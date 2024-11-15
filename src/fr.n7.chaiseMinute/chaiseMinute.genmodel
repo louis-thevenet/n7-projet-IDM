@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.n7.chaiseMinute/src" modelPluginID="fr.n7.chaiseMinute"
+    modelName="ChaiseMinute" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    usedGenPackages="../fr.n7.column/column.genmodel#//Column" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>chaiseMinute.ecore</foreignModel>
+  <genPackages prefix="ChaiseMinute" disposableProviderFactory="true" ecorePackage="chaiseMinute.ecore#/">
+    <genClasses ecoreClass="chaiseMinute.ecore#//ChaiseMinute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ChaiseMinute/tables"/>
+    </genClasses>
+    <genClasses ecoreClass="chaiseMinute.ecore#//Table">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Table/columns"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
