@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm:Algorithm xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:algorithm="http://algorithm" xsi:schemaLocation="http://algorithm algorithm.ecore">
+  <input xsi:type="algorithm:ColumnArgument" idColumn="A"/>
+  <input xsi:type="algorithm:ColumnArgument" idColumn="B"/>
+  <input xsi:type="algorithm:ColumnArgument" idColumn="C"/>
+  <function input="//@input.0 //@input.1">
+    <operation xsi:type="algorithm:Sum"/>
+  </function>
+</algorithm:Algorithm>

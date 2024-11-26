@@ -10,6 +10,7 @@
         eType="#//AbstractColumn" containment="true" eOpposite="#//AbstractColumn/table"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="chaiseMinute" lowerBound="1"
         eType="#//ChaiseMinute" eOpposite="#//ChaiseMinute/tables"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractColumn" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -17,27 +18,21 @@
         eType="#//Cell" containment="true" eOpposite="#//Cell/column"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="table" lowerBound="1" eType="#//Table"
         eOpposite="#//Table/columns"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linksToSuccessor" upperBound="-1"
-        eType="#//Derivation" eOpposite="#//Derivation/sourceColumns"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DataType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Column" eSuperTypes="#//AbstractColumn"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Derivation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceColumns" lowerBound="1"
-        upperBound="-1" eType="#//AbstractColumn" eOpposite="#//AbstractColumn/linksToSuccessor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetColumn" lowerBound="1"
-        eType="#//DerivatedColumn" eOpposite="#//DerivatedColumn/linkToPredecessor"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="function" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ColumnData" eSuperTypes="#//AbstractColumn"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DerivatedColumn" eSuperTypes="#//AbstractColumn">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="ecore:EClass ../fr.n7.chaiseMinute.script/algorithm.ecore#//Algorithm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" eType="ecore:EClass ../fr.n7.chaiseMinute.script/algorithm.ecore#//ColumnArgument"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cell">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="column" lowerBound="1"
         eType="#//AbstractColumn" eOpposite="#//AbstractColumn/cells"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DerivatedColumn" eSuperTypes="#//AbstractColumn">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceColumns" upperBound="-1"
-        eType="#//AbstractColumn"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkToPredecessor" eType="#//Derivation"
-        eOpposite="#//Derivation/targetColumn"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataType">
+    <eLiterals name="String"/>
+    <eLiterals name="Int" value="1"/>
   </eClassifiers>
 </ecore:EPackage>
