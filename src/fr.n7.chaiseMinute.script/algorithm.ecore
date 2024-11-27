@@ -19,7 +19,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Argument" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ColumnArgument" eSuperTypes="#//Argument">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColumn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="#//Operation"/>
