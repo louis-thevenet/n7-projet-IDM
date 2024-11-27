@@ -7,7 +7,6 @@
   <foreignModel>algorithm.ecore</foreignModel>
   <genPackages prefix="Algorithm" disposableProviderFactory="true" ecorePackage="algorithm.ecore#/">
     <genClasses ecoreClass="algorithm.ecore#//Algorithm">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Algorithm/input"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Algorithm/function"/>
     </genClasses>
     <genClasses ecoreClass="algorithm.ecore#//Function">
@@ -16,7 +15,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithm.ecore#//Function/input"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Function/operation"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="algorithm.ecore#//Argument"/>
+    <genClasses image="false" ecoreClass="algorithm.ecore#//Argument">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference algorithm.ecore#//Argument/usedBy"/>
+    </genClasses>
     <genClasses ecoreClass="algorithm.ecore#//ColumnArgument">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithm.ecore#//ColumnArgument/columnPath"/>
     </genClasses>

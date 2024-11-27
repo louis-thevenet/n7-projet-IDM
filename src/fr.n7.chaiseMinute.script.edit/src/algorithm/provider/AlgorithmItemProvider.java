@@ -77,7 +77,6 @@ public class AlgorithmItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(AlgorithmPackage.Literals.ALGORITHM__INPUT);
 			childrenFeatures.add(AlgorithmPackage.Literals.ALGORITHM__FUNCTION);
 		}
 		return childrenFeatures;
@@ -131,7 +130,6 @@ public class AlgorithmItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Algorithm.class)) {
-			case AlgorithmPackage.ALGORITHM__INPUT:
 			case AlgorithmPackage.ALGORITHM__FUNCTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -149,11 +147,6 @@ public class AlgorithmItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(AlgorithmPackage.Literals.ALGORITHM__INPUT,
-				 AlgorithmFactory.eINSTANCE.createColumnArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter

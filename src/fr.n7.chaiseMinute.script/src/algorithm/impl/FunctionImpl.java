@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +51,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	protected Function previous;
 
 	/**
-	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNext()
@@ -60,7 +61,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	protected Function next;
 
 	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference list.
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInput()
@@ -130,34 +131,12 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrevious(Function newPrevious, NotificationChain msgs) {
-		Function oldPrevious = previous;
-		previous = newPrevious;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AlgorithmPackage.FUNCTION__PREVIOUS, oldPrevious, newPrevious);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public void setPrevious(Function newPrevious) {
-		if (newPrevious != previous) {
-			NotificationChain msgs = null;
-			if (previous != null)
-				msgs = ((InternalEObject)previous).eInverseRemove(this, AlgorithmPackage.FUNCTION__NEXT, Function.class, msgs);
-			if (newPrevious != null)
-				msgs = ((InternalEObject)newPrevious).eInverseAdd(this, AlgorithmPackage.FUNCTION__NEXT, Function.class, msgs);
-			msgs = basicSetPrevious(newPrevious, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmPackage.FUNCTION__PREVIOUS, newPrevious, newPrevious));
+		Function oldPrevious = previous;
+		previous = newPrevious;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmPackage.FUNCTION__PREVIOUS, oldPrevious, previous));
 	}
 
 	/**
@@ -167,23 +146,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 */
 	@Override
 	public Function getNext() {
-		if (next != null && next.eIsProxy()) {
-			InternalEObject oldNext = (InternalEObject)next;
-			next = (Function)eResolveProxy(oldNext);
-			if (next != oldNext) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AlgorithmPackage.FUNCTION__NEXT, oldNext, next));
-			}
-		}
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Function basicGetNext() {
 		return next;
 	}
 
@@ -212,9 +174,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		if (newNext != next) {
 			NotificationChain msgs = null;
 			if (next != null)
-				msgs = ((InternalEObject)next).eInverseRemove(this, AlgorithmPackage.FUNCTION__PREVIOUS, Function.class, msgs);
+				msgs = ((InternalEObject)next).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AlgorithmPackage.FUNCTION__NEXT, null, msgs);
 			if (newNext != null)
-				msgs = ((InternalEObject)newNext).eInverseAdd(this, AlgorithmPackage.FUNCTION__PREVIOUS, Function.class, msgs);
+				msgs = ((InternalEObject)newNext).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AlgorithmPackage.FUNCTION__NEXT, null, msgs);
 			msgs = basicSetNext(newNext, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -230,7 +192,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public EList<Argument> getInput() {
 		if (input == null) {
-			input = new EObjectResolvingEList<Argument>(Argument.class, this, AlgorithmPackage.FUNCTION__INPUT);
+			input = new EObjectContainmentWithInverseEList<Argument>(Argument.class, this, AlgorithmPackage.FUNCTION__INPUT, AlgorithmPackage.ARGUMENT__USED_BY);
 		}
 		return input;
 	}
@@ -285,17 +247,12 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AlgorithmPackage.FUNCTION__PREVIOUS:
-				if (previous != null)
-					msgs = ((InternalEObject)previous).eInverseRemove(this, AlgorithmPackage.FUNCTION__NEXT, Function.class, msgs);
-				return basicSetPrevious((Function)otherEnd, msgs);
-			case AlgorithmPackage.FUNCTION__NEXT:
-				if (next != null)
-					msgs = ((InternalEObject)next).eInverseRemove(this, AlgorithmPackage.FUNCTION__PREVIOUS, Function.class, msgs);
-				return basicSetNext((Function)otherEnd, msgs);
+			case AlgorithmPackage.FUNCTION__INPUT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInput()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -308,10 +265,10 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AlgorithmPackage.FUNCTION__PREVIOUS:
-				return basicSetPrevious(null, msgs);
 			case AlgorithmPackage.FUNCTION__NEXT:
 				return basicSetNext(null, msgs);
+			case AlgorithmPackage.FUNCTION__INPUT:
+				return ((InternalEList<?>)getInput()).basicRemove(otherEnd, msgs);
 			case AlgorithmPackage.FUNCTION__OPERATION:
 				return basicSetOperation(null, msgs);
 		}
@@ -330,8 +287,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 				if (resolve) return getPrevious();
 				return basicGetPrevious();
 			case AlgorithmPackage.FUNCTION__NEXT:
-				if (resolve) return getNext();
-				return basicGetNext();
+				return getNext();
 			case AlgorithmPackage.FUNCTION__INPUT:
 				return getInput();
 			case AlgorithmPackage.FUNCTION__OPERATION:

@@ -1,0 +1,6 @@
+{
+           {Table1, , data(Int):A, data(Int):B, computed(Int): 
+           	Sum ("Table", "sdfsdfjk", "ddf") > Sum ("Table1.A")->C
+           }
+           {Table2, , data(Int):A, data(Int):B, imported(Int): "Table1.A"->C}
+}

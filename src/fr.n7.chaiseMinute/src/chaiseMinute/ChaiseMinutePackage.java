@@ -334,13 +334,13 @@ public interface ChaiseMinutePackage extends EPackage {
 	int COMPUTED_COLUMN__TYPE = COLUMN__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Function</b></em>' reference.
+	 * The feature id for the '<em><b>Algorithm</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTED_COLUMN__FUNCTION = COLUMN_FEATURE_COUNT + 0;
+	int COMPUTED_COLUMN__ALGORITHM = COLUMN_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference.
@@ -593,15 +593,15 @@ public interface ChaiseMinutePackage extends EPackage {
 	EClass getComputedColumn();
 
 	/**
-	 * Returns the meta object for the reference '{@link chaiseMinute.ComputedColumn#getFunction <em>Function</em>}'.
+	 * Returns the meta object for the containment reference '{@link chaiseMinute.ComputedColumn#getAlgorithm <em>Algorithm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Function</em>'.
-	 * @see chaiseMinute.ComputedColumn#getFunction()
+	 * @return the meta object for the containment reference '<em>Algorithm</em>'.
+	 * @see chaiseMinute.ComputedColumn#getAlgorithm()
 	 * @see #getComputedColumn()
 	 * @generated
 	 */
-	EReference getComputedColumn_Function();
+	EReference getComputedColumn_Algorithm();
 
 	/**
 	 * Returns the meta object for the reference '{@link chaiseMinute.ComputedColumn#getOutput <em>Output</em>}'.
@@ -793,12 +793,12 @@ public interface ChaiseMinutePackage extends EPackage {
 		EClass COMPUTED_COLUMN = eINSTANCE.getComputedColumn();
 
 		/**
-		 * The meta object literal for the '<em><b>Function</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Algorithm</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPUTED_COLUMN__FUNCTION = eINSTANCE.getComputedColumn_Function();
+		EReference COMPUTED_COLUMN__ALGORITHM = eINSTANCE.getComputedColumn_Algorithm();
 
 		/**
 		 * The meta object literal for the '<em><b>Output</b></em>' reference feature.

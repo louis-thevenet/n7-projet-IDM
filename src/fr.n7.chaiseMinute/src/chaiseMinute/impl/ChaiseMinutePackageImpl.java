@@ -295,7 +295,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 	 * @generated
 	 */
 	@Override
-	public EReference getComputedColumn_Function() {
+	public EReference getComputedColumn_Algorithm() {
 		return (EReference)computedColumnEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -387,7 +387,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		columnDataEClass = createEClass(COLUMN_DATA);
 
 		computedColumnEClass = createEClass(COMPUTED_COLUMN);
-		createEReference(computedColumnEClass, COMPUTED_COLUMN__FUNCTION);
+		createEReference(computedColumnEClass, COMPUTED_COLUMN__ALGORITHM);
 		createEReference(computedColumnEClass, COMPUTED_COLUMN__OUTPUT);
 
 		importedColumnEClass = createEClass(IMPORTED_COLUMN);
@@ -452,7 +452,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		initEClass(columnDataEClass, ColumnData.class, "ColumnData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(computedColumnEClass, ComputedColumn.class, "ComputedColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComputedColumn_Function(), theAlgorithmPackage.getAlgorithm(), null, "function", null, 0, 1, ComputedColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComputedColumn_Algorithm(), theAlgorithmPackage.getAlgorithm(), null, "algorithm", null, 0, 1, ComputedColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComputedColumn_Output(), theAlgorithmPackage.getColumnArgument(), null, "output", null, 0, 1, ComputedColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importedColumnEClass, ImportedColumn.class, "ImportedColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -67,22 +67,13 @@ public interface AlgorithmPackage extends EPackage {
 	int ALGORITHM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Input</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM__INPUT = 0;
-
-	/**
 	 * The feature id for the '<em><b>Function</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALGORITHM__FUNCTION = 1;
+	int ALGORITHM__FUNCTION = 0;
 
 	/**
 	 * The number of structural features of the '<em>Algorithm</em>' class.
@@ -91,7 +82,7 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALGORITHM_FEATURE_COUNT = 2;
+	int ALGORITHM_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Algorithm</em>' class.
@@ -122,7 +113,7 @@ public interface AlgorithmPackage extends EPackage {
 	int FUNCTION__PREVIOUS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Next</b></em>' reference.
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +122,7 @@ public interface AlgorithmPackage extends EPackage {
 	int FUNCTION__NEXT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * The feature id for the '<em><b>Input</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,13 +168,22 @@ public interface AlgorithmPackage extends EPackage {
 	int ARGUMENT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Used By</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__USED_BY = 0;
+
+	/**
 	 * The number of structural features of the '<em>Argument</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENT_FEATURE_COUNT = 0;
+	int ARGUMENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Argument</em>' class.
@@ -203,6 +203,15 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 */
 	int COLUMN_ARGUMENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Used By</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN_ARGUMENT__USED_BY = ARGUMENT__USED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Column Path</b></em>' attribute.
@@ -299,17 +308,6 @@ public interface AlgorithmPackage extends EPackage {
 	EClass getAlgorithm();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link algorithm.Algorithm#getInput <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input</em>'.
-	 * @see algorithm.Algorithm#getInput()
-	 * @see #getAlgorithm()
-	 * @generated
-	 */
-	EReference getAlgorithm_Input();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link algorithm.Algorithm#getFunction <em>Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -342,10 +340,10 @@ public interface AlgorithmPackage extends EPackage {
 	EReference getFunction_Previous();
 
 	/**
-	 * Returns the meta object for the reference '{@link algorithm.Function#getNext <em>Next</em>}'.
+	 * Returns the meta object for the containment reference '{@link algorithm.Function#getNext <em>Next</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Next</em>'.
+	 * @return the meta object for the containment reference '<em>Next</em>'.
 	 * @see algorithm.Function#getNext()
 	 * @see #getFunction()
 	 * @generated
@@ -353,10 +351,10 @@ public interface AlgorithmPackage extends EPackage {
 	EReference getFunction_Next();
 
 	/**
-	 * Returns the meta object for the reference list '{@link algorithm.Function#getInput <em>Input</em>}'.
+	 * Returns the meta object for the containment reference list '{@link algorithm.Function#getInput <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input</em>'.
+	 * @return the meta object for the containment reference list '<em>Input</em>'.
 	 * @see algorithm.Function#getInput()
 	 * @see #getFunction()
 	 * @generated
@@ -383,6 +381,17 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getArgument();
+
+	/**
+	 * Returns the meta object for the container reference '{@link algorithm.Argument#getUsedBy <em>Used By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Used By</em>'.
+	 * @see algorithm.Argument#getUsedBy()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EReference getArgument_UsedBy();
 
 	/**
 	 * Returns the meta object for class '{@link algorithm.ColumnArgument <em>Column Argument</em>}'.
@@ -459,14 +468,6 @@ public interface AlgorithmPackage extends EPackage {
 		EClass ALGORITHM = eINSTANCE.getAlgorithm();
 
 		/**
-		 * The meta object literal for the '<em><b>Input</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ALGORITHM__INPUT = eINSTANCE.getAlgorithm_Input();
-
-		/**
 		 * The meta object literal for the '<em><b>Function</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -493,7 +494,7 @@ public interface AlgorithmPackage extends EPackage {
 		EReference FUNCTION__PREVIOUS = eINSTANCE.getFunction_Previous();
 
 		/**
-		 * The meta object literal for the '<em><b>Next</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -501,7 +502,7 @@ public interface AlgorithmPackage extends EPackage {
 		EReference FUNCTION__NEXT = eINSTANCE.getFunction_Next();
 
 		/**
-		 * The meta object literal for the '<em><b>Input</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Input</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -525,6 +526,14 @@ public interface AlgorithmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ARGUMENT = eINSTANCE.getArgument();
+
+		/**
+		 * The meta object literal for the '<em><b>Used By</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENT__USED_BY = eINSTANCE.getArgument_UsedBy();
 
 		/**
 		 * The meta object literal for the '{@link algorithm.impl.ColumnArgumentImpl <em>Column Argument</em>}' class.

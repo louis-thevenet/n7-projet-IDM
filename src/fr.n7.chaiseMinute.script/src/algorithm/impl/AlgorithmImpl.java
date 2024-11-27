@@ -4,24 +4,14 @@ package algorithm.impl;
 
 import algorithm.Algorithm;
 import algorithm.AlgorithmPackage;
-import algorithm.Argument;
 import algorithm.Function;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,23 +21,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link algorithm.impl.AlgorithmImpl#getInput <em>Input</em>}</li>
  *   <li>{@link algorithm.impl.AlgorithmImpl#getFunction <em>Function</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algorithm {
-	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInput()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Argument> input;
-
 	/**
 	 * The cached value of the '{@link #getFunction() <em>Function</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -75,19 +54,6 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
 	@Override
 	protected EClass eStaticClass() {
 		return AlgorithmPackage.Literals.ALGORITHM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Argument> getInput() {
-		if (input == null) {
-			input = new EObjectContainmentEList<Argument>(Argument.class, this, AlgorithmPackage.ALGORITHM__INPUT);
-		}
-		return input;
 	}
 
 	/**
@@ -143,8 +109,6 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AlgorithmPackage.ALGORITHM__INPUT:
-				return ((InternalEList<?>)getInput()).basicRemove(otherEnd, msgs);
 			case AlgorithmPackage.ALGORITHM__FUNCTION:
 				return basicSetFunction(null, msgs);
 		}
@@ -159,8 +123,6 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AlgorithmPackage.ALGORITHM__INPUT:
-				return getInput();
 			case AlgorithmPackage.ALGORITHM__FUNCTION:
 				return getFunction();
 		}
@@ -176,10 +138,6 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AlgorithmPackage.ALGORITHM__INPUT:
-				getInput().clear();
-				getInput().addAll((Collection<? extends Argument>)newValue);
-				return;
 			case AlgorithmPackage.ALGORITHM__FUNCTION:
 				setFunction((Function)newValue);
 				return;
@@ -195,9 +153,6 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AlgorithmPackage.ALGORITHM__INPUT:
-				getInput().clear();
-				return;
 			case AlgorithmPackage.ALGORITHM__FUNCTION:
 				setFunction((Function)null);
 				return;
@@ -213,8 +168,6 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AlgorithmPackage.ALGORITHM__INPUT:
-				return input != null && !input.isEmpty();
 			case AlgorithmPackage.ALGORITHM__FUNCTION:
 				return function != null;
 		}

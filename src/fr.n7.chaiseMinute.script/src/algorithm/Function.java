@@ -28,14 +28,12 @@ import org.eclipse.emf.ecore.EObject;
 public interface Function extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Previous</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link algorithm.Function#getNext <em>Next</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Previous</em>' reference.
 	 * @see #setPrevious(Function)
 	 * @see algorithm.AlgorithmPackage#getFunction_Previous()
-	 * @see algorithm.Function#getNext
-	 * @model opposite="next"
+	 * @model
 	 * @generated
 	 */
 	Function getPrevious();
@@ -51,37 +49,37 @@ public interface Function extends EObject {
 	void setPrevious(Function value);
 
 	/**
-	 * Returns the value of the '<em><b>Next</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link algorithm.Function#getPrevious <em>Previous</em>}'.
+	 * Returns the value of the '<em><b>Next</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next</em>' reference.
+	 * @return the value of the '<em>Next</em>' containment reference.
 	 * @see #setNext(Function)
 	 * @see algorithm.AlgorithmPackage#getFunction_Next()
-	 * @see algorithm.Function#getPrevious
-	 * @model opposite="previous"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Function getNext();
 
 	/**
-	 * Sets the value of the '{@link algorithm.Function#getNext <em>Next</em>}' reference.
+	 * Sets the value of the '{@link algorithm.Function#getNext <em>Next</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next</em>' reference.
+	 * @param value the new value of the '<em>Next</em>' containment reference.
 	 * @see #getNext()
 	 * @generated
 	 */
 	void setNext(Function value);
 
 	/**
-	 * Returns the value of the '<em><b>Input</b></em>' reference list.
+	 * Returns the value of the '<em><b>Input</b></em>' containment reference list.
 	 * The list contents are of type {@link algorithm.Argument}.
+	 * It is bidirectional and its opposite is '{@link algorithm.Argument#getUsedBy <em>Used By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input</em>' reference list.
+	 * @return the value of the '<em>Input</em>' containment reference list.
 	 * @see algorithm.AlgorithmPackage#getFunction_Input()
-	 * @model
+	 * @see algorithm.Argument#getUsedBy
+	 * @model opposite="usedBy" containment="true"
 	 * @generated
 	 */
 	EList<Argument> getInput();

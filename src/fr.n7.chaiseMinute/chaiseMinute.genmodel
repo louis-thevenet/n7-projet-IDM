@@ -29,7 +29,7 @@
     <genClasses ecoreClass="chaiseMinute.ecore#//IndexColumn"/>
     <genClasses ecoreClass="chaiseMinute.ecore#//ColumnData"/>
     <genClasses ecoreClass="chaiseMinute.ecore#//ComputedColumn">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ComputedColumn/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ComputedColumn/algorithm"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ComputedColumn/output"/>
     </genClasses>
     <genClasses ecoreClass="chaiseMinute.ecore#//ImportedColumn">
