@@ -3,10 +3,9 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="algorithm" nsURI="http://algorithm" nsPrefix="algorithm">
   <eClassifiers xsi:type="ecore:EClass" name="Algorithm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
-        eType="#//Argument"/>
+        eType="#//Argument" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="function" lowerBound="1"
-        eType="#//Function"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outputLocation" eType="#//Argument"/>
+        eType="#//Function" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
     <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="#//Function"
@@ -15,26 +14,13 @@
         eOpposite="#//Function/previous"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
         eType="#//Argument"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Argument"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CellArgument" eSuperTypes="#//Argument">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexLine" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColumn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Argument" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ColumnArgument" eSuperTypes="#//Argument">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColumn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BlockArgument" eSuperTypes="#//Argument">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexLineStart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexLineEnd" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColumnStart" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColumnEnd" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LineArgument" eSuperTypes="#//Argument">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexLine" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="#//Operation"/>
 </ecore:EPackage>
