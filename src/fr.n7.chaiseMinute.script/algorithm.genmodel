@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.n7.chaiseMinute.script/src" modelPluginID="fr.n7.chaiseMinute.script"
+    modelName="Algorithm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>algorithm.ecore</foreignModel>
+  <genPackages prefix="Algorithm" disposableProviderFactory="true" ecorePackage="algorithm.ecore#/">
+    <genClasses ecoreClass="algorithm.ecore#//Algorithm">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Algorithm/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Algorithm/function"/>
+    </genClasses>
+    <genClasses ecoreClass="algorithm.ecore#//Function">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithm.ecore#//Function/previous"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithm.ecore#//Function/next"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithm.ecore#//Function/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Function/operation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="algorithm.ecore#//Argument"/>
+    <genClasses ecoreClass="algorithm.ecore#//ColumnArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithm.ecore#//ColumnArgument/columnPath"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="algorithm.ecore#//Operation"/>
+    <genClasses ecoreClass="algorithm.ecore#//Sum"/>
+  </genPackages>
+</genmodel:GenModel>
