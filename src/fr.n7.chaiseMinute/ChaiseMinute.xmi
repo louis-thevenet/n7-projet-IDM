@@ -5,33 +5,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:chaiseMinute="http://chaiseMinute"
     xsi:schemaLocation="http://chaiseMinute chaiseMinute.ecore">
-  <tables name="sommer a et b">
+  <tables>
     <columns
         xsi:type="chaiseMinute:ColumnData"
-        id="A"
-        type="Int">
-      <cells
-          id="1"
-          value="1"/>
-      <cells
-          id="2"
-          value="3"/>
-    </columns>
+        id="A"/>
     <columns
         xsi:type="chaiseMinute:ColumnData"
-        id="B"
-        type="Int">
-      <cells
-          id="1"
-          value="42"/>
-      <cells
-          id="2"
-          value="12"/>
-    </columns>
+        id="B"/>
     <columns
-        xsi:type="chaiseMinute:DerivatedColumn"
-        id="C"
-        type="Int">
+        xsi:type="chaiseMinute:ComputedColumn"
+        id="C">
       <function
           href="../fr.n7.chaiseMinute.script/SumAandB.xmi#/"/>
       <output
