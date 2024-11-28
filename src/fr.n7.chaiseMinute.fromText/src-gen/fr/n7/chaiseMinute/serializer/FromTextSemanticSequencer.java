@@ -6,6 +6,7 @@ package fr.n7.chaiseMinute.serializer;
 import algorithm.Algorithm;
 import algorithm.AlgorithmPackage;
 import algorithm.ColumnArgument;
+import algorithm.Feur;
 import algorithm.Function;
 import algorithm.Sum;
 import chaiseMinute.ChaiseMinute;
@@ -47,6 +48,9 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case AlgorithmPackage.COLUMN_ARGUMENT:
 				sequence_ColumnArgument(context, (ColumnArgument) semanticObject); 
+				return; 
+			case AlgorithmPackage.FEUR:
+				sequence_Feur(context, (Feur) semanticObject); 
 				return; 
 			case AlgorithmPackage.FUNCTION:
 				sequence_Function(context, (Function) semanticObject); 
@@ -189,10 +193,25 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     Operation returns Feur
+	 *     Feur returns Feur
+	 *
+	 * Constraint:
+	 *     {Feur}
+	 * </pre>
+	 */
+	protected void sequence_Feur(ISerializationContext context, Feur semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     Function returns Function
 	 *
 	 * Constraint:
-	 *     (operation=Operation input+=ColumnArgument next=Function?)
+	 *     (operation=Operation (input+=Argument input+=Argument*)? next=Function?)
 	 * </pre>
 	 */
 	protected void sequence_Function(ISerializationContext context, Function semanticObject) {

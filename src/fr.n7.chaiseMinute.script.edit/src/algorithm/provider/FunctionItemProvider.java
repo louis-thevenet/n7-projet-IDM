@@ -62,33 +62,10 @@ public class FunctionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPreviousPropertyDescriptor(object);
 			addNextPropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Previous feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPreviousPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Function_previous_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Function_previous_feature", "_UI_Function_type"),
-				 AlgorithmPackage.Literals.FUNCTION__PREVIOUS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -217,6 +194,11 @@ public class FunctionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AlgorithmPackage.Literals.FUNCTION__OPERATION,
+				 AlgorithmFactory.eINSTANCE.createFeur()));
 
 		newChildDescriptors.add
 			(createChildParameter

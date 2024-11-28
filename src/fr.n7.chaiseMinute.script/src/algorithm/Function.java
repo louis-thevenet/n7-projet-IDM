@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link algorithm.Function#getPrevious <em>Previous</em>}</li>
  *   <li>{@link algorithm.Function#getNext <em>Next</em>}</li>
  *   <li>{@link algorithm.Function#getInput <em>Input</em>}</li>
  *   <li>{@link algorithm.Function#getOperation <em>Operation</em>}</li>
@@ -26,28 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Function extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Previous</em>' reference.
-	 * @see #setPrevious(Function)
-	 * @see algorithm.AlgorithmPackage#getFunction_Previous()
-	 * @model
-	 * @generated
-	 */
-	Function getPrevious();
-
-	/**
-	 * Sets the value of the '{@link algorithm.Function#getPrevious <em>Previous</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Previous</em>' reference.
-	 * @see #getPrevious()
-	 * @generated
-	 */
-	void setPrevious(Function value);
-
 	/**
 	 * Returns the value of the '<em><b>Next</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

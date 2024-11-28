@@ -633,6 +633,31 @@ ruleColumnArgument returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleArgument
+entryRuleArgument returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getArgumentRule()); }
+	iv_ruleArgument=ruleArgument
+	{ $current=$iv_ruleArgument.current; }
+	EOF;
+
+// Rule Argument
+ruleArgument returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	{
+		newCompositeNode(grammarAccess.getArgumentAccess().getColumnArgumentParserRuleCall());
+	}
+	this_ColumnArgument_0=ruleColumnArgument
+	{
+		$current = $this_ColumnArgument_0.current;
+		afterParserOrEnumRuleCall();
+	}
+;
+
 // Entry rule entryRuleAlgorithm
 entryRuleAlgorithm returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getAlgorithmRule()); }
@@ -693,14 +718,25 @@ ruleOperation returns [EObject current=null]
 @after {
 	leaveRule();
 }:
-	{
-		newCompositeNode(grammarAccess.getOperationAccess().getSumParserRuleCall());
-	}
-	this_Sum_0=ruleSum
-	{
-		$current = $this_Sum_0.current;
-		afterParserOrEnumRuleCall();
-	}
+	(
+		{
+			newCompositeNode(grammarAccess.getOperationAccess().getSumParserRuleCall_0());
+		}
+		this_Sum_0=ruleSum
+		{
+			$current = $this_Sum_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getOperationAccess().getFeurParserRuleCall_1());
+		}
+		this_Feur_1=ruleFeur
+		{
+			$current = $this_Feur_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
 ;
 
 // Entry rule entryRuleSum
@@ -729,6 +765,36 @@ ruleSum returns [EObject current=null]
 		otherlv_1='Sum'
 		{
 			newLeafNode(otherlv_1, grammarAccess.getSumAccess().getSumKeyword_1());
+		}
+	)
+;
+
+// Entry rule entryRuleFeur
+entryRuleFeur returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFeurRule()); }
+	iv_ruleFeur=ruleFeur
+	{ $current=$iv_ruleFeur.current; }
+	EOF;
+
+// Rule Feur
+ruleFeur returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getFeurAccess().getFeurAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='Feur'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getFeurAccess().getFeurKeyword_1());
 		}
 	)
 ;
@@ -781,38 +847,65 @@ ruleFunction returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getFunctionAccess().getInputColumnArgumentParserRuleCall_3_0());
-				}
-				lv_input_3_0=ruleColumnArgument
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFunctionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getFunctionAccess().getInputArgumentParserRuleCall_3_0_0());
 					}
-					add(
-						$current,
-						"input",
-						lv_input_3_0,
-						"fr.n7.chaiseMinute.FromText.ColumnArgument");
-					afterParserOrEnumRuleCall();
-				}
+					lv_input_3_0=ruleArgument
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getFunctionRule());
+						}
+						add(
+							$current,
+							"input",
+							lv_input_3_0,
+							"fr.n7.chaiseMinute.FromText.Argument");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)
-		otherlv_4=')'
+			(
+				otherlv_4=','
+				{
+					newLeafNode(otherlv_4, grammarAccess.getFunctionAccess().getCommaKeyword_3_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getFunctionAccess().getInputArgumentParserRuleCall_3_1_1_0());
+						}
+						lv_input_5_0=ruleArgument
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getFunctionRule());
+							}
+							add(
+								$current,
+								"input",
+								lv_input_5_0,
+								"fr.n7.chaiseMinute.FromText.Argument");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+		)?
+		otherlv_6=')'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getFunctionAccess().getRightParenthesisKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getFunctionAccess().getRightParenthesisKeyword_4());
 		}
 		(
-			otherlv_5='>'
+			otherlv_7='>'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getFunctionAccess().getGreaterThanSignKeyword_5_0());
+				newLeafNode(otherlv_7, grammarAccess.getFunctionAccess().getGreaterThanSignKeyword_5_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getFunctionAccess().getNextFunctionParserRuleCall_5_1_0());
 					}
-					lv_next_6_0=ruleFunction
+					lv_next_8_0=ruleFunction
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFunctionRule());
@@ -820,7 +913,7 @@ ruleFunction returns [EObject current=null]
 						set(
 							$current,
 							"next",
-							lv_next_6_0,
+							lv_next_8_0,
 							"fr.n7.chaiseMinute.FromText.Function");
 						afterParserOrEnumRuleCall();
 					}

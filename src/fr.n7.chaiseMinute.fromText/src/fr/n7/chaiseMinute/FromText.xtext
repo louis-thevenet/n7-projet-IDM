@@ -70,11 +70,16 @@ Algorithm returns algorithm::Algorithm:
 		;
 
 Operation returns algorithm::Operation:
-	Sum;
+	Sum|Feur;
 
 Sum returns algorithm::Sum:
 	{algorithm::Sum}
 	'Sum'
+	;
+	
+Feur returns algorithm::Feur:
+	{algorithm::Feur}
+	'Feur'
 	;
 
 Function returns algorithm::Function:

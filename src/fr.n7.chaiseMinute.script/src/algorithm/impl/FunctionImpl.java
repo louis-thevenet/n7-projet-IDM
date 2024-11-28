@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link algorithm.impl.FunctionImpl#getPrevious <em>Previous</em>}</li>
  *   <li>{@link algorithm.impl.FunctionImpl#getNext <em>Next</em>}</li>
  *   <li>{@link algorithm.impl.FunctionImpl#getInput <em>Input</em>}</li>
  *   <li>{@link algorithm.impl.FunctionImpl#getOperation <em>Operation</em>}</li>
@@ -40,16 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class FunctionImpl extends MinimalEObjectImpl.Container implements Function {
-	/**
-	 * The cached value of the '{@link #getPrevious() <em>Previous</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrevious()
-	 * @generated
-	 * @ordered
-	 */
-	protected Function previous;
-
 	/**
 	 * The cached value of the '{@link #getNext() <em>Next</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -97,46 +86,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	protected EClass eStaticClass() {
 		return AlgorithmPackage.Literals.FUNCTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Function getPrevious() {
-		if (previous != null && previous.eIsProxy()) {
-			InternalEObject oldPrevious = (InternalEObject)previous;
-			previous = (Function)eResolveProxy(oldPrevious);
-			if (previous != oldPrevious) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AlgorithmPackage.FUNCTION__PREVIOUS, oldPrevious, previous));
-			}
-		}
-		return previous;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Function basicGetPrevious() {
-		return previous;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPrevious(Function newPrevious) {
-		Function oldPrevious = previous;
-		previous = newPrevious;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmPackage.FUNCTION__PREVIOUS, oldPrevious, previous));
 	}
 
 	/**
@@ -283,9 +232,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AlgorithmPackage.FUNCTION__PREVIOUS:
-				if (resolve) return getPrevious();
-				return basicGetPrevious();
 			case AlgorithmPackage.FUNCTION__NEXT:
 				return getNext();
 			case AlgorithmPackage.FUNCTION__INPUT:
@@ -305,9 +251,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AlgorithmPackage.FUNCTION__PREVIOUS:
-				setPrevious((Function)newValue);
-				return;
 			case AlgorithmPackage.FUNCTION__NEXT:
 				setNext((Function)newValue);
 				return;
@@ -330,9 +273,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AlgorithmPackage.FUNCTION__PREVIOUS:
-				setPrevious((Function)null);
-				return;
 			case AlgorithmPackage.FUNCTION__NEXT:
 				setNext((Function)null);
 				return;
@@ -354,8 +294,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AlgorithmPackage.FUNCTION__PREVIOUS:
-				return previous != null;
 			case AlgorithmPackage.FUNCTION__NEXT:
 				return next != null;
 			case AlgorithmPackage.FUNCTION__INPUT:

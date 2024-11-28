@@ -88,6 +88,10 @@ public class AlgorithmAdapterFactory extends AdapterFactoryImpl {
 				return createOperationAdapter();
 			}
 			@Override
+			public Adapter caseFeur(Feur object) {
+				return createFeurAdapter();
+			}
+			@Override
 			public Adapter caseSum(Sum object) {
 				return createSumAdapter();
 			}
@@ -178,6 +182,20 @@ public class AlgorithmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link algorithm.Feur <em>Feur</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see algorithm.Feur
+	 * @generated
+	 */
+	public Adapter createFeurAdapter() {
 		return null;
 	}
 

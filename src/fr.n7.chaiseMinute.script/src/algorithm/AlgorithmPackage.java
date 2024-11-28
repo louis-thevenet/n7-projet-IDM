@@ -104,22 +104,13 @@ public interface AlgorithmPackage extends EPackage {
 	int FUNCTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__PREVIOUS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Next</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__NEXT = 1;
+	int FUNCTION__NEXT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' containment reference list.
@@ -128,7 +119,7 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__INPUT = 2;
+	int FUNCTION__INPUT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' containment reference.
@@ -137,7 +128,7 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__OPERATION = 3;
+	int FUNCTION__OPERATION = 2;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -146,7 +137,7 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = 4;
+	int FUNCTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -269,6 +260,34 @@ public interface AlgorithmPackage extends EPackage {
 	int OPERATION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link algorithm.impl.FeurImpl <em>Feur</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see algorithm.impl.FeurImpl
+	 * @see algorithm.impl.AlgorithmPackageImpl#getFeur()
+	 * @generated
+	 */
+	int FEUR = 5;
+
+	/**
+	 * The number of structural features of the '<em>Feur</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEUR_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Feur</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEUR_OPERATION_COUNT = OPERATION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link algorithm.impl.SumImpl <em>Sum</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,7 +295,7 @@ public interface AlgorithmPackage extends EPackage {
 	 * @see algorithm.impl.AlgorithmPackageImpl#getSum()
 	 * @generated
 	 */
-	int SUM = 5;
+	int SUM = 6;
 
 	/**
 	 * The number of structural features of the '<em>Sum</em>' class.
@@ -327,17 +346,6 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFunction();
-
-	/**
-	 * Returns the meta object for the reference '{@link algorithm.Function#getPrevious <em>Previous</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Previous</em>'.
-	 * @see algorithm.Function#getPrevious()
-	 * @see #getFunction()
-	 * @generated
-	 */
-	EReference getFunction_Previous();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link algorithm.Function#getNext <em>Next</em>}'.
@@ -425,6 +433,16 @@ public interface AlgorithmPackage extends EPackage {
 	EClass getOperation();
 
 	/**
+	 * Returns the meta object for class '{@link algorithm.Feur <em>Feur</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feur</em>'.
+	 * @see algorithm.Feur
+	 * @generated
+	 */
+	EClass getFeur();
+
+	/**
 	 * Returns the meta object for class '{@link algorithm.Sum <em>Sum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -484,14 +502,6 @@ public interface AlgorithmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FUNCTION = eINSTANCE.getFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Previous</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION__PREVIOUS = eINSTANCE.getFunction_Previous();
 
 		/**
 		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
@@ -562,6 +572,16 @@ public interface AlgorithmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OPERATION = eINSTANCE.getOperation();
+
+		/**
+		 * The meta object literal for the '{@link algorithm.impl.FeurImpl <em>Feur</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see algorithm.impl.FeurImpl
+		 * @see algorithm.impl.AlgorithmPackageImpl#getFeur()
+		 * @generated
+		 */
+		EClass FEUR = eINSTANCE.getFeur();
 
 		/**
 		 * The meta object literal for the '{@link algorithm.impl.SumImpl <em>Sum</em>}' class.

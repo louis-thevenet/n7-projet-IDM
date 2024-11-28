@@ -49,6 +49,15 @@ public interface AlgorithmFactory extends EFactory {
 	ColumnArgument createColumnArgument();
 
 	/**
+	 * Returns a new object of class '<em>Feur</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Feur</em>'.
+	 * @generated
+	 */
+	Feur createFeur();
+
+	/**
 	 * Returns a new object of class '<em>Sum</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

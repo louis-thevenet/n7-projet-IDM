@@ -3,10 +3,9 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="algorithm" nsURI="http://algorithm" nsPrefix="algorithm">
   <eClassifiers xsi:type="ecore:EClass" name="Algorithm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="function" lowerBound="1"
-        eType="#//Function" containment="true"/>
+        upperBound="-1" eType="#//Function" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="#//Function"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Function"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
@@ -22,5 +21,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Feur" eSuperTypes="#//Operation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="#//Operation"/>
 </ecore:EPackage>

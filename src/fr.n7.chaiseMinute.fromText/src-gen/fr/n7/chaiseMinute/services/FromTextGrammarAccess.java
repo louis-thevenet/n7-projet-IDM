@@ -432,14 +432,22 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	public class OperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Operation");
-		private final RuleCall cSumParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSumParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cFeurParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Operation returns algorithm::Operation:
-		//    Sum;
+		//    Sum|Feur;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//Sum|Feur
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
 		//Sum
-		public RuleCall getSumParserRuleCall() { return cSumParserRuleCall; }
+		public RuleCall getSumParserRuleCall_0() { return cSumParserRuleCall_0; }
+		
+		//Feur
+		public RuleCall getFeurParserRuleCall_1() { return cFeurParserRuleCall_1; }
 	}
 	public class SumElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Sum");
@@ -463,6 +471,28 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'Sum'
 		public Keyword getSumKeyword_1() { return cSumKeyword_1; }
 	}
+	public class FeurElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Feur");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cFeurAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cFeurKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//Feur returns algorithm::Feur:
+		//    {algorithm::Feur}
+		//    'Feur'
+		//    ;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{algorithm::Feur}
+		//'Feur'
+		public Group getGroup() { return cGroup; }
+		
+		//{algorithm::Feur}
+		public Action getFeurAction_0() { return cFeurAction_0; }
+		
+		//'Feur'
+		public Keyword getFeurKeyword_1() { return cFeurKeyword_1; }
+	}
 	public class FunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Function");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -470,8 +500,13 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cOperationAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOperationOperationParserRuleCall_1_0 = (RuleCall)cOperationAssignment_1.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cInputAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cInputColumnArgumentParserRuleCall_3_0 = (RuleCall)cInputAssignment_3.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cInputAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cInputArgumentParserRuleCall_3_0_0 = (RuleCall)cInputAssignment_3_0.eContents().get(0);
+		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
+		private final Assignment cInputAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
+		private final RuleCall cInputArgumentParserRuleCall_3_1_1_0 = (RuleCall)cInputAssignment_3_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cGreaterThanSignKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
@@ -482,7 +517,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//    {algorithm::Function}
 		//    operation=Operation
 		//    '('
-		//        input+=ColumnArgument //(( "," input+=Argument)*)  ?
+		//        (input+=Argument ( "," input+=Argument)*)  ?
 		//    ')'
 		//    ('>' next=Function)?
 		//    ;
@@ -491,7 +526,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//{algorithm::Function}
 		//operation=Operation
 		//'('
-		//    input+=ColumnArgument //(( "," input+=Argument)*)  ?
+		//    (input+=Argument ( "," input+=Argument)*)  ?
 		//')'
 		//('>' next=Function)?
 		public Group getGroup() { return cGroup; }
@@ -508,14 +543,28 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
-		//input+=ColumnArgument
-		public Assignment getInputAssignment_3() { return cInputAssignment_3; }
+		//(input+=Argument ( "," input+=Argument)*)  ?
+		public Group getGroup_3() { return cGroup_3; }
 		
-		//ColumnArgument
-		public RuleCall getInputColumnArgumentParserRuleCall_3_0() { return cInputColumnArgumentParserRuleCall_3_0; }
+		//input+=Argument
+		public Assignment getInputAssignment_3_0() { return cInputAssignment_3_0; }
 		
-		////(( "," input+=Argument)*)  ?
-		//   ')'
+		//Argument
+		public RuleCall getInputArgumentParserRuleCall_3_0_0() { return cInputArgumentParserRuleCall_3_0_0; }
+		
+		//( "," input+=Argument)*
+		public Group getGroup_3_1() { return cGroup_3_1; }
+		
+		//","
+		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		
+		//input+=Argument
+		public Assignment getInputAssignment_3_1_1() { return cInputAssignment_3_1_1; }
+		
+		//Argument
+		public RuleCall getInputArgumentParserRuleCall_3_1_1_0() { return cInputArgumentParserRuleCall_3_1_1_0; }
+		
+		//')'
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 		
 		//('>' next=Function)?
@@ -610,6 +659,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final AlgorithmElements pAlgorithm;
 	private final OperationElements pOperation;
 	private final SumElements pSum;
+	private final FeurElements pFeur;
 	private final FunctionElements pFunction;
 	private final EIntElements pEInt;
 	private final EStringElements pEString;
@@ -636,6 +686,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pAlgorithm = new AlgorithmElements();
 		this.pOperation = new OperationElements();
 		this.pSum = new SumElements();
+		this.pFeur = new FeurElements();
 		this.pFunction = new FunctionElements();
 		this.pEInt = new EIntElements();
 		this.pEString = new EStringElements();
@@ -804,7 +855,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Operation returns algorithm::Operation:
-	//    Sum;
+	//    Sum|Feur;
 	public OperationElements getOperationAccess() {
 		return pOperation;
 	}
@@ -825,11 +876,23 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getSumAccess().getRule();
 	}
 	
+	//Feur returns algorithm::Feur:
+	//    {algorithm::Feur}
+	//    'Feur'
+	//    ;
+	public FeurElements getFeurAccess() {
+		return pFeur;
+	}
+	
+	public ParserRule getFeurRule() {
+		return getFeurAccess().getRule();
+	}
+	
 	//Function returns algorithm::Function:
 	//    {algorithm::Function}
 	//    operation=Operation
 	//    '('
-	//        input+=ColumnArgument //(( "," input+=Argument)*)  ?
+	//        (input+=Argument ( "," input+=Argument)*)  ?
 	//    ')'
 	//    ('>' next=Function)?
 	//    ;
