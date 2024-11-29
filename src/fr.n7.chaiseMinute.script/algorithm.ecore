@@ -3,12 +3,9 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="algorithm" nsURI="http://algorithm" nsPrefix="algorithm">
   <eClassifiers xsi:type="ecore:EClass" name="Algorithm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//Argument" containment="true"/>
+        eType="ecore:EClass ../fr.n7.chaiseMinute.function/function.ecore#//Argument"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="functions" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Argument" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ColumnArgument" eSuperTypes="#//Argument">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

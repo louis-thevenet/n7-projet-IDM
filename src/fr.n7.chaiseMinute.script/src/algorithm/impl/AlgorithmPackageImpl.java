@@ -5,8 +5,10 @@ package algorithm.impl;
 import algorithm.Algorithm;
 import algorithm.AlgorithmFactory;
 import algorithm.AlgorithmPackage;
-import algorithm.Argument;
-import algorithm.ColumnArgument;
+
+import function.FunctionPackage;
+
+import function.impl.FunctionPackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -28,20 +30,6 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	private EClass algorithmEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass argumentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass columnArgumentEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -89,11 +77,17 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FunctionPackage.eNS_URI);
+		FunctionPackageImpl theFunctionPackage = (FunctionPackageImpl)(registeredPackage instanceof FunctionPackageImpl ? registeredPackage : FunctionPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theAlgorithmPackage.createPackageContents();
+		theFunctionPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theAlgorithmPackage.initializePackageContents();
+		theFunctionPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theAlgorithmPackage.freeze();
@@ -139,36 +133,6 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	@Override
-	public EClass getArgument() {
-		return argumentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getColumnArgument() {
-		return columnArgumentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getColumnArgument_ColumnPath() {
-		return (EAttribute)columnArgumentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public AlgorithmFactory getAlgorithmFactory() {
 		return (AlgorithmFactory)getEFactoryInstance();
 	}
@@ -195,11 +159,6 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 		algorithmEClass = createEClass(ALGORITHM);
 		createEReference(algorithmEClass, ALGORITHM__INPUTS);
 		createEAttribute(algorithmEClass, ALGORITHM__FUNCTIONS);
-
-		argumentEClass = createEClass(ARGUMENT);
-
-		columnArgumentEClass = createEClass(COLUMN_ARGUMENT);
-		createEAttribute(columnArgumentEClass, COLUMN_ARGUMENT__COLUMN_PATH);
 	}
 
 	/**
@@ -225,22 +184,19 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		FunctionPackage theFunctionPackage = (FunctionPackage)EPackage.Registry.INSTANCE.getEPackage(FunctionPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		columnArgumentEClass.getESuperTypes().add(this.getArgument());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(algorithmEClass, Algorithm.class, "Algorithm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAlgorithm_Inputs(), this.getArgument(), null, "inputs", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgorithm_Inputs(), theFunctionPackage.getArgument(), null, "inputs", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAlgorithm_Functions(), ecorePackage.getEString(), "functions", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(argumentEClass, Argument.class, "Argument", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(columnArgumentEClass, ColumnArgument.class, "ColumnArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getColumnArgument_ColumnPath(), ecorePackage.getEString(), "columnPath", null, 0, 1, ColumnArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

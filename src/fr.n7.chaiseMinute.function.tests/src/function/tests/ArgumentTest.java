@@ -1,8 +1,8 @@
 /**
  */
-package algorithm.tests;
+package function.tests;
 
-import algorithm.Argument;
+import function.Argument;
 
 import junit.framework.TestCase;
 

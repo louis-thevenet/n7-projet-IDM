@@ -2,6 +2,8 @@
  */
 package algorithm;
 
+import function.Argument;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -26,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Algorithm extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
-	 * The list contents are of type {@link algorithm.Argument}.
+	 * The list contents are of type {@link function.Argument}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Inputs</em>' containment reference list.

@@ -23,4 +23,5 @@ Export-Package: fr.n7.chaiseMinute.scoping,
  fr.n7.chaiseMinute.validation,
  fr.n7.chaiseMinute.parser.antlr,
  fr.n7.chaiseMinute.formatting2
-Import-Package: org.apache.log4j
+Import-Package: function,
+ org.apache.log4j

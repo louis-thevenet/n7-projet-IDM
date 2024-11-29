@@ -3,13 +3,12 @@
 package chaiseMinute.impl;
 
 import algorithm.Algorithm;
-import algorithm.ColumnArgument;
-
 import chaiseMinute.ChaiseMinutePackage;
 import chaiseMinute.ComputedColumn;
 import chaiseMinute.DataType;
 import chaiseMinute.Table;
 
+import function.ColumnArgument;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 

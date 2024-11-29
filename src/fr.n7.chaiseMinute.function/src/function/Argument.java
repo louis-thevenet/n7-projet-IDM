@@ -1,6 +1,6 @@
 /**
  */
-package algorithm;
+package function;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see algorithm.AlgorithmPackage#getArgument()
+ * @see function.FunctionPackage#getArgument()
  * @model interface="true" abstract="true"
  * @generated
  */

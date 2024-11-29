@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.n7.chaiseMinute/src" modelPluginID="fr.n7.chaiseMinute"
     modelName="ChaiseMinute" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
-    usedGenPackages="../fr.n7.chaiseMinute.script/algorithm.genmodel#//algorithm"
+    usedGenPackages="../fr.n7.chaiseMinute.script/algorithm.genmodel#//algorithm ../fr.n7.chaiseMinute.script/algorithm.genmodel#//function"
     operationReflection="true" importOrganizing="true">
   <foreignModel>chaiseMinute.ecore</foreignModel>
   <foreignModel>../fr.n7.chaiseMinute.script/algorithm.ecore</foreignModel>

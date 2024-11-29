@@ -34,4 +34,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated algorithm -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="function.presentation.FunctionModelWizardID"
+            name="%_UI_FunctionModelWizard_label"
+            class="function.presentation.FunctionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FunctionModelFile.gif">
+         <description>%_UI_FunctionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated algorithm -->
+      <editor
+            id="function.presentation.FunctionEditorID"
+            name="%_UI_FunctionEditor_label"
+            icon="icons/full/obj16/FunctionModelFile.gif"
+            extensions="function"
+            class="function.presentation.FunctionEditor"
+            contributorClass="function.presentation.FunctionActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

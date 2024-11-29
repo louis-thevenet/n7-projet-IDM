@@ -5,7 +5,6 @@ package fr.n7.chaiseMinute.serializer;
 
 import algorithm.Algorithm;
 import algorithm.AlgorithmPackage;
-import algorithm.ColumnArgument;
 import chaiseMinute.ChaiseMinute;
 import chaiseMinute.ChaiseMinutePackage;
 import chaiseMinute.ColumnData;
@@ -15,6 +14,8 @@ import chaiseMinute.IndexColumn;
 import chaiseMinute.Table;
 import com.google.inject.Inject;
 import fr.n7.chaiseMinute.services.FromTextGrammarAccess;
+import function.ColumnArgument;
+import function.FunctionPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -43,9 +44,6 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case AlgorithmPackage.ALGORITHM:
 				sequence_Algorithm(context, (Algorithm) semanticObject); 
 				return; 
-			case AlgorithmPackage.COLUMN_ARGUMENT:
-				sequence_ColumnArgument(context, (ColumnArgument) semanticObject); 
-				return; 
 			}
 		else if (epackage == ChaiseMinutePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
@@ -66,6 +64,12 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case ChaiseMinutePackage.TABLE:
 				sequence_Table(context, (Table) semanticObject); 
+				return; 
+			}
+		else if (epackage == FunctionPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
+			case FunctionPackage.COLUMN_ARGUMENT:
+				sequence_ColumnArgument(context, (ColumnArgument) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -112,8 +116,8 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_ColumnArgument(ISerializationContext context, ColumnArgument semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AlgorithmPackage.Literals.COLUMN_ARGUMENT__COLUMN_PATH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AlgorithmPackage.Literals.COLUMN_ARGUMENT__COLUMN_PATH));
+			if (transientValues.isValueTransient(semanticObject, FunctionPackage.Literals.COLUMN_ARGUMENT__COLUMN_PATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FunctionPackage.Literals.COLUMN_ARGUMENT__COLUMN_PATH));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getColumnArgumentAccess().getColumnPathSTRINGTerminalRuleCall_1_0(), semanticObject.getColumnPath());

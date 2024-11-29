@@ -72,14 +72,6 @@ public class AlgorithmAdapterFactory extends AdapterFactoryImpl {
 				return createAlgorithmAdapter();
 			}
 			@Override
-			public Adapter caseArgument(Argument object) {
-				return createArgumentAdapter();
-			}
-			@Override
-			public Adapter caseColumnArgument(ColumnArgument object) {
-				return createColumnArgumentAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -110,34 +102,6 @@ public class AlgorithmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAlgorithmAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithm.Argument <em>Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithm.Argument
-	 * @generated
-	 */
-	public Adapter createArgumentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithm.ColumnArgument <em>Column Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithm.ColumnArgument
-	 * @generated
-	 */
-	public Adapter createColumnArgumentAdapter() {
 		return null;
 	}
 
