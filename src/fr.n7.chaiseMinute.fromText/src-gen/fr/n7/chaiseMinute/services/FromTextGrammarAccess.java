@@ -408,27 +408,141 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Algorithm");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cAlgorithmAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cFunctionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFunctionFunctionParserRuleCall_1_0 = (RuleCall)cFunctionAssignment_1.eContents().get(0);
+		private final Assignment cFunctionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFunctionsFunctionParserRuleCall_1_0 = (RuleCall)cFunctionsAssignment_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cInputsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cInputsArgumentParserRuleCall_3_0_0 = (RuleCall)cInputsAssignment_3_0.eContents().get(0);
+		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
+		private final Assignment cInputsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
+		private final RuleCall cInputsArgumentParserRuleCall_3_1_1_0 = (RuleCall)cInputsAssignment_3_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cGreaterThanSignKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cFunctionsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cFunctionsFunctionParserRuleCall_5_1_0 = (RuleCall)cFunctionsAssignment_5_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
+		private final Assignment cInputsAssignment_5_3_0 = (Assignment)cGroup_5_3.eContents().get(0);
+		private final RuleCall cInputsArgumentParserRuleCall_5_3_0_0 = (RuleCall)cInputsAssignment_5_3_0.eContents().get(0);
+		private final Group cGroup_5_3_1 = (Group)cGroup_5_3.eContents().get(1);
+		private final Keyword cCommaKeyword_5_3_1_0 = (Keyword)cGroup_5_3_1.eContents().get(0);
+		private final Assignment cInputsAssignment_5_3_1_1 = (Assignment)cGroup_5_3_1.eContents().get(1);
+		private final RuleCall cInputsArgumentParserRuleCall_5_3_1_1_0 = (RuleCall)cInputsAssignment_5_3_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		
 		//Algorithm returns algorithm::Algorithm:
 		//    {algorithm::Algorithm}
-		//    function=Function
+		//    functions+=Function
+		//    '('
+		//        (inputs+=Argument ( "," inputs+=Argument)*)?
+		//    ')'
+		//    (
+		//        '>'
+		//        functions+=Function
+		//        '('
+		//        (inputs+=Argument ( "," inputs+=Argument)*)?
+		//        ')'
+		//    )?
 		//        ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{algorithm::Algorithm}
-		//function=Function
+		//functions+=Function
+		//'('
+		//    (inputs+=Argument ( "," inputs+=Argument)*)?
+		//')'
+		//(
+		//    '>'
+		//    functions+=Function
+		//    '('
+		//    (inputs+=Argument ( "," inputs+=Argument)*)?
+		//    ')'
+		//)?
 		public Group getGroup() { return cGroup; }
 		
 		//{algorithm::Algorithm}
 		public Action getAlgorithmAction_0() { return cAlgorithmAction_0; }
 		
-		//function=Function
-		public Assignment getFunctionAssignment_1() { return cFunctionAssignment_1; }
+		//functions+=Function
+		public Assignment getFunctionsAssignment_1() { return cFunctionsAssignment_1; }
 		
 		//Function
-		public RuleCall getFunctionFunctionParserRuleCall_1_0() { return cFunctionFunctionParserRuleCall_1_0; }
+		public RuleCall getFunctionsFunctionParserRuleCall_1_0() { return cFunctionsFunctionParserRuleCall_1_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		
+		//(inputs+=Argument ( "," inputs+=Argument)*)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//inputs+=Argument
+		public Assignment getInputsAssignment_3_0() { return cInputsAssignment_3_0; }
+		
+		//Argument
+		public RuleCall getInputsArgumentParserRuleCall_3_0_0() { return cInputsArgumentParserRuleCall_3_0_0; }
+		
+		//( "," inputs+=Argument)*
+		public Group getGroup_3_1() { return cGroup_3_1; }
+		
+		//","
+		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		
+		//inputs+=Argument
+		public Assignment getInputsAssignment_3_1_1() { return cInputsAssignment_3_1_1; }
+		
+		//Argument
+		public RuleCall getInputsArgumentParserRuleCall_3_1_1_0() { return cInputsArgumentParserRuleCall_3_1_1_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		
+		//(
+		//    '>'
+		//    functions+=Function
+		//    '('
+		//    (inputs+=Argument ( "," inputs+=Argument)*)?
+		//    ')'
+		//)?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_5_0() { return cGreaterThanSignKeyword_5_0; }
+		
+		//functions+=Function
+		public Assignment getFunctionsAssignment_5_1() { return cFunctionsAssignment_5_1; }
+		
+		//Function
+		public RuleCall getFunctionsFunctionParserRuleCall_5_1_0() { return cFunctionsFunctionParserRuleCall_5_1_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_5_2() { return cLeftParenthesisKeyword_5_2; }
+		
+		//(inputs+=Argument ( "," inputs+=Argument)*)?
+		public Group getGroup_5_3() { return cGroup_5_3; }
+		
+		//inputs+=Argument
+		public Assignment getInputsAssignment_5_3_0() { return cInputsAssignment_5_3_0; }
+		
+		//Argument
+		public RuleCall getInputsArgumentParserRuleCall_5_3_0_0() { return cInputsArgumentParserRuleCall_5_3_0_0; }
+		
+		//( "," inputs+=Argument)*
+		public Group getGroup_5_3_1() { return cGroup_5_3_1; }
+		
+		//","
+		public Keyword getCommaKeyword_5_3_1_0() { return cCommaKeyword_5_3_1_0; }
+		
+		//inputs+=Argument
+		public Assignment getInputsAssignment_5_3_1_1() { return cInputsAssignment_5_3_1_1; }
+		
+		//Argument
+		public RuleCall getInputsArgumentParserRuleCall_5_3_1_1_0() { return cInputsArgumentParserRuleCall_5_3_1_1_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_5_4() { return cRightParenthesisKeyword_5_4; }
 	}
 	public class OperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Operation");
@@ -499,36 +613,15 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Action cFunctionAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cOperationAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOperationOperationParserRuleCall_1_0 = (RuleCall)cOperationAssignment_1.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cInputAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cInputArgumentParserRuleCall_3_0_0 = (RuleCall)cInputAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cInputAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cInputArgumentParserRuleCall_3_1_1_0 = (RuleCall)cInputAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cGreaterThanSignKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cNextAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cNextFunctionParserRuleCall_5_1_0 = (RuleCall)cNextAssignment_5_1.eContents().get(0);
 		
 		//Function returns algorithm::Function:
 		//    {algorithm::Function}
 		//    operation=Operation
-		//    '('
-		//        (input+=Argument ( "," input+=Argument)*)  ?
-		//    ')'
-		//    ('>' next=Function)?
-		//    ;
+		//        ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{algorithm::Function}
 		//operation=Operation
-		//'('
-		//    (input+=Argument ( "," input+=Argument)*)  ?
-		//')'
-		//('>' next=Function)?
 		public Group getGroup() { return cGroup; }
 		
 		//{algorithm::Function}
@@ -539,45 +632,6 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//Operation
 		public RuleCall getOperationOperationParserRuleCall_1_0() { return cOperationOperationParserRuleCall_1_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
-		
-		//(input+=Argument ( "," input+=Argument)*)  ?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//input+=Argument
-		public Assignment getInputAssignment_3_0() { return cInputAssignment_3_0; }
-		
-		//Argument
-		public RuleCall getInputArgumentParserRuleCall_3_0_0() { return cInputArgumentParserRuleCall_3_0_0; }
-		
-		//( "," input+=Argument)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
-		
-		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
-		
-		//input+=Argument
-		public Assignment getInputAssignment_3_1_1() { return cInputAssignment_3_1_1; }
-		
-		//Argument
-		public RuleCall getInputArgumentParserRuleCall_3_1_1_0() { return cInputArgumentParserRuleCall_3_1_1_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
-		
-		//('>' next=Function)?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_5_0() { return cGreaterThanSignKeyword_5_0; }
-		
-		//next=Function
-		public Assignment getNextAssignment_5_1() { return cNextAssignment_5_1; }
-		
-		//Function
-		public RuleCall getNextFunctionParserRuleCall_5_1_0() { return cNextFunctionParserRuleCall_5_1_0; }
 	}
 	public class EIntElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.EInt");
@@ -844,7 +898,17 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	//Algorithm returns algorithm::Algorithm:
 	//    {algorithm::Algorithm}
-	//    function=Function
+	//    functions+=Function
+	//    '('
+	//        (inputs+=Argument ( "," inputs+=Argument)*)?
+	//    ')'
+	//    (
+	//        '>'
+	//        functions+=Function
+	//        '('
+	//        (inputs+=Argument ( "," inputs+=Argument)*)?
+	//        ')'
+	//    )?
 	//        ;
 	public AlgorithmElements getAlgorithmAccess() {
 		return pAlgorithm;
@@ -891,11 +955,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//Function returns algorithm::Function:
 	//    {algorithm::Function}
 	//    operation=Operation
-	//    '('
-	//        (input+=Argument ( "," input+=Argument)*)  ?
-	//    ')'
-	//    ('>' next=Function)?
-	//    ;
+	//        ;
 	public FunctionElements getFunctionAccess() {
 		return pFunction;
 	}

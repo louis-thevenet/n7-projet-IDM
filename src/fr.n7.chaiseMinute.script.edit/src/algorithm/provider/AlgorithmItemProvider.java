@@ -77,7 +77,8 @@ public class AlgorithmItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(AlgorithmPackage.Literals.ALGORITHM__FUNCTION);
+			childrenFeatures.add(AlgorithmPackage.Literals.ALGORITHM__FUNCTIONS);
+			childrenFeatures.add(AlgorithmPackage.Literals.ALGORITHM__INPUTS);
 		}
 		return childrenFeatures;
 	}
@@ -130,7 +131,8 @@ public class AlgorithmItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Algorithm.class)) {
-			case AlgorithmPackage.ALGORITHM__FUNCTION:
+			case AlgorithmPackage.ALGORITHM__FUNCTIONS:
+			case AlgorithmPackage.ALGORITHM__INPUTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,8 +152,13 @@ public class AlgorithmItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(AlgorithmPackage.Literals.ALGORITHM__FUNCTION,
+				(AlgorithmPackage.Literals.ALGORITHM__FUNCTIONS,
 				 AlgorithmFactory.eINSTANCE.createFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AlgorithmPackage.Literals.ALGORITHM__INPUTS,
+				 AlgorithmFactory.eINSTANCE.createColumnArgument()));
 	}
 
 	/**

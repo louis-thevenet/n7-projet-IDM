@@ -46,12 +46,14 @@ public class FromTextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getComputedColumnAccess().getGroup(), "rule__ComputedColumn__Group__0");
 			builder.put(grammarAccess.getColumnArgumentAccess().getGroup(), "rule__ColumnArgument__Group__0");
 			builder.put(grammarAccess.getAlgorithmAccess().getGroup(), "rule__Algorithm__Group__0");
+			builder.put(grammarAccess.getAlgorithmAccess().getGroup_3(), "rule__Algorithm__Group_3__0");
+			builder.put(grammarAccess.getAlgorithmAccess().getGroup_3_1(), "rule__Algorithm__Group_3_1__0");
+			builder.put(grammarAccess.getAlgorithmAccess().getGroup_5(), "rule__Algorithm__Group_5__0");
+			builder.put(grammarAccess.getAlgorithmAccess().getGroup_5_3(), "rule__Algorithm__Group_5_3__0");
+			builder.put(grammarAccess.getAlgorithmAccess().getGroup_5_3_1(), "rule__Algorithm__Group_5_3_1__0");
 			builder.put(grammarAccess.getSumAccess().getGroup(), "rule__Sum__Group__0");
 			builder.put(grammarAccess.getFeurAccess().getGroup(), "rule__Feur__Group__0");
 			builder.put(grammarAccess.getFunctionAccess().getGroup(), "rule__Function__Group__0");
-			builder.put(grammarAccess.getFunctionAccess().getGroup_3(), "rule__Function__Group_3__0");
-			builder.put(grammarAccess.getFunctionAccess().getGroup_3_1(), "rule__Function__Group_3_1__0");
-			builder.put(grammarAccess.getFunctionAccess().getGroup_5(), "rule__Function__Group_5__0");
 			builder.put(grammarAccess.getEIntAccess().getGroup(), "rule__EInt__Group__0");
 			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_1_0(), "rule__ChaiseMinute__TablesAssignment_1_0");
 			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_1_1_1(), "rule__ChaiseMinute__TablesAssignment_1_1_1");
@@ -68,11 +70,13 @@ public class FromTextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getComputedColumnAccess().getAlgorithmAssignment_5(), "rule__ComputedColumn__AlgorithmAssignment_5");
 			builder.put(grammarAccess.getComputedColumnAccess().getIdAssignment_7(), "rule__ComputedColumn__IdAssignment_7");
 			builder.put(grammarAccess.getColumnArgumentAccess().getColumnPathAssignment_1(), "rule__ColumnArgument__ColumnPathAssignment_1");
-			builder.put(grammarAccess.getAlgorithmAccess().getFunctionAssignment_1(), "rule__Algorithm__FunctionAssignment_1");
+			builder.put(grammarAccess.getAlgorithmAccess().getFunctionsAssignment_1(), "rule__Algorithm__FunctionsAssignment_1");
+			builder.put(grammarAccess.getAlgorithmAccess().getInputsAssignment_3_0(), "rule__Algorithm__InputsAssignment_3_0");
+			builder.put(grammarAccess.getAlgorithmAccess().getInputsAssignment_3_1_1(), "rule__Algorithm__InputsAssignment_3_1_1");
+			builder.put(grammarAccess.getAlgorithmAccess().getFunctionsAssignment_5_1(), "rule__Algorithm__FunctionsAssignment_5_1");
+			builder.put(grammarAccess.getAlgorithmAccess().getInputsAssignment_5_3_0(), "rule__Algorithm__InputsAssignment_5_3_0");
+			builder.put(grammarAccess.getAlgorithmAccess().getInputsAssignment_5_3_1_1(), "rule__Algorithm__InputsAssignment_5_3_1_1");
 			builder.put(grammarAccess.getFunctionAccess().getOperationAssignment_1(), "rule__Function__OperationAssignment_1");
-			builder.put(grammarAccess.getFunctionAccess().getInputAssignment_3_0(), "rule__Function__InputAssignment_3_0");
-			builder.put(grammarAccess.getFunctionAccess().getInputAssignment_3_1_1(), "rule__Function__InputAssignment_3_1_1");
-			builder.put(grammarAccess.getFunctionAccess().getNextAssignment_5_1(), "rule__Function__NextAssignment_5_1");
 		}
 	}
 	

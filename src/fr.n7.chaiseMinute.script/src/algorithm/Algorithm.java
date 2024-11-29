@@ -2,6 +2,7 @@
  */
 package algorithm;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,7 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link algorithm.Algorithm#getFunction <em>Function</em>}</li>
+ *   <li>{@link algorithm.Algorithm#getFunctions <em>Functions</em>}</li>
+ *   <li>{@link algorithm.Algorithm#getInputs <em>Inputs</em>}</li>
  * </ul>
  *
  * @see algorithm.AlgorithmPackage#getAlgorithm()
@@ -22,25 +24,27 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Algorithm extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Function</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Functions</b></em>' containment reference list.
+	 * The list contents are of type {@link algorithm.Function}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Function</em>' containment reference.
-	 * @see #setFunction(Function)
-	 * @see algorithm.AlgorithmPackage#getAlgorithm_Function()
+	 * @return the value of the '<em>Functions</em>' containment reference list.
+	 * @see algorithm.AlgorithmPackage#getAlgorithm_Functions()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Function getFunction();
+	EList<Function> getFunctions();
 
 	/**
-	 * Sets the value of the '{@link algorithm.Algorithm#getFunction <em>Function</em>}' containment reference.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
+	 * The list contents are of type {@link algorithm.Argument}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Function</em>' containment reference.
-	 * @see #getFunction()
+	 * @return the value of the '<em>Inputs</em>' containment reference list.
+	 * @see algorithm.AlgorithmPackage#getAlgorithm_Inputs()
+	 * @model containment="true"
 	 * @generated
 	 */
-	void setFunction(Function value);
+	EList<Argument> getInputs();
 
 } // Algorithm

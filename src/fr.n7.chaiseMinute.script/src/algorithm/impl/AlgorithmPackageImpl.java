@@ -151,8 +151,18 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getAlgorithm_Function() {
+	public EReference getAlgorithm_Functions() {
 		return (EReference)algorithmEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAlgorithm_Inputs() {
+		return (EReference)algorithmEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -171,28 +181,8 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getFunction_Next() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_Input() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getFunction_Operation() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(2);
+		return (EReference)functionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -203,16 +193,6 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	@Override
 	public EClass getArgument() {
 		return argumentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getArgument_UsedBy() {
-		return (EReference)argumentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -295,15 +275,13 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 
 		// Create classes and their features
 		algorithmEClass = createEClass(ALGORITHM);
-		createEReference(algorithmEClass, ALGORITHM__FUNCTION);
+		createEReference(algorithmEClass, ALGORITHM__FUNCTIONS);
+		createEReference(algorithmEClass, ALGORITHM__INPUTS);
 
 		functionEClass = createEClass(FUNCTION);
-		createEReference(functionEClass, FUNCTION__NEXT);
-		createEReference(functionEClass, FUNCTION__INPUT);
 		createEReference(functionEClass, FUNCTION__OPERATION);
 
 		argumentEClass = createEClass(ARGUMENT);
-		createEReference(argumentEClass, ARGUMENT__USED_BY);
 
 		columnArgumentEClass = createEClass(COLUMN_ARGUMENT);
 		createEAttribute(columnArgumentEClass, COLUMN_ARGUMENT__COLUMN_PATH);
@@ -349,15 +327,13 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(algorithmEClass, Algorithm.class, "Algorithm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAlgorithm_Function(), this.getFunction(), null, "function", null, 1, 1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgorithm_Functions(), this.getFunction(), null, "functions", null, 1, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgorithm_Inputs(), this.getArgument(), null, "inputs", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFunction_Next(), this.getFunction(), null, "next", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_Input(), this.getArgument(), this.getArgument_UsedBy(), "input", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunction_Operation(), this.getOperation(), null, "operation", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentEClass, Argument.class, "Argument", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArgument_UsedBy(), this.getFunction(), this.getFunction_Input(), "usedBy", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(columnArgumentEClass, ColumnArgument.class, "ColumnArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumnArgument_ColumnPath(), ecorePackage.getEString(), "columnPath", null, 0, 1, ColumnArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

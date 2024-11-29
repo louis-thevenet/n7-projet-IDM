@@ -90,17 +90,11 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Algorithm returns Algorithm
 	 *
 	 * Constraint:
-	 *     function=Function
+	 *     (functions+=Function (inputs+=Argument inputs+=Argument*)? (functions+=Function (inputs+=Argument inputs+=Argument*)?)?)
 	 * </pre>
 	 */
 	protected void sequence_Algorithm(ISerializationContext context, Algorithm semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AlgorithmPackage.Literals.ALGORITHM__FUNCTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AlgorithmPackage.Literals.ALGORITHM__FUNCTION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAlgorithmAccess().getFunctionFunctionParserRuleCall_1_0(), semanticObject.getFunction());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -211,11 +205,17 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Function returns Function
 	 *
 	 * Constraint:
-	 *     (operation=Operation (input+=Argument input+=Argument*)? next=Function?)
+	 *     operation=Operation
 	 * </pre>
 	 */
 	protected void sequence_Function(ISerializationContext context, Function semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AlgorithmPackage.Literals.FUNCTION__OPERATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AlgorithmPackage.Literals.FUNCTION__OPERATION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFunctionAccess().getOperationOperationParserRuleCall_1_0(), semanticObject.getOperation());
+		feeder.finish();
 	}
 	
 	

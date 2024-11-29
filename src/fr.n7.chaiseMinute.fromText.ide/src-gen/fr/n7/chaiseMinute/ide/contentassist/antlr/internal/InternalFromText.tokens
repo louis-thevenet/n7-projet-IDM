@@ -3,11 +3,11 @@
 ','=15
 '->'=21
 ':'=19
-'>'=25
-'Feur'=24
+'>'=23
+'Feur'=25
 'Int'=12
 'String'=11
-'Sum'=23
+'Sum'=24
 'computed'=22
 'data'=16
 'imported'=20

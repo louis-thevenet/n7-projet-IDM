@@ -2,21 +2,16 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="algorithm" nsURI="http://algorithm" nsPrefix="algorithm">
   <eClassifiers xsi:type="ecore:EClass" name="Algorithm">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="function" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" lowerBound="1"
         upperBound="-1" eType="#//Function" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//Argument" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Function"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
-        eType="#//Argument" containment="true" eOpposite="#//Argument/usedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Argument" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" eType="#//Function"
-        eOpposite="#//Function/input"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Argument" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ColumnArgument" eSuperTypes="#//Argument">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
