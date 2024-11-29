@@ -7,9 +7,6 @@ import algorithm.AlgorithmFactory;
 import algorithm.AlgorithmPackage;
 import algorithm.Argument;
 import algorithm.ColumnArgument;
-import algorithm.Function;
-import algorithm.Operation;
-import algorithm.Sum;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -37,13 +34,6 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass functionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass argumentEClass = null;
 
 	/**
@@ -52,20 +42,6 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	private EClass columnArgumentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass operationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sumEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -143,7 +119,7 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getAlgorithm_Input() {
+	public EReference getAlgorithm_Inputs() {
 		return (EReference)algorithmEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -153,58 +129,8 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getAlgorithm_Function() {
-		return (EReference)algorithmEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFunction() {
-		return functionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_Previous() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_Next() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_Input() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_Operation() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(3);
+	public EAttribute getAlgorithm_Functions() {
+		return (EAttribute)algorithmEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -243,26 +169,6 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	@Override
-	public EClass getOperation() {
-		return operationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSum() {
-		return sumEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public AlgorithmFactory getAlgorithmFactory() {
 		return (AlgorithmFactory)getEFactoryInstance();
 	}
@@ -287,23 +193,13 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 
 		// Create classes and their features
 		algorithmEClass = createEClass(ALGORITHM);
-		createEReference(algorithmEClass, ALGORITHM__INPUT);
-		createEReference(algorithmEClass, ALGORITHM__FUNCTION);
-
-		functionEClass = createEClass(FUNCTION);
-		createEReference(functionEClass, FUNCTION__PREVIOUS);
-		createEReference(functionEClass, FUNCTION__NEXT);
-		createEReference(functionEClass, FUNCTION__INPUT);
-		createEReference(functionEClass, FUNCTION__OPERATION);
+		createEReference(algorithmEClass, ALGORITHM__INPUTS);
+		createEAttribute(algorithmEClass, ALGORITHM__FUNCTIONS);
 
 		argumentEClass = createEClass(ARGUMENT);
 
 		columnArgumentEClass = createEClass(COLUMN_ARGUMENT);
 		createEAttribute(columnArgumentEClass, COLUMN_ARGUMENT__COLUMN_PATH);
-
-		operationEClass = createEClass(OPERATION);
-
-		sumEClass = createEClass(SUM);
 	}
 
 	/**
@@ -335,27 +231,16 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 
 		// Add supertypes to classes
 		columnArgumentEClass.getESuperTypes().add(this.getArgument());
-		sumEClass.getESuperTypes().add(this.getOperation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(algorithmEClass, Algorithm.class, "Algorithm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAlgorithm_Input(), this.getArgument(), null, "input", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAlgorithm_Function(), this.getFunction(), null, "function", null, 1, 1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFunction_Previous(), this.getFunction(), this.getFunction_Next(), "previous", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_Next(), this.getFunction(), this.getFunction_Previous(), "next", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_Input(), this.getArgument(), null, "input", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_Operation(), this.getOperation(), null, "operation", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgorithm_Inputs(), this.getArgument(), null, "inputs", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAlgorithm_Functions(), ecorePackage.getEString(), "functions", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentEClass, Argument.class, "Argument", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(columnArgumentEClass, ColumnArgument.class, "ColumnArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumnArgument_ColumnPath(), ecorePackage.getEString(), "columnPath", null, 0, 1, ColumnArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(operationEClass, Operation.class, "Operation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(sumEClass, Sum.class, "Sum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

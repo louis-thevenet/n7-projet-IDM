@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link algorithm.Algorithm#getInput <em>Input</em>}</li>
- *   <li>{@link algorithm.Algorithm#getFunction <em>Function</em>}</li>
+ *   <li>{@link algorithm.Algorithm#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link algorithm.Algorithm#getFunctions <em>Functions</em>}</li>
  * </ul>
  *
  * @see algorithm.AlgorithmPackage#getAlgorithm()
@@ -25,37 +25,27 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Algorithm extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Input</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
 	 * The list contents are of type {@link algorithm.Argument}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input</em>' containment reference list.
-	 * @see algorithm.AlgorithmPackage#getAlgorithm_Input()
+	 * @return the value of the '<em>Inputs</em>' containment reference list.
+	 * @see algorithm.AlgorithmPackage#getAlgorithm_Inputs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Argument> getInput();
+	EList<Argument> getInputs();
 
 	/**
-	 * Returns the value of the '<em><b>Function</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Functions</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Function</em>' containment reference.
-	 * @see #setFunction(Function)
-	 * @see algorithm.AlgorithmPackage#getAlgorithm_Function()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Functions</em>' attribute list.
+	 * @see algorithm.AlgorithmPackage#getAlgorithm_Functions()
+	 * @model unique="false"
 	 * @generated
 	 */
-	Function getFunction();
-
-	/**
-	 * Sets the value of the '{@link algorithm.Algorithm#getFunction <em>Function</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Function</em>' containment reference.
-	 * @see #getFunction()
-	 * @generated
-	 */
-	void setFunction(Function value);
+	EList<String> getFunctions();
 
 } // Algorithm

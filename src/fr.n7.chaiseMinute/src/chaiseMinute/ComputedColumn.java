@@ -14,7 +14,7 @@ import algorithm.ColumnArgument;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link chaiseMinute.ComputedColumn#getFunction <em>Function</em>}</li>
+ *   <li>{@link chaiseMinute.ComputedColumn#getAlgorithm <em>Algorithm</em>}</li>
  *   <li>{@link chaiseMinute.ComputedColumn#getOutput <em>Output</em>}</li>
  * </ul>
  *
@@ -24,26 +24,26 @@ import algorithm.ColumnArgument;
  */
 public interface ComputedColumn extends Column {
 	/**
-	 * Returns the value of the '<em><b>Function</b></em>' reference.
+	 * Returns the value of the '<em><b>Algorithm</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Function</em>' reference.
-	 * @see #setFunction(Algorithm)
-	 * @see chaiseMinute.ChaiseMinutePackage#getComputedColumn_Function()
-	 * @model
+	 * @return the value of the '<em>Algorithm</em>' containment reference.
+	 * @see #setAlgorithm(Algorithm)
+	 * @see chaiseMinute.ChaiseMinutePackage#getComputedColumn_Algorithm()
+	 * @model containment="true"
 	 * @generated
 	 */
-	Algorithm getFunction();
+	Algorithm getAlgorithm();
 
 	/**
-	 * Sets the value of the '{@link chaiseMinute.ComputedColumn#getFunction <em>Function</em>}' reference.
+	 * Sets the value of the '{@link chaiseMinute.ComputedColumn#getAlgorithm <em>Algorithm</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Function</em>' reference.
-	 * @see #getFunction()
+	 * @param value the new value of the '<em>Algorithm</em>' containment reference.
+	 * @see #getAlgorithm()
 	 * @generated
 	 */
-	void setFunction(Algorithm value);
+	void setAlgorithm(Algorithm value);
 
 	/**
 	 * Returns the value of the '<em><b>Output</b></em>' reference.

@@ -11,6 +11,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: chaiseMinute,
  chaiseMinute.impl,
  chaiseMinute.util
+Import-Package: chaiseMinute
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  fr.n7.chaiseMinute.script;visibility:=reexport

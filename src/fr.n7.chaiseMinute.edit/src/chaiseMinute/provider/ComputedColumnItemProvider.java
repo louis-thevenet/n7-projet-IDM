@@ -3,6 +3,8 @@
 package chaiseMinute.provider;
 
 
+import algorithm.AlgorithmFactory;
+
 import chaiseMinute.ChaiseMinutePackage;
 import chaiseMinute.ComputedColumn;
 
@@ -13,6 +15,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -62,7 +66,6 @@ public class ComputedColumnItemProvider
 
 			addIdPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addFunctionPropertyDescriptor(object);
 			addOutputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -113,28 +116,6 @@ public class ComputedColumnItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Function feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFunctionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComputedColumn_function_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComputedColumn_function_feature", "_UI_ComputedColumn_type"),
-				 ChaiseMinutePackage.Literals.COMPUTED_COLUMN__FUNCTION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Output feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -154,6 +135,36 @@ public class ComputedColumnItemProvider
 				 null,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ChaiseMinutePackage.Literals.COMPUTED_COLUMN__ALGORITHM);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -198,6 +209,9 @@ public class ComputedColumnItemProvider
 			case ChaiseMinutePackage.COMPUTED_COLUMN__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case ChaiseMinutePackage.COMPUTED_COLUMN__ALGORITHM:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -212,6 +226,11 @@ public class ComputedColumnItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ChaiseMinutePackage.Literals.COMPUTED_COLUMN__ALGORITHM,
+				 AlgorithmFactory.eINSTANCE.createAlgorithm()));
 	}
 
 	/**

@@ -25,12 +25,12 @@ public interface ImportedColumn extends Column {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path</em>' attribute.
-	 * @see #setPath(int)
+	 * @see #setPath(String)
 	 * @see chaiseMinute.ChaiseMinutePackage#getImportedColumn_Path()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	int getPath();
+	String getPath();
 
 	/**
 	 * Sets the value of the '{@link chaiseMinute.ImportedColumn#getPath <em>Path</em>}' attribute.
@@ -40,6 +40,6 @@ public interface ImportedColumn extends Column {
 	 * @see #getPath()
 	 * @generated
 	 */
-	void setPath(int value);
+	void setPath(String value);
 
 } // ImportedColumn

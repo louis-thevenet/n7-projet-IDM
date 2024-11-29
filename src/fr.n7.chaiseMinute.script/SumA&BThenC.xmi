@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm:Algorithm
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:algorithm="http://algorithm">
+  <function>
+    <input xsi:type="algorithm:ColumnArgument"
+        columnPath="aa"/>
+    <input xsi:type="algorithm:ColumnArgument"
+        columnPath="zz"/>
+    <operation
+        xsi:type="algorithm:Sum"/>
+  </function>
+</algorithm:Algorithm>

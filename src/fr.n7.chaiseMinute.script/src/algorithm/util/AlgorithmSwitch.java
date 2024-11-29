@@ -72,12 +72,6 @@ public class AlgorithmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AlgorithmPackage.FUNCTION: {
-				Function function = (Function)theEObject;
-				T result = caseFunction(function);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case AlgorithmPackage.ARGUMENT: {
 				Argument argument = (Argument)theEObject;
 				T result = caseArgument(argument);
@@ -88,19 +82,6 @@ public class AlgorithmSwitch<T> extends Switch<T> {
 				ColumnArgument columnArgument = (ColumnArgument)theEObject;
 				T result = caseColumnArgument(columnArgument);
 				if (result == null) result = caseArgument(columnArgument);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AlgorithmPackage.OPERATION: {
-				Operation operation = (Operation)theEObject;
-				T result = caseOperation(operation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AlgorithmPackage.SUM: {
-				Sum sum = (Sum)theEObject;
-				T result = caseSum(sum);
-				if (result == null) result = caseOperation(sum);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,21 +101,6 @@ public class AlgorithmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlgorithm(Algorithm object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Function</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFunction(Function object) {
 		return null;
 	}
 
@@ -165,36 +131,6 @@ public class AlgorithmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseColumnArgument(ColumnArgument object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Operation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOperation(Operation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sum</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sum</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSum(Sum object) {
 		return null;
 	}
 

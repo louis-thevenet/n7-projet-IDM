@@ -31,15 +31,6 @@ public interface AlgorithmFactory extends EFactory {
 	Algorithm createAlgorithm();
 
 	/**
-	 * Returns a new object of class '<em>Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Function</em>'.
-	 * @generated
-	 */
-	Function createFunction();
-
-	/**
 	 * Returns a new object of class '<em>Column Argument</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,15 +38,6 @@ public interface AlgorithmFactory extends EFactory {
 	 * @generated
 	 */
 	ColumnArgument createColumnArgument();
-
-	/**
-	 * Returns a new object of class '<em>Sum</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sum</em>'.
-	 * @generated
-	 */
-	Sum createSum();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -83,7 +83,7 @@ public class ImportedColumnImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int PATH_EDEFAULT = 0;
+	protected static final String PATH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
@@ -93,7 +93,7 @@ public class ImportedColumnImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected int path = PATH_EDEFAULT;
+	protected String path = PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -209,7 +209,7 @@ public class ImportedColumnImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public int getPath() {
+	public String getPath() {
 		return path;
 	}
 
@@ -219,8 +219,8 @@ public class ImportedColumnImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void setPath(int newPath) {
-		int oldPath = path;
+	public void setPath(String newPath) {
+		String oldPath = path;
 		path = newPath;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ChaiseMinutePackage.IMPORTED_COLUMN__PATH, oldPath, path));
@@ -308,7 +308,7 @@ public class ImportedColumnImpl extends MinimalEObjectImpl.Container implements 
 				setType((DataType)newValue);
 				return;
 			case ChaiseMinutePackage.IMPORTED_COLUMN__PATH:
-				setPath((Integer)newValue);
+				setPath((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -353,7 +353,7 @@ public class ImportedColumnImpl extends MinimalEObjectImpl.Container implements 
 			case ChaiseMinutePackage.IMPORTED_COLUMN__TYPE:
 				return type != TYPE_EDEFAULT;
 			case ChaiseMinutePackage.IMPORTED_COLUMN__PATH:
-				return path != PATH_EDEFAULT;
+				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 		}
 		return super.eIsSet(featureID);
 	}
