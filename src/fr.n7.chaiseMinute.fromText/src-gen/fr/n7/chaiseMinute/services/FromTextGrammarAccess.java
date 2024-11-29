@@ -373,17 +373,17 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cColumnPathAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cColumnPathSTRINGTerminalRuleCall_1_0 = (RuleCall)cColumnPathAssignment_1.eContents().get(0);
 		
-		//ColumnArgument returns algorithm::ColumnArgument:
-		//    {algorithm::ColumnArgument}
+		//ColumnArgument returns function::ColumnArgument:
+		//    {function::ColumnArgument}
 		//    columnPath=STRING
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{algorithm::ColumnArgument}
+		//{function::ColumnArgument}
 		//columnPath=STRING
 		public Group getGroup() { return cGroup; }
 		
-		//{algorithm::ColumnArgument}
+		//{function::ColumnArgument}
 		public Action getColumnArgumentAction_0() { return cColumnArgumentAction_0; }
 		
 		//columnPath=STRING
@@ -396,7 +396,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Argument");
 		private final RuleCall cColumnArgumentParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		//Argument returns algorithm::Argument:
+		//Argument returns function::Argument:
 		//    ColumnArgument
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
@@ -776,8 +776,8 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getComputedColumnAccess().getRule();
 	}
 	
-	//ColumnArgument returns algorithm::ColumnArgument:
-	//    {algorithm::ColumnArgument}
+	//ColumnArgument returns function::ColumnArgument:
+	//    {function::ColumnArgument}
 	//    columnPath=STRING
 	//    ;
 	public ColumnArgumentElements getColumnArgumentAccess() {
@@ -788,7 +788,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getColumnArgumentAccess().getRule();
 	}
 	
-	//Argument returns algorithm::Argument:
+	//Argument returns function::Argument:
 	//    ColumnArgument
 	//    ;
 	public ArgumentElements getArgumentAccess() {

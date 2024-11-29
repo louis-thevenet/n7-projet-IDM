@@ -3,7 +3,7 @@
 package chaiseMinute;
 
 import algorithm.Algorithm;
-import algorithm.ColumnArgument;
+import function.ColumnArgument;
 
 /**
  * <!-- begin-user-doc -->

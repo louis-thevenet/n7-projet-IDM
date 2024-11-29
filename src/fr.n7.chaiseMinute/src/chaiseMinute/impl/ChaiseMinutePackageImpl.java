@@ -15,6 +15,7 @@ import chaiseMinute.ImportedColumn;
 import chaiseMinute.IndexColumn;
 import chaiseMinute.Table;
 
+import function.FunctionPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -134,6 +135,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 
 		// Initialize simple dependencies
 		AlgorithmPackage.eINSTANCE.eClass();
+		FunctionPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theChaiseMinutePackage.createPackageContents();
@@ -422,6 +424,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 
 		// Obtain other dependent packages
 		AlgorithmPackage theAlgorithmPackage = (AlgorithmPackage)EPackage.Registry.INSTANCE.getEPackage(AlgorithmPackage.eNS_URI);
+		FunctionPackage theFunctionPackage = (FunctionPackage)EPackage.Registry.INSTANCE.getEPackage(FunctionPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -453,7 +456,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 
 		initEClass(computedColumnEClass, ComputedColumn.class, "ComputedColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComputedColumn_Algorithm(), theAlgorithmPackage.getAlgorithm(), null, "algorithm", null, 0, 1, ComputedColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComputedColumn_Output(), theAlgorithmPackage.getColumnArgument(), null, "output", null, 0, 1, ComputedColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComputedColumn_Output(), theFunctionPackage.getColumnArgument(), null, "output", null, 0, 1, ComputedColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importedColumnEClass, ImportedColumn.class, "ImportedColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImportedColumn_Path(), ecorePackage.getEString(), "path", null, 1, 1, ImportedColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

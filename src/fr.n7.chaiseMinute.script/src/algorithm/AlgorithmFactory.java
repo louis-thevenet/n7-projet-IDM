@@ -31,15 +31,6 @@ public interface AlgorithmFactory extends EFactory {
 	Algorithm createAlgorithm();
 
 	/**
-	 * Returns a new object of class '<em>Column Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Column Argument</em>'.
-	 * @generated
-	 */
-	ColumnArgument createColumnArgument();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -4,8 +4,9 @@ package algorithm.provider;
 
 
 import algorithm.Algorithm;
-import algorithm.AlgorithmFactory;
 import algorithm.AlgorithmPackage;
+
+import function.FunctionFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -153,7 +154,7 @@ public class AlgorithmItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(AlgorithmPackage.Literals.ALGORITHM__INPUTS,
-				 AlgorithmFactory.eINSTANCE.createColumnArgument()));
+				 FunctionFactory.eINSTANCE.createColumnArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter

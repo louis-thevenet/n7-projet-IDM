@@ -31,11 +31,11 @@ public class FromTextFormatter extends AbstractFormatter2 {
   }
 
   protected void _format(final Table table, @Extension final IFormattableDocument document) {
-    document.<IndexColumn>format(table.getIndexColumn());
     EList<Column> _columns = table.getColumns();
     for (final Column column : _columns) {
       document.<Column>format(column);
     }
+    document.<IndexColumn>format(table.getIndexColumn());
   }
 
   public void format(final Object chaiseMinute, final IFormattableDocument document) {

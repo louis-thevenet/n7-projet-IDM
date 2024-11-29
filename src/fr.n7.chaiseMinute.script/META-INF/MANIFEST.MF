@@ -10,7 +10,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: algorithm,
  algorithm.impl,
- algorithm.util
+ algorithm.util,
+ function,
+ function.impl,
+ function.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

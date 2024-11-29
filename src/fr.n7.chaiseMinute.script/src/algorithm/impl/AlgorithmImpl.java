@@ -4,7 +4,8 @@ package algorithm.impl;
 
 import algorithm.Algorithm;
 import algorithm.AlgorithmPackage;
-import algorithm.Argument;
+
+import function.Argument;
 
 import java.util.Collection;
 

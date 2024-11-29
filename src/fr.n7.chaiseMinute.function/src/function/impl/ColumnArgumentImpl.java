@@ -1,9 +1,9 @@
 /**
  */
-package algorithm.impl;
+package function.impl;
 
-import algorithm.AlgorithmPackage;
-import algorithm.ColumnArgument;
+import function.ColumnArgument;
+import function.FunctionPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link algorithm.impl.ColumnArgumentImpl#getColumnPath <em>Column Path</em>}</li>
+ *   <li>{@link function.impl.ColumnArgumentImpl#getColumnPath <em>Column Path</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,7 +62,7 @@ public class ColumnArgumentImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AlgorithmPackage.Literals.COLUMN_ARGUMENT;
+		return FunctionPackage.Literals.COLUMN_ARGUMENT;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class ColumnArgumentImpl extends MinimalEObjectImpl.Container implements 
 		String oldColumnPath = columnPath;
 		columnPath = newColumnPath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmPackage.COLUMN_ARGUMENT__COLUMN_PATH, oldColumnPath, columnPath));
+			eNotify(new ENotificationImpl(this, Notification.SET, FunctionPackage.COLUMN_ARGUMENT__COLUMN_PATH, oldColumnPath, columnPath));
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class ColumnArgumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AlgorithmPackage.COLUMN_ARGUMENT__COLUMN_PATH:
+			case FunctionPackage.COLUMN_ARGUMENT__COLUMN_PATH:
 				return getColumnPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -110,7 +110,7 @@ public class ColumnArgumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AlgorithmPackage.COLUMN_ARGUMENT__COLUMN_PATH:
+			case FunctionPackage.COLUMN_ARGUMENT__COLUMN_PATH:
 				setColumnPath((String)newValue);
 				return;
 		}
@@ -125,7 +125,7 @@ public class ColumnArgumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AlgorithmPackage.COLUMN_ARGUMENT__COLUMN_PATH:
+			case FunctionPackage.COLUMN_ARGUMENT__COLUMN_PATH:
 				setColumnPath(COLUMN_PATH_EDEFAULT);
 				return;
 		}
@@ -140,7 +140,7 @@ public class ColumnArgumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AlgorithmPackage.COLUMN_ARGUMENT__COLUMN_PATH:
+			case FunctionPackage.COLUMN_ARGUMENT__COLUMN_PATH:
 				return COLUMN_PATH_EDEFAULT == null ? columnPath != null : !COLUMN_PATH_EDEFAULT.equals(columnPath);
 		}
 		return super.eIsSet(featureID);

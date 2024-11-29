@@ -57,7 +57,6 @@ public class AlgorithmFactoryImpl extends EFactoryImpl implements AlgorithmFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case AlgorithmPackage.ALGORITHM: return createAlgorithm();
-			case AlgorithmPackage.COLUMN_ARGUMENT: return createColumnArgument();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -72,17 +71,6 @@ public class AlgorithmFactoryImpl extends EFactoryImpl implements AlgorithmFacto
 	public Algorithm createAlgorithm() {
 		AlgorithmImpl algorithm = new AlgorithmImpl();
 		return algorithm;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ColumnArgument createColumnArgument() {
-		ColumnArgumentImpl columnArgument = new ColumnArgumentImpl();
-		return columnArgument;
 	}
 
 	/**

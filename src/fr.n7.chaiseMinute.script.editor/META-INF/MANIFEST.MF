@@ -9,7 +9,8 @@ Bundle-Activator: algorithm.presentation.AlgorithmEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: algorithm.presentation
+Export-Package: algorithm.presentation,
+ function.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  fr.n7.chaiseMinute.script.edit;visibility:=reexport,

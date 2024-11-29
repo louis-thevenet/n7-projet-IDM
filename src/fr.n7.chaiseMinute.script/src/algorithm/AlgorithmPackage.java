@@ -102,71 +102,6 @@ public interface AlgorithmPackage extends EPackage {
 	 */
 	int ALGORITHM_OPERATION_COUNT = 0;
 
-	/**
-	 * The meta object id for the '{@link algorithm.Argument <em>Argument</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see algorithm.Argument
-	 * @see algorithm.impl.AlgorithmPackageImpl#getArgument()
-	 * @generated
-	 */
-	int ARGUMENT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Argument</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Argument</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link algorithm.impl.ColumnArgumentImpl <em>Column Argument</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see algorithm.impl.ColumnArgumentImpl
-	 * @see algorithm.impl.AlgorithmPackageImpl#getColumnArgument()
-	 * @generated
-	 */
-	int COLUMN_ARGUMENT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Column Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLUMN_ARGUMENT__COLUMN_PATH = ARGUMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Column Argument</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLUMN_ARGUMENT_FEATURE_COUNT = ARGUMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Column Argument</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLUMN_ARGUMENT_OPERATION_COUNT = ARGUMENT_OPERATION_COUNT + 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link algorithm.Algorithm <em>Algorithm</em>}'.
@@ -199,37 +134,6 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAlgorithm_Functions();
-
-	/**
-	 * Returns the meta object for class '{@link algorithm.Argument <em>Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Argument</em>'.
-	 * @see algorithm.Argument
-	 * @generated
-	 */
-	EClass getArgument();
-
-	/**
-	 * Returns the meta object for class '{@link algorithm.ColumnArgument <em>Column Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Column Argument</em>'.
-	 * @see algorithm.ColumnArgument
-	 * @generated
-	 */
-	EClass getColumnArgument();
-
-	/**
-	 * Returns the meta object for the attribute '{@link algorithm.ColumnArgument#getColumnPath <em>Column Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Column Path</em>'.
-	 * @see algorithm.ColumnArgument#getColumnPath()
-	 * @see #getColumnArgument()
-	 * @generated
-	 */
-	EAttribute getColumnArgument_ColumnPath();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -279,34 +183,6 @@ public interface AlgorithmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ALGORITHM__FUNCTIONS = eINSTANCE.getAlgorithm_Functions();
-
-		/**
-		 * The meta object literal for the '{@link algorithm.Argument <em>Argument</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see algorithm.Argument
-		 * @see algorithm.impl.AlgorithmPackageImpl#getArgument()
-		 * @generated
-		 */
-		EClass ARGUMENT = eINSTANCE.getArgument();
-
-		/**
-		 * The meta object literal for the '{@link algorithm.impl.ColumnArgumentImpl <em>Column Argument</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see algorithm.impl.ColumnArgumentImpl
-		 * @see algorithm.impl.AlgorithmPackageImpl#getColumnArgument()
-		 * @generated
-		 */
-		EClass COLUMN_ARGUMENT = eINSTANCE.getColumnArgument();
-
-		/**
-		 * The meta object literal for the '<em><b>Column Path</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLUMN_ARGUMENT__COLUMN_PATH = eINSTANCE.getColumnArgument_ColumnPath();
 
 	}
 

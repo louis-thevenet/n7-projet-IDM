@@ -1,10 +1,12 @@
 /**
  */
-package algorithm.provider;
+package function.provider;
 
 
-import algorithm.AlgorithmPackage;
-import algorithm.ColumnArgument;
+import algorithm.provider.AlgorithmEditPlugin;
+
+import function.ColumnArgument;
+import function.FunctionPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -26,7 +28,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link algorithm.ColumnArgument} object.
+ * This is the item provider adapter for a {@link function.ColumnArgument} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +80,7 @@ public class ColumnArgumentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ColumnArgument_columnPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ColumnArgument_columnPath_feature", "_UI_ColumnArgument_type"),
-				 AlgorithmPackage.Literals.COLUMN_ARGUMENT__COLUMN_PATH,
+				 FunctionPackage.Literals.COLUMN_ARGUMENT__COLUMN_PATH,
 				 true,
 				 false,
 				 false,
@@ -125,7 +127,7 @@ public class ColumnArgumentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ColumnArgument.class)) {
-			case AlgorithmPackage.COLUMN_ARGUMENT__COLUMN_PATH:
+			case FunctionPackage.COLUMN_ARGUMENT__COLUMN_PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -14,6 +14,7 @@ public abstract class AbstractFromTextValidator extends AbstractDeclarativeValid
 	protected List<EPackage> getEPackages() {
 		List<EPackage> result = new ArrayList<EPackage>();
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://chaiseMinute"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://function"));
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://algorithm"));
 		return result;
 	}

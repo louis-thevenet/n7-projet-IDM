@@ -72,19 +72,6 @@ public class AlgorithmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AlgorithmPackage.ARGUMENT: {
-				Argument argument = (Argument)theEObject;
-				T result = caseArgument(argument);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AlgorithmPackage.COLUMN_ARGUMENT: {
-				ColumnArgument columnArgument = (ColumnArgument)theEObject;
-				T result = caseColumnArgument(columnArgument);
-				if (result == null) result = caseArgument(columnArgument);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -101,36 +88,6 @@ public class AlgorithmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlgorithm(Algorithm object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseArgument(Argument object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Column Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Column Argument</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseColumnArgument(ColumnArgument object) {
 		return null;
 	}
 

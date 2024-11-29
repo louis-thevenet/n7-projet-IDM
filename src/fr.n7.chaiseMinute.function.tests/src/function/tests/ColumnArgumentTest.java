@@ -1,9 +1,9 @@
 /**
  */
-package algorithm.tests;
+package function.tests;
 
-import algorithm.AlgorithmFactory;
-import algorithm.ColumnArgument;
+import function.ColumnArgument;
+import function.FunctionFactory;
 
 import junit.framework.TestCase;
 
@@ -72,7 +72,7 @@ public class ColumnArgumentTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(AlgorithmFactory.eINSTANCE.createColumnArgument());
+		setFixture(FunctionFactory.eINSTANCE.createColumnArgument());
 	}
 
 	/**

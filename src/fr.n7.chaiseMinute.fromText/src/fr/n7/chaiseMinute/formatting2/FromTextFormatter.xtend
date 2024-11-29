@@ -23,11 +23,11 @@ class FromTextFormatter extends AbstractFormatter2 {
 
 	def dispatch void format(Table table, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		table.indexColumn.format
 		for (column : table.columns) {
 			column.format
 		}
+		table.indexColumn.format
 	}
 	
-	// TODO: implement for Algorithm, Function
+	// TODO: implement for ComputedColumn, Algorithm
 }

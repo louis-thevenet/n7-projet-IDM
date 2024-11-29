@@ -95,29 +95,6 @@ public class AlgorithmItemProviderAdapterFactory extends AlgorithmAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link algorithm.ColumnArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ColumnArgumentItemProvider columnArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link algorithm.ColumnArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createColumnArgumentAdapter() {
-		if (columnArgumentItemProvider == null) {
-			columnArgumentItemProvider = new ColumnArgumentItemProvider(this);
-		}
-
-		return columnArgumentItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -223,7 +200,6 @@ public class AlgorithmItemProviderAdapterFactory extends AlgorithmAdapterFactory
 	@Override
 	public void dispose() {
 		if (algorithmItemProvider != null) algorithmItemProvider.dispose();
-		if (columnArgumentItemProvider != null) columnArgumentItemProvider.dispose();
 	}
 
 }

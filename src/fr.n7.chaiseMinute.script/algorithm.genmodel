@@ -10,9 +10,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Algorithm/inputs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute algorithm.ecore#//Algorithm/functions"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="algorithm.ecore#//Argument"/>
-    <genClasses ecoreClass="algorithm.ecore#//ColumnArgument">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithm.ecore#//ColumnArgument/columnPath"/>
+  </genPackages>
+  <genPackages prefix="Function" ecorePackage="../fr.n7.chaiseMinute.function/function.ecore#/">
+    <genClasses image="false" ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//Argument"/>
+    <genClasses ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//ColumnArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../fr.n7.chaiseMinute.function/function.ecore#//ColumnArgument/columnPath"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
