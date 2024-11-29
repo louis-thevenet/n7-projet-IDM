@@ -8,6 +8,7 @@ import chaiseMinute.Column;
 import chaiseMinute.IndexColumn;
 import chaiseMinute.Table;
 import com.google.inject.Inject;
+import fr.n7.chaiseMinute.services.FromTextGrammarAccess;
 import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -20,7 +21,7 @@ import org.eclipse.xtext.xbase.lib.Extension;
 public class FromTextFormatter extends AbstractFormatter2 {
   @Inject
   @Extension
-  private /* FromTextGrammarAccess */Object _fromTextGrammarAccess;
+  private FromTextGrammarAccess _fromTextGrammarAccess;
 
   protected void _format(final ChaiseMinute chaiseMinute, @Extension final IFormattableDocument document) {
     EList<Table> _tables = chaiseMinute.getTables();
@@ -30,11 +31,11 @@ public class FromTextFormatter extends AbstractFormatter2 {
   }
 
   protected void _format(final Table table, @Extension final IFormattableDocument document) {
-    document.<IndexColumn>format(table.getIndexColumn());
     EList<Column> _columns = table.getColumns();
     for (final Column column : _columns) {
       document.<Column>format(column);
     }
+    document.<IndexColumn>format(table.getIndexColumn());
   }
 
   public void format(final Object chaiseMinute, final IFormattableDocument document) {
