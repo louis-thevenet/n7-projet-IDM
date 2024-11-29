@@ -57,10 +57,7 @@ public class AlgorithmFactoryImpl extends EFactoryImpl implements AlgorithmFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case AlgorithmPackage.ALGORITHM: return createAlgorithm();
-			case AlgorithmPackage.FUNCTION: return createFunction();
 			case AlgorithmPackage.COLUMN_ARGUMENT: return createColumnArgument();
-			case AlgorithmPackage.FEUR: return createFeur();
-			case AlgorithmPackage.SUM: return createSum();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,42 +80,9 @@ public class AlgorithmFactoryImpl extends EFactoryImpl implements AlgorithmFacto
 	 * @generated
 	 */
 	@Override
-	public Function createFunction() {
-		FunctionImpl function = new FunctionImpl();
-		return function;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ColumnArgument createColumnArgument() {
 		ColumnArgumentImpl columnArgument = new ColumnArgumentImpl();
 		return columnArgument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Feur createFeur() {
-		FeurImpl feur = new FeurImpl();
-		return feur;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Sum createSum() {
-		SumImpl sum = new SumImpl();
-		return sum;
 	}
 
 	/**

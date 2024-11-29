@@ -66,39 +66,18 @@ Argument returns algorithm::Argument:
 
 Algorithm returns algorithm::Algorithm:
 	{algorithm::Algorithm}
-	functions+=Function
+	functions+=EString
 	'('
 		(inputs+=Argument ( "," inputs+=Argument)*)?
 	')'
 	(
 		'>'
-		functions+=Function
+		functions+=EString
 		'('
 		(inputs+=Argument ( "," inputs+=Argument)*)?
 		')' 
 	)?
 		;
-
-Operation returns algorithm::Operation:
-	Sum|Feur;
-
-Sum returns algorithm::Sum:
-	{algorithm::Sum}
-	'Sum'
-	;
-	
-Feur returns algorithm::Feur:
-	{algorithm::Feur}
-	'Feur'
-	;
-
-Function returns algorithm::Function:
-	{algorithm::Function}
-	operation=Operation
-	
-		;
-
-
 
 EInt returns ecore::EInt:
 	'-'? INT;

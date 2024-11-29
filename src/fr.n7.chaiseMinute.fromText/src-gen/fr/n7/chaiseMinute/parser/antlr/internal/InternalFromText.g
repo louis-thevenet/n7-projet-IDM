@@ -684,9 +684,9 @@ ruleAlgorithm returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAlgorithmAccess().getFunctionsFunctionParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getAlgorithmAccess().getFunctionsEStringParserRuleCall_1_0());
 				}
-				lv_functions_1_0=ruleFunction
+				lv_functions_1_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAlgorithmRule());
@@ -695,7 +695,7 @@ ruleAlgorithm returns [EObject current=null]
 						$current,
 						"functions",
 						lv_functions_1_0,
-						"fr.n7.chaiseMinute.FromText.Function");
+						"fr.n7.chaiseMinute.FromText.EString");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -762,9 +762,9 @@ ruleAlgorithm returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getAlgorithmAccess().getFunctionsFunctionParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getAlgorithmAccess().getFunctionsEStringParserRuleCall_5_1_0());
 					}
-					lv_functions_8_0=ruleFunction
+					lv_functions_8_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getAlgorithmRule());
@@ -773,7 +773,7 @@ ruleAlgorithm returns [EObject current=null]
 							$current,
 							"functions",
 							lv_functions_8_0,
-							"fr.n7.chaiseMinute.FromText.Function");
+							"fr.n7.chaiseMinute.FromText.EString");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -833,147 +833,6 @@ ruleAlgorithm returns [EObject current=null]
 				newLeafNode(otherlv_13, grammarAccess.getAlgorithmAccess().getRightParenthesisKeyword_5_4());
 			}
 		)?
-	)
-;
-
-// Entry rule entryRuleOperation
-entryRuleOperation returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getOperationRule()); }
-	iv_ruleOperation=ruleOperation
-	{ $current=$iv_ruleOperation.current; }
-	EOF;
-
-// Rule Operation
-ruleOperation returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		{
-			newCompositeNode(grammarAccess.getOperationAccess().getSumParserRuleCall_0());
-		}
-		this_Sum_0=ruleSum
-		{
-			$current = $this_Sum_0.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getOperationAccess().getFeurParserRuleCall_1());
-		}
-		this_Feur_1=ruleFeur
-		{
-			$current = $this_Feur_1.current;
-			afterParserOrEnumRuleCall();
-		}
-	)
-;
-
-// Entry rule entryRuleSum
-entryRuleSum returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getSumRule()); }
-	iv_ruleSum=ruleSum
-	{ $current=$iv_ruleSum.current; }
-	EOF;
-
-// Rule Sum
-ruleSum returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getSumAccess().getSumAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='Sum'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getSumAccess().getSumKeyword_1());
-		}
-	)
-;
-
-// Entry rule entryRuleFeur
-entryRuleFeur returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getFeurRule()); }
-	iv_ruleFeur=ruleFeur
-	{ $current=$iv_ruleFeur.current; }
-	EOF;
-
-// Rule Feur
-ruleFeur returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getFeurAccess().getFeurAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='Feur'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getFeurAccess().getFeurKeyword_1());
-		}
-	)
-;
-
-// Entry rule entryRuleFunction
-entryRuleFunction returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getFunctionRule()); }
-	iv_ruleFunction=ruleFunction
-	{ $current=$iv_ruleFunction.current; }
-	EOF;
-
-// Rule Function
-ruleFunction returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getFunctionAccess().getFunctionAction_0(),
-					$current);
-			}
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getFunctionAccess().getOperationOperationParserRuleCall_1_0());
-				}
-				lv_operation_1_0=ruleOperation
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFunctionRule());
-					}
-					set(
-						$current,
-						"operation",
-						lv_operation_1_0,
-						"fr.n7.chaiseMinute.FromText.Operation");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
 	)
 ;
 

@@ -3,6 +3,7 @@
 package algorithm;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link algorithm.Algorithm#getFunctions <em>Functions</em>}</li>
  *   <li>{@link algorithm.Algorithm#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link algorithm.Algorithm#getFunctions <em>Functions</em>}</li>
  * </ul>
  *
  * @see algorithm.AlgorithmPackage#getAlgorithm()
@@ -23,18 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Algorithm extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Functions</b></em>' containment reference list.
-	 * The list contents are of type {@link algorithm.Function}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Functions</em>' containment reference list.
-	 * @see algorithm.AlgorithmPackage#getAlgorithm_Functions()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<Function> getFunctions();
-
 	/**
 	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
 	 * The list contents are of type {@link algorithm.Argument}.
@@ -46,5 +35,17 @@ public interface Algorithm extends EObject {
 	 * @generated
 	 */
 	EList<Argument> getInputs();
+
+	/**
+	 * Returns the value of the '<em><b>Functions</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Functions</em>' attribute list.
+	 * @see algorithm.AlgorithmPackage#getAlgorithm_Functions()
+	 * @model unique="false"
+	 * @generated
+	 */
+	EList<String> getFunctions();
 
 } // Algorithm

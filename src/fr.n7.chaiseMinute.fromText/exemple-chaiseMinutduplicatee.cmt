@@ -4,7 +4,7 @@
 	   	data(Int):A,
 	   	data(Int):B,
 	   	computed(Int):
-	   		Sum("Table1.A", "Table2.B") 
+	   		Feur("Table1.A",  "Table2.B") 
 	   		> Sum("Table1.A")
 	   		-> C
    },

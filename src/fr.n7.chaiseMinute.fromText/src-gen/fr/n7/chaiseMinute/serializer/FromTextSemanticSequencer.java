@@ -6,9 +6,6 @@ package fr.n7.chaiseMinute.serializer;
 import algorithm.Algorithm;
 import algorithm.AlgorithmPackage;
 import algorithm.ColumnArgument;
-import algorithm.Feur;
-import algorithm.Function;
-import algorithm.Sum;
 import chaiseMinute.ChaiseMinute;
 import chaiseMinute.ChaiseMinutePackage;
 import chaiseMinute.ColumnData;
@@ -49,15 +46,6 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case AlgorithmPackage.COLUMN_ARGUMENT:
 				sequence_ColumnArgument(context, (ColumnArgument) semanticObject); 
 				return; 
-			case AlgorithmPackage.FEUR:
-				sequence_Feur(context, (Feur) semanticObject); 
-				return; 
-			case AlgorithmPackage.FUNCTION:
-				sequence_Function(context, (Function) semanticObject); 
-				return; 
-			case AlgorithmPackage.SUM:
-				sequence_Sum(context, (Sum) semanticObject); 
-				return; 
 			}
 		else if (epackage == ChaiseMinutePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
@@ -90,7 +78,7 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Algorithm returns Algorithm
 	 *
 	 * Constraint:
-	 *     (functions+=Function (inputs+=Argument inputs+=Argument*)? (functions+=Function (inputs+=Argument inputs+=Argument*)?)?)
+	 *     (functions+=EString (inputs+=Argument inputs+=Argument*)? (functions+=EString (inputs+=Argument inputs+=Argument*)?)?)
 	 * </pre>
 	 */
 	protected void sequence_Algorithm(ISerializationContext context, Algorithm semanticObject) {
@@ -187,41 +175,6 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Operation returns Feur
-	 *     Feur returns Feur
-	 *
-	 * Constraint:
-	 *     {Feur}
-	 * </pre>
-	 */
-	protected void sequence_Feur(ISerializationContext context, Feur semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Function returns Function
-	 *
-	 * Constraint:
-	 *     operation=Operation
-	 * </pre>
-	 */
-	protected void sequence_Function(ISerializationContext context, Function semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AlgorithmPackage.Literals.FUNCTION__OPERATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AlgorithmPackage.Literals.FUNCTION__OPERATION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFunctionAccess().getOperationOperationParserRuleCall_1_0(), semanticObject.getOperation());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
 	 *     Column returns ImportedColumn
 	 *     ImportedColumn returns ImportedColumn
 	 *
@@ -256,21 +209,6 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * </pre>
 	 */
 	protected void sequence_IndexColumn(ISerializationContext context, IndexColumn semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Operation returns Sum
-	 *     Sum returns Sum
-	 *
-	 * Constraint:
-	 *     {Sum}
-	 * </pre>
-	 */
-	protected void sequence_Sum(ISerializationContext context, Sum semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

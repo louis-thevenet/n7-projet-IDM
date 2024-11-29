@@ -72,28 +72,12 @@ public class AlgorithmAdapterFactory extends AdapterFactoryImpl {
 				return createAlgorithmAdapter();
 			}
 			@Override
-			public Adapter caseFunction(Function object) {
-				return createFunctionAdapter();
-			}
-			@Override
 			public Adapter caseArgument(Argument object) {
 				return createArgumentAdapter();
 			}
 			@Override
 			public Adapter caseColumnArgument(ColumnArgument object) {
 				return createColumnArgumentAdapter();
-			}
-			@Override
-			public Adapter caseOperation(Operation object) {
-				return createOperationAdapter();
-			}
-			@Override
-			public Adapter caseFeur(Feur object) {
-				return createFeurAdapter();
-			}
-			@Override
-			public Adapter caseSum(Sum object) {
-				return createSumAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -130,20 +114,6 @@ public class AlgorithmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link algorithm.Function <em>Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithm.Function
-	 * @generated
-	 */
-	public Adapter createFunctionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link algorithm.Argument <em>Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -168,48 +138,6 @@ public class AlgorithmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createColumnArgumentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithm.Operation <em>Operation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithm.Operation
-	 * @generated
-	 */
-	public Adapter createOperationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithm.Feur <em>Feur</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithm.Feur
-	 * @generated
-	 */
-	public Adapter createFeurAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithm.Sum <em>Sum</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithm.Sum
-	 * @generated
-	 */
-	public Adapter createSumAdapter() {
 		return null;
 	}
 

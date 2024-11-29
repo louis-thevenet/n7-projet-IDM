@@ -95,29 +95,6 @@ public class AlgorithmItemProviderAdapterFactory extends AlgorithmAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link algorithm.Function} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionItemProvider functionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link algorithm.Function}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFunctionAdapter() {
-		if (functionItemProvider == null) {
-			functionItemProvider = new FunctionItemProvider(this);
-		}
-
-		return functionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link algorithm.ColumnArgument} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,52 +115,6 @@ public class AlgorithmItemProviderAdapterFactory extends AlgorithmAdapterFactory
 		}
 
 		return columnArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link algorithm.Feur} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FeurItemProvider feurItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link algorithm.Feur}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFeurAdapter() {
-		if (feurItemProvider == null) {
-			feurItemProvider = new FeurItemProvider(this);
-		}
-
-		return feurItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link algorithm.Sum} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SumItemProvider sumItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link algorithm.Sum}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSumAdapter() {
-		if (sumItemProvider == null) {
-			sumItemProvider = new SumItemProvider(this);
-		}
-
-		return sumItemProvider;
 	}
 
 	/**
@@ -292,10 +223,7 @@ public class AlgorithmItemProviderAdapterFactory extends AlgorithmAdapterFactory
 	@Override
 	public void dispose() {
 		if (algorithmItemProvider != null) algorithmItemProvider.dispose();
-		if (functionItemProvider != null) functionItemProvider.dispose();
 		if (columnArgumentItemProvider != null) columnArgumentItemProvider.dispose();
-		if (feurItemProvider != null) feurItemProvider.dispose();
-		if (sumItemProvider != null) sumItemProvider.dispose();
 	}
 
 }
