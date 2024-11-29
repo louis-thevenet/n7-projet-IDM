@@ -66,7 +66,6 @@ public class ComputedColumnItemProvider
 
 			addIdPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addOutputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,28 +110,6 @@ public class ComputedColumnItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Output feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOutputPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComputedColumn_output_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComputedColumn_output_feature", "_UI_ComputedColumn_type"),
-				 ChaiseMinutePackage.Literals.COMPUTED_COLUMN__OUTPUT,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

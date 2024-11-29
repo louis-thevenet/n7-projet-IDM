@@ -1,6 +1,6 @@
 {
            {Table1, , data(Int):A, data(Int):B, computed(Int): 
-           	"Sum"("Table1.A", "Table1.B") > "Sum"("Table2.A") -> C
+           	Sum("Table1.A", "Table1.B") > Sum2("Table2.A") -> C
            }
            {Table2, , data(Int):A, data(Int):B, imported(Int): "Table1.A"->C}
 }

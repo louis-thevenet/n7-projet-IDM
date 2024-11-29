@@ -26,7 +26,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComputedColumn" eSuperTypes="#//Column">
     <eStructuralFeatures xsi:type="ecore:EReference" name="algorithm" eType="ecore:EClass ../fr.n7.chaiseMinute.script/algorithm.ecore#//Algorithm"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output" eType="ecore:EClass ../fr.n7.chaiseMinute.function/function.ecore#//ColumnArgument"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DataType">
     <eLiterals name="String"/>

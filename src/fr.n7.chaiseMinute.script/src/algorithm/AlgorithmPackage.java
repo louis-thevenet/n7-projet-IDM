@@ -2,7 +2,6 @@
  */
 package algorithm;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -67,22 +66,13 @@ public interface AlgorithmPackage extends EPackage {
 	int ALGORITHM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Functions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALGORITHM__INPUTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Functions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM__FUNCTIONS = 1;
+	int ALGORITHM__FUNCTIONS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Algorithm</em>' class.
@@ -91,7 +81,7 @@ public interface AlgorithmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALGORITHM_FEATURE_COUNT = 2;
+	int ALGORITHM_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Algorithm</em>' class.
@@ -114,26 +104,15 @@ public interface AlgorithmPackage extends EPackage {
 	EClass getAlgorithm();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link algorithm.Algorithm#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link algorithm.Algorithm#getFunctions <em>Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
-	 * @see algorithm.Algorithm#getInputs()
-	 * @see #getAlgorithm()
-	 * @generated
-	 */
-	EReference getAlgorithm_Inputs();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link algorithm.Algorithm#getFunctions <em>Functions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Functions</em>'.
+	 * @return the meta object for the containment reference list '<em>Functions</em>'.
 	 * @see algorithm.Algorithm#getFunctions()
 	 * @see #getAlgorithm()
 	 * @generated
 	 */
-	EAttribute getAlgorithm_Functions();
+	EReference getAlgorithm_Functions();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -169,20 +148,12 @@ public interface AlgorithmPackage extends EPackage {
 		EClass ALGORITHM = eINSTANCE.getAlgorithm();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Functions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ALGORITHM__INPUTS = eINSTANCE.getAlgorithm_Inputs();
-
-		/**
-		 * The meta object literal for the '<em><b>Functions</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ALGORITHM__FUNCTIONS = eINSTANCE.getAlgorithm_Functions();
+		EReference ALGORITHM__FUNCTIONS = eINSTANCE.getAlgorithm_Functions();
 
 	}
 

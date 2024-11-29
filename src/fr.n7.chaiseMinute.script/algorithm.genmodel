@@ -7,14 +7,17 @@
   <foreignModel>algorithm.ecore</foreignModel>
   <genPackages prefix="Algorithm" disposableProviderFactory="true" ecorePackage="algorithm.ecore#/">
     <genClasses ecoreClass="algorithm.ecore#//Algorithm">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Algorithm/inputs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute algorithm.ecore#//Algorithm/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithm.ecore#//Algorithm/functions"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Function" ecorePackage="../fr.n7.chaiseMinute.function/function.ecore#/">
     <genClasses image="false" ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//Argument"/>
     <genClasses ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//ColumnArgument">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../fr.n7.chaiseMinute.function/function.ecore#//ColumnArgument/columnPath"/>
+    </genClasses>
+    <genClasses ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//Function">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../fr.n7.chaiseMinute.function/function.ecore#//Function/inputs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../fr.n7.chaiseMinute.function/function.ecore#//Function/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

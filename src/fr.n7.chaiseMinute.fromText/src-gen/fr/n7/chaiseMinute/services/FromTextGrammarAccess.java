@@ -404,12 +404,12 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//ColumnArgument
 		public RuleCall getColumnArgumentParserRuleCall() { return cColumnArgumentParserRuleCall; }
 	}
-	public class AlgorithmElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Algorithm");
+	public class FunctionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Function");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cAlgorithmAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cFunctionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFunctionsEStringParserRuleCall_1_0 = (RuleCall)cFunctionsAssignment_1.eContents().get(0);
+		private final Action cFunctionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Assignment cInputsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
@@ -419,58 +419,31 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cInputsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
 		private final RuleCall cInputsArgumentParserRuleCall_3_1_1_0 = (RuleCall)cInputsAssignment_3_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cGreaterThanSignKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cFunctionsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cFunctionsEStringParserRuleCall_5_1_0 = (RuleCall)cFunctionsAssignment_5_1.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
-		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
-		private final Assignment cInputsAssignment_5_3_0 = (Assignment)cGroup_5_3.eContents().get(0);
-		private final RuleCall cInputsArgumentParserRuleCall_5_3_0_0 = (RuleCall)cInputsAssignment_5_3_0.eContents().get(0);
-		private final Group cGroup_5_3_1 = (Group)cGroup_5_3.eContents().get(1);
-		private final Keyword cCommaKeyword_5_3_1_0 = (Keyword)cGroup_5_3_1.eContents().get(0);
-		private final Assignment cInputsAssignment_5_3_1_1 = (Assignment)cGroup_5_3_1.eContents().get(1);
-		private final RuleCall cInputsArgumentParserRuleCall_5_3_1_1_0 = (RuleCall)cInputsAssignment_5_3_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		
-		//Algorithm returns algorithm::Algorithm:
-		//    {algorithm::Algorithm}
-		//    functions+=EString
+		//Function returns function::Function:
+		//    {function::Function}
+		//    name  = EString
 		//    '('
 		//        (inputs+=Argument ( "," inputs+=Argument)*)?
 		//    ')'
-		//    (
-		//        '>'
-		//        functions+=EString
-		//        '('
-		//        (inputs+=Argument ( "," inputs+=Argument)*)?
-		//        ')'
-		//    )?
-		//        ;
+		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{algorithm::Algorithm}
-		//functions+=EString
+		//{function::Function}
+		//name  = EString
 		//'('
 		//    (inputs+=Argument ( "," inputs+=Argument)*)?
 		//')'
-		//(
-		//    '>'
-		//    functions+=EString
-		//    '('
-		//    (inputs+=Argument ( "," inputs+=Argument)*)?
-		//    ')'
-		//)?
 		public Group getGroup() { return cGroup; }
 		
-		//{algorithm::Algorithm}
-		public Action getAlgorithmAction_0() { return cAlgorithmAction_0; }
+		//{function::Function}
+		public Action getFunctionAction_0() { return cFunctionAction_0; }
 		
-		//functions+=EString
-		public Assignment getFunctionsAssignment_1() { return cFunctionsAssignment_1; }
+		//name  = EString
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//EString
-		public RuleCall getFunctionsEStringParserRuleCall_1_0() { return cFunctionsEStringParserRuleCall_1_0; }
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
@@ -498,51 +471,59 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+	}
+	public class AlgorithmElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Algorithm");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cAlgorithmAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cFunctionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFunctionsFunctionParserRuleCall_1_0 = (RuleCall)cFunctionsAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cGreaterThanSignKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cFunctionsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cFunctionsFunctionParserRuleCall_2_1_0 = (RuleCall)cFunctionsAssignment_2_1.eContents().get(0);
+		
+		//Algorithm returns algorithm::Algorithm:
+		//    {algorithm::Algorithm}
+		//    functions+=Function
+		//    (
+		//        '>'
+		//        functions+=Function
+		//    )?
+		//        ;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{algorithm::Algorithm}
+		//functions+=Function
+		//(
+		//    '>'
+		//    functions+=Function
+		//)?
+		public Group getGroup() { return cGroup; }
+		
+		//{algorithm::Algorithm}
+		public Action getAlgorithmAction_0() { return cAlgorithmAction_0; }
+		
+		//functions+=Function
+		public Assignment getFunctionsAssignment_1() { return cFunctionsAssignment_1; }
+		
+		//Function
+		public RuleCall getFunctionsFunctionParserRuleCall_1_0() { return cFunctionsFunctionParserRuleCall_1_0; }
 		
 		//(
 		//    '>'
-		//    functions+=EString
-		//    '('
-		//    (inputs+=Argument ( "," inputs+=Argument)*)?
-		//    ')'
+		//    functions+=Function
 		//)?
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_2() { return cGroup_2; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_5_0() { return cGreaterThanSignKeyword_5_0; }
+		public Keyword getGreaterThanSignKeyword_2_0() { return cGreaterThanSignKeyword_2_0; }
 		
-		//functions+=EString
-		public Assignment getFunctionsAssignment_5_1() { return cFunctionsAssignment_5_1; }
+		//functions+=Function
+		public Assignment getFunctionsAssignment_2_1() { return cFunctionsAssignment_2_1; }
 		
-		//EString
-		public RuleCall getFunctionsEStringParserRuleCall_5_1_0() { return cFunctionsEStringParserRuleCall_5_1_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_5_2() { return cLeftParenthesisKeyword_5_2; }
-		
-		//(inputs+=Argument ( "," inputs+=Argument)*)?
-		public Group getGroup_5_3() { return cGroup_5_3; }
-		
-		//inputs+=Argument
-		public Assignment getInputsAssignment_5_3_0() { return cInputsAssignment_5_3_0; }
-		
-		//Argument
-		public RuleCall getInputsArgumentParserRuleCall_5_3_0_0() { return cInputsArgumentParserRuleCall_5_3_0_0; }
-		
-		//( "," inputs+=Argument)*
-		public Group getGroup_5_3_1() { return cGroup_5_3_1; }
-		
-		//","
-		public Keyword getCommaKeyword_5_3_1_0() { return cCommaKeyword_5_3_1_0; }
-		
-		//inputs+=Argument
-		public Assignment getInputsAssignment_5_3_1_1() { return cInputsAssignment_5_3_1_1; }
-		
-		//Argument
-		public RuleCall getInputsArgumentParserRuleCall_5_3_1_1_0() { return cInputsArgumentParserRuleCall_5_3_1_1_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_5_4() { return cRightParenthesisKeyword_5_4; }
+		//Function
+		public RuleCall getFunctionsFunctionParserRuleCall_2_1_0() { return cFunctionsFunctionParserRuleCall_2_1_0; }
 	}
 	public class EIntElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.EInt");
@@ -621,6 +602,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final ComputedColumnElements pComputedColumn;
 	private final ColumnArgumentElements pColumnArgument;
 	private final ArgumentElements pArgument;
+	private final FunctionElements pFunction;
 	private final AlgorithmElements pAlgorithm;
 	private final EIntElements pEInt;
 	private final EStringElements pEString;
@@ -644,6 +626,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pComputedColumn = new ComputedColumnElements();
 		this.pColumnArgument = new ColumnArgumentElements();
 		this.pArgument = new ArgumentElements();
+		this.pFunction = new FunctionElements();
 		this.pAlgorithm = new AlgorithmElements();
 		this.pEInt = new EIntElements();
 		this.pEString = new EStringElements();
@@ -799,18 +782,27 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getArgumentAccess().getRule();
 	}
 	
-	//Algorithm returns algorithm::Algorithm:
-	//    {algorithm::Algorithm}
-	//    functions+=EString
+	//Function returns function::Function:
+	//    {function::Function}
+	//    name  = EString
 	//    '('
 	//        (inputs+=Argument ( "," inputs+=Argument)*)?
 	//    ')'
+	//    ;
+	public FunctionElements getFunctionAccess() {
+		return pFunction;
+	}
+	
+	public ParserRule getFunctionRule() {
+		return getFunctionAccess().getRule();
+	}
+	
+	//Algorithm returns algorithm::Algorithm:
+	//    {algorithm::Algorithm}
+	//    functions+=Function
 	//    (
 	//        '>'
-	//        functions+=EString
-	//        '('
-	//        (inputs+=Argument ( "," inputs+=Argument)*)?
-	//        ')'
+	//        functions+=Function
 	//    )?
 	//        ;
 	public AlgorithmElements getAlgorithmAccess() {

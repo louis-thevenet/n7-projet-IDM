@@ -57,6 +57,7 @@ public class FunctionFactoryImpl extends EFactoryImpl implements FunctionFactory
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case FunctionPackage.COLUMN_ARGUMENT: return createColumnArgument();
+			case FunctionPackage.FUNCTION: return createFunction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,6 +72,17 @@ public class FunctionFactoryImpl extends EFactoryImpl implements FunctionFactory
 	public ColumnArgument createColumnArgument() {
 		ColumnArgumentImpl columnArgument = new ColumnArgumentImpl();
 		return columnArgument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Function createFunction() {
+		FunctionImpl function = new FunctionImpl();
+		return function;
 	}
 
 	/**

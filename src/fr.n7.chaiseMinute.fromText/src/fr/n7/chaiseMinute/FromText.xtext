@@ -62,20 +62,23 @@ Argument returns function::Argument:
 	ColumnArgument
 	;
 
+Function returns function::Function:
+	{function::Function} 
+	name  = EString
+	
+	'('
+		(inputs+=Argument ( "," inputs+=Argument)*)?
+	')'
+	;
 
 
 Algorithm returns algorithm::Algorithm:
 	{algorithm::Algorithm}
-	functions+=EString
-	'('
-		(inputs+=Argument ( "," inputs+=Argument)*)?
-	')'
+	functions+=Function
 	(
 		'>'
-		functions+=EString
-		'('
-		(inputs+=Argument ( "," inputs+=Argument)*)?
-		')' 
+		functions+=Function
+		 
 	)?
 		;
 

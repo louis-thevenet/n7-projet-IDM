@@ -10,5 +10,9 @@
     <genClasses ecoreClass="function.ecore#//ColumnArgument">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function.ecore#//ColumnArgument/columnPath"/>
     </genClasses>
+    <genClasses ecoreClass="function.ecore#//Function">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference function.ecore#//Function/inputs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function.ecore#//Function/name"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -7,8 +7,6 @@ import chaiseMinute.ChaiseMinutePackage;
 import chaiseMinute.ComputedColumn;
 import chaiseMinute.DataType;
 import chaiseMinute.Table;
-
-import function.ColumnArgument;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -32,7 +30,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link chaiseMinute.impl.ComputedColumnImpl#getTable <em>Table</em>}</li>
  *   <li>{@link chaiseMinute.impl.ComputedColumnImpl#getType <em>Type</em>}</li>
  *   <li>{@link chaiseMinute.impl.ComputedColumnImpl#getAlgorithm <em>Algorithm</em>}</li>
- *   <li>{@link chaiseMinute.impl.ComputedColumnImpl#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,16 +84,6 @@ public class ComputedColumnImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected Algorithm algorithm;
-
-	/**
-	 * The cached value of the '{@link #getOutput() <em>Output</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput()
-	 * @generated
-	 * @ordered
-	 */
-	protected ColumnArgument output;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -257,46 +244,6 @@ public class ComputedColumnImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public ColumnArgument getOutput() {
-		if (output != null && output.eIsProxy()) {
-			InternalEObject oldOutput = (InternalEObject)output;
-			output = (ColumnArgument)eResolveProxy(oldOutput);
-			if (output != oldOutput) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ChaiseMinutePackage.COMPUTED_COLUMN__OUTPUT, oldOutput, output));
-			}
-		}
-		return output;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ColumnArgument basicGetOutput() {
-		return output;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setOutput(ColumnArgument newOutput) {
-		ColumnArgument oldOutput = output;
-		output = newOutput;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChaiseMinutePackage.COMPUTED_COLUMN__OUTPUT, oldOutput, output));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ChaiseMinutePackage.COMPUTED_COLUMN__TABLE:
@@ -353,9 +300,6 @@ public class ComputedColumnImpl extends MinimalEObjectImpl.Container implements 
 				return getType();
 			case ChaiseMinutePackage.COMPUTED_COLUMN__ALGORITHM:
 				return getAlgorithm();
-			case ChaiseMinutePackage.COMPUTED_COLUMN__OUTPUT:
-				if (resolve) return getOutput();
-				return basicGetOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -379,9 +323,6 @@ public class ComputedColumnImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case ChaiseMinutePackage.COMPUTED_COLUMN__ALGORITHM:
 				setAlgorithm((Algorithm)newValue);
-				return;
-			case ChaiseMinutePackage.COMPUTED_COLUMN__OUTPUT:
-				setOutput((ColumnArgument)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -407,9 +348,6 @@ public class ComputedColumnImpl extends MinimalEObjectImpl.Container implements 
 			case ChaiseMinutePackage.COMPUTED_COLUMN__ALGORITHM:
 				setAlgorithm((Algorithm)null);
 				return;
-			case ChaiseMinutePackage.COMPUTED_COLUMN__OUTPUT:
-				setOutput((ColumnArgument)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -430,8 +368,6 @@ public class ComputedColumnImpl extends MinimalEObjectImpl.Container implements 
 				return type != TYPE_EDEFAULT;
 			case ChaiseMinutePackage.COMPUTED_COLUMN__ALGORITHM:
 				return algorithm != null;
-			case ChaiseMinutePackage.COMPUTED_COLUMN__OUTPUT:
-				return output != null;
 		}
 		return super.eIsSet(featureID);
 	}

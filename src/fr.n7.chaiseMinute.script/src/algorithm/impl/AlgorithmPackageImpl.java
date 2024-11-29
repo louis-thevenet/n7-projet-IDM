@@ -9,8 +9,6 @@ import algorithm.AlgorithmPackage;
 import function.FunctionPackage;
 
 import function.impl.FunctionPackageImpl;
-
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -113,18 +111,8 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getAlgorithm_Inputs() {
+	public EReference getAlgorithm_Functions() {
 		return (EReference)algorithmEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAlgorithm_Functions() {
-		return (EAttribute)algorithmEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -157,8 +145,7 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 
 		// Create classes and their features
 		algorithmEClass = createEClass(ALGORITHM);
-		createEReference(algorithmEClass, ALGORITHM__INPUTS);
-		createEAttribute(algorithmEClass, ALGORITHM__FUNCTIONS);
+		createEReference(algorithmEClass, ALGORITHM__FUNCTIONS);
 	}
 
 	/**
@@ -195,8 +182,7 @@ public class AlgorithmPackageImpl extends EPackageImpl implements AlgorithmPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(algorithmEClass, Algorithm.class, "Algorithm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAlgorithm_Inputs(), theFunctionPackage.getArgument(), null, "inputs", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAlgorithm_Functions(), ecorePackage.getEString(), "functions", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgorithm_Functions(), theFunctionPackage.getFunction(), null, "functions", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -3,7 +3,6 @@
 package chaiseMinute;
 
 import algorithm.Algorithm;
-import function.ColumnArgument;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +14,6 @@ import function.ColumnArgument;
  * </p>
  * <ul>
  *   <li>{@link chaiseMinute.ComputedColumn#getAlgorithm <em>Algorithm</em>}</li>
- *   <li>{@link chaiseMinute.ComputedColumn#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @see chaiseMinute.ChaiseMinutePackage#getComputedColumn()
@@ -44,27 +42,5 @@ public interface ComputedColumn extends Column {
 	 * @generated
 	 */
 	void setAlgorithm(Algorithm value);
-
-	/**
-	 * Returns the value of the '<em><b>Output</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output</em>' reference.
-	 * @see #setOutput(ColumnArgument)
-	 * @see chaiseMinute.ChaiseMinutePackage#getComputedColumn_Output()
-	 * @model
-	 * @generated
-	 */
-	ColumnArgument getOutput();
-
-	/**
-	 * Sets the value of the '{@link chaiseMinute.ComputedColumn#getOutput <em>Output</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output</em>' reference.
-	 * @see #getOutput()
-	 * @generated
-	 */
-	void setOutput(ColumnArgument value);
 
 } // ComputedColumn

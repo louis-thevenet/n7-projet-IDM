@@ -8,6 +8,7 @@ import algorithm.impl.AlgorithmPackageImpl;
 
 import function.Argument;
 import function.ColumnArgument;
+import function.Function;
 import function.FunctionFactory;
 import function.FunctionPackage;
 
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -37,6 +39,13 @@ public class FunctionPackageImpl extends EPackageImpl implements FunctionPackage
 	 * @generated
 	 */
 	private EClass columnArgumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -140,6 +149,36 @@ public class FunctionPackageImpl extends EPackageImpl implements FunctionPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getFunction() {
+		return functionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFunction_Inputs() {
+		return (EReference)functionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFunction_Name() {
+		return (EAttribute)functionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public FunctionFactory getFunctionFactory() {
 		return (FunctionFactory)getEFactoryInstance();
 	}
@@ -167,6 +206,10 @@ public class FunctionPackageImpl extends EPackageImpl implements FunctionPackage
 
 		columnArgumentEClass = createEClass(COLUMN_ARGUMENT);
 		createEAttribute(columnArgumentEClass, COLUMN_ARGUMENT__COLUMN_PATH);
+
+		functionEClass = createEClass(FUNCTION);
+		createEReference(functionEClass, FUNCTION__INPUTS);
+		createEAttribute(functionEClass, FUNCTION__NAME);
 	}
 
 	/**
@@ -204,6 +247,10 @@ public class FunctionPackageImpl extends EPackageImpl implements FunctionPackage
 
 		initEClass(columnArgumentEClass, ColumnArgument.class, "ColumnArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumnArgument_ColumnPath(), ecorePackage.getEString(), "columnPath", null, 0, 1, ColumnArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFunction_Inputs(), this.getArgument(), null, "inputs", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

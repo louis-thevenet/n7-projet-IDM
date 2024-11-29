@@ -343,22 +343,13 @@ public interface ChaiseMinutePackage extends EPackage {
 	int COMPUTED_COLUMN__ALGORITHM = COLUMN_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Output</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPUTED_COLUMN__OUTPUT = COLUMN_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Computed Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTED_COLUMN_FEATURE_COUNT = COLUMN_FEATURE_COUNT + 2;
+	int COMPUTED_COLUMN_FEATURE_COUNT = COLUMN_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Computed Column</em>' class.
@@ -604,17 +595,6 @@ public interface ChaiseMinutePackage extends EPackage {
 	EReference getComputedColumn_Algorithm();
 
 	/**
-	 * Returns the meta object for the reference '{@link chaiseMinute.ComputedColumn#getOutput <em>Output</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Output</em>'.
-	 * @see chaiseMinute.ComputedColumn#getOutput()
-	 * @see #getComputedColumn()
-	 * @generated
-	 */
-	EReference getComputedColumn_Output();
-
-	/**
 	 * Returns the meta object for class '{@link chaiseMinute.ImportedColumn <em>Imported Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -799,14 +779,6 @@ public interface ChaiseMinutePackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPUTED_COLUMN__ALGORITHM = eINSTANCE.getComputedColumn_Algorithm();
-
-		/**
-		 * The meta object literal for the '<em><b>Output</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPUTED_COLUMN__OUTPUT = eINSTANCE.getComputedColumn_Output();
 
 		/**
 		 * The meta object literal for the '{@link chaiseMinute.impl.ImportedColumnImpl <em>Imported Column</em>}' class.

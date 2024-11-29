@@ -95,6 +95,29 @@ public class FunctionItemProviderAdapterFactory extends FunctionAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link function.Function} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionItemProvider functionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link function.Function}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionAdapter() {
+		if (functionItemProvider == null) {
+			functionItemProvider = new FunctionItemProvider(this);
+		}
+
+		return functionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,6 +223,7 @@ public class FunctionItemProviderAdapterFactory extends FunctionAdapterFactory i
 	@Override
 	public void dispose() {
 		if (columnArgumentItemProvider != null) columnArgumentItemProvider.dispose();
+		if (functionItemProvider != null) functionItemProvider.dispose();
 	}
 
 }

@@ -15,6 +15,7 @@ import chaiseMinute.Table;
 import com.google.inject.Inject;
 import fr.n7.chaiseMinute.services.FromTextGrammarAccess;
 import function.ColumnArgument;
+import function.Function;
 import function.FunctionPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -71,6 +72,9 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case FunctionPackage.COLUMN_ARGUMENT:
 				sequence_ColumnArgument(context, (ColumnArgument) semanticObject); 
 				return; 
+			case FunctionPackage.FUNCTION:
+				sequence_Function(context, (Function) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -82,7 +86,7 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Algorithm returns Algorithm
 	 *
 	 * Constraint:
-	 *     (functions+=EString (inputs+=Argument inputs+=Argument*)? (functions+=EString (inputs+=Argument inputs+=Argument*)?)?)
+	 *     (functions+=Function functions+=Function?)
 	 * </pre>
 	 */
 	protected void sequence_Algorithm(ISerializationContext context, Algorithm semanticObject) {
@@ -173,6 +177,20 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		feeder.accept(grammarAccess.getComputedColumnAccess().getAlgorithmAlgorithmParserRuleCall_5_0(), semanticObject.getAlgorithm());
 		feeder.accept(grammarAccess.getComputedColumnAccess().getIdEStringParserRuleCall_7_0(), semanticObject.getId());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Function returns Function
+	 *
+	 * Constraint:
+	 *     (name=EString (inputs+=Argument inputs+=Argument*)?)
+	 * </pre>
+	 */
+	protected void sequence_Function(ISerializationContext context, Function semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
