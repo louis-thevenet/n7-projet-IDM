@@ -34,4 +34,21 @@
         id="index"
         type="Int"/>
   </tables>
+  <tables name="table2">
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="C"
+        type="Int"/>
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="B"
+        type="Int"/>
+    <columns
+        xsi:type="chaiseMinute:ImportedColumn"
+        id="A"
+        type="Int"
+        path="table1.B"/>
+    <indexColumn
+        id="index2"/>
+  </tables>
 </chaiseMinute:ChaiseMinute>

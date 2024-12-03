@@ -6,14 +6,52 @@
 [comment @main/]
 [file ((aChaiseMinute.name)+'.py', false, 'UTF-8')]
 import sys
+import pandas as pd
 
 def main():
-	filename = sys.argv['['/]1]
-	print(filename)
-	f = open(filename, "r")
-	print(f.read()) 
+# Load files
+	content = {}	
+[for (t : Table | aChaiseMinute.getTables())]
+	csv_file_path = ['"' + t.name+ '.csv'+'"'/]
+	content['['/]"[t.name/]"] = pd.read_csv(csv_file_path)
+[/for]	
+
+[for (t : Table | aChaiseMinute.getTables())]
+[t.generateElement()/]
+[/for]	
 	
 if __name__ == '__main__':
 	main()
+
 [/file]
+[/template]
+
+[query public getTable(arg : ChaiseMinute, name: String) : Table = arg.tables 
+-> select(e | e.oclIsTypeOf(Table) and e.name = name)
+-> collect(e | e.oclAsType(Table)) 
+/]
+[query public getTables(arg : ChaiseMinute): OrderedSet(Table) = arg.tables 
+-> select(e | e.oclIsTypeOf(Table))
+-> collect(e | e.oclAsType(Table)) 
+-> asOrderedSet()
+/]
+
+[template public generateElement(aTable: Table)]
+	out = {}
+
+	[for (c: Column | aTable.columns)]
+		[if (c.oclIsKindOf(ColumnData))]
+	out['['/]"[c.id/]"]=content['['/]"[aTable.name/]"]['['/]"[c.id/]"]
+
+		[elseif (c.oclIsTypeOf(ImportedColumn))]
+	[let table:String = c.oclAsType(ImportedColumn).path.replaceAll('\\..*', '')]
+	[let id:String = c.oclAsType(ImportedColumn).path.replaceFirst('.*\\.', '')]
+	# Looking for [table/].[id/] 
+	out['['/]"[c.id/]"]=content['['/]"[table/]"]['['/]"[id/]"]
+
+	[/let][/let]
+		
+		[/if]
+	[/for]
+	pd.DataFrame.from_dict(out, orient="columns").to_csv("output_"+"[aTable.name/]"+".csv", index_label="[aTable.indexColumn.id/]")
 [/template]
