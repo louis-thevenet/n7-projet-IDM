@@ -227,11 +227,20 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     IndexColumn returns IndexColumn
 	 *
 	 * Constraint:
-	 *     {IndexColumn}
+	 *     (type=DataType id=EString)
 	 * </pre>
 	 */
 	protected void sequence_IndexColumn(ISerializationContext context, IndexColumn semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ChaiseMinutePackage.Literals.INDEX_COLUMN__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChaiseMinutePackage.Literals.INDEX_COLUMN__TYPE));
+			if (transientValues.isValueTransient(semanticObject, ChaiseMinutePackage.Literals.INDEX_COLUMN__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChaiseMinutePackage.Literals.INDEX_COLUMN__ID));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIndexColumnAccess().getTypeDataTypeEnumRuleCall_3_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getIndexColumnAccess().getIdEStringParserRuleCall_6_0(), semanticObject.getId());
+		feeder.finish();
 	}
 	
 	

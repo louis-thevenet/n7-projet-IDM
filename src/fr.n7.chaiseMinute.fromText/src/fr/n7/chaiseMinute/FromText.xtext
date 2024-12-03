@@ -21,6 +21,7 @@ Table returns Table:
 
 IndexColumn returns IndexColumn:
 	{IndexColumn}
+		'index' '(' type=DataType ')' ':' id=EString
 	;
 
 Column returns Column:

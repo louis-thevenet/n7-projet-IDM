@@ -40,6 +40,7 @@ public class FromTextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTableAccess().getGroup(), "rule__Table__Group__0");
 			builder.put(grammarAccess.getTableAccess().getGroup_5(), "rule__Table__Group_5__0");
 			builder.put(grammarAccess.getTableAccess().getGroup_5_1(), "rule__Table__Group_5_1__0");
+			builder.put(grammarAccess.getIndexColumnAccess().getGroup(), "rule__IndexColumn__Group__0");
 			builder.put(grammarAccess.getColumnDataAccess().getGroup(), "rule__ColumnData__Group__0");
 			builder.put(grammarAccess.getImportedColumnAccess().getGroup(), "rule__ImportedColumn__Group__0");
 			builder.put(grammarAccess.getComputedColumnAccess().getGroup(), "rule__ComputedColumn__Group__0");
@@ -56,6 +57,8 @@ public class FromTextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTableAccess().getIndexColumnAssignment_3(), "rule__Table__IndexColumnAssignment_3");
 			builder.put(grammarAccess.getTableAccess().getColumnsAssignment_5_0(), "rule__Table__ColumnsAssignment_5_0");
 			builder.put(grammarAccess.getTableAccess().getColumnsAssignment_5_1_1(), "rule__Table__ColumnsAssignment_5_1_1");
+			builder.put(grammarAccess.getIndexColumnAccess().getTypeAssignment_3(), "rule__IndexColumn__TypeAssignment_3");
+			builder.put(grammarAccess.getIndexColumnAccess().getIdAssignment_6(), "rule__IndexColumn__IdAssignment_6");
 			builder.put(grammarAccess.getColumnDataAccess().getTypeAssignment_2(), "rule__ColumnData__TypeAssignment_2");
 			builder.put(grammarAccess.getColumnDataAccess().getIdAssignment_5(), "rule__ColumnData__IdAssignment_5");
 			builder.put(grammarAccess.getImportedColumnAccess().getTypeAssignment_2(), "rule__ImportedColumn__TypeAssignment_2");

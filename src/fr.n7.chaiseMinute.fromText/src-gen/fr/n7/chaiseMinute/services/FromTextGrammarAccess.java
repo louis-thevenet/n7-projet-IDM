@@ -157,15 +157,53 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	public class IndexColumnElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.IndexColumn");
-		private final Action cIndexColumnAction = (Action)rule.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cIndexColumnAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cIndexKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeDataTypeEnumRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cIdAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cIdEStringParserRuleCall_6_0 = (RuleCall)cIdAssignment_6.eContents().get(0);
 		
 		//IndexColumn returns IndexColumn:
 		//    {IndexColumn}
+		//        'index' '(' type=DataType ')' ':' id=EString
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{IndexColumn}
-		public Action getIndexColumnAction() { return cIndexColumnAction; }
+		//    'index' '(' type=DataType ')' ':' id=EString
+		public Group getGroup() { return cGroup; }
+		
+		//{IndexColumn}
+		public Action getIndexColumnAction_0() { return cIndexColumnAction_0; }
+		
+		//'index'
+		public Keyword getIndexKeyword_1() { return cIndexKeyword_1; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		
+		//type=DataType
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+		
+		//DataType
+		public RuleCall getTypeDataTypeEnumRuleCall_3_0() { return cTypeDataTypeEnumRuleCall_3_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		
+		//':'
+		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+		
+		//id=EString
+		public Assignment getIdAssignment_6() { return cIdAssignment_6; }
+		
+		//EString
+		public RuleCall getIdEStringParserRuleCall_6_0() { return cIdEStringParserRuleCall_6_0; }
 	}
 	public class ColumnElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Column");
@@ -687,6 +725,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	//IndexColumn returns IndexColumn:
 	//    {IndexColumn}
+	//        'index' '(' type=DataType ')' ':' id=EString
 	//    ;
 	public IndexColumnElements getIndexColumnAccess() {
 		return pIndexColumn;

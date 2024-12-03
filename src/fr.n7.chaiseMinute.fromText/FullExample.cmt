@@ -1,6 +1,6 @@
 {
-           {Table1, , data(Int):A, data(Int):B, computed(Int): 
+           {Table1, index(Int):Index, data(Int):A, data(Int):B, computed(Int): 
            	Sum("Table1.A", "Table1.B") > Sum2("Table2.A") -> C
            }
-           {Table2, , data(Int):A, data(Int):B, imported(Int): "Table1.A"->C}
+           {Table2, index(String):Index2, data(Int):A, data(Int):B, imported(Int): "Table1.A"->C}
 }

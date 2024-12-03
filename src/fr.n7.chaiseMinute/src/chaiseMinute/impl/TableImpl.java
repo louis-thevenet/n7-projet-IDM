@@ -215,9 +215,9 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 		if (newIndexColumn != indexColumn) {
 			NotificationChain msgs = null;
 			if (indexColumn != null)
-				msgs = ((InternalEObject)indexColumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChaiseMinutePackage.TABLE__INDEX_COLUMN, null, msgs);
+				msgs = ((InternalEObject)indexColumn).eInverseRemove(this, ChaiseMinutePackage.INDEX_COLUMN__TABLE, IndexColumn.class, msgs);
 			if (newIndexColumn != null)
-				msgs = ((InternalEObject)newIndexColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChaiseMinutePackage.TABLE__INDEX_COLUMN, null, msgs);
+				msgs = ((InternalEObject)newIndexColumn).eInverseAdd(this, ChaiseMinutePackage.INDEX_COLUMN__TABLE, IndexColumn.class, msgs);
 			msgs = basicSetIndexColumn(newIndexColumn, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -240,6 +240,10 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetChaiseMinute((ChaiseMinute)otherEnd, msgs);
+			case ChaiseMinutePackage.TABLE__INDEX_COLUMN:
+				if (indexColumn != null)
+					msgs = ((InternalEObject)indexColumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChaiseMinutePackage.TABLE__INDEX_COLUMN, null, msgs);
+				return basicSetIndexColumn((IndexColumn)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}

@@ -78,15 +78,15 @@ public class ChaiseMinuteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ChaiseMinutePackage.COLUMN: {
-				Column column = (Column)theEObject;
-				T result = caseColumn(column);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ChaiseMinutePackage.INDEX_COLUMN: {
 				IndexColumn indexColumn = (IndexColumn)theEObject;
 				T result = caseIndexColumn(indexColumn);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChaiseMinutePackage.COLUMN: {
+				Column column = (Column)theEObject;
+				T result = caseColumn(column);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -21,12 +21,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//Table/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Table/indexColumn"/>
     </genClasses>
+    <genClasses ecoreClass="chaiseMinute.ecore#//IndexColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//IndexColumn/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//IndexColumn/table"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//IndexColumn/type"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="chaiseMinute.ecore#//Column">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//Column/id"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Column/table"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//Column/type"/>
     </genClasses>
-    <genClasses ecoreClass="chaiseMinute.ecore#//IndexColumn"/>
     <genClasses ecoreClass="chaiseMinute.ecore#//ColumnData"/>
     <genClasses ecoreClass="chaiseMinute.ecore#//ComputedColumn">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ComputedColumn/algorithm"/>

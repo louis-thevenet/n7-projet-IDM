@@ -12,7 +12,14 @@
         eType="#//ChaiseMinute" eOpposite="#//ChaiseMinute/tables"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="indexColumn" lowerBound="1"
-        eType="#//IndexColumn" containment="true"/>
+        eType="#//IndexColumn" containment="true" eOpposite="#//IndexColumn/table"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IndexColumn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="id"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="table" lowerBound="1" eType="#//Table"
+        eOpposite="#//Table/indexColumn"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DataType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Column" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -21,7 +28,6 @@
         eOpposite="#//Table/columns"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DataType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IndexColumn"/>
   <eClassifiers xsi:type="ecore:EClass" name="ColumnData" eSuperTypes="#//Column"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComputedColumn" eSuperTypes="#//Column">
     <eStructuralFeatures xsi:type="ecore:EReference" name="algorithm" eType="ecore:EClass ../fr.n7.chaiseMinute.script/algorithm.ecore#//Algorithm"

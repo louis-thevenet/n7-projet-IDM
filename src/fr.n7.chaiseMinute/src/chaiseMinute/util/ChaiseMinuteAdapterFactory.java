@@ -76,12 +76,12 @@ public class ChaiseMinuteAdapterFactory extends AdapterFactoryImpl {
 				return createTableAdapter();
 			}
 			@Override
-			public Adapter caseColumn(Column object) {
-				return createColumnAdapter();
-			}
-			@Override
 			public Adapter caseIndexColumn(IndexColumn object) {
 				return createIndexColumnAdapter();
+			}
+			@Override
+			public Adapter caseColumn(Column object) {
+				return createColumnAdapter();
 			}
 			@Override
 			public Adapter caseColumnData(ColumnData object) {

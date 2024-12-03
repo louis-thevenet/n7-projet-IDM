@@ -271,11 +271,67 @@ ruleIndexColumn returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getIndexColumnAccess().getIndexColumnAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='index'
 		{
-			$current = forceCreateModelElement(
-				grammarAccess.getIndexColumnAccess().getIndexColumnAction(),
-				$current);
+			newLeafNode(otherlv_1, grammarAccess.getIndexColumnAccess().getIndexKeyword_1());
 		}
+		otherlv_2='('
+		{
+			newLeafNode(otherlv_2, grammarAccess.getIndexColumnAccess().getLeftParenthesisKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getIndexColumnAccess().getTypeDataTypeEnumRuleCall_3_0());
+				}
+				lv_type_3_0=ruleDataType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getIndexColumnRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_3_0,
+						"fr.n7.chaiseMinute.FromText.DataType");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4=')'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getIndexColumnAccess().getRightParenthesisKeyword_4());
+		}
+		otherlv_5=':'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getIndexColumnAccess().getColonKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getIndexColumnAccess().getIdEStringParserRuleCall_6_0());
+				}
+				lv_id_6_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getIndexColumnRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_6_0,
+						"fr.n7.chaiseMinute.FromText.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 

@@ -166,7 +166,62 @@ public interface ChaiseMinutePackage extends EPackage {
 	 * @see chaiseMinute.impl.ChaiseMinutePackageImpl#getColumn()
 	 * @generated
 	 */
-	int COLUMN = 2;
+	int COLUMN = 3;
+
+	/**
+	 * The meta object id for the '{@link chaiseMinute.impl.IndexColumnImpl <em>Index Column</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see chaiseMinute.impl.IndexColumnImpl
+	 * @see chaiseMinute.impl.ChaiseMinutePackageImpl#getIndexColumn()
+	 * @generated
+	 */
+	int INDEX_COLUMN = 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_COLUMN__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Table</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_COLUMN__TABLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_COLUMN__TYPE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Index Column</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_COLUMN_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Index Column</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_COLUMN_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -212,34 +267,6 @@ public interface ChaiseMinutePackage extends EPackage {
 	 * @ordered
 	 */
 	int COLUMN_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link chaiseMinute.impl.IndexColumnImpl <em>Index Column</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see chaiseMinute.impl.IndexColumnImpl
-	 * @see chaiseMinute.impl.ChaiseMinutePackageImpl#getIndexColumn()
-	 * @generated
-	 */
-	int INDEX_COLUMN = 3;
-
-	/**
-	 * The number of structural features of the '<em>Index Column</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_COLUMN_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Index Column</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDEX_COLUMN_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link chaiseMinute.impl.ColumnDataImpl <em>Column Data</em>}' class.
@@ -564,6 +591,39 @@ public interface ChaiseMinutePackage extends EPackage {
 	EClass getIndexColumn();
 
 	/**
+	 * Returns the meta object for the attribute '{@link chaiseMinute.IndexColumn#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see chaiseMinute.IndexColumn#getId()
+	 * @see #getIndexColumn()
+	 * @generated
+	 */
+	EAttribute getIndexColumn_Id();
+
+	/**
+	 * Returns the meta object for the container reference '{@link chaiseMinute.IndexColumn#getTable <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Table</em>'.
+	 * @see chaiseMinute.IndexColumn#getTable()
+	 * @see #getIndexColumn()
+	 * @generated
+	 */
+	EReference getIndexColumn_Table();
+
+	/**
+	 * Returns the meta object for the attribute '{@link chaiseMinute.IndexColumn#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see chaiseMinute.IndexColumn#getType()
+	 * @see #getIndexColumn()
+	 * @generated
+	 */
+	EAttribute getIndexColumn_Type();
+
+	/**
 	 * Returns the meta object for class '{@link chaiseMinute.ColumnData <em>Column Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -751,6 +811,30 @@ public interface ChaiseMinutePackage extends EPackage {
 		 * @generated
 		 */
 		EClass INDEX_COLUMN = eINSTANCE.getIndexColumn();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INDEX_COLUMN__ID = eINSTANCE.getIndexColumn_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Table</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INDEX_COLUMN__TABLE = eINSTANCE.getIndexColumn_Table();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INDEX_COLUMN__TYPE = eINSTANCE.getIndexColumn_Type();
 
 		/**
 		 * The meta object literal for the '{@link chaiseMinute.impl.ColumnDataImpl <em>Column Data</em>}' class.

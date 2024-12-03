@@ -277,6 +277,36 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 	 * @generated
 	 */
 	@Override
+	public EAttribute getIndexColumn_Id() {
+		return (EAttribute)indexColumnEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getIndexColumn_Table() {
+		return (EReference)indexColumnEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIndexColumn_Type() {
+		return (EAttribute)indexColumnEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getColumnData() {
 		return columnDataEClass;
 	}
@@ -369,12 +399,15 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		createEAttribute(tableEClass, TABLE__NAME);
 		createEReference(tableEClass, TABLE__INDEX_COLUMN);
 
+		indexColumnEClass = createEClass(INDEX_COLUMN);
+		createEAttribute(indexColumnEClass, INDEX_COLUMN__ID);
+		createEReference(indexColumnEClass, INDEX_COLUMN__TABLE);
+		createEAttribute(indexColumnEClass, INDEX_COLUMN__TYPE);
+
 		columnEClass = createEClass(COLUMN);
 		createEAttribute(columnEClass, COLUMN__ID);
 		createEReference(columnEClass, COLUMN__TABLE);
 		createEAttribute(columnEClass, COLUMN__TYPE);
-
-		indexColumnEClass = createEClass(INDEX_COLUMN);
 
 		columnDataEClass = createEClass(COLUMN_DATA);
 
@@ -431,14 +464,17 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		initEReference(getTable_Columns(), this.getColumn(), this.getColumn_Table(), "columns", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTable_ChaiseMinute(), this.getChaiseMinute(), this.getChaiseMinute_Tables(), "chaiseMinute", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTable_IndexColumn(), this.getIndexColumn(), null, "indexColumn", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_IndexColumn(), this.getIndexColumn(), this.getIndexColumn_Table(), "indexColumn", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(indexColumnEClass, IndexColumn.class, "IndexColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIndexColumn_Id(), ecorePackage.getEString(), "id", "id", 1, 1, IndexColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIndexColumn_Table(), this.getTable(), this.getTable_IndexColumn(), "table", null, 1, 1, IndexColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIndexColumn_Type(), this.getDataType(), "type", null, 0, 1, IndexColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(columnEClass, Column.class, "Column", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumn_Id(), ecorePackage.getEString(), "id", "id", 1, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getColumn_Table(), this.getTable(), this.getTable_Columns(), "table", null, 1, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getColumn_Type(), this.getDataType(), "type", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(indexColumnEClass, IndexColumn.class, "IndexColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(columnDataEClass, ColumnData.class, "ColumnData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

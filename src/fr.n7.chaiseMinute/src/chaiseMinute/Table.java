@@ -88,12 +88,14 @@ public interface Table extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Index Column</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link chaiseMinute.IndexColumn#getTable <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index Column</em>' containment reference.
 	 * @see #setIndexColumn(IndexColumn)
 	 * @see chaiseMinute.ChaiseMinutePackage#getTable_IndexColumn()
-	 * @model containment="true" required="true"
+	 * @see chaiseMinute.IndexColumn#getTable
+	 * @model opposite="table" containment="true" required="true"
 	 * @generated
 	 */
 	IndexColumn getIndexColumn();
