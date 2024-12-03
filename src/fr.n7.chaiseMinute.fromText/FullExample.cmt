@@ -1,4 +1,4 @@
-{
+TestChaiseMinute {
            {Table1, index(Int):Index, data(Int):A, data(Int):B, computed(Int): 
            	Sum("Table1.A", "Table1.B") > Sum2("Table2.A") -> C
            }

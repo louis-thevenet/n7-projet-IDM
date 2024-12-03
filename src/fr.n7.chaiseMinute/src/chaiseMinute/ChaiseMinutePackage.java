@@ -77,13 +77,22 @@ public interface ChaiseMinutePackage extends EPackage {
 	int CHAISE_MINUTE__TABLES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAISE_MINUTE__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Chaise Minute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHAISE_MINUTE_FEATURE_COUNT = 1;
+	int CHAISE_MINUTE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Chaise Minute</em>' class.
@@ -484,6 +493,17 @@ public interface ChaiseMinutePackage extends EPackage {
 	EReference getChaiseMinute_Tables();
 
 	/**
+	 * Returns the meta object for the attribute '{@link chaiseMinute.ChaiseMinute#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see chaiseMinute.ChaiseMinute#getName()
+	 * @see #getChaiseMinute()
+	 * @generated
+	 */
+	EAttribute getChaiseMinute_Name();
+
+	/**
 	 * Returns the meta object for class '{@link chaiseMinute.Table <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,6 +745,14 @@ public interface ChaiseMinutePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CHAISE_MINUTE__TABLES = eINSTANCE.getChaiseMinute_Tables();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHAISE_MINUTE__NAME = eINSTANCE.getChaiseMinute_Name();
 
 		/**
 		 * The meta object literal for the '{@link chaiseMinute.impl.TableImpl <em>Table</em>}' class.

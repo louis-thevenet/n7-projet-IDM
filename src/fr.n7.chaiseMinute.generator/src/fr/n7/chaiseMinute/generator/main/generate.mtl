@@ -1,0 +1,19 @@
+[comment encoding = UTF-8 /]
+[module generate('http://chaiseMinute')]
+
+
+[template public generateElement(aChaiseMinute : ChaiseMinute)]
+[comment @main/]
+[file ((aChaiseMinute.name)+'.py', false, 'UTF-8')]
+import sys
+
+def main():
+	filename = sys.argv['['/]1]
+	print(filename)
+	f = open(filename, "r")
+	print(f.read()) 
+	
+if __name__ == '__main__':
+	main()
+[/file]
+[/template]

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -88,7 +88,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public EList<Argument> getInputs() {
 		if (inputs == null) {
-			inputs = new EObjectContainmentEList<Argument>(Argument.class, this, FunctionPackage.FUNCTION__INPUTS);
+			inputs = new EObjectContainmentWithInverseEList<Argument>(Argument.class, this, FunctionPackage.FUNCTION__INPUTS, FunctionPackage.ARGUMENT__USED_BY);
 		}
 		return inputs;
 	}
@@ -114,6 +114,21 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FunctionPackage.FUNCTION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FunctionPackage.FUNCTION__INPUTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputs()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

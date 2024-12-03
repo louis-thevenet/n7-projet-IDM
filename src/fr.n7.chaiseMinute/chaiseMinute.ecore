@@ -4,6 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ChaiseMinute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1"
         eType="#//Table" containment="true" eOpposite="#//Table/chaiseMinute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"

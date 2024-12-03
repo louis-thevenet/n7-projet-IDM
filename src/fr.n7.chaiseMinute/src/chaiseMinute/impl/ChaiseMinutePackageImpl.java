@@ -177,6 +177,16 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 	 * @generated
 	 */
 	@Override
+	public EAttribute getChaiseMinute_Name() {
+		return (EAttribute)chaiseMinuteEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTable() {
 		return tableEClass;
 	}
@@ -392,6 +402,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		// Create classes and their features
 		chaiseMinuteEClass = createEClass(CHAISE_MINUTE);
 		createEReference(chaiseMinuteEClass, CHAISE_MINUTE__TABLES);
+		createEAttribute(chaiseMinuteEClass, CHAISE_MINUTE__NAME);
 
 		tableEClass = createEClass(TABLE);
 		createEReference(tableEClass, TABLE__COLUMNS);
@@ -459,6 +470,7 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		// Initialize classes, features, and operations; add parameters
 		initEClass(chaiseMinuteEClass, ChaiseMinute.class, "ChaiseMinute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getChaiseMinute_Tables(), this.getTable(), this.getTable_ChaiseMinute(), "tables", null, 0, -1, ChaiseMinute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChaiseMinute_Name(), ecorePackage.getEString(), "name", null, 1, 1, ChaiseMinute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTable_Columns(), this.getColumn(), this.getColumn_Table(), "columns", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

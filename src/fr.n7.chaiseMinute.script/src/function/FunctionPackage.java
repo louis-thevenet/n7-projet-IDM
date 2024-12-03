@@ -67,13 +67,22 @@ public interface FunctionPackage extends EPackage {
 	int ARGUMENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Used by</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__USED_BY = 0;
+
+	/**
 	 * The number of structural features of the '<em>Argument</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENT_FEATURE_COUNT = 0;
+	int ARGUMENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Argument</em>' class.
@@ -93,6 +102,15 @@ public interface FunctionPackage extends EPackage {
 	 * @generated
 	 */
 	int COLUMN_ARGUMENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Used by</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN_ARGUMENT__USED_BY = ARGUMENT__USED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Column Path</b></em>' attribute.
@@ -180,6 +198,17 @@ public interface FunctionPackage extends EPackage {
 	EClass getArgument();
 
 	/**
+	 * Returns the meta object for the container reference '{@link function.Argument#getUsed_by <em>Used by</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Used by</em>'.
+	 * @see function.Argument#getUsed_by()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EReference getArgument_Used_by();
+
+	/**
 	 * Returns the meta object for class '{@link function.ColumnArgument <em>Column Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -264,6 +293,14 @@ public interface FunctionPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ARGUMENT = eINSTANCE.getArgument();
+
+		/**
+		 * The meta object literal for the '<em><b>Used by</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENT__USED_BY = eINSTANCE.getArgument_Used_by();
 
 		/**
 		 * The meta object literal for the '{@link function.impl.ColumnArgumentImpl <em>Column Argument</em>}' class.

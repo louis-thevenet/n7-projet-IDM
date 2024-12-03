@@ -35,8 +35,8 @@ public class FromTextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 			builder.put(grammarAccess.getDataTypeAccess().getAlternatives(), "rule__DataType__Alternatives");
 			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup(), "rule__ChaiseMinute__Group__0");
-			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_1(), "rule__ChaiseMinute__Group_1__0");
-			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_1_1(), "rule__ChaiseMinute__Group_1_1__0");
+			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_2(), "rule__ChaiseMinute__Group_2__0");
+			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_2_1(), "rule__ChaiseMinute__Group_2_1__0");
 			builder.put(grammarAccess.getTableAccess().getGroup(), "rule__Table__Group__0");
 			builder.put(grammarAccess.getTableAccess().getGroup_5(), "rule__Table__Group_5__0");
 			builder.put(grammarAccess.getTableAccess().getGroup_5_1(), "rule__Table__Group_5_1__0");
@@ -51,8 +51,9 @@ public class FromTextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAlgorithmAccess().getGroup(), "rule__Algorithm__Group__0");
 			builder.put(grammarAccess.getAlgorithmAccess().getGroup_2(), "rule__Algorithm__Group_2__0");
 			builder.put(grammarAccess.getEIntAccess().getGroup(), "rule__EInt__Group__0");
-			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_1_0(), "rule__ChaiseMinute__TablesAssignment_1_0");
-			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_1_1_1(), "rule__ChaiseMinute__TablesAssignment_1_1_1");
+			builder.put(grammarAccess.getChaiseMinuteAccess().getNameAssignment_0(), "rule__ChaiseMinute__NameAssignment_0");
+			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_2_0(), "rule__ChaiseMinute__TablesAssignment_2_0");
+			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_2_1_1(), "rule__ChaiseMinute__TablesAssignment_2_1_1");
 			builder.put(grammarAccess.getTableAccess().getNameAssignment_1(), "rule__Table__NameAssignment_1");
 			builder.put(grammarAccess.getTableAccess().getIndexColumnAssignment_3(), "rule__Table__IndexColumnAssignment_3");
 			builder.put(grammarAccess.getTableAccess().getColumnsAssignment_5_0(), "rule__Table__ColumnsAssignment_5_0");

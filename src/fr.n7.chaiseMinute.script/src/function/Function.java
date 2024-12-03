@@ -26,11 +26,13 @@ public interface Function extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
 	 * The list contents are of type {@link function.Argument}.
+	 * It is bidirectional and its opposite is '{@link function.Argument#getUsed_by <em>Used by</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Inputs</em>' containment reference list.
 	 * @see function.FunctionPackage#getFunction_Inputs()
-	 * @model containment="true"
+	 * @see function.Argument#getUsed_by
+	 * @model opposite="used_by" containment="true"
 	 * @generated
 	 */
 	EList<Argument> getInputs();

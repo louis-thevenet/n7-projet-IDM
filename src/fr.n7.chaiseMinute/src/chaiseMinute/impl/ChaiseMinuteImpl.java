@@ -8,6 +8,7 @@ import chaiseMinute.Table;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
@@ -29,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link chaiseMinute.impl.ChaiseMinuteImpl#getTables <em>Tables</em>}</li>
+ *   <li>{@link chaiseMinute.impl.ChaiseMinuteImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +46,25 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 	 * @ordered
 	 */
 	protected EList<Table> tables;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,6 +96,29 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 			tables = new EObjectContainmentWithInverseEList<Table>(Table.class, this, ChaiseMinutePackage.CHAISE_MINUTE__TABLES, ChaiseMinutePackage.TABLE__CHAISE_MINUTE);
 		}
 		return tables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ChaiseMinutePackage.CHAISE_MINUTE__NAME, oldName, name));
 	}
 
 	/**
@@ -115,6 +160,8 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 		switch (featureID) {
 			case ChaiseMinutePackage.CHAISE_MINUTE__TABLES:
 				return getTables();
+			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -132,6 +179,9 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 				getTables().clear();
 				getTables().addAll((Collection<? extends Table>)newValue);
 				return;
+			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -147,6 +197,9 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 			case ChaiseMinutePackage.CHAISE_MINUTE__TABLES:
 				getTables().clear();
 				return;
+			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -161,8 +214,26 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 		switch (featureID) {
 			case ChaiseMinutePackage.CHAISE_MINUTE__TABLES:
 				return tables != null && !tables.isEmpty();
+			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ChaiseMinuteImpl
