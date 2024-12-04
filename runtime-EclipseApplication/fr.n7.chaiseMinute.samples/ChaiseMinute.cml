@@ -11,5 +11,7 @@
     </columns>
     <indexColumn id="Noms"/>
   </tables>
-  <tables name="Table3"/>
+  <tables name="Table3">
+    <indexColumn id="idT3"/>
+  </tables>
 </chaiseMinute:ChaiseMinute>

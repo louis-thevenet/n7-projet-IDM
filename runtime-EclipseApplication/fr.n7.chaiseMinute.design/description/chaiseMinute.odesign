@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="chaiseMinute" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="chaiseMinute" version="12.0.0.2017041100">
   <ownedViewpoints name="ChaiseMinuteViewpoint" modelFileExtension="cml">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ChaiseMinuteDiagram" domainClass="chaiseMinute::ChaiseMinute" enablePopupBars="true">
+      <metamodel href="http://chaiseMinute#/"/>
+      <metamodel href="http://algorithm#/"/>
+      <metamodel href="http://function#/"/>
       <defaultLayer name="Table Layer">
-        <containerMappings name="TableC" domainClass="chaiseMinute::Table">
-          <subNodeMappings name="IndexColumnN" domainClass="chaiseMinute::IndexColumn">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW">
+        <containerMappings name="CMC" semanticCandidatesExpression="var:self" domainClass="chaiseMinute::ChaiseMinute">
+          <subContainerMappings name="TableC" semanticCandidatesExpression="feature:eAllContents" domainClass="chaiseMinute::Table">
+            <subContainerMappings name="DataC" semanticCandidatesExpression="feature:eAllContents" domainClass="chaiseMinute::ColumnData">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:id">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              </style>
+            </subContainerMappings>
+            <subContainerMappings name="IndexC" semanticCandidatesExpression="feature:eAllContents" domainClass="chaiseMinute::IndexColumn">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:id">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+              </style>
+            </subContainerMappings>
+            <subContainerMappings name="ImportedC" semanticCandidatesExpression="feature:eAllContents">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:id">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+              </style>
+            </subContainerMappings>
+            <subContainerMappings name="ComputedC" semanticCandidatesExpression="feature:eAllContents" domainClass="chaiseMinute::ComputedColumn">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:id">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             </style>
-          </subNodeMappings>
-          <subNodeMappings name="ColumnDataN" domainClass="chaiseMinute::ColumnData">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
-            </style>
-          </subNodeMappings>
-          <subNodeMappings name="ComputedColumnN" domainClass="chaiseMinute::ComputedColumn">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            </style>
-          </subNodeMappings>
-          <subNodeMappings name="ImportedColumnN" domainClass="chaiseMinute::ImportedColumn">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            </style>
-          </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false">
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="CM">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
-        <toolSections>
-          <ownedTools xsi:type="tool:ContainerCreationDescription">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation/>
-          </ownedTools>
-        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.n7.chaiseMinute.design.Services"/>
