@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chaiseMinute="http://chaiseMinute" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_x5Z5ULFnEe-PI8zrvViA9A" selectedViews="_0eYsoLFpEe-PI8zrvViA9A" version="15.2.0.202303281325">
+    <semanticResources>ChaiseMinute.cml</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_0eYsoLFpEe-PI8zrvViA9A">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HCsmOrI3Ee-_MJpbk0UDng" name="new ChaiseMinuteTableDesc" repPath="#_HCoUwLI3Ee-_MJpbk0UDng" changeId="1733314568135">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTableDesc']"/>
+        <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_CrA3dbI7Ee-yiaDgrRBpfg" name="new ChaiseMinuteTable" repPath="#_Cq6w0LI7Ee-yiaDgrRBpfg" changeId="1733315436510">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTable']"/>
+        <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <table:DTable uid="_HCoUwLI3Ee-_MJpbk0UDng" headerColumnWidth="379">
+    <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
+    <columns xmi:type="table:DFeatureColumn" uid="_iq3xMLI5Ee-_MJpbk0UDng">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTableDesc']/@ownedColumnMappings[name='']"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_Z21IsrI5Ee-_MJpbk0UDng" label="Column Data note1" width="379">
+      <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.0"/>
+      <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.0"/>
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTableDesc']/@ownedColumnMappings[name='']"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_Z21ItLI5Ee-_MJpbk0UDng" label="Column Data note2" width="379">
+      <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.1"/>
+      <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.1"/>
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTableDesc']/@ownedColumnMappings[name='']"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_Z21ItrI5Ee-_MJpbk0UDng" label="Column Data note3">
+      <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.2"/>
+      <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.2"/>
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTableDesc']/@ownedColumnMappings[name='']"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTableDesc']"/>
+  </table:DTable>
+  <table:DTable uid="_Cq6w0LI7Ee-yiaDgrRBpfg" headerColumnWidth="167">
+    <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
+    <lines xmi:type="table:DLine" uid="_Cq90ILI7Ee-yiaDgrRBpfg" label="Index Column Noms">
+      <target xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.0/@indexColumn"/>
+      <semanticElements xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.0/@indexColumn"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTable']/@ownedLineMappings[name='Index']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_Cq_pULI7Ee-yiaDgrRBpfg" label="Index Column idT3">
+      <target xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.1/@indexColumn"/>
+      <semanticElements xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.1/@indexColumn"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTable']/@ownedLineMappings[name='Index']"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_CrAQYLI7Ee-yiaDgrRBpfg" label="Column Data note1" width="220">
+      <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.0"/>
+      <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTable']/@ownedColumnMappings.0"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_CrA3cbI7Ee-yiaDgrRBpfg" label="Column Data note2" width="221">
+      <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.1"/>
+      <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTable']/@ownedColumnMappings.0"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_CrA3c7I7Ee-yiaDgrRBpfg" label="Column Data note3">
+      <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.2"/>
+      <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTable']/@ownedColumnMappings.0"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteTable']"/>
+  </table:DTable>
+</xmi:XMI>
