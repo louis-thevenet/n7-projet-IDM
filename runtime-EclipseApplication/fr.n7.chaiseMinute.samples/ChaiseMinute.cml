@@ -15,9 +15,6 @@
     <columns xsi:type="chaiseMinute:ImportedColumn" id="Moyenne" path="Table1.Moyenne"/>
     <indexColumn id="idT3"/>
   </tables>
-  <tables>
-    <columns xsi:type="chaiseMinute:ColumnData"/>
-  </tables>
   <tables name="Table2">
     <columns xsi:type="chaiseMinute:ColumnData" id="DataColumn"/>
     <columns xsi:type="chaiseMinute:ImportedColumn" id="Imported" path="Table1.note3"/>
