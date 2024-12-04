@@ -129,16 +129,6 @@ public class FunctionPackageImpl extends EPackageImpl implements FunctionPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getArgument_Used_by() {
-		return (EReference)argumentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getColumnArgument() {
 		return columnArgumentEClass;
 	}
@@ -213,7 +203,6 @@ public class FunctionPackageImpl extends EPackageImpl implements FunctionPackage
 
 		// Create classes and their features
 		argumentEClass = createEClass(ARGUMENT);
-		createEReference(argumentEClass, ARGUMENT__USED_BY);
 
 		columnArgumentEClass = createEClass(COLUMN_ARGUMENT);
 		createEAttribute(columnArgumentEClass, COLUMN_ARGUMENT__COLUMN_PATH);
@@ -255,13 +244,12 @@ public class FunctionPackageImpl extends EPackageImpl implements FunctionPackage
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(argumentEClass, Argument.class, "Argument", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArgument_Used_by(), this.getFunction(), this.getFunction_Inputs(), "used_by", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(columnArgumentEClass, ColumnArgument.class, "ColumnArgument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumnArgument_ColumnPath(), ecorePackage.getEString(), "columnPath", null, 0, 1, ColumnArgument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFunction_Inputs(), this.getArgument(), this.getArgument_Used_by(), "inputs", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_Inputs(), this.getArgument(), null, "inputs", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

@@ -23,8 +23,11 @@ import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import algorithm.AlgorithmPackage;
 import chaiseMinute.ChaiseMinutePackage;
+import function.FunctionPackage;
 
 /**
  * Entry point of the 'Generate' generation module.
@@ -378,6 +381,11 @@ public class Generate extends AbstractAcceleoGenerator {
                  // The normal package registration if your metamodel is in a plugin.
                  resourceSet.getPackageRegistry().put(ChaiseMinutePackage.eNS_URI, ChaiseMinutePackage.eINSTANCE);
              }
+        
+        if (!isInWorkspace(FunctionPackage.class)) {
+            // The normal package registration if your metamodel is in a plugin.
+            resourceSet.getPackageRegistry().put(FunctionPackage.eNS_URI, FunctionPackage.eINSTANCE);
+        }
     }
 
     /**

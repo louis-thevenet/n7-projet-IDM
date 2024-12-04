@@ -11,9 +11,7 @@
     </genClasses>
   </genPackages>
   <genPackages prefix="Function" ecorePackage="../fr.n7.chaiseMinute.function/function.ecore#/">
-    <genClasses image="false" ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//Argument">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../fr.n7.chaiseMinute.function/function.ecore#//Argument/used_by"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//Argument"/>
     <genClasses ecoreClass="../fr.n7.chaiseMinute.function/function.ecore#//ColumnArgument">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../fr.n7.chaiseMinute.function/function.ecore#//ColumnArgument/columnPath"/>
     </genClasses>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="fr.n7.chaiseMinute.generator">
     <property name="ECLIPSE_HOME" value="../../../../../../mnt/n7fs/ens/tp_dupont/modelling-2023-09/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../runtime-EclipseApplication"/>
+    <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="fr.n7.chaiseMinute.generator.libraryclasspath">
@@ -34,6 +34,8 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.35.0.v20230801-1141.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.23.0.v20230211-1150.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_32.1.2.jre.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.edit_2.19.0.v20230828-0616.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.change_2.15.0.v20230211-1150.jar"/>
     </path>
 
     <path id="fr.n7.chaiseMinute.generator.classpath">
