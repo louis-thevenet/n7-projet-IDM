@@ -20,12 +20,12 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class FromTextSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected FromTextGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_ChaiseMinute_CommaKeyword_1_1_0_q;
+	protected AbstractElementAlias match_ChaiseMinute_CommaKeyword_2_1_0_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (FromTextGrammarAccess) access;
-		match_ChaiseMinute_CommaKeyword_1_1_0_q = new TokenAlias(false, true, grammarAccess.getChaiseMinuteAccess().getCommaKeyword_1_1_0());
+		match_ChaiseMinute_CommaKeyword_2_1_0_q = new TokenAlias(false, true, grammarAccess.getChaiseMinuteAccess().getCommaKeyword_2_1_0());
 	}
 	
 	@Override
@@ -40,8 +40,8 @@ public class FromTextSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_ChaiseMinute_CommaKeyword_1_1_0_q.equals(syntax))
-				emit_ChaiseMinute_CommaKeyword_1_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_ChaiseMinute_CommaKeyword_2_1_0_q.equals(syntax))
+				emit_ChaiseMinute_CommaKeyword_2_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -56,7 +56,7 @@ public class FromTextSyntacticSequencer extends AbstractSyntacticSequencer {
 	 
 	 * </pre>
 	 */
-	protected void emit_ChaiseMinute_CommaKeyword_1_1_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ChaiseMinute_CommaKeyword_2_1_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

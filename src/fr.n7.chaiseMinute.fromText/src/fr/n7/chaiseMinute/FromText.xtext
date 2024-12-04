@@ -6,6 +6,7 @@ import "http://algorithm" as algorithm
 import "http://function" as function
 
 ChaiseMinute returns ChaiseMinute:
+	name=EString
 	'{'
 		(tables+=Table ( ','? tables+=Table)* )?
 	'}';

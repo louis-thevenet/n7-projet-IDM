@@ -28,53 +28,63 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	public class ChaiseMinuteElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.ChaiseMinute");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cTablesAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final RuleCall cTablesTableParserRuleCall_1_0_0 = (RuleCall)cTablesAssignment_1_0.eContents().get(0);
-		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
-		private final Keyword cCommaKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final Assignment cTablesAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
-		private final RuleCall cTablesTableParserRuleCall_1_1_1_0 = (RuleCall)cTablesAssignment_1_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cTablesAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cTablesTableParserRuleCall_2_0_0 = (RuleCall)cTablesAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cTablesAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cTablesTableParserRuleCall_2_1_1_0 = (RuleCall)cTablesAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ChaiseMinute returns ChaiseMinute:
+		//    name=EString
 		//    '{'
 		//        (tables+=Table ( ','? tables+=Table)* )?
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
+		//name=EString
 		//'{'
 		//    (tables+=Table ( ','? tables+=Table)* )?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
+		//name=EString
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
+		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
 		//(tables+=Table ( ','? tables+=Table)* )?
-		public Group getGroup_1() { return cGroup_1; }
+		public Group getGroup_2() { return cGroup_2; }
 		
 		//tables+=Table
-		public Assignment getTablesAssignment_1_0() { return cTablesAssignment_1_0; }
+		public Assignment getTablesAssignment_2_0() { return cTablesAssignment_2_0; }
 		
 		//Table
-		public RuleCall getTablesTableParserRuleCall_1_0_0() { return cTablesTableParserRuleCall_1_0_0; }
+		public RuleCall getTablesTableParserRuleCall_2_0_0() { return cTablesTableParserRuleCall_2_0_0; }
 		
 		//( ','? tables+=Table)*
-		public Group getGroup_1_1() { return cGroup_1_1; }
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//','?
-		public Keyword getCommaKeyword_1_1_0() { return cCommaKeyword_1_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
 		//tables+=Table
-		public Assignment getTablesAssignment_1_1_1() { return cTablesAssignment_1_1_1; }
+		public Assignment getTablesAssignment_2_1_1() { return cTablesAssignment_2_1_1; }
 		
 		//Table
-		public RuleCall getTablesTableParserRuleCall_1_1_1_0() { return cTablesTableParserRuleCall_1_1_1_0; }
+		public RuleCall getTablesTableParserRuleCall_2_1_1_0() { return cTablesTableParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class TableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.chaiseMinute.FromText.Table");
@@ -698,6 +708,7 @@ public class FromTextGrammarAccess extends AbstractElementFinder.AbstractGrammar
 
 	
 	//ChaiseMinute returns ChaiseMinute:
+	//    name=EString
 	//    '{'
 	//        (tables+=Table ( ','? tables+=Table)* )?
 	//    '}';

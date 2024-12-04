@@ -77,17 +77,36 @@ ruleChaiseMinute returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='{'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getChaiseMinuteAccess().getNameEStringParserRuleCall_0_0());
+				}
+				lv_name_0_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getChaiseMinuteRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_0_0,
+						"fr.n7.chaiseMinute.FromText.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getChaiseMinuteAccess().getLeftCurlyBracketKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getChaiseMinuteAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getChaiseMinuteAccess().getTablesTableParserRuleCall_1_0_0());
+						newCompositeNode(grammarAccess.getChaiseMinuteAccess().getTablesTableParserRuleCall_2_0_0());
 					}
-					lv_tables_1_0=ruleTable
+					lv_tables_2_0=ruleTable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getChaiseMinuteRule());
@@ -95,7 +114,7 @@ ruleChaiseMinute returns [EObject current=null]
 						add(
 							$current,
 							"tables",
-							lv_tables_1_0,
+							lv_tables_2_0,
 							"fr.n7.chaiseMinute.FromText.Table");
 						afterParserOrEnumRuleCall();
 					}
@@ -103,17 +122,17 @@ ruleChaiseMinute returns [EObject current=null]
 			)
 			(
 				(
-					otherlv_2=','
+					otherlv_3=','
 					{
-						newLeafNode(otherlv_2, grammarAccess.getChaiseMinuteAccess().getCommaKeyword_1_1_0());
+						newLeafNode(otherlv_3, grammarAccess.getChaiseMinuteAccess().getCommaKeyword_2_1_0());
 					}
 				)?
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getChaiseMinuteAccess().getTablesTableParserRuleCall_1_1_1_0());
+							newCompositeNode(grammarAccess.getChaiseMinuteAccess().getTablesTableParserRuleCall_2_1_1_0());
 						}
-						lv_tables_3_0=ruleTable
+						lv_tables_4_0=ruleTable
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getChaiseMinuteRule());
@@ -121,7 +140,7 @@ ruleChaiseMinute returns [EObject current=null]
 							add(
 								$current,
 								"tables",
-								lv_tables_3_0,
+								lv_tables_4_0,
 								"fr.n7.chaiseMinute.FromText.Table");
 							afterParserOrEnumRuleCall();
 						}
@@ -129,9 +148,9 @@ ruleChaiseMinute returns [EObject current=null]
 				)
 			)*
 		)?
-		otherlv_4='}'
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getChaiseMinuteAccess().getRightCurlyBracketKeyword_2());
+			newLeafNode(otherlv_5, grammarAccess.getChaiseMinuteAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;

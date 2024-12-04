@@ -100,7 +100,7 @@ public class FromTextSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     ChaiseMinute returns ChaiseMinute
 	 *
 	 * Constraint:
-	 *     (tables+=Table tables+=Table*)
+	 *     (name=EString (tables+=Table tables+=Table*)?)
 	 * </pre>
 	 */
 	protected void sequence_ChaiseMinute(ISerializationContext context, ChaiseMinute semanticObject) {

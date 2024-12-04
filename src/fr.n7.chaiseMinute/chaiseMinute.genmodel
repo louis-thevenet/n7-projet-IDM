@@ -14,6 +14,7 @@
     </genEnums>
     <genClasses ecoreClass="chaiseMinute.ecore#//ChaiseMinute">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ChaiseMinute/tables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//ChaiseMinute/name"/>
     </genClasses>
     <genClasses ecoreClass="chaiseMinute.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Table/columns"/>

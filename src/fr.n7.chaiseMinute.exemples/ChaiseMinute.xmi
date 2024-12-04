@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chaiseMinute:ChaiseMinute
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:chaiseMinute="http://chaiseMinute"
+    xmlns:function="http://function"
+    name="Un Exemple">
+  <tables name="table1">
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="A"
+        type="Int"/>
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="B"
+        type="Int"/>
+    <columns
+        xsi:type="chaiseMinute:ComputedColumn"
+        id="C">
+      <algorithm>
+        <functions
+            name="Sum">
+          <inputs
+              xsi:type="function:ColumnArgument"
+              columnPath="table1.A"/>
+          <inputs
+              xsi:type="function:ColumnArgument"
+              columnPath="table1.B"/>
+        </functions>
+      </algorithm>
+    </columns>
+    <indexColumn
+        id="index"
+        type="Int"/>
+  </tables>
+  <tables name="table2">
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="C"
+        type="Int"/>
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="B"
+        type="Int"/>
+    <columns
+        xsi:type="chaiseMinute:ImportedColumn"
+        id="A"
+        type="Int"
+        path="table1.B"/>
+    <indexColumn
+        id="index2"/>
+  </tables>
+</chaiseMinute:ChaiseMinute>

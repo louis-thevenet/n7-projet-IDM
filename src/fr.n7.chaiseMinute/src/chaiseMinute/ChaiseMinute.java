@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link chaiseMinute.ChaiseMinute#getTables <em>Tables</em>}</li>
+ *   <li>{@link chaiseMinute.ChaiseMinute#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see chaiseMinute.ChaiseMinutePackage#getChaiseMinute()
@@ -36,5 +37,27 @@ public interface ChaiseMinute extends EObject {
 	 * @generated
 	 */
 	EList<Table> getTables();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see chaiseMinute.ChaiseMinutePackage#getChaiseMinute_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link chaiseMinute.ChaiseMinute#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // ChaiseMinute
