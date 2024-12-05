@@ -7,9 +7,8 @@ def search(input, out, table, id):
 	except Exception:
 		return out[id].to_list()
 
-
 def main():
-# Load files
+	# Load files
 	input = {}	
 	csv_file_path = "table1.csv"
 	input["table1"] = pd.read_csv(csv_file_path)
@@ -40,8 +39,6 @@ def main():
 	# Saving to "output_table1.csv" 
 	################################
 	pd.DataFrame.from_dict(out, orient="columns").to_csv("output_"+"table1"+".csv", index_label="index")
-
-
 	out = {}
 	###########################################################################
 	# Table: table2
@@ -98,8 +95,5 @@ def main():
 	################################
 	pd.DataFrame.from_dict(out, orient="columns").to_csv("output_"+"table2"+".csv", index_label="index")
 
-
-	
 if __name__ == '__main__':
 	main()
-

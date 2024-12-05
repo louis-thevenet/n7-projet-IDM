@@ -14,9 +14,8 @@ def search(input, out, table, id):
 	except Exception:
 		return out['['/]id].to_list()
 
-
 def main():
-# Load files
+	# Load files
 	input = {}	
 [for (t : Table | aChaiseMinute.getTables())]
 	csv_file_path = ['"' + t.name+ '.csv'+'"'/]
@@ -26,10 +25,9 @@ def main():
 [for (t : Table | aChaiseMinute.getTables())]
 [t.generateElement()/]
 [/for]	
-	
+
 if __name__ == '__main__':
 	main()
-
 [/file]
 [/template]
 
@@ -100,8 +98,6 @@ if __name__ == '__main__':
 	# Saving to "output_[aTable.name/].csv" 
 	################################
 	pd.DataFrame.from_dict(out, orient="columns").to_csv("output_"+"[aTable.name/]"+".csv", index_label="[aTable.indexColumn.id/]")
-
-
 [/template]
 
 
