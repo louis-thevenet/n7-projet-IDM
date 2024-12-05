@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generate('http://chaiseMinute', 'http://function')]
+[module generate('http://chaiseMinute', 'http://function', 'http://algorithm')]
 
 
 [template public generateElement(aChaiseMinute : ChaiseMinute)]
@@ -8,28 +8,26 @@
 import sys
 import pandas as pd
 
-def internal_or_external(intern, extern, table, id):
-	if intern['['/]id].to_list() == None:
-		return extern['['/]table]['['/]id].to_list()
-	else:
-		return intern['['/]id].to_list()
-
+def search(input, out, table, id):
+	try:
+		return input['['/]table]['['/]id].to_list()
+	except Exception:
+		return out['['/]id].to_list()
 
 def main():
-# Load files
-	content = {}	
+	# Load files
+	input = {}	
 [for (t : Table | aChaiseMinute.getTables())]
 	csv_file_path = ['"' + t.name+ '.csv'+'"'/]
-	content['['/]"[t.name/]"] = pd.read_csv(csv_file_path)
+	input['['/]"[t.name/]"] = pd.read_csv(csv_file_path)
 [/for]	
 
 [for (t : Table | aChaiseMinute.getTables())]
 [t.generateElement()/]
 [/for]	
-	
+
 if __name__ == '__main__':
 	main()
-
 [/file]
 [/template]
 
@@ -45,18 +43,22 @@ if __name__ == '__main__':
 
 [template public generateElement(aTable: Table)]
 	out = {}
-
-	#### Table: [aTable.name/] ####
-
+	###########################################################################
+	# Table: [aTable.name/]
+	###########################################################################
 	[for (c: Column | aTable.columns)]
 		[if (c.oclIsKindOf(ColumnData))]
-	### Data column: [c.id/] ###
-	out['['/]"[c.id/]"]=content['['/]"[aTable.name/]"]['['/]"[c.id/]"]
+	################################
+	## Data column: [c.id/] 
+	################################
+	out['['/]"[c.id/]"]=input['['/]"[aTable.name/]"]['['/]"[c.id/]"]
+
 		[elseif (c.oclIsTypeOf(ImportedColumn))]
 			[let table:String = c.oclAsType(ImportedColumn).path.replaceAll('\\..*', '')]
 			[let id:String = c.oclAsType(ImportedColumn).path.replaceFirst('.*\\.', '')]
 	### Imported column: [c.id/] from [c.oclAsType(ImportedColumn).path/] ###
-	out['['/]"[c.id/]"]=content['['/]"[table/]"]['['/]"[id/]"]
+	out['['/]"[c.id/]"]=input['['/]"[table/]"]['['/]"[id/]"]
+
 			[/let]
 			[/let]
 		[else]
@@ -64,25 +66,38 @@ if __name__ == '__main__':
 	[/for]
 	[for (c: Column | aTable.columns)]
 		[if (c.oclIsKindOf(ComputedColumn))]
-	### Computed column: [c.id/] ###
-
+	################################			
+	## Computed column: [c.id/] 
+	################################
 			[for (f : Function | c.oclAsType(ComputedColumn).algorithm.functions) ]
+	### Apply [f.name/] ##
 	from [f.name/] import [f.name/]
+				[let functionNo :Integer= i]
 	out['['/]"[c.id/]"] = [f.name/](
-				[for (input : Argument | f.inputs)]
+					[for (input : Argument | f.inputs)]
+					[if (functionNo >=2)]
+		out['['/]"[c.id/]"], # Previous result used in next function
+					[/if]
 					[if input.oclIsTypeOf(ColumnArgument)]
 						[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
 						[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
-						internal_or_external(out, content, "[table/]", "[id/]"),
+		search(input, out, "[table/]", "[id/]"),
 						[/let][/let]
-					[/if]
-				[/for]
-		)
+					[/if]			
+					[/for]
+				[/let]
+	)
+	###############
+
+
 			[/for]
 		[/if]
 	[/for]
 
-
+	################################
+	# Saving to "output_[aTable.name/].csv" 
+	################################
 	pd.DataFrame.from_dict(out, orient="columns").to_csv("output_"+"[aTable.name/]"+".csv", index_label="[aTable.indexColumn.id/]")
-	################
 [/template]
+
+
