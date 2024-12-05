@@ -1,20 +1,20 @@
 import sys
 import pandas as pd
 
-def internal_or_external(intern, extern, table, id):
-	if intern[id].to_list() == None:
-		return extern[table][id].to_list()
-	else:
-		return intern[id].to_list()
+def search(input, out, table, id):
+	try:
+		return input[table][id].to_list()
+	except Exception:
+		return out[id].to_list()
 
 
 def main():
 # Load files
-	content = {}	
+	input = {}	
 	csv_file_path = "table1.csv"
-	content["table1"] = pd.read_csv(csv_file_path)
+	input["table1"] = pd.read_csv(csv_file_path)
 	csv_file_path = "table2.csv"
-	content["table2"] = pd.read_csv(csv_file_path)
+	input["table2"] = pd.read_csv(csv_file_path)
 
 	out = {}
 	###########################################################################
@@ -23,17 +23,17 @@ def main():
 	################################
 	## Data column: A 
 	################################
-	out["A"]=content["table1"]["A"]
+	out["A"]=input["table1"]["A"]
 
 	################################
 	## Data column: B 
 	################################
-	out["B"]=content["table1"]["B"]
+	out["B"]=input["table1"]["B"]
 
 	################################
 	## Data column: C 
 	################################
-	out["C"]=content["table1"]["C"]
+	out["C"]=input["table1"]["C"]
 
 
 	################################
@@ -49,36 +49,36 @@ def main():
 	################################
 	## Data column: A 
 	################################
-	out["A"]=content["table2"]["A"]
+	out["A"]=input["table2"]["A"]
 
 	################################
 	## Data column: B 
 	################################
-	out["B"]=content["table2"]["B"]
+	out["B"]=input["table2"]["B"]
 
 	### Imported column: C from table1.A ###
-	out["C"]=content["table1"]["A"]
+	out["C"]=input["table1"]["A"]
 
-	################################
+	################################			
 	## Computed column: Sum 
 	################################
 	### Apply sum ##
 	from sum import sum
 	out["Sum"] = sum(
-		internal_or_external(out, content, "table1", "A"),
-		internal_or_external(out, content, "table1", "B"),
+		search(input, out, "table1", "A"),
+		search(input, out, "table1", "B"),
 	)
 	###############
 
 
-	################################
+	################################			
 	## Computed column: Variation 
 	################################
 	### Apply variation ##
 	from variation import variation
 	out["Variation"] = variation(
-		internal_or_external(out, content, "table1", "A"),
-		internal_or_external(out, content, "table1", "B"),
+		search(input, out, "table1", "A"),
+		search(input, out, "table1", "B"),
 	)
 	###############
 
@@ -86,8 +86,8 @@ def main():
 	### Apply variation ##
 	from variation import variation
 	out["Variation"] = variation(
-		out["Variation"],
-		internal_or_external(out, content, "table2", "A"),
+		out["Variation"], # Previous result used in next function
+		search(input, out, "table2", "A"),
 	)
 	###############
 
