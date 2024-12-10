@@ -21,6 +21,10 @@ L'utilisateur de `ChaiseMinute` diposera d'une syntaxe textuelle ainsi qu'un out
 == `ChaiseMinute` vers Python
 = Transformations Modèle à Modèle
 = Edition graphique
+Nous avons développé un outils graphique permettant de modifier des fichiers .cml (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
+
+  - Les `Tables` sont représentées par des container blanc
+  - Les `IndexColumn` sont représentées par des container rouge à l'intérieur des `Tables`
 
 = Exemples
 
