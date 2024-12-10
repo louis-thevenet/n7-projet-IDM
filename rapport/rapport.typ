@@ -5,17 +5,28 @@
   subject: "Ingénierie Dirigée par les Modèles", title: "Projet IDM : chaiseMinute", authors: ("LEBOBE Timothée", "LECUYER Simon","SABLAYROLLES Guillaume", "THEVENET Louis",), date: "Novembre 2024 - Decembre 2024", subtitle: "Groupe L34-2", toc: true,
 )
 
+= Introduction
+Ce projet consiste en la réalisation d'un environnement de calcul Domaine-Scientifique nommé : ChaiseMinute.
+
+ChaiseMinute permet à tous ses utilisateurs de développer des `schémas de tables` et des `librairies` pour réaliser des calculs automatiques sur ces schémas. Ainsi l'utilisateur pourra produire des outils pour d'autres utilisateurs finaux souhaitant manipuler des données sans avoir à créer leur propres outils.
+
+L'utilisateur de `ChaiseMinute` diposera d'une syntaxe textuelle ainsi qu'un outil graphique permettant de définir ses schémas de tables. Les schémas de tables pourront être transformés dans des langages plus spécifiques au calcul pour pouvoir utiliser les données avec.  
 
 = Méta-Modèles
 == `ChaiseMinute`
 == `Algorithm`
 == `Function` 
-= Transformations Modèle à Modèle
+= Transforamtions Texte à Modèle de `ChaiseMinute`
 = Transformations Modèle à Texte
-= Transforamtions texte à Modèle
+== `ChaiseMinute` vers Python
+= Transformations Modèle à Modèle
 = Edition graphique
 
 = Exemples
 
 
 = Conclusion
+//  qui doit inclure un bilan sur le projet (soit personnel soit de groupe), expliquant notamment les points de difficulté, et si possible une critique sur le sujet proposé
+
+= Annexes
+//Une description détaillée de ce que contient le rendu (cf Section 4) : description succincte de chaque projet et des fichiers importants (méta-modèles, modèles exemple, fichiers de description, scripts, etc.)
