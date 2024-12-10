@@ -187,6 +187,16 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 	 * @generated
 	 */
 	@Override
+	public EReference getChaiseMinute_Constraints() {
+		return (EReference)chaiseMinuteEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTable() {
 		return tableEClass;
 	}
@@ -229,6 +239,16 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 	@Override
 	public EReference getTable_IndexColumn() {
 		return (EReference)tableEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTable_Constraints() {
+		return (EReference)tableEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -403,12 +423,14 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		chaiseMinuteEClass = createEClass(CHAISE_MINUTE);
 		createEReference(chaiseMinuteEClass, CHAISE_MINUTE__TABLES);
 		createEAttribute(chaiseMinuteEClass, CHAISE_MINUTE__NAME);
+		createEReference(chaiseMinuteEClass, CHAISE_MINUTE__CONSTRAINTS);
 
 		tableEClass = createEClass(TABLE);
 		createEReference(tableEClass, TABLE__COLUMNS);
 		createEReference(tableEClass, TABLE__CHAISE_MINUTE);
 		createEAttribute(tableEClass, TABLE__NAME);
 		createEReference(tableEClass, TABLE__INDEX_COLUMN);
+		createEReference(tableEClass, TABLE__CONSTRAINTS);
 
 		indexColumnEClass = createEClass(INDEX_COLUMN);
 		createEAttribute(indexColumnEClass, INDEX_COLUMN__ID);
@@ -471,12 +493,14 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		initEClass(chaiseMinuteEClass, ChaiseMinute.class, "ChaiseMinute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getChaiseMinute_Tables(), this.getTable(), this.getTable_ChaiseMinute(), "tables", null, 0, -1, ChaiseMinute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getChaiseMinute_Name(), ecorePackage.getEString(), "name", null, 1, 1, ChaiseMinute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChaiseMinute_Constraints(), theAlgorithmPackage.getAlgorithm(), null, "constraints", null, 0, -1, ChaiseMinute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTable_Columns(), this.getColumn(), this.getColumn_Table(), "columns", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTable_ChaiseMinute(), this.getChaiseMinute(), this.getChaiseMinute_Tables(), "chaiseMinute", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTable_IndexColumn(), this.getIndexColumn(), this.getIndexColumn_Table(), "indexColumn", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_Constraints(), theAlgorithmPackage.getAlgorithm(), null, "constraints", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(indexColumnEClass, IndexColumn.class, "IndexColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIndexColumn_Id(), ecorePackage.getEString(), "id", "id", 1, 1, IndexColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

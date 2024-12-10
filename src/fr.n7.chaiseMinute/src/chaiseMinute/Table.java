@@ -2,6 +2,7 @@
  */
 package chaiseMinute;
 
+import algorithm.Algorithm;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link chaiseMinute.Table#getChaiseMinute <em>Chaise Minute</em>}</li>
  *   <li>{@link chaiseMinute.Table#getName <em>Name</em>}</li>
  *   <li>{@link chaiseMinute.Table#getIndexColumn <em>Index Column</em>}</li>
+ *   <li>{@link chaiseMinute.Table#getConstraints <em>Constraints</em>}</li>
  * </ul>
  *
  * @see chaiseMinute.ChaiseMinutePackage#getTable()
@@ -109,5 +111,17 @@ public interface Table extends EObject {
 	 * @generated
 	 */
 	void setIndexColumn(IndexColumn value);
+
+	/**
+	 * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
+	 * The list contents are of type {@link algorithm.Algorithm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Constraints</em>' containment reference list.
+	 * @see chaiseMinute.ChaiseMinutePackage#getTable_Constraints()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Algorithm> getConstraints();
 
 } // Table

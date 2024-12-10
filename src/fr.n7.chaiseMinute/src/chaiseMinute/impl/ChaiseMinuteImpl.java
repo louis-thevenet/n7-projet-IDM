@@ -2,6 +2,7 @@
  */
 package chaiseMinute.impl;
 
+import algorithm.Algorithm;
 import chaiseMinute.ChaiseMinute;
 import chaiseMinute.ChaiseMinutePackage;
 import chaiseMinute.Table;
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -32,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link chaiseMinute.impl.ChaiseMinuteImpl#getTables <em>Tables</em>}</li>
  *   <li>{@link chaiseMinute.impl.ChaiseMinuteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link chaiseMinute.impl.ChaiseMinuteImpl#getConstraints <em>Constraints</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +68,16 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstraints()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Algorithm> constraints;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,6 +139,19 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EList<Algorithm> getConstraints() {
+		if (constraints == null) {
+			constraints = new EObjectContainmentEList<Algorithm>(Algorithm.class, this, ChaiseMinutePackage.CHAISE_MINUTE__CONSTRAINTS);
+		}
+		return constraints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -146,6 +172,8 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 		switch (featureID) {
 			case ChaiseMinutePackage.CHAISE_MINUTE__TABLES:
 				return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
+			case ChaiseMinutePackage.CHAISE_MINUTE__CONSTRAINTS:
+				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -162,6 +190,8 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 				return getTables();
 			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
 				return getName();
+			case ChaiseMinutePackage.CHAISE_MINUTE__CONSTRAINTS:
+				return getConstraints();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -182,6 +212,10 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
 				setName((String)newValue);
 				return;
+			case ChaiseMinutePackage.CHAISE_MINUTE__CONSTRAINTS:
+				getConstraints().clear();
+				getConstraints().addAll((Collection<? extends Algorithm>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -200,6 +234,9 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ChaiseMinutePackage.CHAISE_MINUTE__CONSTRAINTS:
+				getConstraints().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -216,6 +253,8 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
 				return tables != null && !tables.isEmpty();
 			case ChaiseMinutePackage.CHAISE_MINUTE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ChaiseMinutePackage.CHAISE_MINUTE__CONSTRAINTS:
+				return constraints != null && !constraints.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

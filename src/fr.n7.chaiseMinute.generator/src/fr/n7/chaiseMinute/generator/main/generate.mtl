@@ -22,6 +22,33 @@ def main():
 	input['['/]"[t.name/]"] = pd.read_csv(csv_file_path)
 [/for]	
 
+	################################
+	# Verifying Input Constraints
+	################################
+	[for (a : Algorithm |  aChaiseMinute.constraints)]
+		[for (f : Function | a.functions)]
+	### Apply [f.name/] ##
+	from [f.name/] import [f.name/]
+				[let functionNo :Integer= i]
+	res = [f.name/](
+	[if (functionNo >=2)]
+		res, # Previous result used in next function
+	[/if]
+					[for (input : Argument | f.inputs)]	
+					[if input.oclIsTypeOf(ColumnArgument)]
+						[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
+						[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
+		input['['/]"[table/]"]['['/]"[id/]"].to_list(),
+						[/let][/let]
+					[/if]			
+					[/for]
+				[/let]
+	)
+
+		[/for]
+	assert res, ("[aChaiseMinute.constraints.getLastFunction().name/] constraints failed")
+	[/for]
+
 [for (t : Table | aChaiseMinute.getTables())]
 [t.generateElement()/]
 [/for]	
@@ -30,7 +57,7 @@ if __name__ == '__main__':
 	main()
 [/file]
 [/template]
-
+[query public getLastFunction(arg : Algorithm) :Function = arg.functions -> last()/]
 [query public getTable(arg : ChaiseMinute, name: String) : Table = arg.tables 
 -> select(e | e.oclIsTypeOf(Table) and e.name = name)
 -> collect(e | e.oclAsType(Table)) 
@@ -88,10 +115,34 @@ if __name__ == '__main__':
 				[/let]
 	)
 	###############
-
-
 			[/for]
 		[/if]
+	[/for]
+
+	################################
+	# Verifying Table Constraints
+	################################
+	[for (a : Algorithm |  aTable.constraints)]
+		[for (f : Function | a.functions)]
+	### Apply [f.name/] ##
+	from [f.name/] import [f.name/]
+				[let functionNo :Integer= i]
+	res = [f.name/](
+					[for (input : Argument | f.inputs)]
+					[if (functionNo >=2)]
+		res, # Previous result used in next function
+					[/if]
+					[if input.oclIsTypeOf(ColumnArgument)]
+						[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
+						[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
+		search(input, out, "[table/]", "[id/]"),
+						[/let][/let]
+					[/if]			
+					[/for]
+				[/let]
+	)
+	assert res, ("[f.name/] constraints failed")
+		[/for]
 	[/for]
 
 	################################

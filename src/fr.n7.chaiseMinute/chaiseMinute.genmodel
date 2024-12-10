@@ -15,12 +15,14 @@
     <genClasses ecoreClass="chaiseMinute.ecore#//ChaiseMinute">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ChaiseMinute/tables"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//ChaiseMinute/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ChaiseMinute/constraints"/>
     </genClasses>
     <genClasses ecoreClass="chaiseMinute.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Table/columns"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Table/chaiseMinute"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//Table/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Table/indexColumn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//Table/constraints"/>
     </genClasses>
     <genClasses ecoreClass="chaiseMinute.ecore#//IndexColumn">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chaiseMinute.ecore#//IndexColumn/id"/>
