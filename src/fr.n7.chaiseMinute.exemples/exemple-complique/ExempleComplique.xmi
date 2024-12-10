@@ -78,4 +78,17 @@
         id="index"
         type="Int"/>
   </tables>
+  <constraints>
+    <functions
+        name="sum">
+      <inputs
+          xsi:type="function:ColumnArgument"
+          columnPath="table1.Un"/>
+      <inputs
+          xsi:type="function:ColumnArgument"
+          columnPath="table2.Deux"/>
+    </functions>
+    <functions
+        name="ensure_all_lower_than_3"/>
+  </constraints>
 </chaiseMinute:ChaiseMinute>

@@ -86,13 +86,22 @@ public interface ChaiseMinutePackage extends EPackage {
 	int CHAISE_MINUTE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAISE_MINUTE__CONSTRAINTS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Chaise Minute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHAISE_MINUTE_FEATURE_COUNT = 2;
+	int CHAISE_MINUTE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Chaise Minute</em>' class.
@@ -150,13 +159,22 @@ public interface ChaiseMinutePackage extends EPackage {
 	int TABLE__INDEX_COLUMN = 3;
 
 	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__CONSTRAINTS = 4;
+
+	/**
 	 * The number of structural features of the '<em>Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = 4;
+	int TABLE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Table</em>' class.
@@ -504,6 +522,17 @@ public interface ChaiseMinutePackage extends EPackage {
 	EAttribute getChaiseMinute_Name();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link chaiseMinute.ChaiseMinute#getConstraints <em>Constraints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
+	 * @see chaiseMinute.ChaiseMinute#getConstraints()
+	 * @see #getChaiseMinute()
+	 * @generated
+	 */
+	EReference getChaiseMinute_Constraints();
+
+	/**
 	 * Returns the meta object for class '{@link chaiseMinute.Table <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -556,6 +585,17 @@ public interface ChaiseMinutePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTable_IndexColumn();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link chaiseMinute.Table#getConstraints <em>Constraints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
+	 * @see chaiseMinute.Table#getConstraints()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_Constraints();
 
 	/**
 	 * Returns the meta object for class '{@link chaiseMinute.Column <em>Column</em>}'.
@@ -755,6 +795,14 @@ public interface ChaiseMinutePackage extends EPackage {
 		EAttribute CHAISE_MINUTE__NAME = eINSTANCE.getChaiseMinute_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHAISE_MINUTE__CONSTRAINTS = eINSTANCE.getChaiseMinute_Constraints();
+
+		/**
 		 * The meta object literal for the '{@link chaiseMinute.impl.TableImpl <em>Table</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -795,6 +843,14 @@ public interface ChaiseMinutePackage extends EPackage {
 		 * @generated
 		 */
 		EReference TABLE__INDEX_COLUMN = eINSTANCE.getTable_IndexColumn();
+
+		/**
+		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__CONSTRAINTS = eINSTANCE.getTable_Constraints();
 
 		/**
 		 * The meta object literal for the '{@link chaiseMinute.Column <em>Column</em>}' class.

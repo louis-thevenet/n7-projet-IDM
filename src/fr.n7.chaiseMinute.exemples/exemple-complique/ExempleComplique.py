@@ -15,6 +15,24 @@ def main():
 	csv_file_path = "table2.csv"
 	input["table2"] = pd.read_csv(csv_file_path)
 
+	################################
+	# Verifying Input Constraints
+	################################
+	### Apply sum ##
+	from sum import sum
+	res = sum(
+		input["table1"]["Un"].to_list(),
+		input["table2"]["Deux"].to_list(),
+	)
+
+	### Apply ensure_all_lower_than_3 ##
+	from ensure_all_lower_than_3 import ensure_all_lower_than_3
+	res = ensure_all_lower_than_3(
+		res, # Previous result used in next function
+	)
+
+	assert res, ("ensure_all_lower_than_3 constraints failed")
+
 	out = {}
 	###########################################################################
 	# Table: table1
@@ -34,6 +52,10 @@ def main():
 	################################
 	out["C"]=input["table1"]["C"]
 
+
+	################################
+	# Verifying Table Constraints
+	################################
 
 	################################
 	# Saving to "output_table1.csv" 
@@ -66,8 +88,6 @@ def main():
 		search(input, out, "table1", "B"),
 	)
 	###############
-
-
 	################################			
 	## Computed column: Variation 
 	################################
@@ -78,8 +98,6 @@ def main():
 		search(input, out, "table1", "B"),
 	)
 	###############
-
-
 	### Apply variation ##
 	from variation import variation
 	out["Variation"] = variation(
@@ -88,7 +106,9 @@ def main():
 	)
 	###############
 
-
+	################################
+	# Verifying Table Constraints
+	################################
 
 	################################
 	# Saving to "output_table2.csv" 

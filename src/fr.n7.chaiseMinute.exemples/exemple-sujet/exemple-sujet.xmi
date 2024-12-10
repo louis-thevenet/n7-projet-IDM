@@ -65,5 +65,16 @@
     </columns>
     <indexColumn
         id="Date"/>
+    <constraints>
+      <functions
+          name="ensure_min_max">
+        <inputs
+            xsi:type="function:ColumnArgument"
+            columnPath="table.Min"/>
+        <inputs
+            xsi:type="function:ColumnArgument"
+            columnPath="table.Max"/>
+      </functions>
+    </constraints>
   </tables>
 </chaiseMinute:ChaiseMinute>
