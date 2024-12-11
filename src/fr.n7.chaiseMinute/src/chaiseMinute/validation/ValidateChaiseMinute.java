@@ -20,7 +20,7 @@ import chaiseMinute.ChaiseMinutePackage;
  * Les modèles sont donnés dans les arguments de la ligne de commande, et le résultat
  * est affiché dans le terminal.
  * 
- * @author Guillaume Dupont
+ * @author LECUYER Simon & THEVENET Louis & SABLAYROLLES Guillaume & LEBOBE Timothé
  * @version 0.1
  */
 public class ValidateChaiseMinute {

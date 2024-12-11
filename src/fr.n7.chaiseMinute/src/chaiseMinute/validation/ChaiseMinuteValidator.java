@@ -72,7 +72,9 @@ public class ChaiseMinuteValidator extends ChaiseMinuteSwitch<Boolean> {
 		// Contraintes sur ChaiseMinute
 		// inv NomValide
 		this.result.recordIfFailed(
-				object.getName() != null && object.getName().matches(IDENT_REGEX), 
+				object.getName() != null 
+				&& object.getName().length() > 0
+				&& object.getName().matches(IDENT_REGEX), 
 				object, 
 				"Le nom de la ChaiseMinute ne respecte pas les conventions Java");
 		
