@@ -1,0 +1,60 @@
+grammar fr.n7.CHAISEMINUTETEXT with org.eclipse.xtext.common.Terminals
+
+generate cHAISEMINUTETEXT "http://www.n7.fr/CHAISEMINUTETEXT"
+
+ChaiseMinute: name=ID '{'
+	(tables+=Table ( ','? tables+=Table)* )?
+	'}'
+	('constrained' 'by' constraints=Algorithm)?
+;
+
+	
+Table : name=ID 'indexed' 'on' indexcolumn=IndexColumn '('
+	(columns+=Column ( "," columns+=Column)* )?
+		')'
+	('constrained' 'by' constraints=Algorithm)?
+;
+
+IndexColumn:
+	{IndexColumn} 
+	id=ID 'of' type=DataType
+;
+	
+Column : ColumnData | ComputedColumn | ImportedColumn
+;
+
+ColumnData:id=ID 'of' type=DataType	
+;
+
+ComputedColumn:id=ID 'of' type=DataType 'computed' 'with' algorithm=Algorithm
+;
+
+ImportedColumn: id=ID 'of' type=DataType 'imported' 'from' path=STRING
+;
+
+enum DataType:
+	String='string'
+	|Int ='int'
+;
+
+Algorithm:
+	{Algorithm}
+	'['
+	functions+=Function ('>' functions+=Function)?	
+	']'
+;
+
+Function:
+	{Function}
+	 name=ID '('
+	(inputs+=Argument ( "," inputs+=Argument)*)?
+	')'
+;
+
+Argument : ColumnArgument
+;
+
+ColumnArgument :
+	{ColumnArgument}
+	 columnpath=STRING
+;

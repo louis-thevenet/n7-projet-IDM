@@ -1,6 +1,9 @@
 TestChaiseMinute {
-           {Table1, index(Int):Index, data(Int):A, data(Int):B, computed(Int): 
-           	Sum("Table1.A", "Table1.B") > Sum2("Table2.A") -> C
-           }
-           {Table2, index(String):Index2, data(Int):A, data(Int):B, imported(Int): "Table1.A"->C}
+        Table1 indexed on Index1 of int (
+        A of int, B of int, C of int computed with [sum("Table1.A","Table1.B") > sum("Table2.A")]
+        )
+        Table2 indexed on Index2 of string (
+        A of int, B of int, C of int imported from "Table1.A" 
+        )
 }
+constrained by [ensure_min_max("Table1.A","Table1.C") ]

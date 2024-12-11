@@ -1,0 +1,9 @@
+ExempleComplique{
+	table1 indexed on index of int (
+		A of int, B of int, C of string 
+		)
+	table2 indexed on index of int(
+		A of int, B of int, C of int imported from "table1.A", Sum of int computed with [sum("table1.A","table1.B")], Variation of int computed with [variation("table1.A","table1.B")>variation("table2.A")]
+		)
+	}
+	constrained by [sum("table1.UN","table2.DEUX")>ensure_all_lower_than_3()]
