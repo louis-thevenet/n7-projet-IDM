@@ -181,12 +181,14 @@
                   </buttons>
                   <page name="Remove Function Page" labelExpression="Page" domainClass="algorithm::Algorithm" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='RemoveFunction']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
                   <groups name="Remove Function Group" labelExpression="Group" domainClass="algorithm::Algorithm" semanticCandidateExpression="var:self">
-                    <controls xsi:type="properties:TextDescription" name="FunctionToRemove" labelExpression="FunctionToRemove" valueExpression="aql:element.functions.name">
+                    <controls xsi:type="properties:TextDescription" name="FunctionToRemove" labelExpression="FunctionToRemove" valueExpression="aql:self.functions.name">
                       <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:For" expression="[element.functions/]">
-                          <subModelOperations xsi:type="tool_1:If" conditionExpression="[i.name.equalsIgnoreCase(newValue)/]">
-                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
-                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                          <subModelOperations xsi:type="tool_1:For" expression="aql:self.eAllContents(function::Function)">
+                            <subModelOperations xsi:type="tool_1:If" conditionExpression="[i.name.equalsIgnoreCase(newValue)/]">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[i/]">
+                                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                              </subModelOperations>
                             </subModelOperations>
                           </subModelOperations>
                         </firstModelOperations>

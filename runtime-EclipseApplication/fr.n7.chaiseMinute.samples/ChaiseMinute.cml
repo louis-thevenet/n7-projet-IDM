@@ -20,7 +20,6 @@
       <algorithm>
         <functions name="sum.py"/>
         <functions name="caca.py"/>
-        <functions name="proutpy"/>
       </algorithm>
     </columns>
     <indexColumn/>
