@@ -1,0 +1,179 @@
+[comment encoding = UTF-8 /]
+[module generate('http://chaiseMinute', 'http://function', 'http://algorithm')]
+
+[template public generateElement(aChaiseMinute : ChaiseMinute)]
+[comment @main/]
+[file ((aChaiseMinute.name)+'_library.py', false, 'UTF-8')]
+import sys
+import pandas as pd
+
+def search(input, out, table, id):
+	try:
+		return input['['/]table]['['/]id].to_list()
+	except Exception:
+		return out['['/]id].to_list()
+ 
+def load():
+"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
+	input = {}	
+[for (t : Table | aChaiseMinute.getTables())]
+	csv_file_path = ['"' + t.name+ '.csv'+'"'/]
+	input['['/]"[t.name/]"] = pd.read_csv(csv_file_path)
+[/for]	
+	return input
+
+def check_constraints(input):
+"""Ensure all contraints are respected in input and output data"""
+	################################
+	# Verifying Input Constraints
+	################################
+	[for (a : Algorithm |  aChaiseMinute.constraints)]
+		[for (f : Function | a.functions)]
+	### Apply [f.name/] ##
+	from [f.name/] import [f.name/]
+				[let functionNo :Integer= i]
+	res = [f.name/](
+	[if (functionNo >=2)]
+		res, # Previous result used in next function
+	[/if]
+					[for (input : Argument | f.inputs)]	
+					[if input.oclIsTypeOf(ColumnArgument)]
+						[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
+						[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
+		input['['/]"[table/]"]['['/]"[id/]"].to_list(),
+						[/let][/let]
+					[/if]			
+					[/for]
+				[/let]
+	)
+		[/for]
+	
+if not res:
+		return (False,("[aChaiseMinute.constraints.getLastFunction().name/] constraints failed"))
+	[/for]
+
+	################################
+	# Verifying Table Constraints
+	################################
+	out = generate_output(input)
+
+	[for (t : Table | aChaiseMinute.getTables())]
+		[for (a : Algorithm |  t.constraints)]
+			[for (f : Function | a.functions)]
+	### Apply [f.name/] ##
+	from [f.name/] import [f.name/]
+					[let functionNo :Integer= i]
+	res = [f.name/](
+						[for (input : Argument | f.inputs)]
+						[if (functionNo >=2)]
+		res, # Previous result used in next function
+						[/if]
+						[if input.oclIsTypeOf(ColumnArgument)]
+							[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
+							[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
+		search(input, out, "[table/]", "[id/]"),
+							[/let][/let]
+						[/if]			
+						[/for]
+					[/let]
+	)
+
+	if not res:
+		("[f.name/] constraints failed on [t.name/]")
+			[/for]
+		[/for]
+	[/for]
+	return True
+
+def generate_output(input):
+"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
+	tables = {}
+[for (t : Table | aChaiseMinute.getTables())]
+[t.generateElement()/]
+[/for]
+	return tables
+
+def save_to_csv(tables):
+"""Saves each table from he input argument as a CSV file."""
+[for (t : Table | aChaiseMinute.getTables())]
+	
+	################################
+	# Saving to "output_[t.name/].csv" 
+	################################
+	pd.DataFrame.from_dict(tables['['/]"[t.name/]"], orient="columns").to_csv("output_"+"[t.name/]"+".csv", index_label="[t.indexColumn.id/]")
+[/for]
+
+	
+
+if __name__ == '__main__':
+	main()
+[/file]
+[/template]
+[query public getLastFunction(arg : Algorithm) :Function = arg.functions -> last()/]
+[query public getTable(arg : ChaiseMinute, name: String) : Table = arg.tables 
+-> select(e | e.oclIsTypeOf(Table) and e.name = name)
+-> collect(e | e.oclAsType(Table)) 
+/]
+[query public getTables(arg : ChaiseMinute): OrderedSet(Table) = arg.tables 
+-> select(e | e.oclIsTypeOf(Table))
+-> collect(e | e.oclAsType(Table)) 
+-> asOrderedSet()
+/]
+
+[template public generateElement(aTable: Table)]
+	out = {}
+	###########################################################################
+	# Table: [aTable.name/]
+	###########################################################################
+	[for (c: Column | aTable.columns)]
+		[if (c.oclIsKindOf(ColumnData))]
+	################################
+	## Data column: [c.id/] 
+	################################
+	out['['/]"[c.id/]"]=input['['/]"[aTable.name/]"]['['/]"[c.id/]"]
+
+		[elseif (c.oclIsTypeOf(ImportedColumn))]
+			[let table:String = c.oclAsType(ImportedColumn).path.replaceAll('\\..*', '')]
+			[let id:String = c.oclAsType(ImportedColumn).path.replaceFirst('.*\\.', '')]
+	### Imported column: [c.id/] from [c.oclAsType(ImportedColumn).path/] ###
+	out['['/]"[c.id/]"]=input['['/]"[table/]"]['['/]"[id/]"]
+
+			[/let]
+			[/let]
+		[else]
+		[/if]
+	[/for]
+	[for (c: Column | aTable.columns)]
+		[if (c.oclIsKindOf(ComputedColumn))]
+	################################			
+	## Computed column: [c.id/] 
+	################################
+			[for (f : Function | c.oclAsType(ComputedColumn).algorithm.functions) ]
+	### Apply [f.name/] ##
+	from [f.name/] import [f.name/]
+				[let functionNo :Integer= i]
+	out['['/]"[c.id/]"] = [f.name/](
+					[for (input : Argument | f.inputs)]
+					[if (functionNo >=2)]
+		out['['/]"[c.id/]"], # Previous result used in next function
+					[/if]
+					[if input.oclIsTypeOf(ColumnArgument)]
+						[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
+						[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
+		search(input, out, "[table/]", "[id/]"),
+						[/let][/let]
+					[/if]			
+					[/for]
+				[/let]
+	)
+	###############
+			[/for]
+		[/if]
+	[/for]
+	tables['['/]"[aTable.name/]"] = out
+
+
+	
+[/template]
+
+
