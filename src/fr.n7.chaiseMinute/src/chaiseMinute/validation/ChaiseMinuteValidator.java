@@ -87,7 +87,7 @@ public class ChaiseMinuteValidator extends ChaiseMinuteSwitch<Boolean> {
 	}
 
 	/**
-	 * Méthode appelée lorsque l'objet visité est une Table (ou un sous type).
+	 * Méthode appelée lorsque l'objet visité est une Table.
 	 * @param object élément visité
 	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
 	 * vers les classes parentes, le cas échéant)
@@ -159,7 +159,6 @@ public class ChaiseMinuteValidator extends ChaiseMinuteSwitch<Boolean> {
 		
 		// inv CheminCorrect
 		String path = object.getPath();
-		boolean res = true;
 		if (!path.contains(".")) {
 			this.result.recordIfFailed(object.getTable().getColumns().stream()
 					.filter(c -> c.getId().equals(path)).count() == 1,

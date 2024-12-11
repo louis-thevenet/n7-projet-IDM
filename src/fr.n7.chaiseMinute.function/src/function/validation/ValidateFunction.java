@@ -1,4 +1,4 @@
-package chaiseMinute.validation;
+package function.validation;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import chaiseMinute.ChaiseMinutePackage;
+import function.FunctionPackage;
 
 /**
  * Réalise la validation de modèles conformes à ChaiseMinute à l'aide du validateur et
@@ -23,7 +23,7 @@ import chaiseMinute.ChaiseMinutePackage;
  * @author LECUYER Simon & THEVENET Louis & SABLAYROLLES Guillaume & LEBOBE Timothé
  * @version 0.1
  */
-public class ValidateChaiseMinute {
+public class ValidateFunction {
 	
 	/**
 	 * Afficher une lsite d'erreur avec un préfixe.
@@ -51,12 +51,9 @@ public class ValidateChaiseMinute {
 	 * @param resultat résultat de la validation calculé auparavant
 	 */
 	private static void afficherResultat(ValidationResult resultat) {
-		afficherErreurs("- ChaiseMinute", resultat.getRecordedErrorsFor(ChaiseMinutePackage.CHAISE_MINUTE));
-		afficherErreurs("- Table", resultat.getRecordedErrorsFor(ChaiseMinutePackage.TABLE));
-		afficherErreurs("- ColumnData", resultat.getRecordedErrorsFor(ChaiseMinutePackage.COLUMN_DATA));
-		afficherErreurs("- ImportedColumn", resultat.getRecordedErrorsFor(ChaiseMinutePackage.IMPORTED_COLUMN));
-		afficherErreurs("- ComputedColumn", resultat.getRecordedErrorsFor(ChaiseMinutePackage.COMPUTED_COLUMN));
-		afficherErreurs("- IndexColumn", resultat.getRecordedErrorsFor(ChaiseMinutePackage.INDEX_COLUMN));
+		afficherErreurs("- Function", resultat.getRecordedErrorsFor(FunctionPackage.FUNCTION));
+		afficherErreurs("- Argument", resultat.getRecordedErrorsFor(FunctionPackage.ARGUMENT));
+		afficherErreurs("- ColumnArgument", resultat.getRecordedErrorsFor(FunctionPackage.COLUMN_ARGUMENT));
 	}
 
 	/**
@@ -70,7 +67,7 @@ public class ValidateChaiseMinute {
 		// Bien sûr, on n'utilise pas directement packageInstance, d'où le warning "unused" qui
 		// est supprimé avec l'annotation.
 		@SuppressWarnings("unused")
-		ChaiseMinutePackage packageInstance = ChaiseMinutePackage.eINSTANCE;
+		FunctionPackage packageInstance = FunctionPackage.eINSTANCE;
 		
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> m = reg.getExtensionToFactoryMap();
@@ -78,7 +75,7 @@ public class ValidateChaiseMinute {
 		
 		ResourceSet resSet = new ResourceSetImpl();
 		
-		ChaiseMinuteValidator validator = new ChaiseMinuteValidator();
+		FunctionValidator validator = new FunctionValidator();
 
 		for (String model : args) {
 			URI modelURI = URI.createURI(model);
