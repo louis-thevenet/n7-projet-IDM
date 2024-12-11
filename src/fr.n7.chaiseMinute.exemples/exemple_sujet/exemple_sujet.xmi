@@ -70,10 +70,10 @@
           name="ensure_min_max">
         <inputs
             xsi:type="function:ColumnArgument"
-            columnPath="table.Min"/>
+            columnPath="table.Low"/>
         <inputs
             xsi:type="function:ColumnArgument"
-            columnPath="table.Max"/>
+            columnPath="table.High"/>
       </functions>
     </constraints>
   </tables>

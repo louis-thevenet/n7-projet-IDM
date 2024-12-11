@@ -6,15 +6,18 @@ def search(input, out, table, id):
 		return input[table][id].to_list()
 	except Exception:
 		return out[id].to_list()
-
-def main():
-	# Load files
+ 
+def load():
+	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
 	csv_file_path = "table1.csv"
 	input["table1"] = pd.read_csv(csv_file_path)
 	csv_file_path = "table2.csv"
 	input["table2"] = pd.read_csv(csv_file_path)
+	return input
 
+def check_constraints(input):
+	"""Ensure all contraints are respected in input and output data"""
 	################################
 	# Verifying Input Constraints
 	################################
@@ -24,15 +27,25 @@ def main():
 		input["table1"]["Un"].to_list(),
 		input["table2"]["Deux"].to_list(),
 	)
-
 	### Apply ensure_all_lower_than_3 ##
 	from ensure_all_lower_than_3 import ensure_all_lower_than_3
 	res = ensure_all_lower_than_3(
 		res, # Previous result used in next function
 	)
+	
+	if not res:
+		return (False,("ensure_all_lower_than_3 constraints failed"))
 
-	assert res, ("ensure_all_lower_than_3 constraints failed")
+	################################
+	# Verifying Table Constraints
+	################################
+	out = generate_output(input)
 
+	return True
+
+def generate_output(input):
+	"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
+	tables = {}
 	out = {}
 	###########################################################################
 	# Table: table1
@@ -52,15 +65,8 @@ def main():
 	################################
 	out["C"]=input["table1"]["C"]
 
+	tables["table1"] = out
 
-	################################
-	# Verifying Table Constraints
-	################################
-
-	################################
-	# Saving to "output_table1.csv" 
-	################################
-	pd.DataFrame.from_dict(out, orient="columns").to_csv("output_"+"table1"+".csv", index_label="index")
 	out = {}
 	###########################################################################
 	# Table: table2
@@ -105,15 +111,30 @@ def main():
 		search(input, out, "table2", "A"),
 	)
 	###############
+	tables["table2"] = out
 
-	################################
-	# Verifying Table Constraints
-	################################
+	return tables
 
+def save_to_csv(tables):
+	"""Saves each table from he input argument as a CSV file."""
+	
+	################################
+	# Saving to "output_table1.csv" 
+	################################
+	pd.DataFrame.from_dict(tables["table1"], orient="columns").to_csv("output_"+"table1"+".csv", index_label="index")
+	
 	################################
 	# Saving to "output_table2.csv" 
 	################################
-	pd.DataFrame.from_dict(out, orient="columns").to_csv("output_"+"table2"+".csv", index_label="index")
+	pd.DataFrame.from_dict(tables["table2"], orient="columns").to_csv("output_"+"table2"+".csv", index_label="index")
+
+	
+def main():
+	input = load()
+	out = generate_output(input)
+	check_constraints(input)
+	save_to_csv(out)
 
 if __name__ == '__main__':
 	main()
+
