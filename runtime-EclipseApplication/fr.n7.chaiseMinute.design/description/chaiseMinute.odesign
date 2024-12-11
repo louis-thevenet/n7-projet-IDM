@@ -137,6 +137,66 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="AddFunction">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="function::Function" referenceName="functions" variableName="instanceFunction">
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Change Name">
+                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[instanceAlgorithm/]">
+                          <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="Name Page" labelExpression="Page" domainClass="function::Function" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='AddFunction']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                    <groups name="Name Group" labelExpression="Group" domainClass="function::Function" semanticCandidateExpression="var:self">
+                      <controls xsi:type="properties:TextDescription" name="WriteName" labelExpression="WriteName" valueExpression="aql:self.name">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                        </initialOperation>
+                      </controls>
+                    </groups>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="RemoveFunction">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Delete Function">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="Remove Function Page" labelExpression="Page" domainClass="algorithm::Algorithm" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='RemoveFunction']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <groups name="Remove Function Group" labelExpression="Group" domainClass="algorithm::Algorithm" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:TextDescription" name="FunctionToRemove" labelExpression="FunctionToRemove" valueExpression="aql:element.functions.name">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:For" expression="[element.functions/]">
+                          <subModelOperations xsi:type="tool_1:If" conditionExpression="[i.name.equalsIgnoreCase(newValue)/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                              <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>

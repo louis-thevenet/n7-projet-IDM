@@ -8,6 +8,7 @@
       <algorithm>
         <functions name="Moyenne"/>
         <functions name="Addition"/>
+        <functions name="pedale.py"/>
       </algorithm>
     </columns>
     <indexColumn id="Noms"/>
@@ -15,7 +16,13 @@
   <tables name="Table2">
     <columns xsi:type="chaiseMinute:ColumnData" id="DataColumn"/>
     <columns xsi:type="chaiseMinute:ImportedColumn" id="Notes Exportees" path="Table1.note3"/>
-    <columns xsi:type="chaiseMinute:ComputedColumn" id="Computed2"/>
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="Computed2">
+      <algorithm>
+        <functions name="sum.py"/>
+        <functions name="caca.py"/>
+        <functions name="proutpy"/>
+      </algorithm>
+    </columns>
     <indexColumn/>
   </tables>
 </chaiseMinute:ChaiseMinute>
