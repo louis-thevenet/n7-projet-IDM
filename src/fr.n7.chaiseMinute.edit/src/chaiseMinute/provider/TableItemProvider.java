@@ -3,6 +3,7 @@
 package chaiseMinute.provider;
 
 
+import algorithm.AlgorithmFactory;
 import chaiseMinute.ChaiseMinuteFactory;
 import chaiseMinute.ChaiseMinutePackage;
 import chaiseMinute.Table;
@@ -104,6 +105,7 @@ public class TableItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ChaiseMinutePackage.Literals.TABLE__COLUMNS);
 			childrenFeatures.add(ChaiseMinutePackage.Literals.TABLE__INDEX_COLUMN);
+			childrenFeatures.add(ChaiseMinutePackage.Literals.TABLE__CONSTRAINTS);
 		}
 		return childrenFeatures;
 	}
@@ -164,6 +166,7 @@ public class TableItemProvider
 				return;
 			case ChaiseMinutePackage.TABLE__COLUMNS:
 			case ChaiseMinutePackage.TABLE__INDEX_COLUMN:
+			case ChaiseMinutePackage.TABLE__CONSTRAINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -200,6 +203,11 @@ public class TableItemProvider
 			(createChildParameter
 				(ChaiseMinutePackage.Literals.TABLE__INDEX_COLUMN,
 				 ChaiseMinuteFactory.eINSTANCE.createIndexColumn()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ChaiseMinutePackage.Literals.TABLE__CONSTRAINTS,
+				 AlgorithmFactory.eINSTANCE.createAlgorithm()));
 	}
 
 	/**

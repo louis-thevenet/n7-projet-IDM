@@ -3,6 +3,7 @@
 package chaiseMinute.provider;
 
 
+import algorithm.AlgorithmFactory;
 import chaiseMinute.ChaiseMinute;
 import chaiseMinute.ChaiseMinuteFactory;
 import chaiseMinute.ChaiseMinutePackage;
@@ -103,6 +104,7 @@ public class ChaiseMinuteItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ChaiseMinutePackage.Literals.CHAISE_MINUTE__TABLES);
+			childrenFeatures.add(ChaiseMinutePackage.Literals.CHAISE_MINUTE__CONSTRAINTS);
 		}
 		return childrenFeatures;
 	}
@@ -162,6 +164,7 @@ public class ChaiseMinuteItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ChaiseMinutePackage.CHAISE_MINUTE__TABLES:
+			case ChaiseMinutePackage.CHAISE_MINUTE__CONSTRAINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -183,6 +186,11 @@ public class ChaiseMinuteItemProvider
 			(createChildParameter
 				(ChaiseMinutePackage.Literals.CHAISE_MINUTE__TABLES,
 				 ChaiseMinuteFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ChaiseMinutePackage.Literals.CHAISE_MINUTE__CONSTRAINTS,
+				 AlgorithmFactory.eINSTANCE.createAlgorithm()));
 	}
 
 	/**
