@@ -3,7 +3,8 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:chaiseMinute="http://chaiseMinute">
+    xmlns:chaiseMinute="http://chaiseMinute"
+    name="PremiereChaise">
   <tables name="Table1">
     <columns
         xsi:type="chaiseMinute:ColumnData"

@@ -14,5 +14,6 @@ Export-Package: chaiseMinute,
 Import-Package: chaiseMinute
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- fr.n7.chaiseMinute.script;visibility:=reexport
+ fr.n7.chaiseMinute.script;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi
 Bundle-ActivationPolicy: lazy
