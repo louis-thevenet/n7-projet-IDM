@@ -15,11 +15,7 @@
   <tables name="Table2">
     <columns xsi:type="chaiseMinute:ColumnData" id="DataColumn"/>
     <columns xsi:type="chaiseMinute:ImportedColumn" id="Notes Exportees" path="Table1.note3"/>
-    <columns xsi:type="chaiseMinute:ComputedColumn" id="Computed2">
-      <algorithm>
-        <functions/>
-      </algorithm>
-    </columns>
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="Computed2"/>
     <indexColumn/>
   </tables>
 </chaiseMinute:ChaiseMinute>
