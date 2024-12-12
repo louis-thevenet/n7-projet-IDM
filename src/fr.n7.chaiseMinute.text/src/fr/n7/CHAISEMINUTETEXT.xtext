@@ -5,14 +5,14 @@ generate cHAISEMINUTETEXT "http://www.n7.fr/CHAISEMINUTETEXT"
 ChaiseMinute: name=ID '{'
 	(tables+=Table ( ','? tables+=Table)* )?
 	'}'
-	('constrained' 'by' constraints=Algorithm)?
+	('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 ;
 
 	
 Table : name=ID 'indexed' 'on' indexcolumn=IndexColumn '('
 	(columns+=Column ( "," columns+=Column)* )?
 		')'
-	('constrained' 'by' constraints=Algorithm)?
+	('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 ;
 
 IndexColumn:

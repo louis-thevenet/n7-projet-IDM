@@ -170,7 +170,7 @@ ruleChaiseMinute returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getChaiseMinuteRule());
 						}
-						set(
+						add(
 							$current,
 							"constraints",
 							lv_constraints_8_0,
@@ -179,6 +179,31 @@ ruleChaiseMinute returns [EObject current=null]
 					}
 				)
 			)
+			(
+				otherlv_9=','
+				{
+					newLeafNode(otherlv_9, grammarAccess.getChaiseMinuteAccess().getCommaKeyword_4_3_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getChaiseMinuteAccess().getConstraintsAlgorithmParserRuleCall_4_3_1_0());
+						}
+						lv_constraints_10_0=ruleAlgorithm
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getChaiseMinuteRule());
+							}
+							add(
+								$current,
+								"constraints",
+								lv_constraints_10_0,
+								"fr.n7.CHAISEMINUTETEXT.Algorithm");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
 		)?
 	)
 ;
@@ -317,7 +342,7 @@ ruleTable returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTableRule());
 						}
-						set(
+						add(
 							$current,
 							"constraints",
 							lv_constraints_11_0,
@@ -326,6 +351,31 @@ ruleTable returns [EObject current=null]
 					}
 				)
 			)
+			(
+				otherlv_12=','
+				{
+					newLeafNode(otherlv_12, grammarAccess.getTableAccess().getCommaKeyword_7_3_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getTableAccess().getConstraintsAlgorithmParserRuleCall_7_3_1_0());
+						}
+						lv_constraints_13_0=ruleAlgorithm
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getTableRule());
+							}
+							add(
+								$current,
+								"constraints",
+								lv_constraints_13_0,
+								"fr.n7.CHAISEMINUTETEXT.Algorithm");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
 		)?
 	)
 ;

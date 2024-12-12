@@ -37,10 +37,12 @@ public class CHAISEMINUTETEXTParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_2(), "rule__ChaiseMinute__Group_2__0");
 			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_2_1(), "rule__ChaiseMinute__Group_2_1__0");
 			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_4(), "rule__ChaiseMinute__Group_4__0");
+			builder.put(grammarAccess.getChaiseMinuteAccess().getGroup_4_3(), "rule__ChaiseMinute__Group_4_3__0");
 			builder.put(grammarAccess.getTableAccess().getGroup(), "rule__Table__Group__0");
 			builder.put(grammarAccess.getTableAccess().getGroup_5(), "rule__Table__Group_5__0");
 			builder.put(grammarAccess.getTableAccess().getGroup_5_1(), "rule__Table__Group_5_1__0");
 			builder.put(grammarAccess.getTableAccess().getGroup_7(), "rule__Table__Group_7__0");
+			builder.put(grammarAccess.getTableAccess().getGroup_7_3(), "rule__Table__Group_7_3__0");
 			builder.put(grammarAccess.getIndexColumnAccess().getGroup(), "rule__IndexColumn__Group__0");
 			builder.put(grammarAccess.getColumnDataAccess().getGroup(), "rule__ColumnData__Group__0");
 			builder.put(grammarAccess.getComputedColumnAccess().getGroup(), "rule__ComputedColumn__Group__0");
@@ -55,11 +57,13 @@ public class CHAISEMINUTETEXTParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_2_0(), "rule__ChaiseMinute__TablesAssignment_2_0");
 			builder.put(grammarAccess.getChaiseMinuteAccess().getTablesAssignment_2_1_1(), "rule__ChaiseMinute__TablesAssignment_2_1_1");
 			builder.put(grammarAccess.getChaiseMinuteAccess().getConstraintsAssignment_4_2(), "rule__ChaiseMinute__ConstraintsAssignment_4_2");
+			builder.put(grammarAccess.getChaiseMinuteAccess().getConstraintsAssignment_4_3_1(), "rule__ChaiseMinute__ConstraintsAssignment_4_3_1");
 			builder.put(grammarAccess.getTableAccess().getNameAssignment_0(), "rule__Table__NameAssignment_0");
 			builder.put(grammarAccess.getTableAccess().getIndexcolumnAssignment_3(), "rule__Table__IndexcolumnAssignment_3");
 			builder.put(grammarAccess.getTableAccess().getColumnsAssignment_5_0(), "rule__Table__ColumnsAssignment_5_0");
 			builder.put(grammarAccess.getTableAccess().getColumnsAssignment_5_1_1(), "rule__Table__ColumnsAssignment_5_1_1");
 			builder.put(grammarAccess.getTableAccess().getConstraintsAssignment_7_2(), "rule__Table__ConstraintsAssignment_7_2");
+			builder.put(grammarAccess.getTableAccess().getConstraintsAssignment_7_3_1(), "rule__Table__ConstraintsAssignment_7_3_1");
 			builder.put(grammarAccess.getIndexColumnAccess().getIdAssignment_1(), "rule__IndexColumn__IdAssignment_1");
 			builder.put(grammarAccess.getIndexColumnAccess().getTypeAssignment_3(), "rule__IndexColumn__TypeAssignment_3");
 			builder.put(grammarAccess.getColumnDataAccess().getIdAssignment_0(), "rule__ColumnData__IdAssignment_0");

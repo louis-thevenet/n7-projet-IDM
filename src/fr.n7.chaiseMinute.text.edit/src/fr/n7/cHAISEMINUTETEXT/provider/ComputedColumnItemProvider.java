@@ -4,6 +4,7 @@
 package fr.n7.cHAISEMINUTETEXT.provider;
 
 
+import fr.n7.cHAISEMINUTETEXT.CHAISEMINUTETEXTFactory;
 import fr.n7.cHAISEMINUTETEXT.CHAISEMINUTETEXTPackage;
 import fr.n7.cHAISEMINUTETEXT.ComputedColumn;
 
@@ -13,8 +14,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link fr.n7.cHAISEMINUTETEXT.ComputedColumn} object.
@@ -44,31 +47,38 @@ public class ComputedColumnItemProvider extends ColumnItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAlgorithmPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Algorithm feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAlgorithmPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComputedColumn_algorithm_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComputedColumn_algorithm_feature", "_UI_ComputedColumn_type"),
-				 CHAISEMINUTETEXTPackage.Literals.COMPUTED_COLUMN__ALGORITHM,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(CHAISEMINUTETEXTPackage.Literals.COMPUTED_COLUMN__ALGORITHM);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -107,6 +117,12 @@ public class ComputedColumnItemProvider extends ColumnItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ComputedColumn.class)) {
+			case CHAISEMINUTETEXTPackage.COMPUTED_COLUMN__ALGORITHM:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -120,6 +136,11 @@ public class ComputedColumnItemProvider extends ColumnItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CHAISEMINUTETEXTPackage.Literals.COMPUTED_COLUMN__ALGORITHM,
+				 CHAISEMINUTETEXTFactory.eINSTANCE.createAlgorithm()));
 	}
 
 }

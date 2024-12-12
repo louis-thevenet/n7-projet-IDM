@@ -44,18 +44,22 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 		private final Keyword cByKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		private final Assignment cConstraintsAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
 		private final RuleCall cConstraintsAlgorithmParserRuleCall_4_2_0 = (RuleCall)cConstraintsAssignment_4_2.eContents().get(0);
+		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
+		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
+		private final Assignment cConstraintsAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final RuleCall cConstraintsAlgorithmParserRuleCall_4_3_1_0 = (RuleCall)cConstraintsAssignment_4_3_1.eContents().get(0);
 		
 		//ChaiseMinute: name=ID '{'
 		//    (tables+=Table ( ','? tables+=Table)* )?
 		//    '}'
-		//    ('constrained' 'by' constraints=Algorithm)?
+		//    ('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name=ID '{'
 		//   (tables+=Table ( ','? tables+=Table)* )?
 		//   '}'
-		//   ('constrained' 'by' constraints=Algorithm)?
+		//   ('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 		public Group getGroup() { return cGroup; }
 		
 		//name=ID
@@ -91,7 +95,7 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 		
-		//('constrained' 'by' constraints=Algorithm)?
+		//('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'constrained'
@@ -100,11 +104,23 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 		//'by'
 		public Keyword getByKeyword_4_1() { return cByKeyword_4_1; }
 		
-		//constraints=Algorithm
+		//constraints+=Algorithm
 		public Assignment getConstraintsAssignment_4_2() { return cConstraintsAssignment_4_2; }
 		
 		//Algorithm
 		public RuleCall getConstraintsAlgorithmParserRuleCall_4_2_0() { return cConstraintsAlgorithmParserRuleCall_4_2_0; }
+		
+		//( "," constraints+=Algorithm)*
+		public Group getGroup_4_3() { return cGroup_4_3; }
+		
+		//","
+		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
+		
+		//constraints+=Algorithm
+		public Assignment getConstraintsAssignment_4_3_1() { return cConstraintsAssignment_4_3_1; }
+		
+		//Algorithm
+		public RuleCall getConstraintsAlgorithmParserRuleCall_4_3_1_0() { return cConstraintsAlgorithmParserRuleCall_4_3_1_0; }
 	}
 	public class TableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.CHAISEMINUTETEXT.Table");
@@ -129,18 +145,22 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 		private final Keyword cByKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
 		private final Assignment cConstraintsAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
 		private final RuleCall cConstraintsAlgorithmParserRuleCall_7_2_0 = (RuleCall)cConstraintsAssignment_7_2.eContents().get(0);
+		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
+		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
+		private final Assignment cConstraintsAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
+		private final RuleCall cConstraintsAlgorithmParserRuleCall_7_3_1_0 = (RuleCall)cConstraintsAssignment_7_3_1.eContents().get(0);
 		
 		//Table : name=ID 'indexed' 'on' indexcolumn=IndexColumn '('
 		//    (columns+=Column ( "," columns+=Column)* )?
 		//        ')'
-		//    ('constrained' 'by' constraints=Algorithm)?
+		//    ('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name=ID 'indexed' 'on' indexcolumn=IndexColumn '('
 		//   (columns+=Column ( "," columns+=Column)* )?
 		//       ')'
-		//   ('constrained' 'by' constraints=Algorithm)?
+		//   ('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 		public Group getGroup() { return cGroup; }
 		
 		//name=ID
@@ -188,7 +208,7 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 		//')'
 		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
 		
-		//('constrained' 'by' constraints=Algorithm)?
+		//('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//'constrained'
@@ -197,11 +217,23 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 		//'by'
 		public Keyword getByKeyword_7_1() { return cByKeyword_7_1; }
 		
-		//constraints=Algorithm
+		//constraints+=Algorithm
 		public Assignment getConstraintsAssignment_7_2() { return cConstraintsAssignment_7_2; }
 		
 		//Algorithm
 		public RuleCall getConstraintsAlgorithmParserRuleCall_7_2_0() { return cConstraintsAlgorithmParserRuleCall_7_2_0; }
+		
+		//( "," constraints+=Algorithm)*
+		public Group getGroup_7_3() { return cGroup_7_3; }
+		
+		//","
+		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
+		
+		//constraints+=Algorithm
+		public Assignment getConstraintsAssignment_7_3_1() { return cConstraintsAssignment_7_3_1; }
+		
+		//Algorithm
+		public RuleCall getConstraintsAlgorithmParserRuleCall_7_3_1_0() { return cConstraintsAlgorithmParserRuleCall_7_3_1_0; }
 	}
 	public class IndexColumnElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.CHAISEMINUTETEXT.IndexColumn");
@@ -644,7 +676,7 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 	//ChaiseMinute: name=ID '{'
 	//    (tables+=Table ( ','? tables+=Table)* )?
 	//    '}'
-	//    ('constrained' 'by' constraints=Algorithm)?
+	//    ('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 	//;
 	public ChaiseMinuteElements getChaiseMinuteAccess() {
 		return pChaiseMinute;
@@ -657,7 +689,7 @@ public class CHAISEMINUTETEXTGrammarAccess extends AbstractElementFinder.Abstrac
 	//Table : name=ID 'indexed' 'on' indexcolumn=IndexColumn '('
 	//    (columns+=Column ( "," columns+=Column)* )?
 	//        ')'
-	//    ('constrained' 'by' constraints=Algorithm)?
+	//    ('constrained' 'by' constraints+=Algorithm ( "," constraints+=Algorithm)* )?
 	//;
 	public TableElements getTableAccess() {
 		return pTable;

@@ -84,14 +84,14 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table
   protected EList<Column> columns;
 
   /**
-   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference.
+   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getConstraints()
    * @generated
    * @ordered
    */
-  protected Algorithm constraints;
+  protected EList<Algorithm> constraints;
 
   /**
    * <!-- begin-user-doc -->
@@ -210,48 +210,13 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table
    * @generated
    */
   @Override
-  public Algorithm getConstraints()
+  public EList<Algorithm> getConstraints()
   {
+    if (constraints == null)
+    {
+      constraints = new EObjectContainmentEList<Algorithm>(Algorithm.class, this, CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS);
+    }
     return constraints;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetConstraints(Algorithm newConstraints, NotificationChain msgs)
-  {
-    Algorithm oldConstraints = constraints;
-    constraints = newConstraints;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS, oldConstraints, newConstraints);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setConstraints(Algorithm newConstraints)
-  {
-    if (newConstraints != constraints)
-    {
-      NotificationChain msgs = null;
-      if (constraints != null)
-        msgs = ((InternalEObject)constraints).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS, null, msgs);
-      if (newConstraints != null)
-        msgs = ((InternalEObject)newConstraints).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS, null, msgs);
-      msgs = basicSetConstraints(newConstraints, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS, newConstraints, newConstraints));
   }
 
   /**
@@ -269,7 +234,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table
       case CHAISEMINUTETEXTPackage.TABLE__COLUMNS:
         return ((InternalEList<?>)getColumns()).basicRemove(otherEnd, msgs);
       case CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS:
-        return basicSetConstraints(null, msgs);
+        return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -318,7 +283,8 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table
         getColumns().addAll((Collection<? extends Column>)newValue);
         return;
       case CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS:
-        setConstraints((Algorithm)newValue);
+        getConstraints().clear();
+        getConstraints().addAll((Collection<? extends Algorithm>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -344,7 +310,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table
         getColumns().clear();
         return;
       case CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS:
-        setConstraints((Algorithm)null);
+        getConstraints().clear();
         return;
     }
     super.eUnset(featureID);
@@ -367,7 +333,7 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table
       case CHAISEMINUTETEXTPackage.TABLE__COLUMNS:
         return columns != null && !columns.isEmpty();
       case CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS:
-        return constraints != null;
+        return constraints != null && !constraints.isEmpty();
     }
     return super.eIsSet(featureID);
   }

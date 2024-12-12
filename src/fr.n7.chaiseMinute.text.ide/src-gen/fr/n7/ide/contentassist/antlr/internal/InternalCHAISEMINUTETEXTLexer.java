@@ -449,10 +449,10 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCHAISEMINUTETEXT.g:2494:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalCHAISEMINUTETEXT.g:2494:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCHAISEMINUTETEXT.g:2686:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalCHAISEMINUTETEXT.g:2686:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalCHAISEMINUTETEXT.g:2494:11: ( '^' )?
+            // InternalCHAISEMINUTETEXT.g:2686:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -461,7 +461,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalCHAISEMINUTETEXT.g:2494:11: '^'
+                    // InternalCHAISEMINUTETEXT.g:2686:11: '^'
                     {
                     match('^'); 
 
@@ -479,7 +479,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalCHAISEMINUTETEXT.g:2494:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCHAISEMINUTETEXT.g:2686:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -528,10 +528,10 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCHAISEMINUTETEXT.g:2496:10: ( ( '0' .. '9' )+ )
-            // InternalCHAISEMINUTETEXT.g:2496:12: ( '0' .. '9' )+
+            // InternalCHAISEMINUTETEXT.g:2688:10: ( ( '0' .. '9' )+ )
+            // InternalCHAISEMINUTETEXT.g:2688:12: ( '0' .. '9' )+
             {
-            // InternalCHAISEMINUTETEXT.g:2496:12: ( '0' .. '9' )+
+            // InternalCHAISEMINUTETEXT.g:2688:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -545,7 +545,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalCHAISEMINUTETEXT.g:2496:13: '0' .. '9'
+            	    // InternalCHAISEMINUTETEXT.g:2688:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -577,10 +577,10 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCHAISEMINUTETEXT.g:2498:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalCHAISEMINUTETEXT.g:2498:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCHAISEMINUTETEXT.g:2690:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalCHAISEMINUTETEXT.g:2690:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalCHAISEMINUTETEXT.g:2498:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCHAISEMINUTETEXT.g:2690:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -598,10 +598,10 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalCHAISEMINUTETEXT.g:2498:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalCHAISEMINUTETEXT.g:2690:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalCHAISEMINUTETEXT.g:2498:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalCHAISEMINUTETEXT.g:2690:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -617,7 +617,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalCHAISEMINUTETEXT.g:2498:21: '\\\\' .
+                    	    // InternalCHAISEMINUTETEXT.g:2690:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -625,7 +625,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCHAISEMINUTETEXT.g:2498:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalCHAISEMINUTETEXT.g:2690:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -650,10 +650,10 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalCHAISEMINUTETEXT.g:2498:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalCHAISEMINUTETEXT.g:2690:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalCHAISEMINUTETEXT.g:2498:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalCHAISEMINUTETEXT.g:2690:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -669,7 +669,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalCHAISEMINUTETEXT.g:2498:54: '\\\\' .
+                    	    // InternalCHAISEMINUTETEXT.g:2690:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -677,7 +677,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCHAISEMINUTETEXT.g:2498:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalCHAISEMINUTETEXT.g:2690:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -720,12 +720,12 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCHAISEMINUTETEXT.g:2500:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalCHAISEMINUTETEXT.g:2500:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalCHAISEMINUTETEXT.g:2692:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalCHAISEMINUTETEXT.g:2692:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalCHAISEMINUTETEXT.g:2500:24: ( options {greedy=false; } : . )*
+            // InternalCHAISEMINUTETEXT.g:2692:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -750,7 +750,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalCHAISEMINUTETEXT.g:2500:52: .
+            	    // InternalCHAISEMINUTETEXT.g:2692:52: .
             	    {
             	    matchAny(); 
 
@@ -780,12 +780,12 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCHAISEMINUTETEXT.g:2502:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalCHAISEMINUTETEXT.g:2502:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalCHAISEMINUTETEXT.g:2694:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalCHAISEMINUTETEXT.g:2694:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalCHAISEMINUTETEXT.g:2502:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalCHAISEMINUTETEXT.g:2694:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -798,7 +798,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalCHAISEMINUTETEXT.g:2502:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalCHAISEMINUTETEXT.g:2694:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -818,7 +818,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalCHAISEMINUTETEXT.g:2502:40: ( ( '\\r' )? '\\n' )?
+            // InternalCHAISEMINUTETEXT.g:2694:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -827,9 +827,9 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalCHAISEMINUTETEXT.g:2502:41: ( '\\r' )? '\\n'
+                    // InternalCHAISEMINUTETEXT.g:2694:41: ( '\\r' )? '\\n'
                     {
-                    // InternalCHAISEMINUTETEXT.g:2502:41: ( '\\r' )?
+                    // InternalCHAISEMINUTETEXT.g:2694:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -838,7 +838,7 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalCHAISEMINUTETEXT.g:2502:41: '\\r'
+                            // InternalCHAISEMINUTETEXT.g:2694:41: '\\r'
                             {
                             match('\r'); 
 
@@ -870,10 +870,10 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCHAISEMINUTETEXT.g:2504:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalCHAISEMINUTETEXT.g:2504:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCHAISEMINUTETEXT.g:2696:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalCHAISEMINUTETEXT.g:2696:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalCHAISEMINUTETEXT.g:2504:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCHAISEMINUTETEXT.g:2696:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -927,8 +927,8 @@ public class InternalCHAISEMINUTETEXTLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCHAISEMINUTETEXT.g:2506:16: ( . )
-            // InternalCHAISEMINUTETEXT.g:2506:18: .
+            // InternalCHAISEMINUTETEXT.g:2698:16: ( . )
+            // InternalCHAISEMINUTETEXT.g:2698:18: .
             {
             matchAny(); 
 

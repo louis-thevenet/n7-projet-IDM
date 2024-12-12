@@ -72,14 +72,14 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
   protected EList<Table> tables;
 
   /**
-   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference.
+   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getConstraints()
    * @generated
    * @ordered
    */
-  protected Algorithm constraints;
+  protected EList<Algorithm> constraints;
 
   /**
    * <!-- begin-user-doc -->
@@ -148,48 +148,13 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
    * @generated
    */
   @Override
-  public Algorithm getConstraints()
+  public EList<Algorithm> getConstraints()
   {
+    if (constraints == null)
+    {
+      constraints = new EObjectContainmentEList<Algorithm>(Algorithm.class, this, CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS);
+    }
     return constraints;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetConstraints(Algorithm newConstraints, NotificationChain msgs)
-  {
-    Algorithm oldConstraints = constraints;
-    constraints = newConstraints;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS, oldConstraints, newConstraints);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setConstraints(Algorithm newConstraints)
-  {
-    if (newConstraints != constraints)
-    {
-      NotificationChain msgs = null;
-      if (constraints != null)
-        msgs = ((InternalEObject)constraints).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS, null, msgs);
-      if (newConstraints != null)
-        msgs = ((InternalEObject)newConstraints).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS, null, msgs);
-      msgs = basicSetConstraints(newConstraints, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS, newConstraints, newConstraints));
   }
 
   /**
@@ -205,7 +170,7 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
       case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__TABLES:
         return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
       case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS:
-        return basicSetConstraints(null, msgs);
+        return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -249,7 +214,8 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
         getTables().addAll((Collection<? extends Table>)newValue);
         return;
       case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS:
-        setConstraints((Algorithm)newValue);
+        getConstraints().clear();
+        getConstraints().addAll((Collection<? extends Algorithm>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -272,7 +238,7 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
         getTables().clear();
         return;
       case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS:
-        setConstraints((Algorithm)null);
+        getConstraints().clear();
         return;
     }
     super.eUnset(featureID);
@@ -293,7 +259,7 @@ public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements Ch
       case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__TABLES:
         return tables != null && !tables.isEmpty();
       case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS:
-        return constraints != null;
+        return constraints != null && !constraints.isEmpty();
     }
     return super.eIsSet(featureID);
   }

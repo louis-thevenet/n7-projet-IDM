@@ -1,0 +1,93 @@
+-- @path CM=/fr.n7.chaiseMinute/chaiseMinute.ecore
+-- @path CMT=/fr.n7.chaiseMinute.text/model/generated/CHAISEMINUTETEXT.ecore
+
+module cmtTocm;
+create OUT : CM from IN : CMT;
+
+rule ChaiseMinuteT2ChaiseMinute {
+    from chaiseminutetext : CMT!ChaiseMinute
+    to chaiseminute : CM!ChaiseMinute(
+        name <- chaiseminutetext.name,
+        tables <- chaiseminutetext.tables,
+        constraints <- chaiseminutetext.constraints)
+}
+
+helper def : resolveTemp(element : OclAny, typeName : String) : OclAny =
+    element.oclAsType(OclAny).oclAsType(typeName);
+
+rule ChaiseMinuteT2Table {
+    from chaiseminutetexttable : CMT!Table
+    to table : CM!Table(
+        name <- chaiseminutetexttable.name,
+        columns <- chaiseminutetexttable.columns,
+        indexColumn <- chaiseminutetexttable.indexcolumn,
+        constraints <- chaiseminutetexttable.constraints,
+        chaiseMinute <- thisModule.resolveTemp(chaiseminutetexttable.eContainer(), 'CM!ChaiseMinute'))
+}
+
+rule ChaiseMinuteT2IndexColumn {
+    from chaiseminutetextid : CMT!IndexColumn
+    to indexcolumn : CM!IndexColumn(
+        id <- chaiseminutetextid.id,
+        type <- chaiseminutetextid.type,
+        table <- thisModule.resolveTemp(chaiseminutetextid.eContainer(), 'CM!Table'))
+}
+
+rule ChaiseMinuteT2Column {
+    from chaiseminutetextcolumn : CMT!Column
+    to column : CM!Column(
+        id <- chaiseminutetextcolumn.id,
+        type <- chaiseminutetextcolumn.type,
+        table <- thisModule.resolveTemp(chaiseminutetextcolumn.eContainer(), 'CM!Table'))
+}
+
+rule ChaiseMinuteT2ColumnData {
+    from chaiseminutetextcolumndata : CMT!ColumnData
+    to columndata : CM!ColumnData(
+        id <- chaiseminutetextcolumndata.id,
+        type <- chaiseminutetextcolumndata.type,
+        table <- thisModule.resolveTemp(chaiseminutetextcolumndata.eContainer(), 'CM!Table'))
+}
+
+rule ChaiseMinuteT2ComputedColumn {
+    from chaiseminutetextcomputedcolumn : CMT!ComputedColumn
+    to computedcolumn : CM!ComputedColumn(
+        id <- chaiseminutetextcomputedcolumn.id,
+        type <- chaiseminutetextcomputedcolumn.type,
+        table <- thisModule.resolveTemp(chaiseminutetextcomputedcolumn.eContainer(), 'CM!Table'),
+        algorithm <- chaiseminutetextcomputedcolumn.algorithm)
+}
+
+rule ChaiseMinuteT2ImportedColumn {
+    from chaiseminutetextimportedcolumn : CMT!ImportedColumn
+    to importedcolumn : CM!ImportedColumn(
+        id <- chaiseminutetextimportedcolumn.id,
+        type <- chaiseminutetextimportedcolumn.type,
+        table <- thisModule.resolveTemp(chaiseminutetextimportedcolumn.eContainer(), 'CM!Table'),
+        path <- chaiseminutetextimportedcolumn.path)
+}
+
+rule ChaiseMinuteT2Algorithm {
+    from chaiseminutetextalg : CMT!Algorithm
+    to algorithm : CM!Algorithm(
+        functions <- chaiseminutetextalg.functions)
+}
+
+rule ChaiseMinuteT2Function {
+    from chaiseminutetextfct : CMT!Function
+    to function : CM!Function(
+        name <- chaiseminutetextfct.name,
+        inputs <- chaiseminutetextfct.inputs
+    )
+}
+
+rule ChaiseMinuteT2Argument {
+    from chaiseminutetextarg : CMT!Argument
+    to argument : CM!Argument()
+}
+
+rule ChaiseMinuteT2ColumnArgument {
+    from chaiseminutetextcolarg : CMT!ColumnArgument
+    to columnargument : CM!ColumnArgument(
+        columnPath <- chaiseminutetextcolarg.columnpath)
+}

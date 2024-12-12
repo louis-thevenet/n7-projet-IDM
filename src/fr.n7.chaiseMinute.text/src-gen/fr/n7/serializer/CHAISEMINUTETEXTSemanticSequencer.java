@@ -92,7 +92,7 @@ public class CHAISEMINUTETEXTSemanticSequencer extends AbstractDelegatingSemanti
 	 *     ChaiseMinute returns ChaiseMinute
 	 *
 	 * Constraint:
-	 *     (name=ID (tables+=Table tables+=Table*)? constraints=Algorithm?)
+	 *     (name=ID (tables+=Table tables+=Table*)? (constraints+=Algorithm constraints+=Algorithm*)?)
 	 * </pre>
 	 */
 	protected void sequence_ChaiseMinute(ISerializationContext context, ChaiseMinute semanticObject) {
@@ -242,7 +242,7 @@ public class CHAISEMINUTETEXTSemanticSequencer extends AbstractDelegatingSemanti
 	 *     Table returns Table
 	 *
 	 * Constraint:
-	 *     (name=ID indexcolumn=IndexColumn (columns+=Column columns+=Column*)? constraints=Algorithm?)
+	 *     (name=ID indexcolumn=IndexColumn (columns+=Column columns+=Column*)? (constraints+=Algorithm constraints+=Algorithm*)?)
 	 * </pre>
 	 */
 	protected void sequence_Table(ISerializationContext context, Table semanticObject) {

@@ -87,7 +87,7 @@ public interface CHAISEMINUTETEXTPackage extends EPackage
   int CHAISE_MINUTE__TABLES = 1;
 
   /**
-   * The feature id for the '<em><b>Constraints</b></em>' containment reference.
+   * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -142,7 +142,7 @@ public interface CHAISEMINUTETEXTPackage extends EPackage
   int TABLE__COLUMNS = 2;
 
   /**
-   * The feature id for the '<em><b>Constraints</b></em>' containment reference.
+   * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -518,10 +518,10 @@ public interface CHAISEMINUTETEXTPackage extends EPackage
   EReference getChaiseMinute_Tables();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.n7.cHAISEMINUTETEXT.ChaiseMinute#getConstraints <em>Constraints</em>}'.
+   * Returns the meta object for the containment reference list '{@link fr.n7.cHAISEMINUTETEXT.ChaiseMinute#getConstraints <em>Constraints</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Constraints</em>'.
+   * @return the meta object for the containment reference list '<em>Constraints</em>'.
    * @see fr.n7.cHAISEMINUTETEXT.ChaiseMinute#getConstraints()
    * @see #getChaiseMinute()
    * @generated
@@ -572,10 +572,10 @@ public interface CHAISEMINUTETEXTPackage extends EPackage
   EReference getTable_Columns();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.n7.cHAISEMINUTETEXT.Table#getConstraints <em>Constraints</em>}'.
+   * Returns the meta object for the containment reference list '{@link fr.n7.cHAISEMINUTETEXT.Table#getConstraints <em>Constraints</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Constraints</em>'.
+   * @return the meta object for the containment reference list '<em>Constraints</em>'.
    * @see fr.n7.cHAISEMINUTETEXT.Table#getConstraints()
    * @see #getTable()
    * @generated
@@ -842,7 +842,7 @@ public interface CHAISEMINUTETEXTPackage extends EPackage
     EReference CHAISE_MINUTE__TABLES = eINSTANCE.getChaiseMinute_Tables();
 
     /**
-     * The meta object literal for the '<em><b>Constraints</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -884,7 +884,7 @@ public interface CHAISEMINUTETEXTPackage extends EPackage
     EReference TABLE__COLUMNS = eINSTANCE.getTable_Columns();
 
     /**
-     * The meta object literal for the '<em><b>Constraints</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

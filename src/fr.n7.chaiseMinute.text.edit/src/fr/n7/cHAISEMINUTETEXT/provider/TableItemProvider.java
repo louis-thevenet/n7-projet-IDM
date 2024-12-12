@@ -65,8 +65,6 @@ public class TableItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addIndexcolumnPropertyDescriptor(object);
-			addConstraintsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,50 +92,6 @@ public class TableItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Indexcolumn feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIndexcolumnPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Table_indexcolumn_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Table_indexcolumn_feature", "_UI_Table_type"),
-				 CHAISEMINUTETEXTPackage.Literals.TABLE__INDEXCOLUMN,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Constraints feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConstraintsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Table_constraints_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Table_constraints_feature", "_UI_Table_type"),
-				 CHAISEMINUTETEXTPackage.Literals.TABLE__CONSTRAINTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -149,7 +103,9 @@ public class TableItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(CHAISEMINUTETEXTPackage.Literals.TABLE__INDEXCOLUMN);
 			childrenFeatures.add(CHAISEMINUTETEXTPackage.Literals.TABLE__COLUMNS);
+			childrenFeatures.add(CHAISEMINUTETEXTPackage.Literals.TABLE__CONSTRAINTS);
 		}
 		return childrenFeatures;
 	}
@@ -208,7 +164,9 @@ public class TableItemProvider
 			case CHAISEMINUTETEXTPackage.TABLE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case CHAISEMINUTETEXTPackage.TABLE__INDEXCOLUMN:
 			case CHAISEMINUTETEXTPackage.TABLE__COLUMNS:
+			case CHAISEMINUTETEXTPackage.TABLE__CONSTRAINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -225,6 +183,11 @@ public class TableItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CHAISEMINUTETEXTPackage.Literals.TABLE__INDEXCOLUMN,
+				 CHAISEMINUTETEXTFactory.eINSTANCE.createIndexColumn()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -245,6 +208,11 @@ public class TableItemProvider
 			(createChildParameter
 				(CHAISEMINUTETEXTPackage.Literals.TABLE__COLUMNS,
 				 CHAISEMINUTETEXTFactory.eINSTANCE.createImportedColumn()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CHAISEMINUTETEXTPackage.Literals.TABLE__CONSTRAINTS,
+				 CHAISEMINUTETEXTFactory.eINSTANCE.createAlgorithm()));
 	}
 
 	/**

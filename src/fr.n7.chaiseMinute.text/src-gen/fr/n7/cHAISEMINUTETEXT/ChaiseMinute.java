@@ -62,25 +62,15 @@ public interface ChaiseMinute extends EObject
   EList<Table> getTables();
 
   /**
-   * Returns the value of the '<em><b>Constraints</b></em>' containment reference.
+   * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
+   * The list contents are of type {@link fr.n7.cHAISEMINUTETEXT.Algorithm}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Constraints</em>' containment reference.
-   * @see #setConstraints(Algorithm)
+   * @return the value of the '<em>Constraints</em>' containment reference list.
    * @see fr.n7.cHAISEMINUTETEXT.CHAISEMINUTETEXTPackage#getChaiseMinute_Constraints()
    * @model containment="true"
    * @generated
    */
-  Algorithm getConstraints();
-
-  /**
-   * Sets the value of the '{@link fr.n7.cHAISEMINUTETEXT.ChaiseMinute#getConstraints <em>Constraints</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Constraints</em>' containment reference.
-   * @see #getConstraints()
-   * @generated
-   */
-  void setConstraints(Algorithm value);
+  EList<Algorithm> getConstraints();
 
 } // ChaiseMinute

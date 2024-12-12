@@ -65,7 +65,6 @@ public class ChaiseMinuteItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addConstraintsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,28 +92,6 @@ public class ChaiseMinuteItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Constraints feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConstraintsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ChaiseMinute_constraints_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ChaiseMinute_constraints_feature", "_UI_ChaiseMinute_type"),
-				 CHAISEMINUTETEXTPackage.Literals.CHAISE_MINUTE__CONSTRAINTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -127,6 +104,7 @@ public class ChaiseMinuteItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CHAISEMINUTETEXTPackage.Literals.CHAISE_MINUTE__TABLES);
+			childrenFeatures.add(CHAISEMINUTETEXTPackage.Literals.CHAISE_MINUTE__CONSTRAINTS);
 		}
 		return childrenFeatures;
 	}
@@ -186,6 +164,7 @@ public class ChaiseMinuteItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__TABLES:
+			case CHAISEMINUTETEXTPackage.CHAISE_MINUTE__CONSTRAINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -207,6 +186,11 @@ public class ChaiseMinuteItemProvider
 			(createChildParameter
 				(CHAISEMINUTETEXTPackage.Literals.CHAISE_MINUTE__TABLES,
 				 CHAISEMINUTETEXTFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CHAISEMINUTETEXTPackage.Literals.CHAISE_MINUTE__CONSTRAINTS,
+				 CHAISEMINUTETEXTFactory.eINSTANCE.createAlgorithm()));
 	}
 
 	/**
