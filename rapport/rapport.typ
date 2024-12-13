@@ -91,9 +91,14 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
 - Les `IndexColumn` sont représentées par des `containers` bleus clairs,
 - Les `DataColumn` sont représentées par des `containers` rouges clairs,
 - Les `ImportedColumn` sont représentées par des `containers` violets clairs,
-- Les `ComputedColumn` sont représentées par des `containers` jaunes clairs,
+- Les `ComputedColumn` sont représentées par des `containers` jaunes,
 - Les `Algorithm` sont représentés par des `containers` marrons dans les `ComputedColumn`
+  - Les informations dans les `containers Algorithm` affichent le nom des `Functions` qu'ils utilisent.
 
+#figure(
+  image("./images/exempleCompliqueSiriusDiagram.svg", width: 100%),
+  caption: [Sirius de ExempleComplique.cml.],
+) <exempleCompliqueSiriusDiagram>
 
 
 === Limitation
