@@ -22,7 +22,7 @@ L'utilisateur de `ChaiseMinute` diposera d'une syntaxe textuelle ainsi qu'un out
 == `Algorithm`
 #figure(
   image("/images/algorithmDiagram.svg", width: 60%),
-  caption: [Algorith Diagram.],
+  caption: [Algorithm Diagram.],
 ) <algorithDiagram>
 
 == `Function` 
