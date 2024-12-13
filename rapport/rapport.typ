@@ -51,12 +51,25 @@ Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
   caption: [Algorithm Diagram.],
 ) <algorithDiagram>
 
+`Algorithm` représente le point d'entrée d'un algorithme, il contient les fonctions qui seront appliquées.
+
+L'application des fonctions respecte les règles suivantes :
+- La première fonction est appliquée à ses arguments déclarés dans le modèle
+- Les fonctions suivantes reçoivent en premier argument la sortie de la fonction précédente, puis leur arguments déclarés
+
+Ces règles nous permettent de chaîner les fonctions dans un algorithme.
+
 
 == `Function`
 #figure(
   image("./images/functionDiagram.svg", width: 50%),
   caption: [Algorith Diagram.],
 ) <functionDiagram>
+
+Une `Function` est représentée par un identifiant qui référence un programme Python, elle contient des arguments, qui sont des références vers des colonnes. Les colonnes sont représentées sous la forme `nomTable.nomColonne` dans tout le projet (pour les références croisées de @chaiseMinuteDiagram, les arguments de fonctions, etc).
+
+=== Limitations
+On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on aurait pu construire un arbre d'appels et prendre la sortie de plusieurs fonctions à la fois en arguments. On peut quand même obtenir ce résultat avec le système actuel en adaptant les fonctions Python pour qu'elles renvoient plusieurs colonnes, ainsi en adaptant la fonction suivante pour qu'elle récupère ces deux colonnes, on imite le fonctionnement d'un arbre d'appels.
 
 = Transforamtions Texte à Modèle de `ChaiseMinute`
 = Transformations Modèle à Texte
