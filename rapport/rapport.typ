@@ -26,6 +26,8 @@ Nous avons développé un outils graphique permettant de modifier des fichiers .
   - Les `Tables` sont représentées par des container blanc
   - Les `IndexColumn` sont représentées par des container rouge à l'intérieur des `Tables`
 
+Il est aussi possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à un fichier présent et donc le supprimer en conséquence.
+
 = Exemples
 
 
