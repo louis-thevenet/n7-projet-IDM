@@ -86,10 +86,18 @@ Nous générons aussi une fonction `main` dans notre librarie qui prend en entr�
 = Edition graphique
 Nous avons développé un outils graphique permettant de modifier des fichiers .cml (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
 
-- Les `Tables` sont représentées par des container blanc
-- Les `IndexColumn` sont représentées par des container rouge à l'intérieur des `Tables`
+Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boîtes, pour montrer l'imbrication des `Columns` dans les `Tables` et la fraternités des `Columns`.
+- Les `Tables` sont représentées par des `containers` verts clairs,
+- Les `IndexColumn` sont représentées par des `containers` bleus clairs,
+- Les `DataColumn` sont représentées par des `containers` rouges clairs,
+- Les `ImportedColumn` sont représentées par des `containers` violets clairs,
+- Les `ComputedColumn` sont représentées par des `containers` jaunes clairs,
+- Les `Algorithm` sont représentés par des `containers` marrons dans les `ComputedColumn`
 
-Il est aussi possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à un fichier présent et donc le supprimer en conséquence.
+
+
+=== Limitation
+Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à un fichier présent et donc le supprimer en conséquence.
 
 = Exemples
 
