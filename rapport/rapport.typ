@@ -45,6 +45,7 @@ Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
   - `ImportedColumn` : une colonne provenant d'une autre `Table`,
   - `ComputedColumn` : représentant une colonne calculée avec un `Algorithm`
 
+Toutes les contraintes sont représentées par des algorithmes qui renvoient un booléen.
 == `Algorithm`
 #figure(
   image("./images/algorithmDiagram.svg", width: 60%),
@@ -72,8 +73,15 @@ Une `Function` est représentée par un identifiant qui référence un programme
 On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on aurait pu construire un arbre d'appels et prendre la sortie de plusieurs fonctions à la fois en arguments. On peut quand même obtenir ce résultat avec le système actuel en adaptant les fonctions Python pour qu'elles renvoient plusieurs colonnes, ainsi en adaptant la fonction suivante pour qu'elle récupère ces deux colonnes, on imite le fonctionnement d'un arbre d'appels.
 
 = Transforamtions Texte à Modèle de `ChaiseMinute`
-= Transformations Modèle à Texte
-== `ChaiseMinute` vers Python
+= Génération de la librarie et du script de calcul (Transformation M2T)
+Nous avons décidé d'utiliser le language Python pour nos algorithmes. Ainsi, pour générer une librarie de calcul à partir d'un schéma de table, il nous suffit de générer un programme Python qui appelle les fonctions référencées par les algorithmes et les contraintes.
+
+Nous générons aussi une fonction `main` dans notre librarie qui prend en entrée des fichier au format CSV et qui en génèrent de nouveaux en appliquant le schéma de table, résultant en un script de transformation automatique des données.
+
+// ici ajouter une image du modèle exemple-compliqué et les fonctions python
+
+== Exemple
+
 = Transformations Modèle à Modèle
 = Edition graphique
 Nous avons développé un outils graphique permettant de modifier des fichiers .cml (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
