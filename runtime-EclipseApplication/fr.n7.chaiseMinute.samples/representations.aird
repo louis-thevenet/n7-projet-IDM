@@ -16,6 +16,10 @@
         <description xmi:type="description_2:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']"/>
         <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
       </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mNZOsLh5Ee-XRc4ovRtY4A" name="new ChaiseMinuteDiagram" repPath="#_mNLzULh5Ee-XRc4ovRtY4A" changeId="1734001796048">
+        <description xmi:type="description_2:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']"/>
+        <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
+      </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
   <table:DTable uid="_HCoUwLI3Ee-_MJpbk0UDng" headerColumnWidth="379">
@@ -321,6 +325,245 @@
     </ownedDiagramElements>
     <description xmi:type="description_2:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_18IPkLJyEe-bI7DNog6ykQ"/>
+    <activatedLayers xmi:type="description_2:Layer" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer"/>
+    <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_mNLzULh5Ee-XRc4ovRtY4A">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_mNjmwLh5Ee-XRc4ovRtY4A" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_mNjmwbh5Ee-XRc4ovRtY4A" type="Sirius" element="_mNLzULh5Ee-XRc4ovRtY4A" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_mOok0Lh5Ee-XRc4ovRtY4A" type="2002" element="_mNofQLh5Ee-XRc4ovRtY4A">
+          <children xmi:type="notation:Node" xmi:id="_mOurcLh5Ee-XRc4ovRtY4A" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_mOvSgLh5Ee-XRc4ovRtY4A" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_mO0yELh5Ee-XRc4ovRtY4A" type="3008" element="_mNrik7h5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO1ZILh5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO2AMLh5Ee-XRc4ovRtY4A" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO2AMbh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO2AMrh5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO0yEbh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO0yErh5Ee-XRc4ovRtY4A" x="31" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mO2AM7h5Ee-XRc4ovRtY4A" type="3008" element="_mNsJobh5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO2nQLh5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO2nQbh5Ee-XRc4ovRtY4A" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO2nQrh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO2nQ7h5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO2ANLh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO2ANbh5Ee-XRc4ovRtY4A" x="211" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mO2nRLh5Ee-XRc4ovRtY4A" type="3008" element="_mNsJpLh5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO2nR7h5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO2nSLh5Ee-XRc4ovRtY4A" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO2nSbh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO2nSrh5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO2nRbh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO2nRrh5Ee-XRc4ovRtY4A" x="421" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mO3OULh5Ee-XRc4ovRtY4A" type="3008" element="_mNswsLh5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO3OU7h5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO3OVLh5Ee-XRc4ovRtY4A" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO3OVbh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO3OVrh5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO3OUbh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO3OUrh5Ee-XRc4ovRtY4A" x="631" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mO3OV7h5Ee-XRc4ovRtY4A" type="3008" element="_mNsws7h5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO31YLh5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO31Ybh5Ee-XRc4ovRtY4A" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_mO31ZLh5Ee-XRc4ovRtY4A" type="3008" element="_mOR_gLh5Ee-XRc4ovRtY4A">
+                  <children xmi:type="notation:Node" xmi:id="_mO31Z7h5Ee-XRc4ovRtY4A" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_mO4ccLh5Ee-XRc4ovRtY4A" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_mO4ccbh5Ee-XRc4ovRtY4A"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_mO4ccrh5Ee-XRc4ovRtY4A"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mO31Zbh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO31Zrh5Ee-XRc4ovRtY4A" x="31" y="30"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO31Yrh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO31Y7h5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO3OWLh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO3OWbh5Ee-XRc4ovRtY4A" x="841" y="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_mOvSgbh5Ee-XRc4ovRtY4A"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_mOvSgrh5Ee-XRc4ovRtY4A"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mOok0bh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOok0rh5Ee-XRc4ovRtY4A"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_mOzj8Lh5Ee-XRc4ovRtY4A" type="2002" element="_mNrikLh5Ee-XRc4ovRtY4A">
+          <children xmi:type="notation:Node" xmi:id="_mO0LALh5Ee-XRc4ovRtY4A" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_mO0LAbh5Ee-XRc4ovRtY4A" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_mO4cc7h5Ee-XRc4ovRtY4A" type="3008" element="_mOW4Arh5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO5DgLh5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO5Dgbh5Ee-XRc4ovRtY4A" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO5Dgrh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO5Dg7h5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO4cdLh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO4cdbh5Ee-XRc4ovRtY4A" x="31" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mO5DhLh5Ee-XRc4ovRtY4A" type="3008" element="_mOXfErh5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO5Dh7h5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO5qkLh5Ee-XRc4ovRtY4A" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO5qkbh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO5qkrh5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO5Dhbh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO5Dhrh5Ee-XRc4ovRtY4A" x="211" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mO5qk7h5Ee-XRc4ovRtY4A" type="3008" element="_mOYGILh5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO5qlrh5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO5ql7h5Ee-XRc4ovRtY4A" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO5qmLh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO5qmbh5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO5qlLh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12" italic="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO5qlbh5Ee-XRc4ovRtY4A" x="421" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mO6RoLh5Ee-XRc4ovRtY4A" type="3008" element="_mOcXkLh5Ee-XRc4ovRtY4A">
+              <children xmi:type="notation:Node" xmi:id="_mO6Ro7h5Ee-XRc4ovRtY4A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_mO6RpLh5Ee-XRc4ovRtY4A" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_mO6Rp7h5Ee-XRc4ovRtY4A" type="3008" element="_mOc-oLh5Ee-XRc4ovRtY4A">
+                  <children xmi:type="notation:Node" xmi:id="_mO64sLh5Ee-XRc4ovRtY4A" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_mO64sbh5Ee-XRc4ovRtY4A" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_mO64srh5Ee-XRc4ovRtY4A"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_mO64s7h5Ee-XRc4ovRtY4A"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mO6RqLh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO6Rqbh5Ee-XRc4ovRtY4A" x="31" y="30"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_mO6Rpbh5Ee-XRc4ovRtY4A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_mO6Rprh5Ee-XRc4ovRtY4A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO6Robh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO6Rorh5Ee-XRc4ovRtY4A" x="643" y="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_mO0LArh5Ee-XRc4ovRtY4A"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_mO0LA7h5Ee-XRc4ovRtY4A"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mOzj8bh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOzj8rh5Ee-XRc4ovRtY4A" x="240" y="204"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_mNjmwrh5Ee-XRc4ovRtY4A"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_mOeMwLh5Ee-XRc4ovRtY4A" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_mOeMwbh5Ee-XRc4ovRtY4A"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mNofQLh5Ee-XRc4ovRtY4A" name="Table1">
+      <target xmi:type="chaiseMinute:Table" href="ChaiseMinute.cml#//@tables.0"/>
+      <semanticElements xmi:type="chaiseMinute:Table" href="ChaiseMinute.cml#//@tables.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mNptYLh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mNrik7h5Ee-XRc4ovRtY4A" name="note1">
+        <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.0"/>
+        <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mNrilLh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="246,139,139" foregroundColor="246,139,139">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mNsJobh5Ee-XRc4ovRtY4A" name="note2">
+        <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.1"/>
+        <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mNsJorh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="246,139,139" foregroundColor="246,139,139">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mNsJpLh5Ee-XRc4ovRtY4A" name="note3">
+        <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.2"/>
+        <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.0/@columns.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mNsJpbh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="246,139,139" foregroundColor="246,139,139">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mNswsLh5Ee-XRc4ovRtY4A" name="Noms">
+        <target xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.0/@indexColumn"/>
+        <semanticElements xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.0/@indexColumn"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mNswsbh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="194,239,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='IndexC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='IndexC']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mNsws7h5Ee-XRc4ovRtY4A" name="moyenne2">
+        <target xmi:type="chaiseMinute:ComputedColumn" href="ChaiseMinute.cml#//@tables.0/@columns.3"/>
+        <semanticElements xmi:type="chaiseMinute:ComputedColumn" href="ChaiseMinute.cml#//@tables.0/@columns.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mORYcLh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,233,79" foregroundColor="252,233,79">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mOR_gLh5Ee-XRc4ovRtY4A" name="[MOYENNE, ADDITION, PEDALE.PY]">
+          <target xmi:type="algorithm:Algorithm" href="ChaiseMinute.cml#//@tables.0/@columns.3/@algorithm"/>
+          <semanticElements xmi:type="algorithm:Algorithm" href="ChaiseMinute.cml#//@tables.0/@columns.3/@algorithm"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mOW4ALh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="253,206,137" foregroundColor="253,206,137">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']/@subContainerMappings[name='AlgorithmC']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']/@subContainerMappings[name='AlgorithmC']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mNrikLh5Ee-XRc4ovRtY4A" name="Table2">
+      <target xmi:type="chaiseMinute:Table" href="ChaiseMinute.cml#//@tables.1"/>
+      <semanticElements xmi:type="chaiseMinute:Table" href="ChaiseMinute.cml#//@tables.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mNrikbh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mOW4Arh5Ee-XRc4ovRtY4A" name="DataColumn">
+        <target xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.1/@columns.0"/>
+        <semanticElements xmi:type="chaiseMinute:ColumnData" href="ChaiseMinute.cml#//@tables.1/@columns.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mOXfELh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="246,139,139" foregroundColor="246,139,139">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='DataC']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mOXfErh5Ee-XRc4ovRtY4A" name="id">
+        <target xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.1/@indexColumn"/>
+        <semanticElements xmi:type="chaiseMinute:IndexColumn" href="ChaiseMinute.cml#//@tables.1/@indexColumn"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mOXfE7h5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="194,239,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='IndexC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='IndexC']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mOYGILh5Ee-XRc4ovRtY4A" name="Notes Exportees&#xA;from Table1.note3">
+        <target xmi:type="chaiseMinute:ImportedColumn" href="ChaiseMinute.cml#//@tables.1/@columns.1"/>
+        <semanticElements xmi:type="chaiseMinute:ImportedColumn" href="ChaiseMinute.cml#//@tables.1/@columns.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mObJcLh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="217,196,215" foregroundColor="217,196,215">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ImportedC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ImportedC']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mOcXkLh5Ee-XRc4ovRtY4A" name="Computed2">
+        <target xmi:type="chaiseMinute:ComputedColumn" href="ChaiseMinute.cml#//@tables.1/@columns.2"/>
+        <semanticElements xmi:type="chaiseMinute:ComputedColumn" href="ChaiseMinute.cml#//@tables.1/@columns.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mOcXkbh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,233,79" foregroundColor="252,233,79">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mOc-oLh5Ee-XRc4ovRtY4A" name="[SUM.PY, CACA.PY]">
+          <target xmi:type="algorithm:Algorithm" href="ChaiseMinute.cml#//@tables.1/@columns.2/@algorithm"/>
+          <semanticElements xmi:type="algorithm:Algorithm" href="ChaiseMinute.cml#//@tables.1/@columns.2/@algorithm"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mOc-obh5Ee-XRc4ovRtY4A" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="253,206,137" foregroundColor="253,206,137">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']/@subContainerMappings[name='AlgorithmC']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer/@containerMappings[name='TableC']/@subContainerMappings[name='ComputedC']/@subContainerMappings[name='AlgorithmC']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_mNRS4Lh5Ee-XRc4ovRtY4A"/>
     <activatedLayers xmi:type="description_2:Layer" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']/@defaultLayer"/>
     <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
   </diagram:DSemanticDiagram>
