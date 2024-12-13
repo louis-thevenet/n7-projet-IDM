@@ -13,11 +13,27 @@ ChaiseMinute permet à tous ses utilisateurs de développer des `schémas de tab
 L'utilisateur de `ChaiseMinute` diposera d'une syntaxe textuelle ainsi qu'un outil graphique permettant de définir ses schémas de tables. Les schémas de tables pourront être transformés dans des langages plus spécifiques au calcul pour pouvoir utiliser les données avec.  
 
 = Méta-Modèles
+Pour les méta-modèles nous avons décidés de séparer en trois méta-modèles pour représenter l'objectif : 
++ ChaiseMinute.Ecore
+  - Point d'entrée, il permet de définir les schéma de table
++ Algorithm.Ecore
+  - Définir l'algorithme utilisé pour les `ComputedColumns`
++ Function.Ecore
+  - Pour spécifier les `Functions` utiles pour `Algorithm`
+
 == `ChaiseMinute`
 #figure(
   image("/images/chaiseMinuteDiagram.svg", width: 100%),
   caption: [ChaiseMinute Ecore Diagram.],
 ) <chaiseMinuteDiagram>
+
+- `ChaiseMinute` représente le container permettant de regrouper les schémas de tables entre eux.
+- `Table` défini un schéma de table comme un ensemble de `Column` et d'une `IndexColumn`
+- `IndexColumn` : est une colonne spéciale pour les index des lignes
+- `Column` est une interface regroupant les propriétés pour les différents type de colonnes possible dans le schémas de table : 
+  - `ColumnData` : une colonne simple par une donnée,
+  - `ImportedColumn` : une colonne provenant d'une autre `Table`,
+  - `ComputedColumn` : représentant une colonne calculée avec un `Algorithm` pouvant provenir de `Column` de la même `Table` ou non
 
 == `Algorithm`
 #figure(
