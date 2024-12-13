@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chaiseMinute:ChaiseMinute xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chaiseMinute="http://chaiseMinute">
+<chaiseMinute:ChaiseMinute xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chaiseMinute="http://chaiseMinute" name="CM">
   <tables name="Table1">
     <columns xsi:type="chaiseMinute:ColumnData" id="note1"/>
     <columns xsi:type="chaiseMinute:ColumnData" id="note2"/>
     <columns xsi:type="chaiseMinute:ColumnData" id="note3"/>
-    <columns xsi:type="chaiseMinute:ComputedColumn" id="moyenne">
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="moyenne2">
       <algorithm>
         <functions name="Moyenne"/>
+        <functions name="Addition"/>
+        <functions name="pedale.py"/>
       </algorithm>
     </columns>
     <indexColumn id="Noms"/>
   </tables>
-  <tables name="Table3">
-    <columns xsi:type="chaiseMinute:ImportedColumn" id="Moyenne" path="Table1.Moyenne"/>
-    <indexColumn id="idT3"/>
-  </tables>
   <tables name="Table2">
     <columns xsi:type="chaiseMinute:ColumnData" id="DataColumn"/>
-    <columns xsi:type="chaiseMinute:ImportedColumn" id="Imported" path="Table1.note3"/>
-    <columns xsi:type="chaiseMinute:ComputedColumn" id="Computed"/>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="Notes Exportees" path="Table1.note3"/>
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="Computed2">
+      <algorithm>
+        <functions name="sum.py"/>
+      </algorithm>
+    </columns>
     <indexColumn/>
   </tables>
 </chaiseMinute:ChaiseMinute>
