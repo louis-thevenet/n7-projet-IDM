@@ -14,6 +14,7 @@ L'utilisateur de `ChaiseMinute` diposera d'une syntaxe textuelle ainsi qu'un out
 
 = Méta-Modèles
 == `ChaiseMinute`
+<<<<<<< HEAD
 #figure(
   image("/images/chaiseMinuteDiagram.svg", width: 100%),
   caption: [ChaiseMinute Ecore Diagram.],
@@ -31,6 +32,10 @@ L'utilisateur de `ChaiseMinute` diposera d'une syntaxe textuelle ainsi qu'un out
   caption: [Algorith Diagram.],
 ) <functionDiagram>
 
+=======
+== `Algorithm`
+== `Function` 
+>>>>>>> 42d8187836fd2a40a33bb6c1b2af5c6fab9ae8f6
 = Transforamtions Texte à Modèle de `ChaiseMinute`
 = Transformations Modèle à Texte
 == `ChaiseMinute` vers Python
