@@ -6,8 +6,8 @@ package fr.n7.chaiseMinute.fromText.ui.internal;
 import com.google.common.collect.Maps;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import fr.n7.chaiseMinute.FromTextRuntimeModule;
-import fr.n7.chaiseMinute.ui.FromTextUiModule;
+import fr.n7.chaiseMinute.CHAISEMINUTETEXTRuntimeModule;
+import fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTUiModule;
 import java.util.Collections;
 import java.util.Map;
 import org.apache.log4j.Logger;
@@ -23,7 +23,7 @@ import org.osgi.framework.BundleContext;
 public class FromTextActivator extends AbstractUIPlugin {
 
 	public static final String PLUGIN_ID = "fr.n7.chaiseMinute.fromText.ui";
-	public static final String FR_N7_CHAISEMINUTE_FROMTEXT = "fr.n7.chaiseMinute.FromText";
+	public static final String FR_N7_CHAISEMINUTE_CHAISEMINUTETEXT = "fr.n7.chaiseMinute.CHAISEMINUTETEXT";
 	
 	private static final Logger logger = Logger.getLogger(FromTextActivator.class);
 	
@@ -73,15 +73,15 @@ public class FromTextActivator extends AbstractUIPlugin {
 	}
 	
 	protected com.google.inject.Module getRuntimeModule(String grammar) {
-		if (FR_N7_CHAISEMINUTE_FROMTEXT.equals(grammar)) {
-			return new FromTextRuntimeModule();
+		if (FR_N7_CHAISEMINUTE_CHAISEMINUTETEXT.equals(grammar)) {
+			return new CHAISEMINUTETEXTRuntimeModule();
 		}
 		throw new IllegalArgumentException(grammar);
 	}
 	
 	protected com.google.inject.Module getUiModule(String grammar) {
-		if (FR_N7_CHAISEMINUTE_FROMTEXT.equals(grammar)) {
-			return new FromTextUiModule(this);
+		if (FR_N7_CHAISEMINUTE_CHAISEMINUTETEXT.equals(grammar)) {
+			return new CHAISEMINUTETEXTUiModule(this);
 		}
 		throw new IllegalArgumentException(grammar);
 	}

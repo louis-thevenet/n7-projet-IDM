@@ -7,7 +7,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: fr.n7.chaiseMinute.fromText.ui.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: fr.n7.chaiseMinute.fromText.ui,
- fr.n7.chaiseMinute,
  org.eclipse.xtext.testing,
  org.eclipse.xtext.ui.testing,
  org.eclipse.xtext.xbase.testing,

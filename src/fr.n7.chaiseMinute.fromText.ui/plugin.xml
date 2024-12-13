@@ -4,48 +4,48 @@
 	<extension
 		point="org.eclipse.ui.editors">
 		<editor
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
 			extensions="cmt"
-			id="fr.n7.chaiseMinute.FromText"
-			name="FromText Editor">
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			name="CHAISEMINUTETEXT Editor">
 		</editor>
 	</extension>
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
 			commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
 			<activeWhen>
 				<reference
-					definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+					definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-			commandId="fr.n7.chaiseMinute.FromText.validate">
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+			commandId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.validate">
 			<activeWhen>
 				<reference
-					definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+					definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
 		<!-- copy qualified name -->
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
 			<activeWhen>
-				<reference definitionId="fr.n7.chaiseMinute.FromText.Editor.opened" />
+				<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened" />
 			</activeWhen>
 		</handler>
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
 			<activeWhen>
 				<and>
-					<reference definitionId="fr.n7.chaiseMinute.FromText.XtextEditor.opened" />
+					<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.XtextEditor.opened" />
 					<iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -54,22 +54,22 @@
 		</handler>
 	</extension>
 	<extension point="org.eclipse.core.expressions.definitions">
-		<definition id="fr.n7.chaiseMinute.FromText.Editor.opened">
+		<definition id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 			<and>
 				<reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
-						value="fr.n7.chaiseMinute.FromText"
+						value="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
 						forcePluginActivation="true"/>
 				</with>
 			</and>
 		</definition>
-		<definition id="fr.n7.chaiseMinute.FromText.XtextEditor.opened">
+		<definition id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.XtextEditor.opened">
 			<and>
 				<reference definitionId="isXtextEditorActive"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
-						value="fr.n7.chaiseMinute.FromText"
+						value="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
 						forcePluginActivation="true"/>
 				</with>
 			</and>
@@ -78,33 +78,33 @@
 	<extension
 			point="org.eclipse.ui.preferencePages">
 		<page
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="fr.n7.chaiseMinute.FromText"
-			name="FromText">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			name="CHAISEMINUTETEXT">
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 		</page>
 		<page
-			category="fr.n7.chaiseMinute.FromText"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-			id="fr.n7.chaiseMinute.FromText.coloring"
+			category="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.coloring"
 			name="Syntax Coloring">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 		</page>
 		<page
-			category="fr.n7.chaiseMinute.FromText"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-			id="fr.n7.chaiseMinute.FromText.templates"
+			category="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.templates"
 			name="Templates">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 		</page>
 	</extension>
 	<extension
 			point="org.eclipse.ui.propertyPages">
 		<page
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="fr.n7.chaiseMinute.FromText"
-			name="FromText">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			name="CHAISEMINUTETEXT">
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -114,14 +114,14 @@
 	<extension
 		point="org.eclipse.ui.keywords">
 		<keyword
-			id="fr.n7.chaiseMinute.ui.keyword_FromText"
-			label="FromText"/>
+			id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"
+			label="CHAISEMINUTETEXT"/>
 	</extension>
 	<extension
 		point="org.eclipse.ui.commands">
 		<command
 			description="Trigger expensive validation"
-			id="fr.n7.chaiseMinute.FromText.validate"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.validate"
 			name="Validate">
 		</command>
 		<!-- copy qualified name -->
@@ -142,12 +142,12 @@
 		<menuContribution
 			locationURI="popup:#TextEditorContext?after=group.edit">
 			<command
-				commandId="fr.n7.chaiseMinute.FromText.validate"
+				commandId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.validate"
 				style="push"
 				tooltip="Trigger expensive validation">
 				<visibleWhen checkEnabled="false">
 					<reference
-						definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+						definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -157,7 +157,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="fr.n7.chaiseMinute.FromText.Editor.opened" />
+					<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -165,7 +165,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="fr.n7.chaiseMinute.FromText.Editor.opened" />
+					<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -174,7 +174,7 @@
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
 					<and>
-						<reference definitionId="fr.n7.chaiseMinute.FromText.XtextEditor.opened" />
+						<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -187,7 +187,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+					<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -195,11 +195,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
 			commandId="org.eclipse.xtext.ui.editor.FindReferences">
 			<activeWhen>
 				<reference
-					definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+					definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -208,8 +208,8 @@
 		<content-type
 			base-type="org.eclipse.core.runtime.text"
 			file-extensions="cmt"
-			id="fr.n7.chaiseMinute.FromText.contenttype"
-			name="FromText File"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.contenttype"
+			name="CHAISEMINUTETEXT File"
 			priority="normal">
 		</content-type>
 	</extension>
@@ -217,68 +217,68 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="cmt">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 		<resourceServiceProvider
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
 			uriExtension="cmt">
 		</resourceServiceProvider>
 	</extension>
-	<!-- marker definitions for fr.n7.chaiseMinute.FromText -->
+	<!-- marker definitions for fr.n7.chaiseMinute.CHAISEMINUTETEXT -->
 	<extension
-			id="fromtext.check.fast"
-			name="FromText Problem"
+			id="chaiseminutetext.check.fast"
+			name="CHAISEMINUTETEXT Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.fast"/>
 		<persistent value="true"/>
 	</extension>
 	<extension
-			id="fromtext.check.normal"
-			name="FromText Problem"
+			id="chaiseminutetext.check.normal"
+			name="CHAISEMINUTETEXT Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.normal"/>
 		<persistent value="true"/>
 	</extension>
 	<extension
-			id="fromtext.check.expensive"
-			name="FromText Problem"
+			id="chaiseminutetext.check.expensive"
+			name="CHAISEMINUTETEXT Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.expensive"/>
 		<persistent value="true"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="fr.n7.chaiseMinute.FromText"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.validation.ValidatorPreferencePage"
-			id="fr.n7.chaiseMinute.FromText.validator.preferencePage"
+			category="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.validation.ValidatorPreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.validator.preferencePage"
 			name="Errors/Warnings">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
 			fileExtensions="cmt"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="fr.n7.chaiseMinute.FromText"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="fr.n7.chaiseMinute.FromText.compiler.preferencePage"
+			category="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.compiler.preferencePage"
 			name="Compiler">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.ui.propertyPages">
 		<page
-			category="fr.n7.chaiseMinute.FromText"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="fr.n7.chaiseMinute.FromText.compiler.propertyPage"
+			category="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.compiler.propertyPage"
 			name="Compiler">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -289,20 +289,20 @@
 		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
 			<command
 				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
-				id="fr.n7.chaiseMinute.FromText.OpenGeneratedCode"
+				id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.OpenGeneratedCode"
 				style="push">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="fr.n7.chaiseMinute.FromText.Editor.opened" />
+					<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
 			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
 			<activeWhen>
-				<reference definitionId="fr.n7.chaiseMinute.FromText.Editor.opened" />
+				<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened" />
 			</activeWhen>
 		</handler>
 	</extension>
@@ -310,11 +310,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+					definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -334,33 +334,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="fr.n7.chaiseMinute.FromText.Editor.opened"/>
+					<reference definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-	<!-- quickfix marker resolution generator for fr.n7.chaiseMinute.FromText -->
+	<!-- quickfix marker resolution generator for fr.n7.chaiseMinute.CHAISEMINUTETEXT -->
 	<extension
 			point="org.eclipse.ui.ide.markerResolution">
 		<markerResolutionGenerator
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="fr.n7.chaiseMinute.fromText.ui.fromtext.check.fast">
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="fr.n7.chaiseMinute.fromText.ui.chaiseminutetext.check.fast">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
 			</attribute>
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="fr.n7.chaiseMinute.fromText.ui.fromtext.check.normal">
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="fr.n7.chaiseMinute.fromText.ui.chaiseminutetext.check.normal">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
 			</attribute>
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="fr.n7.chaiseMinute.fromText.ui.fromtext.check.expensive">
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="fr.n7.chaiseMinute.fromText.ui.chaiseminutetext.check.expensive">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
@@ -370,11 +370,11 @@
 	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+					definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -386,7 +386,7 @@
 				style="push">
 				<visibleWhen checkEnabled="false">
 					<reference
-						definitionId="fr.n7.chaiseMinute.FromText.Editor.opened">
+						definitionId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -394,34 +394,34 @@
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="fr.n7.chaiseMinute.FromText"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-			id="fr.n7.chaiseMinute.FromText.refactoring"
+			category="fr.n7.chaiseMinute.CHAISEMINUTETEXT"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+			id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.refactoring"
 			name="Refactoring">
-			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_FromText"/>
+			<keywordReference id="fr.n7.chaiseMinute.ui.keyword_CHAISEMINUTETEXT"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.compare.contentViewers">
-		<viewer id="fr.n7.chaiseMinute.FromText.compare.contentViewers"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+		<viewer id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.compare.contentViewers"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="cmt">
 		</viewer>
 		<contentTypeBinding
-			contentTypeId="fr.n7.chaiseMinute.FromText.contenttype"
-			contentViewerId="fr.n7.chaiseMinute.FromText.compare.contentViewers" />
+			contentTypeId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.contenttype"
+			contentViewerId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
-		<viewer id="fr.n7.chaiseMinute.FromText.compare.contentMergeViewers"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="cmt" label="FromText Compare">
+		<viewer id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.compare.contentMergeViewers"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="cmt" label="CHAISEMINUTETEXT Compare">
 		</viewer>
 		<contentTypeBinding
-			contentTypeId="fr.n7.chaiseMinute.FromText.contenttype"
-			contentMergeViewerId="fr.n7.chaiseMinute.FromText.compare.contentMergeViewers" />
+			contentTypeId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.contenttype"
+			contentMergeViewerId="fr.n7.chaiseMinute.CHAISEMINUTETEXT.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
-		<provider id="fr.n7.chaiseMinute.FromText.editors.documentProviders"
-			class="fr.n7.chaiseMinute.ui.FromTextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+		<provider id="fr.n7.chaiseMinute.CHAISEMINUTETEXT.editors.documentProviders"
+			class="fr.n7.chaiseMinute.ui.CHAISEMINUTETEXTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
 			extensions="cmt">
 		</provider>
 	</extension>
