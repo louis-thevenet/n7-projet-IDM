@@ -16,7 +16,7 @@
         <description xmi:type="description_2:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']"/>
         <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mNZOsLh5Ee-XRc4ovRtY4A" name="new ChaiseMinuteDiagram" repPath="#_mNLzULh5Ee-XRc4ovRtY4A" changeId="1734001796048">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mNZOsLh5Ee-XRc4ovRtY4A" name="new ChaiseMinuteDiagram" repPath="#_mNLzULh5Ee-XRc4ovRtY4A" changeId="1734104620143">
         <description xmi:type="description_2:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.design/description/chaiseMinute.odesign#//@ownedViewpoints[name='ChaiseMinuteViewpoint']/@ownedRepresentations[name='ChaiseMinuteDiagram']"/>
         <target xmi:type="chaiseMinute:ChaiseMinute" href="ChaiseMinute.cml#/"/>
       </ownedRepresentationDescriptors>
@@ -404,7 +404,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_mO5Dg7h5Ee-XRc4ovRtY4A"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_mO4cdLh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO4cdbh5Ee-XRc4ovRtY4A" x="31" y="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO4cdbh5Ee-XRc4ovRtY4A" x="181" y="30"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_mO5DhLh5Ee-XRc4ovRtY4A" type="3008" element="_mOXfErh5Ee-XRc4ovRtY4A">
               <children xmi:type="notation:Node" xmi:id="_mO5Dh7h5Ee-XRc4ovRtY4A" type="5005"/>
@@ -413,7 +413,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_mO5qkrh5Ee-XRc4ovRtY4A"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_mO5Dhbh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO5Dhrh5Ee-XRc4ovRtY4A" x="211" y="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO5Dhrh5Ee-XRc4ovRtY4A" x="361" y="30"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_mO5qk7h5Ee-XRc4ovRtY4A" type="3008" element="_mOYGILh5Ee-XRc4ovRtY4A">
               <children xmi:type="notation:Node" xmi:id="_mO5qlrh5Ee-XRc4ovRtY4A" type="5005"/>
@@ -422,7 +422,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_mO5qmbh5Ee-XRc4ovRtY4A"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_mO5qlLh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12" italic="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO5qlbh5Ee-XRc4ovRtY4A" x="421" y="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO5qlbh5Ee-XRc4ovRtY4A" x="571" y="30"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_mO6RoLh5Ee-XRc4ovRtY4A" type="3008" element="_mOcXkLh5Ee-XRc4ovRtY4A">
               <children xmi:type="notation:Node" xmi:id="_mO6Ro7h5Ee-XRc4ovRtY4A" type="5005"/>
@@ -440,13 +440,13 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_mO6Rprh5Ee-XRc4ovRtY4A"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_mO6Robh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO6Rorh5Ee-XRc4ovRtY4A" x="643" y="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO6Rorh5Ee-XRc4ovRtY4A" x="793" y="30"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_mO0LArh5Ee-XRc4ovRtY4A"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_mO0LA7h5Ee-XRc4ovRtY4A"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_mOzj8bh5Ee-XRc4ovRtY4A" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOzj8rh5Ee-XRc4ovRtY4A" x="240" y="204"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOzj8rh5Ee-XRc4ovRtY4A" x="90" y="204" width="1030"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_mNjmwrh5Ee-XRc4ovRtY4A"/>
       </data>

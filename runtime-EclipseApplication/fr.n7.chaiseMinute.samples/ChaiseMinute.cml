@@ -19,7 +19,6 @@
     <columns xsi:type="chaiseMinute:ComputedColumn" id="Computed2">
       <algorithm>
         <functions name="sum.py"/>
-        <functions name="caca.py"/>
       </algorithm>
     </columns>
     <indexColumn/>
