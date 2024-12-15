@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[module toPython('http://calculus')]
+
+[template public generateElement(aCalculus : Calculus)]
+[comment @main/]
+[file ((aCalculus.name)+'.py', false, 'UTF-8')]
+
+def search(input, out, table, id):
+	try:
+		return input['['/]table]['['/]id].to_list()
+	except Exception:
+		return out['['/]id].to_list()
+ 
+[/file]
+[/template]
+

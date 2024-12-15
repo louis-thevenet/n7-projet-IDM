@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.n7.chaiseMinute.calculus/src" modelPluginID="fr.n7.chaiseMinute.calculus"
+    modelName="Calculus" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>calculus.ecore</foreignModel>
+  <genPackages prefix="Calculus" disposableProviderFactory="true" ecorePackage="calculus.ecore#/">
+    <genClasses ecoreClass="calculus.ecore#//Calculus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//Calculus/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference calculus.ecore#//Calculus/Expressions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="calculus.ecore#//Expression"/>
+    <genClasses ecoreClass="calculus.ecore#//InputsArgs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//InputsArgs/argName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="calculus.ecore#//UnaryExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//UnaryExpression/input"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//UnaryExpression/next"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//UnaryExpression/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//UnaryExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="calculus.ecore#//Inverse"/>
+    <genClasses ecoreClass="calculus.ecore#//Opposite"/>
+    <genClasses image="false" ecoreClass="calculus.ecore#//BinaryExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/First"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/Second"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/next"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//BinaryExpression/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//BinaryExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="calculus.ecore#//Sum"/>
+    <genClasses ecoreClass="calculus.ecore#//Substraction"/>
+    <genClasses ecoreClass="calculus.ecore#//Products"/>
+    <genClasses ecoreClass="calculus.ecore#//Division"/>
+    <genClasses ecoreClass="calculus.ecore#//Constante">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//Constante/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="calculus.ecore#//FinaleExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//FinaleExpression/result"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//FinaleExpression/from"/>
+    </genClasses>
+    <genClasses ecoreClass="calculus.ecore#//Result"/>
+  </genPackages>
+</genmodel:GenModel>

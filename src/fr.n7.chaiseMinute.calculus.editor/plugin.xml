@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated calculus -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="calculus.presentation.CalculusModelWizardID"
+            name="%_UI_CalculusModelWizard_label"
+            class="calculus.presentation.CalculusModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CalculusModelFile.gif">
+         <description>%_UI_CalculusModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated calculus -->
+      <editor
+            id="calculus.presentation.CalculusEditorID"
+            name="%_UI_CalculusEditor_label"
+            icon="icons/full/obj16/CalculusModelFile.gif"
+            extensions="calculus"
+            class="calculus.presentation.CalculusEditor"
+            contributorClass="calculus.presentation.CalculusActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
