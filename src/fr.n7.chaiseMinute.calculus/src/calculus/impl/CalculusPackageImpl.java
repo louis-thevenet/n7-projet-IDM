@@ -598,7 +598,7 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 		// Initialize classes, features, and operations; add parameters
 		initEClass(calculusEClass, Calculus.class, "Calculus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCalculus_Name(), ecorePackage.getEString(), "name", null, 1, 1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCalculus_Expressions(), this.getExpression(), null, "Expressions", null, 0, -1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCalculus_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

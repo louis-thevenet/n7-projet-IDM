@@ -20,4 +20,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Export-Package: fr.n7.chaiseMinute.calculus.toPython.main
+Import-Package: calculus
 

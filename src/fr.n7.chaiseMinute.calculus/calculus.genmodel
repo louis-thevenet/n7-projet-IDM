@@ -8,7 +8,7 @@
   <genPackages prefix="Calculus" disposableProviderFactory="true" ecorePackage="calculus.ecore#/">
     <genClasses ecoreClass="calculus.ecore#//Calculus">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//Calculus/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference calculus.ecore#//Calculus/Expressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference calculus.ecore#//Calculus/expressions"/>
     </genClasses>
     <genClasses image="false" ecoreClass="calculus.ecore#//Expression"/>
     <genClasses ecoreClass="calculus.ecore#//InputsArgs">

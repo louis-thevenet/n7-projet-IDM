@@ -5,12 +5,32 @@
 [comment @main/]
 [file ((aCalculus.name)+'.py', false, 'UTF-8')]
 
-def search(input, out, table, id):
-	try:
-		return input['['/]table]['['/]id].to_list()
-	except Exception:
-		return out['['/]id].to_list()
+def [aCalculus.name/]([for (a : InputsArgs | aCalculus.getInputArgs())][argName/],[/for]):
+	[for (e : Expression | aCalculus.getExpressions())]
+		[e/]
+	[/for]
  
 [/file]
 [/template]
+
+[query public getInputArgs(arg : Calculus): OrderedSet(InputsArgs) = arg.expressions
+-> select(e | e.oclIsKindOf(Expression))
+-> select(e | e.oclIsKindOf(InputsArgs))
+-> collect(e | e.oclAsType(InputsArgs)) 
+-> asOrderedSet()
+/]
+
+[query public getSums(arg : Calculus): OrderedSet(Sum) = arg.expressions
+-> select(e | e.oclIsKindOf(Expression))
+-> select(e | e.oclIsKindOf(BinaryExpression))
+-> select(e | e.oclIsKindOf(Sum))
+-> collect(e | e.oclAsType(Sum)) 
+-> asOrderedSet()
+/]
+
+[query public getExpressions(arg : Calculus): OrderedSet(Expression) = arg.expressions
+-> select(e | e.oclIsKindOf(Expression))
+-> collect(e | e.oclAsType(Expression)) 
+-> asOrderedSet()
+/]
 
