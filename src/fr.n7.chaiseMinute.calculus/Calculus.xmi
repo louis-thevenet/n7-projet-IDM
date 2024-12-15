@@ -7,26 +7,30 @@
     xsi:schemaLocation="http://calculus calculus.ecore"
     name="Mean">
   <Expressions
-      xsi:type="calculus:InputsExpression"
-      arg1="min"
-      arg2="max"/>
+      xsi:type="calculus:InputsArgs"
+      argName="maximum"/>
+  <Expressions
+      xsi:type="calculus:InputsArgs"
+      argName="minimum"/>
   <Expressions
       xsi:type="calculus:Sum"
       First="//@Expressions.0"
-      Second="//@Expressions.0"
+      Second="//@Expressions.1"
       next="//@Expressions.4"
-      name="Somme"/>
+      name="Somme"
+      op="+"/>
   <Expressions
       xsi:type="calculus:Constante"
       value="2.0"/>
   <Expressions
       xsi:type="calculus:Division"
-      First="//@Expressions.1"
-      Second="//@Expressions.2"
-      next="//@Expressions.3"
-      name="Divide"/>
+      First="//@Expressions.2"
+      Second="//@Expressions.3"
+      next="//@Expressions.5"
+      name="Division"
+      op="/"/>
   <Expressions
       xsi:type="calculus:Result"
-      result="resultMean"
-      from="//@Expressions.3"/>
+      result="resultat"
+      from="//@Expressions.4"/>
 </calculus:Calculus>
