@@ -101,7 +101,7 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
 ) <exempleCompliqueSiriusDiagram>
 
 
-=== Limitation
+== Limitation
 Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
 
 = Exemples
