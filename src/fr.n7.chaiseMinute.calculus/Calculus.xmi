@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calculus:Calculus
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:calculus="http://calculus"
+    xsi:schemaLocation="http://calculus calculus.ecore"
+    name="Mean">
+  <Expressions
+      xsi:type="calculus:InputsExpression"
+      arg1="min"
+      arg2="max"/>
+  <Expressions
+      xsi:type="calculus:Sum"
+      First="//@Expressions.0"
+      Second="//@Expressions.0"
+      next="//@Expressions.4"
+      name="Somme"/>
+  <Expressions
+      xsi:type="calculus:Constante"
+      value="2.0"/>
+  <Expressions
+      xsi:type="calculus:Division"
+      First="//@Expressions.1"
+      Second="//@Expressions.2"
+      next="//@Expressions.3"
+      name="Divide"/>
+  <Expressions
+      xsi:type="calculus:Result"
+      result="resultMean"
+      from="//@Expressions.3"/>
+</calculus:Calculus>

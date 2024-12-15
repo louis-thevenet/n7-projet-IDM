@@ -2,18 +2,19 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="calculus" nsURI="http://calculus" nsPrefix="calculus">
   <eClassifiers xsi:type="ecore:EClass" name="Calculus">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Input1" lowerBound="1"
-        eType="ecore:EClass ../fr.n7.chaiseMinute/chaiseMinute.ecore#//Column"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Input2" lowerBound="1"
-        eType="ecore:EClass ../fr.n7.chaiseMinute/chaiseMinute.ecore#//Column"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//Expression"/>
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputsExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arg1" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arg2" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnaryExpression" abstract="true" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" eType="#//Expression"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" lowerBound="1" eType="#//Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inverse" eSuperTypes="#//UnaryExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Opposite" eSuperTypes="#//UnaryExpression"/>
@@ -22,6 +23,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Second" lowerBound="1"
         eType="#//Expression"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" lowerBound="1" eType="#//Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="#//BinaryExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Substraction" eSuperTypes="#//BinaryExpression"/>
@@ -32,7 +34,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FinaleExpression" abstract="true" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//Expression"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Result" eSuperTypes="#//FinaleExpression"/>
 </ecore:EPackage>
