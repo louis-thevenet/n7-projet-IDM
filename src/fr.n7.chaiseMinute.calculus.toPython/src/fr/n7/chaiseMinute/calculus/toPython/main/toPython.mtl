@@ -4,26 +4,37 @@
 [template public generateElement(aCalculus : Calculus)]
 [comment @main/]
 [file ((aCalculus.name)+'.py', false, 'UTF-8')]
+import numpy as np
 
 def [aCalculus.name/]([for (a : InputsArgs | aCalculus.getInputArgs())][name/],[/for]):
 	[for (e : Expression | aCalculus.getExpressions())]
-		
 	[if (e.oclIsKindOf(InputsArgs))]
+	[let ia : InputsArgs = e.oclAsType(InputsArgs)]
+	[ia.name/] = np.array([ia.name/])
+
+	[/let]
 	[elseif (e.oclIsKindOf(BinaryExpression))]
 	[let be : BinaryExpression = e.oclAsType(BinaryExpression)]
-		[be.name/] = [be.first.name/] [be.op/] [be.second.name/] 
+	[be.name/] = [be.first.name/] [be.op/] [be.second.name/]
+
 	[/let]
 	[elseif (e.oclIsKindOf(UnaryExpression))]
 	[let ue : UnaryExpression = e.oclAsType(UnaryExpression)]
-		[ue.name/] = [ue.op/] [ue.input.name/] 
+	[ue.name/] = [ue.op/] [ue.input.name/]
+
+	[/let]
+	[elseif (e.oclIsKindOf(Constante))]
+	[let c : Constante = e.oclAsType(Constante)]
+	[c.name/] = [c.value/]
+
 	[/let]
 	[elseif (e.oclIsKindOf(FinaleExpression))]
 	[let fe : FinaleExpression = e.oclAsType(FinaleExpression)]
-		return [fe.name/] = [fe.from.name/]
+	[fe.name/] = [fe.from.name/]
+	return [fe.name/]
 	[/let]
 	[/if]
 	[/for]
- 
 [/file]
 [/template]
 
