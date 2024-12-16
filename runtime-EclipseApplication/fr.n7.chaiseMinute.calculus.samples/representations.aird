@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calculus="http://calculus" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_HNumYLuLEe-kD_Gq1y7QLA" selectedViews="_4Q1T0LuLEe-kD_Gq1y7QLA" version="15.2.0.202303281325">
+    <semanticResources>Mean.clc</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_4Q1T0LuLEe-kD_Gq1y7QLA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GEAv0LuMEe-VJdrmxlPcjg" name="CalculusDiagram" repPath="#_GDvqELuMEe-VJdrmxlPcjg" changeId="1734340273713">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']"/>
+        <target xmi:type="calculus:Calculus" href="Mean.clc#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_GDvqELuMEe-VJdrmxlPcjg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_GEM9ELuMEe-VJdrmxlPcjg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_GEM9EbuMEe-VJdrmxlPcjg" type="Sirius" element="_GDvqELuMEe-VJdrmxlPcjg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_QaCIcLuMEe-VJdrmxlPcjg" type="2002" element="_QY1OkLuMEe-VJdrmxlPcjg">
+          <children xmi:type="notation:Node" xmi:id="_QaD9oLuMEe-VJdrmxlPcjg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_QaEksLuMEe-VJdrmxlPcjg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_QaEksbuMEe-VJdrmxlPcjg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_QaEksruMEe-VJdrmxlPcjg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_QaCIcbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QaCIcruMEe-VJdrmxlPcjg" x="268" y="104"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_QaFLwLuMEe-VJdrmxlPcjg" type="2002" element="_QZG7YLuMEe-VJdrmxlPcjg">
+          <children xmi:type="notation:Node" xmi:id="_QaFy0LuMEe-VJdrmxlPcjg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_QaFy0buMEe-VJdrmxlPcjg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_QaFy0ruMEe-VJdrmxlPcjg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_QaFy07uMEe-VJdrmxlPcjg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_QaFLwbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QaFLwruMEe-VJdrmxlPcjg" x="504" y="120"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_lmh7YLuMEe-VJdrmxlPcjg" type="2002" element="_llHmILuMEe-VJdrmxlPcjg">
+          <children xmi:type="notation:Node" xmi:id="_lmiicLuMEe-VJdrmxlPcjg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_lmiicbuMEe-VJdrmxlPcjg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_lmiicruMEe-VJdrmxlPcjg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_lmiic7uMEe-VJdrmxlPcjg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_lmh7YbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lmh7YruMEe-VJdrmxlPcjg" x="357" y="248"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_8vkTgLuMEe-VJdrmxlPcjg" type="2002" element="_8veM4LuMEe-VJdrmxlPcjg">
+          <children xmi:type="notation:Node" xmi:id="_8vk6kLuMEe-VJdrmxlPcjg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_8vk6kbuMEe-VJdrmxlPcjg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_8vk6kruMEe-VJdrmxlPcjg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_8vk6k7uMEe-VJdrmxlPcjg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_8vkTgbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8vkTgruMEe-VJdrmxlPcjg" x="52" y="171"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_8vk6lLuMEe-VJdrmxlPcjg" type="2002" element="_8vez8LuMEe-VJdrmxlPcjg">
+          <children xmi:type="notation:Node" xmi:id="_8vlhoruMEe-VJdrmxlPcjg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_8vlho7uMEe-VJdrmxlPcjg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_8vlhpLuMEe-VJdrmxlPcjg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_8vlhpbuMEe-VJdrmxlPcjg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_8vlhoLuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8vlhobuMEe-VJdrmxlPcjg" x="52" y="37"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Rkt9cLuNEe-VJdrmxlPcjg" type="2002" element="_RkfT9LuNEe-VJdrmxlPcjg">
+          <children xmi:type="notation:Node" xmi:id="_Rkt9c7uNEe-VJdrmxlPcjg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_RkukgLuNEe-VJdrmxlPcjg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_RkukgbuNEe-VJdrmxlPcjg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_RkukgruNEe-VJdrmxlPcjg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Rkt9cbuNEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rkt9cruNEe-VJdrmxlPcjg" x="728" y="104"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Rkukg7uNEe-VJdrmxlPcjg" type="2002" element="_RkgiEbuNEe-VJdrmxlPcjg">
+          <children xmi:type="notation:Node" xmi:id="_RkukhruNEe-VJdrmxlPcjg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_RkvLkLuNEe-VJdrmxlPcjg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_RkvLkbuNEe-VJdrmxlPcjg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_RkvLkruNEe-VJdrmxlPcjg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_RkukhLuNEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RkukhbuNEe-VJdrmxlPcjg" x="900" y="104"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_GEM9EruMEe-VJdrmxlPcjg"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_GETDsLuMEe-VJdrmxlPcjg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_GETqwLuMEe-VJdrmxlPcjg"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_QY1OkLuMEe-VJdrmxlPcjg" name="somme1">
+      <target xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+      <semanticElements xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_QZCp8LuMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_QZG7YLuMEe-VJdrmxlPcjg" name="division1">
+      <target xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
+      <semanticElements xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_QZHicLuMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_llHmILuMEe-VJdrmxlPcjg" name="c">
+      <target xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+      <semanticElements xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_llINMLuMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="253,206,137" foregroundColor="253,206,137">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='ConstanteC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='ConstanteC']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_8veM4LuMEe-VJdrmxlPcjg" name="minimum">
+      <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+      <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_8veM4buMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_8vez8LuMEe-VJdrmxlPcjg" name="maximum">
+      <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+      <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_8vez8buMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RkfT9LuNEe-VJdrmxlPcjg" name="oppose1">
+      <target xmi:type="calculus:Opposite" href="Mean.clc#//@expressions.5"/>
+      <semanticElements xmi:type="calculus:Opposite" href="Mean.clc#//@expressions.5"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Rkf7ALuNEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="194,239,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='UnaryExpressionC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='UnaryExpressionC']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RkgiEbuNEe-VJdrmxlPcjg" name="resultat">
+      <target xmi:type="calculus:Result" href="Mean.clc#//@expressions.6"/>
+      <semanticElements xmi:type="calculus:Result" href="Mean.clc#//@expressions.6"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RkhJILuNEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="246,139,139" foregroundColor="246,139,139">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='FinaleExpressionC']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='FinaleExpressionC']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_GD40ALuMEe-VJdrmxlPcjg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer"/>
+    <target xmi:type="calculus:Calculus" href="Mean.clc#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

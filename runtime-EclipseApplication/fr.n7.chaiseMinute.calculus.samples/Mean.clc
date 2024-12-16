@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calculus:Calculus xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calculus="http://calculus" name="Mean">
+  <expressions xsi:type="calculus:InputsArgs" name="minimum"/>
+  <expressions xsi:type="calculus:InputsArgs" name="maximum"/>
+  <expressions xsi:type="calculus:Sum" name="somme1" first="//@expressions.0" second="//@expressions.1" op="+"/>
+  <expressions xsi:type="calculus:Constante" name="c" value="2.0"/>
+  <expressions xsi:type="calculus:Division" name="division1" first="//@expressions.2" second="//@expressions.3" op="/"/>
+  <expressions xsi:type="calculus:Opposite" name="oppose1" input="//@expressions.4" op="-"/>
+  <expressions xsi:type="calculus:Result" name="resultat" input="//@expressions.5"/>
+</calculus:Calculus>
