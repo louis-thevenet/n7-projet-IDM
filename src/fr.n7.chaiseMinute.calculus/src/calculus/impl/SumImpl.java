@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link calculus.impl.SumImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.SumImpl#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.impl.SumImpl#getSecond <em>Second</em>}</li>
- *   <li>{@link calculus.impl.SumImpl#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.impl.SumImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
@@ -71,16 +70,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * @ordered
 	 */
 	protected Expression second;
-
-	/**
-	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNext()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression next;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -207,46 +196,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * @generated
 	 */
 	@Override
-	public Expression getNext() {
-		if (next != null && next.eIsProxy()) {
-			InternalEObject oldNext = (InternalEObject)next;
-			next = (Expression)eResolveProxy(oldNext);
-			if (next != oldNext) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.SUM__NEXT, oldNext, next));
-			}
-		}
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Expression basicGetNext() {
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setNext(Expression newNext) {
-		Expression oldNext = next;
-		next = newNext;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.SUM__NEXT, oldNext, next));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -303,9 +252,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 			case CalculusPackage.SUM__SECOND:
 				if (resolve) return getSecond();
 				return basicGetSecond();
-			case CalculusPackage.SUM__NEXT:
-				if (resolve) return getNext();
-				return basicGetNext();
 			case CalculusPackage.SUM__OP:
 				return getOp();
 		}
@@ -328,9 +274,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return;
 			case CalculusPackage.SUM__SECOND:
 				setSecond((Expression)newValue);
-				return;
-			case CalculusPackage.SUM__NEXT:
-				setNext((Expression)newValue);
 				return;
 			case CalculusPackage.SUM__OP:
 				setOp((String)newValue);
@@ -356,9 +299,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 			case CalculusPackage.SUM__SECOND:
 				setSecond((Expression)null);
 				return;
-			case CalculusPackage.SUM__NEXT:
-				setNext((Expression)null);
-				return;
 			case CalculusPackage.SUM__OP:
 				setOp(OP_EDEFAULT);
 				return;
@@ -380,8 +320,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return first != null;
 			case CalculusPackage.SUM__SECOND:
 				return second != null;
-			case CalculusPackage.SUM__NEXT:
-				return next != null;
 			case CalculusPackage.SUM__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}

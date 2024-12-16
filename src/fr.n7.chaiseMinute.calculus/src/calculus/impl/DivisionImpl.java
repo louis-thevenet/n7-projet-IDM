@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link calculus.impl.DivisionImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.DivisionImpl#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.impl.DivisionImpl#getSecond <em>Second</em>}</li>
- *   <li>{@link calculus.impl.DivisionImpl#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.impl.DivisionImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
@@ -71,16 +70,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	 * @ordered
 	 */
 	protected Expression second;
-
-	/**
-	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNext()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression next;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -207,46 +196,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	 * @generated
 	 */
 	@Override
-	public Expression getNext() {
-		if (next != null && next.eIsProxy()) {
-			InternalEObject oldNext = (InternalEObject)next;
-			next = (Expression)eResolveProxy(oldNext);
-			if (next != oldNext) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.DIVISION__NEXT, oldNext, next));
-			}
-		}
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Expression basicGetNext() {
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setNext(Expression newNext) {
-		Expression oldNext = next;
-		next = newNext;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.DIVISION__NEXT, oldNext, next));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -303,9 +252,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 			case CalculusPackage.DIVISION__SECOND:
 				if (resolve) return getSecond();
 				return basicGetSecond();
-			case CalculusPackage.DIVISION__NEXT:
-				if (resolve) return getNext();
-				return basicGetNext();
 			case CalculusPackage.DIVISION__OP:
 				return getOp();
 		}
@@ -328,9 +274,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 				return;
 			case CalculusPackage.DIVISION__SECOND:
 				setSecond((Expression)newValue);
-				return;
-			case CalculusPackage.DIVISION__NEXT:
-				setNext((Expression)newValue);
 				return;
 			case CalculusPackage.DIVISION__OP:
 				setOp((String)newValue);
@@ -356,9 +299,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 			case CalculusPackage.DIVISION__SECOND:
 				setSecond((Expression)null);
 				return;
-			case CalculusPackage.DIVISION__NEXT:
-				setNext((Expression)null);
-				return;
 			case CalculusPackage.DIVISION__OP:
 				setOp(OP_EDEFAULT);
 				return;
@@ -380,8 +320,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 				return first != null;
 			case CalculusPackage.DIVISION__SECOND:
 				return second != null;
-			case CalculusPackage.DIVISION__NEXT:
-				return next != null;
 			case CalculusPackage.DIVISION__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}

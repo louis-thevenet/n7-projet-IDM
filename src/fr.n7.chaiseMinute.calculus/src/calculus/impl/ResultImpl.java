@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link calculus.impl.ResultImpl#getName <em>Name</em>}</li>
- *   <li>{@link calculus.impl.ResultImpl#getFrom <em>From</em>}</li>
+ *   <li>{@link calculus.impl.ResultImpl#getInput <em>Input</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,14 +50,14 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFrom()
+	 * @see #getInput()
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression from;
+	protected Expression input;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,16 +107,16 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * @generated
 	 */
 	@Override
-	public Expression getFrom() {
-		if (from != null && from.eIsProxy()) {
-			InternalEObject oldFrom = (InternalEObject)from;
-			from = (Expression)eResolveProxy(oldFrom);
-			if (from != oldFrom) {
+	public Expression getInput() {
+		if (input != null && input.eIsProxy()) {
+			InternalEObject oldInput = (InternalEObject)input;
+			input = (Expression)eResolveProxy(oldInput);
+			if (input != oldInput) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.RESULT__FROM, oldFrom, from));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.RESULT__INPUT, oldInput, input));
 			}
 		}
-		return from;
+		return input;
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression basicGetFrom() {
-		return from;
+	public Expression basicGetInput() {
+		return input;
 	}
 
 	/**
@@ -134,11 +134,11 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * @generated
 	 */
 	@Override
-	public void setFrom(Expression newFrom) {
-		Expression oldFrom = from;
-		from = newFrom;
+	public void setInput(Expression newInput) {
+		Expression oldInput = input;
+		input = newInput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.RESULT__FROM, oldFrom, from));
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.RESULT__INPUT, oldInput, input));
 	}
 
 	/**
@@ -151,9 +151,9 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		switch (featureID) {
 			case CalculusPackage.RESULT__NAME:
 				return getName();
-			case CalculusPackage.RESULT__FROM:
-				if (resolve) return getFrom();
-				return basicGetFrom();
+			case CalculusPackage.RESULT__INPUT:
+				if (resolve) return getInput();
+				return basicGetInput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,8 +169,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 			case CalculusPackage.RESULT__NAME:
 				setName((String)newValue);
 				return;
-			case CalculusPackage.RESULT__FROM:
-				setFrom((Expression)newValue);
+			case CalculusPackage.RESULT__INPUT:
+				setInput((Expression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,8 +187,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 			case CalculusPackage.RESULT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case CalculusPackage.RESULT__FROM:
-				setFrom((Expression)null);
+			case CalculusPackage.RESULT__INPUT:
+				setInput((Expression)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -204,8 +204,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		switch (featureID) {
 			case CalculusPackage.RESULT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case CalculusPackage.RESULT__FROM:
-				return from != null;
+			case CalculusPackage.RESULT__INPUT:
+				return input != null;
 		}
 		return super.eIsSet(featureID);
 	}

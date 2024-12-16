@@ -63,7 +63,6 @@ public class SumItemProvider
 			addNamePropertyDescriptor(object);
 			addFirstPropertyDescriptor(object);
 			addSecondPropertyDescriptor(object);
-			addNextPropertyDescriptor(object);
 			addOpPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -105,28 +104,6 @@ public class SumItemProvider
 				 getString("_UI_BinaryExpression_second_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_second_feature", "_UI_BinaryExpression_type"),
 				 CalculusPackage.Literals.BINARY_EXPRESSION__SECOND,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Next feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_BinaryExpression_next_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_next_feature", "_UI_BinaryExpression_type"),
-				 CalculusPackage.Literals.BINARY_EXPRESSION__NEXT,
 				 true,
 				 false,
 				 true,

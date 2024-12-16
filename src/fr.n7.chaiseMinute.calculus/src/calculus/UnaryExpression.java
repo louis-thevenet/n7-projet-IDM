@@ -13,7 +13,6 @@ package calculus;
  * </p>
  * <ul>
  *   <li>{@link calculus.UnaryExpression#getInput <em>Input</em>}</li>
- *   <li>{@link calculus.UnaryExpression#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.UnaryExpression#getOp <em>Op</em>}</li>
  * </ul>
  *
@@ -43,28 +42,6 @@ public interface UnaryExpression extends Expression {
 	 * @generated
 	 */
 	void setInput(Expression value);
-
-	/**
-	 * Returns the value of the '<em><b>Next</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next</em>' reference.
-	 * @see #setNext(Expression)
-	 * @see calculus.CalculusPackage#getUnaryExpression_Next()
-	 * @model required="true"
-	 * @generated
-	 */
-	Expression getNext();
-
-	/**
-	 * Sets the value of the '{@link calculus.UnaryExpression#getNext <em>Next</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next</em>' reference.
-	 * @see #getNext()
-	 * @generated
-	 */
-	void setNext(Expression value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' attribute.

@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link calculus.impl.InverseImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.InverseImpl#getInput <em>Input</em>}</li>
- *   <li>{@link calculus.impl.InverseImpl#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.impl.InverseImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
@@ -60,16 +59,6 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 	 * @ordered
 	 */
 	protected Expression input;
-
-	/**
-	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNext()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression next;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -156,46 +145,6 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 	 * @generated
 	 */
 	@Override
-	public Expression getNext() {
-		if (next != null && next.eIsProxy()) {
-			InternalEObject oldNext = (InternalEObject)next;
-			next = (Expression)eResolveProxy(oldNext);
-			if (next != oldNext) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.INVERSE__NEXT, oldNext, next));
-			}
-		}
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Expression basicGetNext() {
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setNext(Expression newNext) {
-		Expression oldNext = next;
-		next = newNext;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.INVERSE__NEXT, oldNext, next));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -249,9 +198,6 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 			case CalculusPackage.INVERSE__INPUT:
 				if (resolve) return getInput();
 				return basicGetInput();
-			case CalculusPackage.INVERSE__NEXT:
-				if (resolve) return getNext();
-				return basicGetNext();
 			case CalculusPackage.INVERSE__OP:
 				return getOp();
 		}
@@ -271,9 +217,6 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 				return;
 			case CalculusPackage.INVERSE__INPUT:
 				setInput((Expression)newValue);
-				return;
-			case CalculusPackage.INVERSE__NEXT:
-				setNext((Expression)newValue);
 				return;
 			case CalculusPackage.INVERSE__OP:
 				setOp((String)newValue);
@@ -296,9 +239,6 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 			case CalculusPackage.INVERSE__INPUT:
 				setInput((Expression)null);
 				return;
-			case CalculusPackage.INVERSE__NEXT:
-				setNext((Expression)null);
-				return;
 			case CalculusPackage.INVERSE__OP:
 				setOp(OP_EDEFAULT);
 				return;
@@ -318,8 +258,6 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.INVERSE__INPUT:
 				return input != null;
-			case CalculusPackage.INVERSE__NEXT:
-				return next != null;
 			case CalculusPackage.INVERSE__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}

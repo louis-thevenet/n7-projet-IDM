@@ -5,11 +5,11 @@ def Mean(minimum,maximum,):
 
 	maximum = np.array(maximum)
 
-	Somme1 = minimum + maximum
+	somme1 = minimum + maximum
 
 	c = 2.0
 
-	Division1 = Somme1 / c
+	division1 = somme1 / c
 
-	resultat = Division1
+	resultat = division1
 	return resultat

@@ -62,7 +62,6 @@ public class OppositeItemProvider
 
 			addNamePropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
-			addNextPropertyDescriptor(object);
 			addOpPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -82,28 +81,6 @@ public class OppositeItemProvider
 				 getString("_UI_UnaryExpression_input_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_UnaryExpression_input_feature", "_UI_UnaryExpression_type"),
 				 CalculusPackage.Literals.UNARY_EXPRESSION__INPUT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Next feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnaryExpression_next_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnaryExpression_next_feature", "_UI_UnaryExpression_type"),
-				 CalculusPackage.Literals.UNARY_EXPRESSION__NEXT,
 				 true,
 				 false,
 				 true,

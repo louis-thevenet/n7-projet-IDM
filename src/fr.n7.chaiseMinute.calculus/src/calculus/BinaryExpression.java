@@ -14,7 +14,6 @@ package calculus;
  * <ul>
  *   <li>{@link calculus.BinaryExpression#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.BinaryExpression#getSecond <em>Second</em>}</li>
- *   <li>{@link calculus.BinaryExpression#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.BinaryExpression#getOp <em>Op</em>}</li>
  * </ul>
  *
@@ -66,28 +65,6 @@ public interface BinaryExpression extends Expression {
 	 * @generated
 	 */
 	void setSecond(Expression value);
-
-	/**
-	 * Returns the value of the '<em><b>Next</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next</em>' reference.
-	 * @see #setNext(Expression)
-	 * @see calculus.CalculusPackage#getBinaryExpression_Next()
-	 * @model required="true"
-	 * @generated
-	 */
-	Expression getNext();
-
-	/**
-	 * Sets the value of the '{@link calculus.BinaryExpression#getNext <em>Next</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next</em>' reference.
-	 * @see #getNext()
-	 * @generated
-	 */
-	void setNext(Expression value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' attribute.

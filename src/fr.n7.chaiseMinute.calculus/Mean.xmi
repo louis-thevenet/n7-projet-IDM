@@ -13,10 +13,9 @@
       name="maximum"/>
   <expressions
       xsi:type="calculus:Sum"
-      name="Somme1"
+      name="somme1"
       first="//@expressions.0"
       second="//@expressions.1"
-      next="//@expressions.4"
       op="+"/>
   <expressions
       xsi:type="calculus:Constante"
@@ -24,13 +23,12 @@
       value="2.0"/>
   <expressions
       xsi:type="calculus:Division"
-      name="Division1"
+      name="division1"
       first="//@expressions.2"
       second="//@expressions.3"
-      next="//@expressions.5"
       op="/"/>
   <expressions
       xsi:type="calculus:Result"
       name="resultat"
-      from="//@expressions.4"/>
+      input="//@expressions.4"/>
 </calculus:Calculus>

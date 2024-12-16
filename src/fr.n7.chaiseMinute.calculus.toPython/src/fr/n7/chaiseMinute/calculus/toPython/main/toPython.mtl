@@ -30,7 +30,7 @@ def [aCalculus.name/]([for (a : InputsArgs | aCalculus.getInputArgs())][name/],[
 	[/let]
 	[elseif (e.oclIsKindOf(FinaleExpression))]
 	[let fe : FinaleExpression = e.oclAsType(FinaleExpression)]
-	[fe.name/] = [fe.from.name/]
+	[fe.name/] = [fe.input.name/]
 	return [fe.name/]
 	[/let]
 	[/if]

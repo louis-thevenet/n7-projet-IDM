@@ -61,7 +61,7 @@ public class ResultItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addFromPropertyDescriptor(object);
+			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,19 +89,19 @@ public class ResultItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the From feature.
+	 * This adds a property descriptor for the Input feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFromPropertyDescriptor(Object object) {
+	protected void addInputPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FinaleExpression_from_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FinaleExpression_from_feature", "_UI_FinaleExpression_type"),
-				 CalculusPackage.Literals.FINALE_EXPRESSION__FROM,
+				 getString("_UI_FinaleExpression_input_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FinaleExpression_input_feature", "_UI_FinaleExpression_type"),
+				 CalculusPackage.Literals.FINALE_EXPRESSION__INPUT,
 				 true,
 				 false,
 				 true,
