@@ -179,4 +179,54 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.n7.chaiseMinute.calculus.design.Services"/>
   </ownedViewpoints>
+  <ownedViewpoints name="Calculus2Viewpoint" modelFileExtension="clc">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Calculus2Diagram" domainClass="calculus::Calculus" enablePopupBars="true">
+      <metamodel href="http://calculus#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="InputsArgs" domainClass="calculus::InputsArgs">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="BinaryExpression" domainClass="calculus::BinaryExpression">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="UE" domainClass="calculus::UnaryExpression">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="RE" domainClass="calculus::FinaleExpression">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="C" domainClass="calculus::Constante">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Links" sourceMapping="//@ownedViewpoints[name='Calculus2Viewpoint']/@ownedRepresentations[name='Calculus2Diagram']/@defaultLayer/@nodeMappings[name='BinaryExpression'] //@ownedViewpoints[name='Calculus2Viewpoint']/@ownedRepresentations[name='Calculus2Diagram']/@defaultLayer/@nodeMappings[name='C'] //@ownedViewpoints[name='Calculus2Viewpoint']/@ownedRepresentations[name='Calculus2Diagram']/@defaultLayer/@nodeMappings[name='InputsArgs'] //@ownedViewpoints[name='Calculus2Viewpoint']/@ownedRepresentations[name='Calculus2Diagram']/@defaultLayer/@nodeMappings[name='UE']" targetMapping="//@ownedViewpoints[name='Calculus2Viewpoint']/@ownedRepresentations[name='Calculus2Diagram']/@defaultLayer/@nodeMappings[name='BinaryExpression'] //@ownedViewpoints[name='Calculus2Viewpoint']/@ownedRepresentations[name='Calculus2Diagram']/@defaultLayer/@nodeMappings[name='RE'] //@ownedViewpoints[name='Calculus2Viewpoint']/@ownedRepresentations[name='Calculus2Diagram']/@defaultLayer/@nodeMappings[name='UE']" targetFinderExpression="[next/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
 </description:Group>
