@@ -61,6 +61,7 @@ public class InverseItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addNextPropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 			addOpPropertyDescriptor(object);
 		}
@@ -107,6 +108,28 @@ public class InverseItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Next feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Expression_next_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_next_feature", "_UI_Expression_type"),
+				 CalculusPackage.Literals.EXPRESSION__NEXT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

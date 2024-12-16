@@ -247,6 +247,16 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 	 * @generated
 	 */
 	@Override
+	public EReference getExpression_Next() {
+		return (EReference)expressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getInputsArgs() {
 		return inputsArgsEClass;
 	}
@@ -466,6 +476,7 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 
 		expressionEClass = createEClass(EXPRESSION);
 		createEAttribute(expressionEClass, EXPRESSION__NAME);
+		createEReference(expressionEClass, EXPRESSION__NEXT);
 
 		inputsArgsEClass = createEClass(INPUTS_ARGS);
 
@@ -547,6 +558,7 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpression_Name(), ecorePackage.getEString(), "name", null, 1, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpression_Next(), this.getExpression(), null, "next", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputsArgsEClass, InputsArgs.class, "InputsArgs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

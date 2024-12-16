@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link calculus.impl.SubstractionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link calculus.impl.SubstractionImpl#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.impl.SubstractionImpl#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.impl.SubstractionImpl#getSecond <em>Second</em>}</li>
  *   <li>{@link calculus.impl.SubstractionImpl#getOp <em>Op</em>}</li>
@@ -50,6 +51,16 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression next;
 
 	/**
 	 * The cached value of the '{@link #getFirst() <em>First</em>}' reference.
@@ -219,6 +230,46 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	 * @generated
 	 */
 	@Override
+	public Expression getNext() {
+		if (next != null && next.eIsProxy()) {
+			InternalEObject oldNext = (InternalEObject)next;
+			next = (Expression)eResolveProxy(oldNext);
+			if (next != oldNext) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.SUBSTRACTION__NEXT, oldNext, next));
+			}
+		}
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression basicGetNext() {
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNext(Expression newNext) {
+		Expression oldNext = next;
+		next = newNext;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.SUBSTRACTION__NEXT, oldNext, next));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getOp() {
 		return op;
 	}
@@ -246,6 +297,9 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 		switch (featureID) {
 			case CalculusPackage.SUBSTRACTION__NAME:
 				return getName();
+			case CalculusPackage.SUBSTRACTION__NEXT:
+				if (resolve) return getNext();
+				return basicGetNext();
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				if (resolve) return getFirst();
 				return basicGetFirst();
@@ -268,6 +322,9 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 		switch (featureID) {
 			case CalculusPackage.SUBSTRACTION__NAME:
 				setName((String)newValue);
+				return;
+			case CalculusPackage.SUBSTRACTION__NEXT:
+				setNext((Expression)newValue);
 				return;
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				setFirst((Expression)newValue);
@@ -293,6 +350,9 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 			case CalculusPackage.SUBSTRACTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CalculusPackage.SUBSTRACTION__NEXT:
+				setNext((Expression)null);
+				return;
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				setFirst((Expression)null);
 				return;
@@ -316,6 +376,8 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 		switch (featureID) {
 			case CalculusPackage.SUBSTRACTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CalculusPackage.SUBSTRACTION__NEXT:
+				return next != null;
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				return first != null;
 			case CalculusPackage.SUBSTRACTION__SECOND:

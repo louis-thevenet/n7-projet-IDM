@@ -5,10 +5,12 @@ package calculus.impl;
 import calculus.CalculusPackage;
 import calculus.Constante;
 
+import calculus.Expression;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -21,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link calculus.impl.ConstanteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link calculus.impl.ConstanteImpl#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.impl.ConstanteImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -46,6 +49,16 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression next;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -115,6 +128,46 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 	 * @generated
 	 */
 	@Override
+	public Expression getNext() {
+		if (next != null && next.eIsProxy()) {
+			InternalEObject oldNext = (InternalEObject)next;
+			next = (Expression)eResolveProxy(oldNext);
+			if (next != oldNext) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.CONSTANTE__NEXT, oldNext, next));
+			}
+		}
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression basicGetNext() {
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNext(Expression newNext) {
+		Expression oldNext = next;
+		next = newNext;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.CONSTANTE__NEXT, oldNext, next));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public float getValue() {
 		return value;
 	}
@@ -142,6 +195,9 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 		switch (featureID) {
 			case CalculusPackage.CONSTANTE__NAME:
 				return getName();
+			case CalculusPackage.CONSTANTE__NEXT:
+				if (resolve) return getNext();
+				return basicGetNext();
 			case CalculusPackage.CONSTANTE__VALUE:
 				return getValue();
 		}
@@ -158,6 +214,9 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 		switch (featureID) {
 			case CalculusPackage.CONSTANTE__NAME:
 				setName((String)newValue);
+				return;
+			case CalculusPackage.CONSTANTE__NEXT:
+				setNext((Expression)newValue);
 				return;
 			case CalculusPackage.CONSTANTE__VALUE:
 				setValue((Float)newValue);
@@ -177,6 +236,9 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 			case CalculusPackage.CONSTANTE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CalculusPackage.CONSTANTE__NEXT:
+				setNext((Expression)null);
+				return;
 			case CalculusPackage.CONSTANTE__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
@@ -194,6 +256,8 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 		switch (featureID) {
 			case CalculusPackage.CONSTANTE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CalculusPackage.CONSTANTE__NEXT:
+				return next != null;
 			case CalculusPackage.CONSTANTE__VALUE:
 				return value != VALUE_EDEFAULT;
 		}

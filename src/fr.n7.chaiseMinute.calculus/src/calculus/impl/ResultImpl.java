@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link calculus.impl.ResultImpl#getName <em>Name</em>}</li>
+ *   <li>{@link calculus.impl.ResultImpl#getNext <em>Next</em>}</li>
  *   <li>{@link calculus.impl.ResultImpl#getInput <em>Input</em>}</li>
  * </ul>
  *
@@ -48,6 +49,16 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression next;
 
 	/**
 	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
@@ -107,6 +118,46 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * @generated
 	 */
 	@Override
+	public Expression getNext() {
+		if (next != null && next.eIsProxy()) {
+			InternalEObject oldNext = (InternalEObject)next;
+			next = (Expression)eResolveProxy(oldNext);
+			if (next != oldNext) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.RESULT__NEXT, oldNext, next));
+			}
+		}
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression basicGetNext() {
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNext(Expression newNext) {
+		Expression oldNext = next;
+		next = newNext;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.RESULT__NEXT, oldNext, next));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Expression getInput() {
 		if (input != null && input.eIsProxy()) {
 			InternalEObject oldInput = (InternalEObject)input;
@@ -151,6 +202,9 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		switch (featureID) {
 			case CalculusPackage.RESULT__NAME:
 				return getName();
+			case CalculusPackage.RESULT__NEXT:
+				if (resolve) return getNext();
+				return basicGetNext();
 			case CalculusPackage.RESULT__INPUT:
 				if (resolve) return getInput();
 				return basicGetInput();
@@ -168,6 +222,9 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		switch (featureID) {
 			case CalculusPackage.RESULT__NAME:
 				setName((String)newValue);
+				return;
+			case CalculusPackage.RESULT__NEXT:
+				setNext((Expression)newValue);
 				return;
 			case CalculusPackage.RESULT__INPUT:
 				setInput((Expression)newValue);
@@ -187,6 +244,9 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 			case CalculusPackage.RESULT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CalculusPackage.RESULT__NEXT:
+				setNext((Expression)null);
+				return;
 			case CalculusPackage.RESULT__INPUT:
 				setInput((Expression)null);
 				return;
@@ -204,6 +264,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		switch (featureID) {
 			case CalculusPackage.RESULT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CalculusPackage.RESULT__NEXT:
+				return next != null;
 			case CalculusPackage.RESULT__INPUT:
 				return input != null;
 		}

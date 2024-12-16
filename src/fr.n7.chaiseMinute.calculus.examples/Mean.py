@@ -1,15 +1,17 @@
 import numpy as np
 
-def Mean(minimum,maximum,):
-	minimum = np.array(minimum)
+def Mean(min,max,):
+	min = np.array(min)
 
-	maximum = np.array(maximum)
+	max = np.array(max)
 
-	somme1 = minimum + maximum
+	somme1 = min + max
 
 	c = 2.0
 
-	division1 = somme1 / c
+	divise = somme1 / c
 
-	resultat = division1
+	oppose = - divise
+
+	resultat = oppose
 	return resultat

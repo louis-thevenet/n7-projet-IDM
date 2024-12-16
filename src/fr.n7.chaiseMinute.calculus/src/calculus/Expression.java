@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link calculus.Expression#getName <em>Name</em>}</li>
+ *   <li>{@link calculus.Expression#getNext <em>Next</em>}</li>
  * </ul>
  *
  * @see calculus.CalculusPackage#getExpression()
@@ -43,4 +44,26 @@ public interface Expression extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Next</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Next</em>' reference.
+	 * @see #setNext(Expression)
+	 * @see calculus.CalculusPackage#getExpression_Next()
+	 * @model
+	 * @generated
+	 */
+	Expression getNext();
+
+	/**
+	 * Sets the value of the '{@link calculus.Expression#getNext <em>Next</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Next</em>' reference.
+	 * @see #getNext()
+	 * @generated
+	 */
+	void setNext(Expression value);
 } // Expression

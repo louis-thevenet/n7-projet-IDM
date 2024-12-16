@@ -3,12 +3,14 @@
 package calculus.impl;
 
 import calculus.CalculusPackage;
+import calculus.Expression;
 import calculus.InputsArgs;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -21,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link calculus.impl.InputsArgsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link calculus.impl.InputsArgsImpl#getNext <em>Next</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +48,16 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression next;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,10 +107,53 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	 * @generated
 	 */
 	@Override
+	public Expression getNext() {
+		if (next != null && next.eIsProxy()) {
+			InternalEObject oldNext = (InternalEObject)next;
+			next = (Expression)eResolveProxy(oldNext);
+			if (next != oldNext) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CalculusPackage.INPUTS_ARGS__NEXT, oldNext, next));
+			}
+		}
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression basicGetNext() {
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNext(Expression newNext) {
+		Expression oldNext = next;
+		next = newNext;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.INPUTS_ARGS__NEXT, oldNext, next));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CalculusPackage.INPUTS_ARGS__NAME:
 				return getName();
+			case CalculusPackage.INPUTS_ARGS__NEXT:
+				if (resolve) return getNext();
+				return basicGetNext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,6 +168,9 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 		switch (featureID) {
 			case CalculusPackage.INPUTS_ARGS__NAME:
 				setName((String)newValue);
+				return;
+			case CalculusPackage.INPUTS_ARGS__NEXT:
+				setNext((Expression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,6 +187,9 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 			case CalculusPackage.INPUTS_ARGS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CalculusPackage.INPUTS_ARGS__NEXT:
+				setNext((Expression)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,6 +204,8 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 		switch (featureID) {
 			case CalculusPackage.INPUTS_ARGS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CalculusPackage.INPUTS_ARGS__NEXT:
+				return next != null;
 		}
 		return super.eIsSet(featureID);
 	}

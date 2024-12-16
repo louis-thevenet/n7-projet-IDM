@@ -12,6 +12,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="calculus.ecore#//Expression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//Expression/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//Expression/next"/>
     </genClasses>
     <genClasses ecoreClass="calculus.ecore#//InputsArgs"/>
     <genClasses image="false" ecoreClass="calculus.ecore#//UnaryExpression">
