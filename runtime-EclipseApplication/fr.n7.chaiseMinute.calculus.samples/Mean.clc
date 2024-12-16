@@ -7,5 +7,4 @@
   <expressions xsi:type="calculus:Division" name="divise" next="//@expressions.5" first="//@expressions.2" second="//@expressions.3" op="/"/>
   <expressions xsi:type="calculus:Opposite" name="oppose" next="//@expressions.6" input="//@expressions.4" op="-"/>
   <expressions xsi:type="calculus:Result" name="resultat" input="//@expressions.5"/>
-  <expressions xsi:type="calculus:InputsArgs" name="test"/>
 </calculus:Calculus>

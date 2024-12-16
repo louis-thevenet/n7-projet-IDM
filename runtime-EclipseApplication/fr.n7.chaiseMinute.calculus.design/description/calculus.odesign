@@ -23,7 +23,7 @@
         </nodeMappings>
         <nodeMappings name="BinaryExpressionN" domainClass="calculus::BinaryExpression">
           <borderedNodeMappings name="BinaryToNext" semanticCandidatesExpression="[self/]" domainClass="calculus::Expression">
-            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node">
+            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>WEST</forbiddenSides>
@@ -33,7 +33,7 @@
             </style>
           </borderedNodeMappings>
           <borderedNodeMappings name="Input1ToBinary" semanticCandidatesExpression="[self.first/]" domainClass="calculus::Expression">
-            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node">
+            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="['first'/]" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>SOUTH</forbiddenSides>
@@ -43,7 +43,7 @@
             </style>
           </borderedNodeMappings>
           <borderedNodeMappings name="Input2ToBinary" semanticCandidatesExpression="[self.second/]" domainClass="calculus::Expression">
-            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node">
+            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="['second'/]" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>WEST</forbiddenSides>
@@ -60,7 +60,7 @@
         </nodeMappings>
         <nodeMappings name="UnaryExpressionN" domainClass="calculus::UnaryExpression">
           <borderedNodeMappings name="UnaryToNext" semanticCandidatesExpression="[self/]" domainClass="calculus::Expression">
-            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node">
+            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>WEST</forbiddenSides>
@@ -77,7 +77,7 @@
         </nodeMappings>
         <nodeMappings name="ConstanteN" domainClass="calculus::Constante">
           <borderedNodeMappings name="ConstantToNext" semanticCandidatesExpression="[self/]" domainClass="calculus::Expression">
-            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node">
+            <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="[''/]" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>WEST</forbiddenSides>
@@ -132,7 +132,7 @@
           </style>
         </edgeMappings>
         <toolSections name="ExpressionsCreation">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="InputsArcCreation" nodeMappings="//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InputsArgCreation" nodeMappings="//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -152,6 +152,15 @@
                 <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target/]">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="first" valueExpression="[source/]"/>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="BinarySumCreation" nodeMappings="//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculus::Sum" referenceName="expressions"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
