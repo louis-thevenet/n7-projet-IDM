@@ -60,25 +60,25 @@ public class InputsArgsItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addArgNamePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Arg Name feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addArgNamePropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InputsArgs_argName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InputsArgs_argName_feature", "_UI_InputsArgs_type"),
-				 CalculusPackage.Literals.INPUTS_ARGS__ARG_NAME,
+				 getString("_UI_Expression_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_name_feature", "_UI_Expression_type"),
+				 CalculusPackage.Literals.EXPRESSION__NAME,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class InputsArgsItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((InputsArgs)object).getArgName();
+		String label = ((InputsArgs)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_InputsArgs_type") :
 			getString("_UI_InputsArgs_type") + " " + label;
@@ -125,7 +125,7 @@ public class InputsArgsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(InputsArgs.class)) {
-			case CalculusPackage.INPUTS_ARGS__ARG_NAME:
+			case CalculusPackage.INPUTS_ARGS__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

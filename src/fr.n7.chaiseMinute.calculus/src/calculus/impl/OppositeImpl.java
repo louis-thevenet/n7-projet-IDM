@@ -22,35 +22,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link calculus.impl.OppositeImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.OppositeImpl#getInput <em>Input</em>}</li>
  *   <li>{@link calculus.impl.OppositeImpl#getNext <em>Next</em>}</li>
- *   <li>{@link calculus.impl.OppositeImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.OppositeImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class OppositeImpl extends MinimalEObjectImpl.Container implements Opposite {
-	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInput()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression input;
-
-	/**
-	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNext()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression next;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,6 +50,26 @@ public class OppositeImpl extends MinimalEObjectImpl.Container implements Opposi
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInput()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression input;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression next;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -244,14 +244,14 @@ public class OppositeImpl extends MinimalEObjectImpl.Container implements Opposi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CalculusPackage.OPPOSITE__NAME:
+				return getName();
 			case CalculusPackage.OPPOSITE__INPUT:
 				if (resolve) return getInput();
 				return basicGetInput();
 			case CalculusPackage.OPPOSITE__NEXT:
 				if (resolve) return getNext();
 				return basicGetNext();
-			case CalculusPackage.OPPOSITE__NAME:
-				return getName();
 			case CalculusPackage.OPPOSITE__OP:
 				return getOp();
 		}
@@ -266,14 +266,14 @@ public class OppositeImpl extends MinimalEObjectImpl.Container implements Opposi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CalculusPackage.OPPOSITE__NAME:
+				setName((String)newValue);
+				return;
 			case CalculusPackage.OPPOSITE__INPUT:
 				setInput((Expression)newValue);
 				return;
 			case CalculusPackage.OPPOSITE__NEXT:
 				setNext((Expression)newValue);
-				return;
-			case CalculusPackage.OPPOSITE__NAME:
-				setName((String)newValue);
 				return;
 			case CalculusPackage.OPPOSITE__OP:
 				setOp((String)newValue);
@@ -290,14 +290,14 @@ public class OppositeImpl extends MinimalEObjectImpl.Container implements Opposi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.OPPOSITE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case CalculusPackage.OPPOSITE__INPUT:
 				setInput((Expression)null);
 				return;
 			case CalculusPackage.OPPOSITE__NEXT:
 				setNext((Expression)null);
-				return;
-			case CalculusPackage.OPPOSITE__NAME:
-				setName(NAME_EDEFAULT);
 				return;
 			case CalculusPackage.OPPOSITE__OP:
 				setOp(OP_EDEFAULT);
@@ -314,12 +314,12 @@ public class OppositeImpl extends MinimalEObjectImpl.Container implements Opposi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.OPPOSITE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.OPPOSITE__INPUT:
 				return input != null;
 			case CalculusPackage.OPPOSITE__NEXT:
 				return next != null;
-			case CalculusPackage.OPPOSITE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.OPPOSITE__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}

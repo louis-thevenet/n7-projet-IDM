@@ -60,10 +60,10 @@ public class DivisionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addFirstPropertyDescriptor(object);
 			addSecondPropertyDescriptor(object);
 			addNextPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 			addOpPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -80,8 +80,8 @@ public class DivisionItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_BinaryExpression_First_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_First_feature", "_UI_BinaryExpression_type"),
+				 getString("_UI_BinaryExpression_first_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_first_feature", "_UI_BinaryExpression_type"),
 				 CalculusPackage.Literals.BINARY_EXPRESSION__FIRST,
 				 true,
 				 false,
@@ -102,8 +102,8 @@ public class DivisionItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_BinaryExpression_Second_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_Second_feature", "_UI_BinaryExpression_type"),
+				 getString("_UI_BinaryExpression_second_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_second_feature", "_UI_BinaryExpression_type"),
 				 CalculusPackage.Literals.BINARY_EXPRESSION__SECOND,
 				 true,
 				 false,
@@ -146,9 +146,9 @@ public class DivisionItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_BinaryExpression_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_name_feature", "_UI_BinaryExpression_type"),
-				 CalculusPackage.Literals.BINARY_EXPRESSION__NAME,
+				 getString("_UI_Expression_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_name_feature", "_UI_Expression_type"),
+				 CalculusPackage.Literals.EXPRESSION__NAME,
 				 true,
 				 false,
 				 false,

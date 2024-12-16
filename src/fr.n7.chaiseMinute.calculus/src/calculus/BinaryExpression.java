@@ -15,7 +15,6 @@ package calculus;
  *   <li>{@link calculus.BinaryExpression#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.BinaryExpression#getSecond <em>Second</em>}</li>
  *   <li>{@link calculus.BinaryExpression#getNext <em>Next</em>}</li>
- *   <li>{@link calculus.BinaryExpression#getName <em>Name</em>}</li>
  *   <li>{@link calculus.BinaryExpression#getOp <em>Op</em>}</li>
  * </ul>
  *
@@ -89,28 +88,6 @@ public interface BinaryExpression extends Expression {
 	 * @generated
 	 */
 	void setNext(Expression value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see calculus.CalculusPackage#getBinaryExpression_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link calculus.BinaryExpression#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' attribute.

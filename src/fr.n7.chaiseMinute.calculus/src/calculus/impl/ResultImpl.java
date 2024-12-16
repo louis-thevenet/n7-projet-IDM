@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link calculus.impl.ResultImpl#getResult <em>Result</em>}</li>
+ *   <li>{@link calculus.impl.ResultImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.ResultImpl#getFrom <em>From</em>}</li>
  * </ul>
  *
@@ -30,24 +30,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	/**
-	 * The default value of the '{@link #getResult() <em>Result</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResult()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESULT_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getResult() <em>Result</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResult()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String result = RESULT_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
@@ -84,8 +84,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * @generated
 	 */
 	@Override
-	public String getResult() {
-		return result;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -94,11 +94,11 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * @generated
 	 */
 	@Override
-	public void setResult(String newResult) {
-		String oldResult = result;
-		result = newResult;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.RESULT__RESULT, oldResult, result));
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.RESULT__NAME, oldName, name));
 	}
 
 	/**
@@ -149,8 +149,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CalculusPackage.RESULT__RESULT:
-				return getResult();
+			case CalculusPackage.RESULT__NAME:
+				return getName();
 			case CalculusPackage.RESULT__FROM:
 				if (resolve) return getFrom();
 				return basicGetFrom();
@@ -166,8 +166,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CalculusPackage.RESULT__RESULT:
-				setResult((String)newValue);
+			case CalculusPackage.RESULT__NAME:
+				setName((String)newValue);
 				return;
 			case CalculusPackage.RESULT__FROM:
 				setFrom((Expression)newValue);
@@ -184,8 +184,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CalculusPackage.RESULT__RESULT:
-				setResult(RESULT_EDEFAULT);
+			case CalculusPackage.RESULT__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case CalculusPackage.RESULT__FROM:
 				setFrom((Expression)null);
@@ -202,8 +202,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CalculusPackage.RESULT__RESULT:
-				return RESULT_EDEFAULT == null ? result != null : !RESULT_EDEFAULT.equals(result);
+			case CalculusPackage.RESULT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.RESULT__FROM:
 				return from != null;
 		}
@@ -220,8 +220,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (result: ");
-		result.append(result);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

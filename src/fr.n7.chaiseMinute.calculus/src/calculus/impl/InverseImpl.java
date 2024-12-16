@@ -22,35 +22,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link calculus.impl.InverseImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.InverseImpl#getInput <em>Input</em>}</li>
  *   <li>{@link calculus.impl.InverseImpl#getNext <em>Next</em>}</li>
- *   <li>{@link calculus.impl.InverseImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.InverseImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse {
-	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInput()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression input;
-
-	/**
-	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNext()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression next;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,6 +50,26 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInput()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression input;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression next;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -244,14 +244,14 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CalculusPackage.INVERSE__NAME:
+				return getName();
 			case CalculusPackage.INVERSE__INPUT:
 				if (resolve) return getInput();
 				return basicGetInput();
 			case CalculusPackage.INVERSE__NEXT:
 				if (resolve) return getNext();
 				return basicGetNext();
-			case CalculusPackage.INVERSE__NAME:
-				return getName();
 			case CalculusPackage.INVERSE__OP:
 				return getOp();
 		}
@@ -266,14 +266,14 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CalculusPackage.INVERSE__NAME:
+				setName((String)newValue);
+				return;
 			case CalculusPackage.INVERSE__INPUT:
 				setInput((Expression)newValue);
 				return;
 			case CalculusPackage.INVERSE__NEXT:
 				setNext((Expression)newValue);
-				return;
-			case CalculusPackage.INVERSE__NAME:
-				setName((String)newValue);
 				return;
 			case CalculusPackage.INVERSE__OP:
 				setOp((String)newValue);
@@ -290,14 +290,14 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.INVERSE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case CalculusPackage.INVERSE__INPUT:
 				setInput((Expression)null);
 				return;
 			case CalculusPackage.INVERSE__NEXT:
 				setNext((Expression)null);
-				return;
-			case CalculusPackage.INVERSE__NAME:
-				setName(NAME_EDEFAULT);
 				return;
 			case CalculusPackage.INVERSE__OP:
 				setOp(OP_EDEFAULT);
@@ -314,12 +314,12 @@ public class InverseImpl extends MinimalEObjectImpl.Container implements Inverse
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.INVERSE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.INVERSE__INPUT:
 				return input != null;
 			case CalculusPackage.INVERSE__NEXT:
 				return next != null;
-			case CalculusPackage.INVERSE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.INVERSE__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}

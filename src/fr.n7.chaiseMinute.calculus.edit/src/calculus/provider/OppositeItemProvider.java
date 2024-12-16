@@ -60,9 +60,9 @@ public class OppositeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 			addNextPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 			addOpPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -123,9 +123,9 @@ public class OppositeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UnaryExpression_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnaryExpression_name_feature", "_UI_UnaryExpression_type"),
-				 CalculusPackage.Literals.UNARY_EXPRESSION__NAME,
+				 getString("_UI_Expression_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_name_feature", "_UI_Expression_type"),
+				 CalculusPackage.Literals.EXPRESSION__NAME,
 				 true,
 				 false,
 				 false,

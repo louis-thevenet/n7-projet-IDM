@@ -113,13 +113,22 @@ public interface CalculusPackage extends EPackage {
 	int EXPRESSION = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_FEATURE_COUNT = 0;
+	int EXPRESSION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Expression</em>' class.
@@ -141,13 +150,13 @@ public interface CalculusPackage extends EPackage {
 	int INPUTS_ARGS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Arg Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUTS_ARGS__ARG_NAME = EXPRESSION_FEATURE_COUNT + 0;
+	int INPUTS_ARGS__NAME = EXPRESSION__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Inputs Args</em>' class.
@@ -156,7 +165,7 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUTS_ARGS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+	int INPUTS_ARGS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Inputs Args</em>' class.
@@ -178,6 +187,15 @@ public interface CalculusPackage extends EPackage {
 	int UNARY_EXPRESSION = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNARY_EXPRESSION__NAME = EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,22 +214,13 @@ public interface CalculusPackage extends EPackage {
 	int UNARY_EXPRESSION__NEXT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNARY_EXPRESSION__NAME = EXPRESSION_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNARY_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 3;
+	int UNARY_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Unary Expression</em>' class.
@@ -220,7 +229,7 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
+	int UNARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Unary Expression</em>' class.
@@ -242,6 +251,15 @@ public interface CalculusPackage extends EPackage {
 	int INVERSE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INVERSE__NAME = UNARY_EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,15 +276,6 @@ public interface CalculusPackage extends EPackage {
 	 * @ordered
 	 */
 	int INVERSE__NEXT = UNARY_EXPRESSION__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INVERSE__NAME = UNARY_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -306,6 +315,15 @@ public interface CalculusPackage extends EPackage {
 	int OPPOSITE = 5;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPOSITE__NAME = UNARY_EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,15 +340,6 @@ public interface CalculusPackage extends EPackage {
 	 * @ordered
 	 */
 	int OPPOSITE__NEXT = UNARY_EXPRESSION__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPPOSITE__NAME = UNARY_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -370,6 +379,15 @@ public interface CalculusPackage extends EPackage {
 	int BINARY_EXPRESSION = 6;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION__NAME = EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>First</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -397,22 +415,13 @@ public interface CalculusPackage extends EPackage {
 	int BINARY_EXPRESSION__NEXT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINARY_EXPRESSION__NAME = EXPRESSION_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINARY_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 4;
+	int BINARY_EXPRESSION__OP = EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Binary Expression</em>' class.
@@ -421,7 +430,7 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 5;
+	int BINARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Binary Expression</em>' class.
@@ -441,6 +450,15 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 */
 	int SUM = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUM__NAME = BINARY_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>First</b></em>' reference.
@@ -468,15 +486,6 @@ public interface CalculusPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUM__NEXT = BINARY_EXPRESSION__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUM__NAME = BINARY_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -516,6 +525,15 @@ public interface CalculusPackage extends EPackage {
 	int SUBSTRACTION = 8;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBSTRACTION__NAME = BINARY_EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>First</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -541,15 +559,6 @@ public interface CalculusPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBSTRACTION__NEXT = BINARY_EXPRESSION__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBSTRACTION__NAME = BINARY_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -589,6 +598,15 @@ public interface CalculusPackage extends EPackage {
 	int PRODUCTS = 9;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCTS__NAME = BINARY_EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>First</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -614,15 +632,6 @@ public interface CalculusPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRODUCTS__NEXT = BINARY_EXPRESSION__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCTS__NAME = BINARY_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -662,6 +671,15 @@ public interface CalculusPackage extends EPackage {
 	int DIVISION = 10;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIVISION__NAME = BINARY_EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>First</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -687,15 +705,6 @@ public interface CalculusPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIVISION__NEXT = BINARY_EXPRESSION__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIVISION__NAME = BINARY_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -735,6 +744,15 @@ public interface CalculusPackage extends EPackage {
 	int CONSTANTE = 11;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE__NAME = EXPRESSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -772,13 +790,13 @@ public interface CalculusPackage extends EPackage {
 	int FINALE_EXPRESSION = 12;
 
 	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINALE_EXPRESSION__RESULT = EXPRESSION_FEATURE_COUNT + 0;
+	int FINALE_EXPRESSION__NAME = EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -787,7 +805,7 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINALE_EXPRESSION__FROM = EXPRESSION_FEATURE_COUNT + 1;
+	int FINALE_EXPRESSION__FROM = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Finale Expression</em>' class.
@@ -796,7 +814,7 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINALE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+	int FINALE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Finale Expression</em>' class.
@@ -818,13 +836,13 @@ public interface CalculusPackage extends EPackage {
 	int RESULT = 13;
 
 	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT__RESULT = FINALE_EXPRESSION__RESULT;
+	int RESULT__NAME = FINALE_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -897,6 +915,17 @@ public interface CalculusPackage extends EPackage {
 	EClass getExpression();
 
 	/**
+	 * Returns the meta object for the attribute '{@link calculus.Expression#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see calculus.Expression#getName()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression_Name();
+
+	/**
 	 * Returns the meta object for class '{@link calculus.InputsArgs <em>Inputs Args</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -905,17 +934,6 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInputsArgs();
-
-	/**
-	 * Returns the meta object for the attribute '{@link calculus.InputsArgs#getArgName <em>Arg Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Arg Name</em>'.
-	 * @see calculus.InputsArgs#getArgName()
-	 * @see #getInputsArgs()
-	 * @generated
-	 */
-	EAttribute getInputsArgs_ArgName();
 
 	/**
 	 * Returns the meta object for class '{@link calculus.UnaryExpression <em>Unary Expression</em>}'.
@@ -948,17 +966,6 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUnaryExpression_Next();
-
-	/**
-	 * Returns the meta object for the attribute '{@link calculus.UnaryExpression#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see calculus.UnaryExpression#getName()
-	 * @see #getUnaryExpression()
-	 * @generated
-	 */
-	EAttribute getUnaryExpression_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link calculus.UnaryExpression#getOp <em>Op</em>}'.
@@ -1033,17 +1040,6 @@ public interface CalculusPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBinaryExpression_Next();
-
-	/**
-	 * Returns the meta object for the attribute '{@link calculus.BinaryExpression#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see calculus.BinaryExpression#getName()
-	 * @see #getBinaryExpression()
-	 * @generated
-	 */
-	EAttribute getBinaryExpression_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link calculus.BinaryExpression#getOp <em>Op</em>}'.
@@ -1128,17 +1124,6 @@ public interface CalculusPackage extends EPackage {
 	EClass getFinaleExpression();
 
 	/**
-	 * Returns the meta object for the attribute '{@link calculus.FinaleExpression#getResult <em>Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Result</em>'.
-	 * @see calculus.FinaleExpression#getResult()
-	 * @see #getFinaleExpression()
-	 * @generated
-	 */
-	EAttribute getFinaleExpression_Result();
-
-	/**
 	 * Returns the meta object for the reference '{@link calculus.FinaleExpression#getFrom <em>From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1219,6 +1204,14 @@ public interface CalculusPackage extends EPackage {
 		EClass EXPRESSION = eINSTANCE.getExpression();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__NAME = eINSTANCE.getExpression_Name();
+
+		/**
 		 * The meta object literal for the '{@link calculus.impl.InputsArgsImpl <em>Inputs Args</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1227,14 +1220,6 @@ public interface CalculusPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUTS_ARGS = eINSTANCE.getInputsArgs();
-
-		/**
-		 * The meta object literal for the '<em><b>Arg Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INPUTS_ARGS__ARG_NAME = eINSTANCE.getInputsArgs_ArgName();
 
 		/**
 		 * The meta object literal for the '{@link calculus.UnaryExpression <em>Unary Expression</em>}' class.
@@ -1261,14 +1246,6 @@ public interface CalculusPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNARY_EXPRESSION__NEXT = eINSTANCE.getUnaryExpression_Next();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNARY_EXPRESSION__NAME = eINSTANCE.getUnaryExpression_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -1331,14 +1308,6 @@ public interface CalculusPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BINARY_EXPRESSION__NEXT = eINSTANCE.getBinaryExpression_Next();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BINARY_EXPRESSION__NAME = eINSTANCE.getBinaryExpression_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -1415,14 +1384,6 @@ public interface CalculusPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FINALE_EXPRESSION = eINSTANCE.getFinaleExpression();
-
-		/**
-		 * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FINALE_EXPRESSION__RESULT = eINSTANCE.getFinaleExpression_Result();
 
 		/**
 		 * The meta object literal for the '<em><b>From</b></em>' reference feature.

@@ -14,7 +14,6 @@ package calculus;
  * <ul>
  *   <li>{@link calculus.UnaryExpression#getInput <em>Input</em>}</li>
  *   <li>{@link calculus.UnaryExpression#getNext <em>Next</em>}</li>
- *   <li>{@link calculus.UnaryExpression#getName <em>Name</em>}</li>
  *   <li>{@link calculus.UnaryExpression#getOp <em>Op</em>}</li>
  * </ul>
  *
@@ -66,28 +65,6 @@ public interface UnaryExpression extends Expression {
 	 * @generated
 	 */
 	void setNext(Expression value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see calculus.CalculusPackage#getUnaryExpression_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link calculus.UnaryExpression#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' attribute.

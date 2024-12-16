@@ -22,16 +22,36 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link calculus.impl.DivisionImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.DivisionImpl#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.impl.DivisionImpl#getSecond <em>Second</em>}</li>
  *   <li>{@link calculus.impl.DivisionImpl#getNext <em>Next</em>}</li>
- *   <li>{@link calculus.impl.DivisionImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.DivisionImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DivisionImpl extends MinimalEObjectImpl.Container implements Division {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getFirst() <em>First</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -61,26 +81,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	 * @ordered
 	 */
 	protected Expression next;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -295,6 +295,8 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CalculusPackage.DIVISION__NAME:
+				return getName();
 			case CalculusPackage.DIVISION__FIRST:
 				if (resolve) return getFirst();
 				return basicGetFirst();
@@ -304,8 +306,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 			case CalculusPackage.DIVISION__NEXT:
 				if (resolve) return getNext();
 				return basicGetNext();
-			case CalculusPackage.DIVISION__NAME:
-				return getName();
 			case CalculusPackage.DIVISION__OP:
 				return getOp();
 		}
@@ -320,6 +320,9 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CalculusPackage.DIVISION__NAME:
+				setName((String)newValue);
+				return;
 			case CalculusPackage.DIVISION__FIRST:
 				setFirst((Expression)newValue);
 				return;
@@ -328,9 +331,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 				return;
 			case CalculusPackage.DIVISION__NEXT:
 				setNext((Expression)newValue);
-				return;
-			case CalculusPackage.DIVISION__NAME:
-				setName((String)newValue);
 				return;
 			case CalculusPackage.DIVISION__OP:
 				setOp((String)newValue);
@@ -347,6 +347,9 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.DIVISION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case CalculusPackage.DIVISION__FIRST:
 				setFirst((Expression)null);
 				return;
@@ -355,9 +358,6 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 				return;
 			case CalculusPackage.DIVISION__NEXT:
 				setNext((Expression)null);
-				return;
-			case CalculusPackage.DIVISION__NAME:
-				setName(NAME_EDEFAULT);
 				return;
 			case CalculusPackage.DIVISION__OP:
 				setOp(OP_EDEFAULT);
@@ -374,14 +374,14 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.DIVISION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.DIVISION__FIRST:
 				return first != null;
 			case CalculusPackage.DIVISION__SECOND:
 				return second != null;
 			case CalculusPackage.DIVISION__NEXT:
 				return next != null;
-			case CalculusPackage.DIVISION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.DIVISION__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}

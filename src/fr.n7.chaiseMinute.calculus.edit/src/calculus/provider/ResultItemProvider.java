@@ -60,26 +60,26 @@ public class ResultItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addResultPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 			addFromPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Result feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addResultPropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FinaleExpression_result_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FinaleExpression_result_feature", "_UI_FinaleExpression_type"),
-				 CalculusPackage.Literals.FINALE_EXPRESSION__RESULT,
+				 getString("_UI_Expression_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_name_feature", "_UI_Expression_type"),
+				 CalculusPackage.Literals.EXPRESSION__NAME,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class ResultItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Result)object).getResult();
+		String label = ((Result)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Result_type") :
 			getString("_UI_Result_type") + " " + label;
@@ -148,7 +148,7 @@ public class ResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Result.class)) {
-			case CalculusPackage.RESULT__RESULT:
+			case CalculusPackage.RESULT__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

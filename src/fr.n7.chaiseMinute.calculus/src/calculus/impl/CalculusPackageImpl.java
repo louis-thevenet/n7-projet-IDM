@@ -237,8 +237,8 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getInputsArgs() {
-		return inputsArgsEClass;
+	public EAttribute getExpression_Name() {
+		return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -247,8 +247,8 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getInputsArgs_ArgName() {
-		return (EAttribute)inputsArgsEClass.getEStructuralFeatures().get(0);
+	public EClass getInputsArgs() {
+		return inputsArgsEClass;
 	}
 
 	/**
@@ -287,18 +287,8 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUnaryExpression_Name() {
-		return (EAttribute)unaryExpressionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getUnaryExpression_Op() {
-		return (EAttribute)unaryExpressionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)unaryExpressionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -367,18 +357,8 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getBinaryExpression_Name() {
-		return (EAttribute)binaryExpressionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getBinaryExpression_Op() {
-		return (EAttribute)binaryExpressionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)binaryExpressionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -457,18 +437,8 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFinaleExpression_Result() {
-		return (EAttribute)finaleExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getFinaleExpression_From() {
-		return (EReference)finaleExpressionEClass.getEStructuralFeatures().get(1);
+		return (EReference)finaleExpressionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -515,14 +485,13 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 		createEReference(calculusEClass, CALCULUS__EXPRESSIONS);
 
 		expressionEClass = createEClass(EXPRESSION);
+		createEAttribute(expressionEClass, EXPRESSION__NAME);
 
 		inputsArgsEClass = createEClass(INPUTS_ARGS);
-		createEAttribute(inputsArgsEClass, INPUTS_ARGS__ARG_NAME);
 
 		unaryExpressionEClass = createEClass(UNARY_EXPRESSION);
 		createEReference(unaryExpressionEClass, UNARY_EXPRESSION__INPUT);
 		createEReference(unaryExpressionEClass, UNARY_EXPRESSION__NEXT);
-		createEAttribute(unaryExpressionEClass, UNARY_EXPRESSION__NAME);
 		createEAttribute(unaryExpressionEClass, UNARY_EXPRESSION__OP);
 
 		inverseEClass = createEClass(INVERSE);
@@ -533,7 +502,6 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__FIRST);
 		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__SECOND);
 		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__NEXT);
-		createEAttribute(binaryExpressionEClass, BINARY_EXPRESSION__NAME);
 		createEAttribute(binaryExpressionEClass, BINARY_EXPRESSION__OP);
 
 		sumEClass = createEClass(SUM);
@@ -548,7 +516,6 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 		createEAttribute(constanteEClass, CONSTANTE__VALUE);
 
 		finaleExpressionEClass = createEClass(FINALE_EXPRESSION);
-		createEAttribute(finaleExpressionEClass, FINALE_EXPRESSION__RESULT);
 		createEReference(finaleExpressionEClass, FINALE_EXPRESSION__FROM);
 
 		resultEClass = createEClass(RESULT);
@@ -601,14 +568,13 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 		initEReference(getCalculus_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExpression_Name(), ecorePackage.getEString(), "name", null, 1, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputsArgsEClass, InputsArgs.class, "InputsArgs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInputsArgs_ArgName(), ecorePackage.getEString(), "argName", null, 1, 1, InputsArgs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unaryExpressionEClass, UnaryExpression.class, "UnaryExpression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnaryExpression_Input(), this.getExpression(), null, "input", null, 1, 1, UnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnaryExpression_Next(), this.getExpression(), null, "next", null, 1, 1, UnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnaryExpression_Name(), ecorePackage.getEString(), "name", null, 1, 1, UnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnaryExpression_Op(), ecorePackage.getEString(), "op", null, 1, 1, UnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inverseEClass, Inverse.class, "Inverse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -616,10 +582,9 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 		initEClass(oppositeEClass, Opposite.class, "Opposite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(binaryExpressionEClass, BinaryExpression.class, "BinaryExpression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBinaryExpression_First(), this.getExpression(), null, "First", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBinaryExpression_Second(), this.getExpression(), null, "Second", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinaryExpression_First(), this.getExpression(), null, "first", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinaryExpression_Second(), this.getExpression(), null, "second", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBinaryExpression_Next(), this.getExpression(), null, "next", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBinaryExpression_Name(), ecorePackage.getEString(), "name", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBinaryExpression_Op(), ecorePackage.getEString(), "op", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sumEClass, Sum.class, "Sum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -634,7 +599,6 @@ public class CalculusPackageImpl extends EPackageImpl implements CalculusPackage
 		initEAttribute(getConstante_Value(), ecorePackage.getEFloat(), "value", null, 1, 1, Constante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(finaleExpressionEClass, FinaleExpression.class, "FinaleExpression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFinaleExpression_Result(), ecorePackage.getEString(), "result", null, 1, 1, FinaleExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFinaleExpression_From(), this.getExpression(), null, "from", null, 1, 1, FinaleExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

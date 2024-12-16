@@ -5,9 +5,23 @@
 [comment @main/]
 [file ((aCalculus.name)+'.py', false, 'UTF-8')]
 
-def [aCalculus.name/]([for (a : InputsArgs | aCalculus.getInputArgs())][argName/],[/for]):
+def [aCalculus.name/]([for (a : InputsArgs | aCalculus.getInputArgs())][name/],[/for]):
 	[for (e : Expression | aCalculus.getExpressions())]
-		[e/]
+		
+	[if (e.oclIsKindOf(InputsArgs))]
+	[elseif (e.oclIsKindOf(BinaryExpression))]
+	[let be : BinaryExpression = e.oclAsType(BinaryExpression)]
+		[be.name/] = [be.first.name/] [be.op/] [be.second.name/] 
+	[/let]
+	[elseif (e.oclIsKindOf(UnaryExpression))]
+	[let ue : UnaryExpression = e.oclAsType(UnaryExpression)]
+		[ue.name/] = [ue.op/] [ue.input.name/] 
+	[/let]
+	[elseif (e.oclIsKindOf(FinaleExpression))]
+	[let fe : FinaleExpression = e.oclAsType(FinaleExpression)]
+		return [fe.name/] = [fe.from.name/]
+	[/let]
+	[/if]
 	[/for]
  
 [/file]
@@ -20,17 +34,10 @@ def [aCalculus.name/]([for (a : InputsArgs | aCalculus.getInputArgs())][argName/
 -> asOrderedSet()
 /]
 
-[query public getSums(arg : Calculus): OrderedSet(Sum) = arg.expressions
--> select(e | e.oclIsKindOf(Expression))
--> select(e | e.oclIsKindOf(BinaryExpression))
--> select(e | e.oclIsKindOf(Sum))
--> collect(e | e.oclAsType(Sum)) 
--> asOrderedSet()
-/]
-
 [query public getExpressions(arg : Calculus): OrderedSet(Expression) = arg.expressions
 -> select(e | e.oclIsKindOf(Expression))
 -> collect(e | e.oclAsType(Expression)) 
 -> asOrderedSet()
 /]
+
 

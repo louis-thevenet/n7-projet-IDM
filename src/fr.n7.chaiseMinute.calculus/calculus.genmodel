@@ -10,23 +10,21 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//Calculus/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference calculus.ecore#//Calculus/expressions"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="calculus.ecore#//Expression"/>
-    <genClasses ecoreClass="calculus.ecore#//InputsArgs">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//InputsArgs/argName"/>
+    <genClasses image="false" ecoreClass="calculus.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//Expression/name"/>
     </genClasses>
+    <genClasses ecoreClass="calculus.ecore#//InputsArgs"/>
     <genClasses image="false" ecoreClass="calculus.ecore#//UnaryExpression">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//UnaryExpression/input"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//UnaryExpression/next"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//UnaryExpression/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//UnaryExpression/op"/>
     </genClasses>
     <genClasses ecoreClass="calculus.ecore#//Inverse"/>
     <genClasses ecoreClass="calculus.ecore#//Opposite"/>
     <genClasses image="false" ecoreClass="calculus.ecore#//BinaryExpression">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/First"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/Second"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/first"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/second"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//BinaryExpression/next"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//BinaryExpression/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//BinaryExpression/op"/>
     </genClasses>
     <genClasses ecoreClass="calculus.ecore#//Sum"/>
@@ -37,7 +35,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//Constante/value"/>
     </genClasses>
     <genClasses image="false" ecoreClass="calculus.ecore#//FinaleExpression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculus.ecore#//FinaleExpression/result"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculus.ecore#//FinaleExpression/from"/>
     </genClasses>
     <genClasses ecoreClass="calculus.ecore#//Result"/>

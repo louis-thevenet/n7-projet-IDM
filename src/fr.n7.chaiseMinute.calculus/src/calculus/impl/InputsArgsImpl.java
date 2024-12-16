@@ -20,31 +20,31 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link calculus.impl.InputsArgsImpl#getArgName <em>Arg Name</em>}</li>
+ *   <li>{@link calculus.impl.InputsArgsImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class InputsArgsImpl extends MinimalEObjectImpl.Container implements InputsArgs {
 	/**
-	 * The default value of the '{@link #getArgName() <em>Arg Name</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getArgName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ARG_NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getArgName() <em>Arg Name</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getArgName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String argName = ARG_NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,8 +71,8 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	 * @generated
 	 */
 	@Override
-	public String getArgName() {
-		return argName;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -81,11 +81,11 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	 * @generated
 	 */
 	@Override
-	public void setArgName(String newArgName) {
-		String oldArgName = argName;
-		argName = newArgName;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.INPUTS_ARGS__ARG_NAME, oldArgName, argName));
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculusPackage.INPUTS_ARGS__NAME, oldName, name));
 	}
 
 	/**
@@ -96,8 +96,8 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CalculusPackage.INPUTS_ARGS__ARG_NAME:
-				return getArgName();
+			case CalculusPackage.INPUTS_ARGS__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,8 +110,8 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CalculusPackage.INPUTS_ARGS__ARG_NAME:
-				setArgName((String)newValue);
+			case CalculusPackage.INPUTS_ARGS__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,8 +125,8 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CalculusPackage.INPUTS_ARGS__ARG_NAME:
-				setArgName(ARG_NAME_EDEFAULT);
+			case CalculusPackage.INPUTS_ARGS__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -140,8 +140,8 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CalculusPackage.INPUTS_ARGS__ARG_NAME:
-				return ARG_NAME_EDEFAULT == null ? argName != null : !ARG_NAME_EDEFAULT.equals(argName);
+			case CalculusPackage.INPUTS_ARGS__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,8 +156,8 @@ public class InputsArgsImpl extends MinimalEObjectImpl.Container implements Inpu
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (argName: ");
-		result.append(argName);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -22,16 +22,36 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link calculus.impl.SubstractionImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.SubstractionImpl#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.impl.SubstractionImpl#getSecond <em>Second</em>}</li>
  *   <li>{@link calculus.impl.SubstractionImpl#getNext <em>Next</em>}</li>
- *   <li>{@link calculus.impl.SubstractionImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.SubstractionImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SubstractionImpl extends MinimalEObjectImpl.Container implements Substraction {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getFirst() <em>First</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -61,26 +81,6 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	 * @ordered
 	 */
 	protected Expression next;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -295,6 +295,8 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CalculusPackage.SUBSTRACTION__NAME:
+				return getName();
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				if (resolve) return getFirst();
 				return basicGetFirst();
@@ -304,8 +306,6 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 			case CalculusPackage.SUBSTRACTION__NEXT:
 				if (resolve) return getNext();
 				return basicGetNext();
-			case CalculusPackage.SUBSTRACTION__NAME:
-				return getName();
 			case CalculusPackage.SUBSTRACTION__OP:
 				return getOp();
 		}
@@ -320,6 +320,9 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CalculusPackage.SUBSTRACTION__NAME:
+				setName((String)newValue);
+				return;
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				setFirst((Expression)newValue);
 				return;
@@ -328,9 +331,6 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 				return;
 			case CalculusPackage.SUBSTRACTION__NEXT:
 				setNext((Expression)newValue);
-				return;
-			case CalculusPackage.SUBSTRACTION__NAME:
-				setName((String)newValue);
 				return;
 			case CalculusPackage.SUBSTRACTION__OP:
 				setOp((String)newValue);
@@ -347,6 +347,9 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.SUBSTRACTION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				setFirst((Expression)null);
 				return;
@@ -355,9 +358,6 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 				return;
 			case CalculusPackage.SUBSTRACTION__NEXT:
 				setNext((Expression)null);
-				return;
-			case CalculusPackage.SUBSTRACTION__NAME:
-				setName(NAME_EDEFAULT);
 				return;
 			case CalculusPackage.SUBSTRACTION__OP:
 				setOp(OP_EDEFAULT);
@@ -374,14 +374,14 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.SUBSTRACTION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.SUBSTRACTION__FIRST:
 				return first != null;
 			case CalculusPackage.SUBSTRACTION__SECOND:
 				return second != null;
 			case CalculusPackage.SUBSTRACTION__NEXT:
 				return next != null;
-			case CalculusPackage.SUBSTRACTION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.SUBSTRACTION__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}

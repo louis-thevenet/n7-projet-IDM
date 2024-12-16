@@ -4,33 +4,33 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:calculus="http://calculus"
-    xsi:schemaLocation="http://calculus calculus.ecore"
     name="Mean">
   <expressions
       xsi:type="calculus:InputsArgs"
-      argName="maximum"/>
+      name="minimum"/>
   <expressions
       xsi:type="calculus:InputsArgs"
-      argName="minimum"/>
+      name="maximum"/>
   <expressions
       xsi:type="calculus:Sum"
-      First="//@expressions.0"
-      Second="//@expressions.1"
+      name="Somme1"
+      first="//@expressions.0"
+      second="//@expressions.1"
       next="//@expressions.4"
-      name="Somme"
       op="+"/>
   <expressions
       xsi:type="calculus:Constante"
+      name="c"
       value="2.0"/>
   <expressions
       xsi:type="calculus:Division"
-      First="//@expressions.2"
-      Second="//@expressions.3"
+      name="Division1"
+      first="//@expressions.2"
+      second="//@expressions.3"
       next="//@expressions.5"
-      name="Division"
       op="/"/>
   <expressions
       xsi:type="calculus:Result"
-      result="resultat"
+      name="resultat"
       from="//@expressions.4"/>
 </calculus:Calculus>

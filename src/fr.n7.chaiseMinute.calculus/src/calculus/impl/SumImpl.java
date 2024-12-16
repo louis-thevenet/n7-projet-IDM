@@ -22,16 +22,36 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link calculus.impl.SumImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.SumImpl#getFirst <em>First</em>}</li>
  *   <li>{@link calculus.impl.SumImpl#getSecond <em>Second</em>}</li>
  *   <li>{@link calculus.impl.SumImpl#getNext <em>Next</em>}</li>
- *   <li>{@link calculus.impl.SumImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculus.impl.SumImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getFirst() <em>First</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -61,26 +81,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * @ordered
 	 */
 	protected Expression next;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -295,6 +295,8 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CalculusPackage.SUM__NAME:
+				return getName();
 			case CalculusPackage.SUM__FIRST:
 				if (resolve) return getFirst();
 				return basicGetFirst();
@@ -304,8 +306,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 			case CalculusPackage.SUM__NEXT:
 				if (resolve) return getNext();
 				return basicGetNext();
-			case CalculusPackage.SUM__NAME:
-				return getName();
 			case CalculusPackage.SUM__OP:
 				return getOp();
 		}
@@ -320,6 +320,9 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CalculusPackage.SUM__NAME:
+				setName((String)newValue);
+				return;
 			case CalculusPackage.SUM__FIRST:
 				setFirst((Expression)newValue);
 				return;
@@ -328,9 +331,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return;
 			case CalculusPackage.SUM__NEXT:
 				setNext((Expression)newValue);
-				return;
-			case CalculusPackage.SUM__NAME:
-				setName((String)newValue);
 				return;
 			case CalculusPackage.SUM__OP:
 				setOp((String)newValue);
@@ -347,6 +347,9 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.SUM__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case CalculusPackage.SUM__FIRST:
 				setFirst((Expression)null);
 				return;
@@ -355,9 +358,6 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return;
 			case CalculusPackage.SUM__NEXT:
 				setNext((Expression)null);
-				return;
-			case CalculusPackage.SUM__NAME:
-				setName(NAME_EDEFAULT);
 				return;
 			case CalculusPackage.SUM__OP:
 				setOp(OP_EDEFAULT);
@@ -374,14 +374,14 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CalculusPackage.SUM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.SUM__FIRST:
 				return first != null;
 			case CalculusPackage.SUM__SECOND:
 				return second != null;
 			case CalculusPackage.SUM__NEXT:
 				return next != null;
-			case CalculusPackage.SUM__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CalculusPackage.SUM__OP:
 				return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
 		}
