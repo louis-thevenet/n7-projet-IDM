@@ -4,163 +4,549 @@
     <semanticResources>Mean.clc</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_4Q1T0LuLEe-kD_Gq1y7QLA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GEAv0LuMEe-VJdrmxlPcjg" name="CalculusDiagram" repPath="#_GDvqELuMEe-VJdrmxlPcjg" changeId="1734340273713">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5p9vULueEe-Jf-N8K8RwpQ" name="new CalculusDiagram" repPath="#_5p8hMLueEe-Jf-N8K8RwpQ" changeId="1734347685822">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']"/>
         <target xmi:type="calculus:Calculus" href="Mean.clc#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram uid="_GDvqELuMEe-VJdrmxlPcjg">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_GEM9ELuMEe-VJdrmxlPcjg" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_GEM9EbuMEe-VJdrmxlPcjg" type="Sirius" element="_GDvqELuMEe-VJdrmxlPcjg" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_QaCIcLuMEe-VJdrmxlPcjg" type="2002" element="_QY1OkLuMEe-VJdrmxlPcjg">
-          <children xmi:type="notation:Node" xmi:id="_QaD9oLuMEe-VJdrmxlPcjg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_QaEksLuMEe-VJdrmxlPcjg" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_QaEksbuMEe-VJdrmxlPcjg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_QaEksruMEe-VJdrmxlPcjg"/>
+  <diagram:DSemanticDiagram uid="_5p8hMLueEe-Jf-N8K8RwpQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_5p-WYLueEe-Jf-N8K8RwpQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_5p-WYbueEe-Jf-N8K8RwpQ" type="Sirius" element="_5p8hMLueEe-Jf-N8K8RwpQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_5rR98LueEe-Jf-N8K8RwpQ" type="2001" element="_5p_kgLueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rR987ueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rR99LueEe-Jf-N8K8RwpQ" y="5"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_QaCIcbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QaCIcruMEe-VJdrmxlPcjg" x="268" y="104"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_QaFLwLuMEe-VJdrmxlPcjg" type="2002" element="_QZG7YLuMEe-VJdrmxlPcjg">
-          <children xmi:type="notation:Node" xmi:id="_QaFy0LuMEe-VJdrmxlPcjg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_QaFy0buMEe-VJdrmxlPcjg" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_QaFy0ruMEe-VJdrmxlPcjg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_QaFy07uMEe-VJdrmxlPcjg"/>
+          <children xmi:type="notation:Node" xmi:id="_5rTzILueEe-Jf-N8K8RwpQ" type="3001" element="_5qHgULueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rTzI7ueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rTzJLueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rTzKLueEe-Jf-N8K8RwpQ" type="3017" element="_5qLKsLueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rTzKbueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rTzKrueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rTzIbueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rTzIrueEe-Jf-N8K8RwpQ" x="22" width="20" height="20"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_QaFLwbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QaFLwruMEe-VJdrmxlPcjg" x="504" y="120"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_lmh7YLuMEe-VJdrmxlPcjg" type="2002" element="_llHmILuMEe-VJdrmxlPcjg">
-          <children xmi:type="notation:Node" xmi:id="_lmiicLuMEe-VJdrmxlPcjg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_lmiicbuMEe-VJdrmxlPcjg" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_lmiicruMEe-VJdrmxlPcjg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_lmiic7uMEe-VJdrmxlPcjg"/>
+          <children xmi:type="notation:Node" xmi:id="_5rTzJbueEe-Jf-N8K8RwpQ" type="3003" element="_5p_kgbueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rTzJrueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rTzJ7ueEe-Jf-N8K8RwpQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_lmh7YbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lmh7YruMEe-VJdrmxlPcjg" x="357" y="248"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rR98bueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rR98rueEe-Jf-N8K8RwpQ" x="52" y="204" width="46" height="47"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_8vkTgLuMEe-VJdrmxlPcjg" type="2002" element="_8veM4LuMEe-VJdrmxlPcjg">
-          <children xmi:type="notation:Node" xmi:id="_8vk6kLuMEe-VJdrmxlPcjg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_8vk6kbuMEe-VJdrmxlPcjg" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_8vk6kruMEe-VJdrmxlPcjg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_8vk6k7uMEe-VJdrmxlPcjg"/>
+        <children xmi:type="notation:Node" xmi:id="_5rSlALueEe-Jf-N8K8RwpQ" type="2001" element="_5qALkbueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rSlA7ueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rSlBLueEe-Jf-N8K8RwpQ" y="5"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_8vkTgbuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8vkTgruMEe-VJdrmxlPcjg" x="52" y="171"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_8vk6lLuMEe-VJdrmxlPcjg" type="2002" element="_8vez8LuMEe-VJdrmxlPcjg">
-          <children xmi:type="notation:Node" xmi:id="_8vlhoruMEe-VJdrmxlPcjg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_8vlho7uMEe-VJdrmxlPcjg" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_8vlhpLuMEe-VJdrmxlPcjg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_8vlhpbuMEe-VJdrmxlPcjg"/>
+          <children xmi:type="notation:Node" xmi:id="_5rTzK7ueEe-Jf-N8K8RwpQ" type="3001" element="_5qLKsrueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rUaMLueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rUaMbueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rUaNbueEe-Jf-N8K8RwpQ" type="3017" element="_5qLxwLueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rUaNrueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rUaN7ueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rTzLLueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rTzLbueEe-Jf-N8K8RwpQ" x="22" width="20" height="20"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_8vlhoLuMEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8vlhobuMEe-VJdrmxlPcjg" x="52" y="37"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_Rkt9cLuNEe-VJdrmxlPcjg" type="2002" element="_RkfT9LuNEe-VJdrmxlPcjg">
-          <children xmi:type="notation:Node" xmi:id="_Rkt9c7uNEe-VJdrmxlPcjg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_RkukgLuNEe-VJdrmxlPcjg" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_RkukgbuNEe-VJdrmxlPcjg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_RkukgruNEe-VJdrmxlPcjg"/>
+          <children xmi:type="notation:Node" xmi:id="_5rUaMrueEe-Jf-N8K8RwpQ" type="3003" element="_5qALkrueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rUaM7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rUaNLueEe-Jf-N8K8RwpQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Rkt9cbuNEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rkt9cruNEe-VJdrmxlPcjg" x="728" y="104"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rSlAbueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rSlArueEe-Jf-N8K8RwpQ" x="58" y="88" width="49" height="47"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Rkukg7uNEe-VJdrmxlPcjg" type="2002" element="_RkgiEbuNEe-VJdrmxlPcjg">
-          <children xmi:type="notation:Node" xmi:id="_RkukhruNEe-VJdrmxlPcjg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_RkvLkLuNEe-VJdrmxlPcjg" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_RkvLkbuNEe-VJdrmxlPcjg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_RkvLkruNEe-VJdrmxlPcjg"/>
+        <children xmi:type="notation:Node" xmi:id="_5rSlBbueEe-Jf-N8K8RwpQ" type="2001" element="_5qAyoLueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rSlCLueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rSlCbueEe-Jf-N8K8RwpQ" y="5"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_RkukhLuNEe-VJdrmxlPcjg" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RkukhbuNEe-VJdrmxlPcjg" x="900" y="104"/>
+          <children xmi:type="notation:Node" xmi:id="_5rUaOLueEe-Jf-N8K8RwpQ" type="3001" element="_5qLxwrueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rUaO7ueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rUaPLueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rVBQLueEe-Jf-N8K8RwpQ" type="3017" element="_5qMY0LueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVBQbueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVBQrueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rUaObueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rUaOrueEe-Jf-N8K8RwpQ" x="22" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rUaPbueEe-Jf-N8K8RwpQ" type="3003" element="_5qAyobueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rUaPrueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rUaP7ueEe-Jf-N8K8RwpQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rSlBrueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rSlB7ueEe-Jf-N8K8RwpQ" width="48" height="47"/>
         </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_GEM9EruMEe-VJdrmxlPcjg"/>
+        <children xmi:type="notation:Node" xmi:id="_5rSlCrueEe-Jf-N8K8RwpQ" type="2001" element="_5qMY0rueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rSlDbueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rSlDrueEe-Jf-N8K8RwpQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rVBQ7ueEe-Jf-N8K8RwpQ" type="3001" element="_5qR4YLueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rVBRrueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rVBR7ueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rVoU7ueEe-Jf-N8K8RwpQ" type="3017" element="_5qU7sLueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVoVLueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVoVbueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVBRLueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVBRbueEe-Jf-N8K8RwpQ" x="22" y="4" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rVBSLueEe-Jf-N8K8RwpQ" type="3001" element="_5qZNILueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rVBS7ueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rVBTLueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rVoVrueEe-Jf-N8K8RwpQ" type="3017" element="_5qZ0MLueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVoV7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVoWLueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVBSbueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVBSrueEe-Jf-N8K8RwpQ" x="-12" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rVBTbueEe-Jf-N8K8RwpQ" type="3001" element="_5qessLueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rVBULueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rVBUbueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rVoWbueEe-Jf-N8K8RwpQ" type="3017" element="_5qessbueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVoWrueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVoW7ueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVBTrueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVBT7ueEe-Jf-N8K8RwpQ" y="22" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rVoULueEe-Jf-N8K8RwpQ" type="3003" element="_5qMY07ueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVoUbueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVoUrueEe-Jf-N8K8RwpQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rSlC7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rSlDLueEe-Jf-N8K8RwpQ" x="149" y="140" width="80" height="47"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_5rSlD7ueEe-Jf-N8K8RwpQ" type="2001" element="_5qMY1bueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rTMELueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rTMEbueEe-Jf-N8K8RwpQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rVoXLueEe-Jf-N8K8RwpQ" type="3001" element="_5qkMQLueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rVoX7ueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rVoYLueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rWPbbueEe-Jf-N8K8RwpQ" type="3017" element="_5qnPkLueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rWPbrueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rWPb7ueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rVoXbueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rVoXrueEe-Jf-N8K8RwpQ" x="22" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rWPYLueEe-Jf-N8K8RwpQ" type="3001" element="_5qsIELueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rWPY7ueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rWPZLueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rW2cLueEe-Jf-N8K8RwpQ" type="3017" element="_5qsvILueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rW2cbueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rW2crueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rWPYbueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rWPYrueEe-Jf-N8K8RwpQ" x="-12" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rWPZbueEe-Jf-N8K8RwpQ" type="3001" element="_5qyOsLueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rWPaLueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rWPabueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rW2c7ueEe-Jf-N8K8RwpQ" type="3017" element="_5q3HMLueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rW2dLueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rW2dbueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rWPZrueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rWPZ7ueEe-Jf-N8K8RwpQ" y="22" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rWParueEe-Jf-N8K8RwpQ" type="3003" element="_5qMY1rueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rWPa7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rWPbLueEe-Jf-N8K8RwpQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rSlELueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rSlEbueEe-Jf-N8K8RwpQ" x="320" y="120" width="61" height="47"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_5rTMErueEe-Jf-N8K8RwpQ" type="2001" element="_5q3HMrueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rTMFbueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rTMFrueEe-Jf-N8K8RwpQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rW2drueEe-Jf-N8K8RwpQ" type="3001" element="_5q6xkLueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rW2ebueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rW2erueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rW2frueEe-Jf-N8K8RwpQ" type="3017" element="_5q904LueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rW2f7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rW2gLueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rW2d7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rW2eLueEe-Jf-N8K8RwpQ" x="22" y="4" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rW2e7ueEe-Jf-N8K8RwpQ" type="3003" element="_5q3HM7ueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rW2fLueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rW2fbueEe-Jf-N8K8RwpQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rTME7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rTMFLueEe-Jf-N8K8RwpQ" x="476" y="112" width="72" height="47"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_5rTMF7ueEe-Jf-N8K8RwpQ" type="2001" element="_5q904rueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rTMGrueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rTMG7ueEe-Jf-N8K8RwpQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rW2gbueEe-Jf-N8K8RwpQ" type="3001" element="_5rA4MLueEe-Jf-N8K8RwpQ">
+            <children xmi:type="notation:Node" xmi:id="_5rXdgLueEe-Jf-N8K8RwpQ" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5rXdgbueEe-Jf-N8K8RwpQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5rXdhbueEe-Jf-N8K8RwpQ" type="3017" element="_5rA4MbueEe-Jf-N8K8RwpQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5rXdhrueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rXdh7ueEe-Jf-N8K8RwpQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rW2grueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rW2g7ueEe-Jf-N8K8RwpQ" x="22" y="4" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rXdgrueEe-Jf-N8K8RwpQ" type="3003" element="_5q9047ueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rXdg7ueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rXdhLueEe-Jf-N8K8RwpQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rTMGLueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rTMGbueEe-Jf-N8K8RwpQ" x="256" y="228" width="27" height="47"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_5rTMHLueEe-Jf-N8K8RwpQ" type="2001" element="_5rA4M7ueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rTMH7ueEe-Jf-N8K8RwpQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5rTMILueEe-Jf-N8K8RwpQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rXdiLueEe-Jf-N8K8RwpQ" type="3003" element="_5rBfQLueEe-Jf-N8K8RwpQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_5rXdibueEe-Jf-N8K8RwpQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rXdirueEe-Jf-N8K8RwpQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5rTMHbueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rTMHrueEe-Jf-N8K8RwpQ" x="672" y="104" width="75" height="47"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_5p-WYrueEe-Jf-N8K8RwpQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="_5rXdi7ueEe-Jf-N8K8RwpQ" type="4001" element="_5rEikLueEe-Jf-N8K8RwpQ" source="_5rTzILueEe-Jf-N8K8RwpQ" target="_5rSlCrueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rYEkLueEe-Jf-N8K8RwpQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYEkbueEe-Jf-N8K8RwpQ" x="-5" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYEkrueEe-Jf-N8K8RwpQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYEk7ueEe-Jf-N8K8RwpQ" x="2" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYElLueEe-Jf-N8K8RwpQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYElbueEe-Jf-N8K8RwpQ" x="4" y="4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_5rXdjLueEe-Jf-N8K8RwpQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_5rXdjbueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5rXdjrueEe-Jf-N8K8RwpQ" points="[10, -4, -79, 23]$[89, -27, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rYElrueEe-Jf-N8K8RwpQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rYEl7ueEe-Jf-N8K8RwpQ" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_5rYEmLueEe-Jf-N8K8RwpQ" type="4001" element="_5rEilbueEe-Jf-N8K8RwpQ" source="_5rTzK7ueEe-Jf-N8K8RwpQ" target="_5rSlCrueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rYEnLueEe-Jf-N8K8RwpQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYEnbueEe-Jf-N8K8RwpQ" x="-10" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYEnrueEe-Jf-N8K8RwpQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYEn7ueEe-Jf-N8K8RwpQ" x="6" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYEoLueEe-Jf-N8K8RwpQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYEobueEe-Jf-N8K8RwpQ" x="3" y="-7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_5rYEmbueEe-Jf-N8K8RwpQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_5rYEmrueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5rYEm7ueEe-Jf-N8K8RwpQ" points="[8, 10, -72, -79]$[80, 89, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rYroLueEe-Jf-N8K8RwpQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rYrobueEe-Jf-N8K8RwpQ" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_5rYrorueEe-Jf-N8K8RwpQ" type="4001" element="_5rKpMLueEe-Jf-N8K8RwpQ" source="_5rVBQ7ueEe-Jf-N8K8RwpQ" target="_5rSlD7ueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rYrprueEe-Jf-N8K8RwpQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYrp7ueEe-Jf-N8K8RwpQ" x="-11" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYrqLueEe-Jf-N8K8RwpQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYrqbueEe-Jf-N8K8RwpQ" x="8" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYrqrueEe-Jf-N8K8RwpQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYrq7ueEe-Jf-N8K8RwpQ" x="9" y="3"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_5rYro7ueEe-Jf-N8K8RwpQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_5rYrpLueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5rYrpbueEe-Jf-N8K8RwpQ" points="[10, 1, -109, -12]$[119, 13, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rYrrLueEe-Jf-N8K8RwpQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rYrrbueEe-Jf-N8K8RwpQ" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_5rYrrrueEe-Jf-N8K8RwpQ" type="4001" element="_5rKpNbueEe-Jf-N8K8RwpQ" source="_5rVoXLueEe-Jf-N8K8RwpQ" target="_5rTMErueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rYrsrueEe-Jf-N8K8RwpQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYrs7ueEe-Jf-N8K8RwpQ" x="-4" y="2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYrtLueEe-Jf-N8K8RwpQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYrtbueEe-Jf-N8K8RwpQ" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rYrtrueEe-Jf-N8K8RwpQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rYrt7ueEe-Jf-N8K8RwpQ" x="1" y="-5"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_5rYrr7ueEe-Jf-N8K8RwpQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_5rYrsLueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5rYrsbueEe-Jf-N8K8RwpQ" points="[10, 2, -119, -27]$[129, 29, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rZSsLueEe-Jf-N8K8RwpQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rZSsbueEe-Jf-N8K8RwpQ" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_5rZSsrueEe-Jf-N8K8RwpQ" type="4001" element="_5rNsgLueEe-Jf-N8K8RwpQ" source="_5rW2drueEe-Jf-N8K8RwpQ" target="_5rTMHLueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rZStrueEe-Jf-N8K8RwpQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rZSt7ueEe-Jf-N8K8RwpQ" x="-4" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rZSuLueEe-Jf-N8K8RwpQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rZSubueEe-Jf-N8K8RwpQ" x="-1" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rZSurueEe-Jf-N8K8RwpQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rZSu7ueEe-Jf-N8K8RwpQ" x="2" y="-7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_5rZSs7ueEe-Jf-N8K8RwpQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_5rZStLueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5rZStbueEe-Jf-N8K8RwpQ" points="[10, 1, -149, -24]$[159, 25, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rZSvLueEe-Jf-N8K8RwpQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rZSvbueEe-Jf-N8K8RwpQ" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_5rZSvrueEe-Jf-N8K8RwpQ" type="4001" element="_5rQv0LueEe-Jf-N8K8RwpQ" source="_5rW2gbueEe-Jf-N8K8RwpQ" target="_5rSlD7ueEe-Jf-N8K8RwpQ">
+          <children xmi:type="notation:Node" xmi:id="_5rZSwrueEe-Jf-N8K8RwpQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rZSw7ueEe-Jf-N8K8RwpQ" x="-21" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rZSxLueEe-Jf-N8K8RwpQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rZSxbueEe-Jf-N8K8RwpQ" x="15" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_5rZSxrueEe-Jf-N8K8RwpQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5rZSx7ueEe-Jf-N8K8RwpQ" x="13"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_5rZSv7ueEe-Jf-N8K8RwpQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_5rZSwLueEe-Jf-N8K8RwpQ" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5rZSwbueEe-Jf-N8K8RwpQ" points="[8, -10, -57, 65]$[65, -75, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rZSyLueEe-Jf-N8K8RwpQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5rZSybueEe-Jf-N8K8RwpQ" id="(0.5,1.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_GETDsLuMEe-VJdrmxlPcjg" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_GETqwLuMEe-VJdrmxlPcjg"/>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_5rQv1bueEe-Jf-N8K8RwpQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_5rQv1rueEe-Jf-N8K8RwpQ"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_QY1OkLuMEe-VJdrmxlPcjg" name="somme1">
-      <target xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
-      <semanticElements xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_QZCp8LuMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_QZG7YLuMEe-VJdrmxlPcjg" name="division1">
-      <target xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
-      <semanticElements xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_QZHicLuMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='BinaryExpressionC']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_llHmILuMEe-VJdrmxlPcjg" name="c">
-      <target xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
-      <semanticElements xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_llINMLuMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="253,206,137" foregroundColor="253,206,137">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='ConstanteC']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='ConstanteC']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_8veM4LuMEe-VJdrmxlPcjg" name="minimum">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5p_kgLueEe-Jf-N8K8RwpQ" name="min" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
       <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qHgULueEe-Jf-N8K8RwpQ" outgoingEdges="_5rEikLueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+        <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qLKsLueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@borderedNodeMappings[name='InputsArgToNext']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@borderedNodeMappings[name='InputsArgToNext']"/>
+      </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_8veM4buMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']/@style"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_5p_kgbueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_8vez8LuMEe-VJdrmxlPcjg" name="maximum">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5qALkbueEe-Jf-N8K8RwpQ" name="max" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
       <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qLKsrueEe-Jf-N8K8RwpQ" outgoingEdges="_5rEilbueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+        <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qLxwLueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@borderedNodeMappings[name='InputsArgToNext']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@borderedNodeMappings[name='InputsArgToNext']"/>
+      </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_8vez8buMEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']/@style"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_5qALkrueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='InputsArgC']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RkfT9LuNEe-VJdrmxlPcjg" name="oppose1">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5qAyoLueEe-Jf-N8K8RwpQ" name="test" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.7"/>
+      <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.7"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qLxwrueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.7"/>
+        <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.7"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qMY0LueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@borderedNodeMappings[name='InputsArgToNext']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@borderedNodeMappings[name='InputsArgToNext']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:Square" uid="_5qAyobueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='InputsArgN']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5qMY0rueEe-Jf-N8K8RwpQ" name="somme1" incomingEdges="_5rEikLueEe-Jf-N8K8RwpQ _5rEilbueEe-Jf-N8K8RwpQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+      <semanticElements xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qR4YLueEe-Jf-N8K8RwpQ" outgoingEdges="_5rKpMLueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+        <semanticElements xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qU7sLueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='BinaryToNext']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='BinaryToNext']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qZNILueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+        <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qZ0MLueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input1ToBinary']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input1ToBinary']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qessLueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+        <semanticElements xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qessbueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input2ToBinary']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input2ToBinary']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_5qMY07ueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="204,242,166">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5qMY1bueEe-Jf-N8K8RwpQ" name="divise" incomingEdges="_5rKpMLueEe-Jf-N8K8RwpQ _5rQv0LueEe-Jf-N8K8RwpQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
+      <semanticElements xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qkMQLueEe-Jf-N8K8RwpQ" outgoingEdges="_5rKpNbueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
+        <semanticElements xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qnPkLueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='BinaryToNext']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='BinaryToNext']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qsIELueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+        <semanticElements xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5qsvILueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input1ToBinary']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input1ToBinary']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5qyOsLueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+        <semanticElements xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5q3HMLueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input2ToBinary']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@borderedNodeMappings[name='Input2ToBinary']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_5qMY1rueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="204,242,166">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='BinaryExpressionN']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5q3HMrueEe-Jf-N8K8RwpQ" name="oppose" incomingEdges="_5rKpNbueEe-Jf-N8K8RwpQ" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculus:Opposite" href="Mean.clc#//@expressions.5"/>
       <semanticElements xmi:type="calculus:Opposite" href="Mean.clc#//@expressions.5"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5q6xkLueEe-Jf-N8K8RwpQ" outgoingEdges="_5rNsgLueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:Opposite" href="Mean.clc#//@expressions.5"/>
+        <semanticElements xmi:type="calculus:Opposite" href="Mean.clc#//@expressions.5"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5q904LueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='UnaryExpressionN']/@borderedNodeMappings[name='UnaryToNext']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='UnaryExpressionN']/@borderedNodeMappings[name='UnaryToNext']"/>
+      </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Rkf7ALuNEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="194,239,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='UnaryExpressionC']/@style"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_5q3HM7ueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="217,196,215">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='UnaryExpressionN']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='UnaryExpressionC']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='UnaryExpressionN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RkgiEbuNEe-VJdrmxlPcjg" name="resultat">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5q904rueEe-Jf-N8K8RwpQ" name="c" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+      <semanticElements xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_5rA4MLueEe-Jf-N8K8RwpQ" outgoingEdges="_5rQv0LueEe-Jf-N8K8RwpQ" width="2" height="2">
+        <target xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+        <semanticElements xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_5rA4MbueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='ConstanteN']/@borderedNodeMappings[name='ConstantToNext']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='ConstanteN']/@borderedNodeMappings[name='ConstantToNext']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_5q9047ueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='ConstanteN']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='ConstanteN']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_5rA4M7ueEe-Jf-N8K8RwpQ" name="resultat" incomingEdges="_5rNsgLueEe-Jf-N8K8RwpQ" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculus:Result" href="Mean.clc#//@expressions.6"/>
       <semanticElements xmi:type="calculus:Result" href="Mean.clc#//@expressions.6"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RkhJILuNEe-VJdrmxlPcjg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="246,139,139" foregroundColor="246,139,139">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='FinaleExpressionC']/@style"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_5rBfQLueEe-Jf-N8K8RwpQ" labelSize="12" showIcon="false" labelPosition="node" color="246,139,139">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='FinaleExpressionN']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@containerMappings[name='FinaleExpressionC']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@nodeMappings[name='FinaleExpressionN']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5rEikLueEe-Jf-N8K8RwpQ" sourceNode="_5qHgULueEe-Jf-N8K8RwpQ" targetNode="_5qMY0rueEe-Jf-N8K8RwpQ">
+      <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5rEikbueEe-Jf-N8K8RwpQ" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='ArgsToExpression']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5rEikrueEe-Jf-N8K8RwpQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='ArgsToExpression']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5rEilbueEe-Jf-N8K8RwpQ" sourceNode="_5qLKsrueEe-Jf-N8K8RwpQ" targetNode="_5qMY0rueEe-Jf-N8K8RwpQ">
+      <target xmi:type="calculus:InputsArgs" href="Mean.clc#//@expressions.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5rEilrueEe-Jf-N8K8RwpQ" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='ArgsToExpression']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5rEil7ueEe-Jf-N8K8RwpQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='ArgsToExpression']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5rKpMLueEe-Jf-N8K8RwpQ" sourceNode="_5qR4YLueEe-Jf-N8K8RwpQ" targetNode="_5qMY1bueEe-Jf-N8K8RwpQ">
+      <target xmi:type="calculus:Sum" href="Mean.clc#//@expressions.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5rKpMbueEe-Jf-N8K8RwpQ" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='BinaryToExpression']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5rKpMrueEe-Jf-N8K8RwpQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='BinaryToExpression']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5rKpNbueEe-Jf-N8K8RwpQ" sourceNode="_5qkMQLueEe-Jf-N8K8RwpQ" targetNode="_5q3HMrueEe-Jf-N8K8RwpQ">
+      <target xmi:type="calculus:Division" href="Mean.clc#//@expressions.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5rKpNrueEe-Jf-N8K8RwpQ" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='BinaryToExpression']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5rKpN7ueEe-Jf-N8K8RwpQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='BinaryToExpression']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5rNsgLueEe-Jf-N8K8RwpQ" sourceNode="_5q6xkLueEe-Jf-N8K8RwpQ" targetNode="_5rA4M7ueEe-Jf-N8K8RwpQ">
+      <target xmi:type="calculus:Opposite" href="Mean.clc#//@expressions.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5rNsgbueEe-Jf-N8K8RwpQ" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='UnaryToExpression']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5rNsgrueEe-Jf-N8K8RwpQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='UnaryToExpression']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5rQv0LueEe-Jf-N8K8RwpQ" sourceNode="_5rA4MLueEe-Jf-N8K8RwpQ" targetNode="_5qMY1bueEe-Jf-N8K8RwpQ">
+      <target xmi:type="calculus:Constante" href="Mean.clc#//@expressions.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5rQv0bueEe-Jf-N8K8RwpQ" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='ConstantToExpression']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5rQv0rueEe-Jf-N8K8RwpQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer/@edgeMappings[name='ConstantToExpression']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_GD40ALuMEe-VJdrmxlPcjg"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_5p9IQLueEe-Jf-N8K8RwpQ"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/fr.n7.chaiseMinute.calculus.design/description/calculus.odesign#//@ownedViewpoints[name='CalculusViewpoint']/@ownedRepresentations[name='CalculusDiagram']/@defaultLayer"/>
     <target xmi:type="calculus:Calculus" href="Mean.clc#/"/>
   </diagram:DSemanticDiagram>
