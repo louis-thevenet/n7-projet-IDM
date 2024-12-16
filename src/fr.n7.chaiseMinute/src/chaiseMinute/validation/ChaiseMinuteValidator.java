@@ -100,10 +100,11 @@ public class ChaiseMinuteValidator extends ChaiseMinuteSwitch<Boolean> {
 				object, 
 				"Le nom de la Table ne respecte pas les conventions Java");
 		
-		// inv IndexColumn
-		this.result.recordIfFailed(object.getIndexColumn() != null,
-				object, 
-				"La table ne contient pas d'index");
+		// Visite
+		for (Column column : object.getColumns()) {
+			this.doSwitch(column);
+		}
+		this.doSwitch(object.getIndexColumn());
 		
 		return null;
 	}
@@ -122,11 +123,16 @@ public class ChaiseMinuteValidator extends ChaiseMinuteSwitch<Boolean> {
 				object, 
 				"Le nom de la Column ne respecte pas les conventions Java");
 		
-		// inv PossedeUneType
+		// inv PossedeUnType
 		this.result.recordIfFailed(object.getType() != null,
 				object,
 				"Le type doit être spécifié");
 		
+		// inv NomUniqueColumn
+		this.result.recordIfFailed(object.getTable().getColumns().stream()
+				.filter(c -> c != object && c.getId().equals(object.getId())).count() <= 0,
+				object,
+				"Le nom de la colonne doit être unique dans la table.");
 		return null;
 	}
 
@@ -152,20 +158,15 @@ public class ChaiseMinuteValidator extends ChaiseMinuteSwitch<Boolean> {
 	public Boolean caseImportedColumn(ImportedColumn object) {
 		// Contraintes sur ImportedColumn
 		
-		// inv PossedeUnChemin
-		this.result.recordIfFailed(object.getPath() != null && object.getId().matches(IDENT_REGEX), 
-				object, 
-				"Le nom du chemin ne respecte pas les conventions Java");
-		
 		// inv CheminCorrect
 		String path = object.getPath();
 		if (!path.contains(".")) {
 			this.result.recordIfFailed(object.getTable().getColumns().stream()
 					.filter(c -> c.getId().equals(path)).count() == 1,
 					object,
-					"Le chemin est invalide");
+					"Le nom de la colonne est invalide : " + path);
 		} else {
-			String[] ps = path.split(".");
+			String[] ps = path.split("\\.");
 			try {
 				
 				String table = ps[0];
@@ -176,11 +177,11 @@ public class ChaiseMinuteValidator extends ChaiseMinuteSwitch<Boolean> {
 							&& t.getColumns().stream()
 								.filter(c -> c.getId().equals(column)).count() == 1).count() == 1, 
 						object,
-						"Le chemin est invalide");
+						"Le nom de la table ou de la colonne est invalide : " + path);
 			} catch (Exception e) {
 				this.result.recordIfFailed(false, 
 						object,
-						"Le chemin est invalide");
+						"Error process when path = " + path + "exception : " + e.getMessage());
 			}
 		}
 		return null;
