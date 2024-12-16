@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chaiseMinute:ChaiseMinute
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:chaiseMinute="http://chaiseMinute"
+    name="">
+  <tables name="NotesEtu4e5">
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="note1"
+        type="Int"/>
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="note2"/>
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="note3"/>
+    <indexColumn
+        id="noms"/>
+  </tables>
+  <tables name="NoteEtu6eme4">
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="note1"/>
+    <columns
+        xsi:type="chaiseMinute:ColumnData"
+        id="note2"/>
+    <indexColumn
+        id="noms"/>
+  </tables>
+</chaiseMinute:ChaiseMinute>

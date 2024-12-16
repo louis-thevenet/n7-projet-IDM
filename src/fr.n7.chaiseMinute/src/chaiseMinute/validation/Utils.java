@@ -7,6 +7,8 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 
+import chaiseMinute.ImportedColumn;
+
 /**
  * Classe utilitaire qui permet surtout de récupérer le nom d'un EObject pour
  * l'afficher de manière <i>user-friendly</i>.
@@ -44,14 +46,16 @@ public final class Utils {
 	 * @return nom deviné de l'objet
 	 */
 	public static String guessName(EObject object) {
-		List<EAttribute> attributes = object.eClass().getEAttributes();
+		List<EAttribute> attributes = object.eClass().getEAllAttributes();
 		
 		Iterator<EAttribute> it = attributes.iterator();
 		String name = null;
 		while (it.hasNext() && name == null) {
 			EAttribute a = it.next();
-			if (NamingAttributes.contains(a.getName())) {
+			if (NamingAttributes.contains(a.getName()) && object.eGet(a) != null) {
 				name = object.eGet(a).toString() + " [" + object.toString() + "]";
+			} else if (object.eGet(a) == null) {
+				name = " [" + object.toString() + "]";
 			}
 		}
 		
