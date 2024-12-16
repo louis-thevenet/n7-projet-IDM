@@ -12,7 +12,7 @@ def search(input, out, table, id):
 def load():
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-	csv_file_path = "table_visualizer.csv"
+	csv_file_path = "table.csv"
 	input["table"] = pd.read_csv(csv_file_path)
 	return input
 
@@ -95,59 +95,73 @@ def save_to_csv(tables):
 	pd.DataFrame.from_dict(tables["table"], orient="columns").to_csv("output_"+"table"+".csv", index_label="Date")
 
 
-# Fonction pour changer la table affichée dans le tableau
-def afficher_donnees(table_name):
-    df = tables_dict[table_name]
-    
-    # Vider l'ancienne vue (si applicable)
-    for item in tree.get_children():
-        tree.delete(item)
 
-    # Mettre à jour les colonnes
-    tree["columns"] = list(df.columns)
-    for col in df.columns:
-        tree.heading(col, text=col)
-        tree.column(col, width=100)
+class TableViewer(tk.Tk):
+    def __init__(self, tables):
+        super().__init__()
 
-    # Insérer les données
-    for index, row in df.iterrows():
-        tree.insert("", "end", values=list(row))
+        self.title("Table Viewer")
+        self.geometry("600x400")
 
-# Fonction pour mettre à jour la table affichée lorsque l'utilisateur change de sélection
-def on_table_select(event):
-    selected_table = table_selector.get()
-    afficher_donnees(selected_table)
+        self.tables = tables
+        self.current_table = None
 
+        self.table_listbox = tk.Listbox(self)
+        self.table_listbox.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        self.table_listbox.bind("<<ListboxSelect>>", self.on_table_select)
+
+        self.populate_table_list()
+
+        self.treeview = ttk.Treeview(self)
+        self.treeview.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+
+    def populate_table_list(self):
+        """Populate the listbox with the table names."""
+        for table_name in self.tables:
+            self.table_listbox.insert(tk.END, table_name)
+
+    def on_table_select(self, event):
+        """Handle table selection from the listbox."""
+        selected_index = self.table_listbox.curselection()
+        if not selected_index:
+            return
+
+        table_name = self.table_listbox.get(selected_index)
+        self.display_table(table_name)
+
+    def display_table(self, table_name):
+        """Display selected table in the Treeview."""
+        table = self.tables[table_name]
+
+        # Clear the previous table display
+        for item in self.treeview.get_children():
+            self.treeview.delete(item)
+
+        # Create columns
+        columns = list(table.keys())
+        self.treeview["columns"] = columns
+        self.treeview["show"] = "headings"
+
+        num_rows = 0
+        for col in columns:
+            self.treeview.heading(col, text=col)
+            print(table)
+            print(table[col])
+            if num_rows < len(table[col]):
+                num_rows = len(table[col])
 
 	
+		# Add rows 
+        for i in range(num_rows):
+            row = [table[col][i] for col in columns]
+            self.treeview.insert("", tk.END, values=row)
+
+
+
 def main():
-	input = load()
-	out = generate_output(input)
-	res_cons = check_constraints(input)
-	root = tk.Tk()
-	root.title("Visualisation des Données CSV")
-	
-	## Créer la fenêtre principale
-	root = tk.Tk()
-	root.title("Changer de Table CSV")
-	
-	# Ajouter un menu déroulant pour sélectionner une table
-	table_selector = ttk.Combobox(root, values=list(tables_dict.keys()))
-	table_selector.set(list(tables_dict.keys())[0])  # Sélectionner par défaut la première table
-	table_selector.pack(pady=10)
-	
-	# Lier l'événement de sélection de table
-	table_selector.bind("<<ComboboxSelected>>", on_table_select)
-	
-	# Créer un tableau pour afficher les données
-	tree = ttk.Treeview(root, show="headings")
-	tree.pack(expand=True, fill=tk.BOTH)
-	
-	# Afficher la table initiale (première table par défaut)
-	afficher_donnees(table_selector.get())
-
-# Lancer l'interface graphique
-root.mainloop()
+	tables_data = load()
+	app = TableViewer(tables_data)
+	app.mainloop()
 
 	
 

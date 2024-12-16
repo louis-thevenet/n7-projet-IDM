@@ -133,24 +133,4 @@ def main():
 	
 	# Ajouter un menu déroulant pour sélectionner une table
 	table_selector = ttk.Combobox(root, values=list(tables_dict.keys()))
-	table_selector.set(list(tables_dict.keys())[0])  # Sélectionner par défaut la première table
-	table_selector.pack(pady=10)
-	
-	# Lier l'événement de sélection de table
-	table_selector.bind("<<ComboboxSelected>>", on_table_select)
-	
-	# Créer un tableau pour afficher les données
-	tree = ttk.Treeview(root, show="headings")
-	tree.pack(expand=True, fill=tk.BOTH)
-	
-	# Afficher la table initiale (première table par défaut)
-	afficher_donnees(table_selector.get())
-
-# Lancer l'interface graphique
-root.mainloop()
-
-	
-
-if __name__ == '__main__':
-	main()
-
+	table_selector.set(list(tables_dict.keys())
