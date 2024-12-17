@@ -5,7 +5,7 @@
   subject: "Ingénierie Dirigée par les Modèles",
   title: "Projet IDM : chaiseMinute",
   authors: (
-    "LEBOBE Timothée",
+    "LEBOBE Timothé",
     "LECUYER Simon",
     "SABLAYROLLES Guillaume",
     "THEVENET Louis",
@@ -71,6 +71,26 @@ Une `Function` est représentée par un identifiant qui référence un programme
 
 === Limitations
 On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on aurait pu construire un arbre d'appels et prendre la sortie de plusieurs fonctions à la fois en arguments. On peut quand même obtenir ce résultat avec le système actuel en adaptant les fonctions Python pour qu'elles renvoient plusieurs colonnes, ainsi en adaptant la fonction suivante pour qu'elle récupère ces deux colonnes, on imite le fonctionnement d'un arbre d'appels.
+
+== `Calculus`
+#figure(
+  image("images/calculusv2Diagram.svg", width: 110%),
+  caption: [Calculus Diagram.],
+) <calculusDiagram>
+
+`Calculus` représente le méta-modèle des fonctions/calculs éditables à l'aide d'une syntaxe graphique par un utilisateur. Un `Calculus` représente un ensemble de `CalculusElement` qui peuvent se décomposer en trois grandes parties : `UsableExpression`, `PipeSuper` et `FinalExpression`.
+
+- `UsableExpression` décrit les expressions pouvant être appelées pour réaliser le calcul :
+  - `InputArgs` pour les arguments en entrée du `Calculus`,
+  - `Constante` pour décrire les constantes pouvant être écrite en dure dans les suites de calculs. Ces deux premiers ne peuvent que fournir des valeurs à l'intérieur du `Calculus` et donc n'ont pas d'expression en entrée,
+  - `Operation` décrit une opération possible à l'intérieur du calcul, pouvant être à deux entrées (`BinaryExpression`) ou à une seule entrée (`UnaryExpression`)
+- `PipeSuper` représente les liens entre les `UsableExpression` pour décrire l'odre des calculs et l'odre des appels : 
+  - `Pipe` pour décrire les liens, les entrées et les sorties, entre les calculs,
+  - `PipeFinal` indique que les calculs redirige vers la sortie finale, la donnée retournée du `Calculus`, 
+- `FinalExpression` indique la fin du calcul.
+
+=== Limitations 
+Nous avons donné des opérations de calcul "classique" utilisable directement par l'utilisateur : `Sum`, `Substraction`, `Products`, `Division`, `Oppose` et `Reciprocal` mais nous aurions pu rajouter des opérations mathématiques plus avancées (sin, cos, exp, modulo, ...) ou juste définir des opérations unaire ou binaire en les décrivants par un argument `opération`.  
 
 = Transforamtions Texte à Modèle de `ChaiseMinute`
 == Syntaxe Textuelle
