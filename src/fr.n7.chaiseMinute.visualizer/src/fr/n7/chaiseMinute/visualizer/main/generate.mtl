@@ -133,150 +133,115 @@ def save_to_csv(tables):
 
 
 class TableViewer(tk.Tk):
-    def __init__(self, tables):
-        super().__init__()
+	def __init__(self, tables):
+		super().__init__()
 
-        self.title("Table Viewer")
-        self.geometry("1500x800")
+		self.title("Table Viewer")
+		self.geometry("1500x800")
 
-        self.tables = tables
-        self.current_table = None
+		self.tables = tables
+		self.current_table = None
 
-        self.left_frame = tk.Frame(self)
-        self.left_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nswe")
+		self.left_frame = tk.Frame(self)
+		self.left_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nswe")
 
-        self.table_listbox = tk.Listbox(self.left_frame, height=20)
-        self.table_listbox.pack(fill=tk.Y, padx=10)
-        self.table_listbox.bind("<<ListboxSelect>>", self.on_table_select)
+		self.table_listbox = tk.Listbox(self.left_frame, height=20)
+		self.table_listbox.pack(fill=tk.Y, padx=10)
+		self.table_listbox.bind("<<ListboxSelect>>", self.on_table_select)
 
-        self.populate_table_list()
+		self.populate_table_list()
 
-        self.right_frame = tk.Frame(self)
-        self.right_frame.grid(row=0, column=1, padx=10, pady=10, sticky="nswe")
+		self.right_frame = tk.Frame(self)
+		self.right_frame.grid(row=0, column=1, padx=10, pady=10, sticky="nswe")
 
-        self.treeview = ttk.Treeview(self.right_frame)
-        self.treeview.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+		self.treeview = ttk.Treeview(self.right_frame)
+		self.treeview.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-        self.grid_columnconfigure(0, weight=1, uniform="equal")
-        self.grid_columnconfigure(1, weight=3, uniform="equal")
+		self.grid_columnconfigure(0, weight=1, uniform="equal")
+		self.grid_columnconfigure(1, weight=3, uniform="equal")
 
-    def populate_table_list(self):
-        """Populate the listbox with the table names."""
-        for table_name in self.tables:
-            self.table_listbox.insert(tk.END, table_name)
+		self.create_menu()
 
-    def on_table_select(self, event):
-        """Handle table selection from the listbox."""
-        selected_index = self.table_listbox.curselection()
-        if not selected_index:
-            return
+	def create_menu(self):
+		"""Create a menu bar with options."""
+		menubar = tk.Menu(self)
+		self.config(menu=menubar)
 
-        table_name = self.table_listbox.get(selected_index)
-        self.display_table(table_name)
+		file_menu = tk.Menu(menubar, tearoff=0)
+		menubar.add_cascade(label="File", menu=file_menu)
+		file_menu.add_command(label="Save", command=self.save_table)
+		file_menu.add_separator()
+		file_menu.add_command(label="Exit", command=self.quit)
 
-    def display_table(self, table_name):
-        """Display selected table in the Treeview."""
-        table = self.tables['['/]table_name]
+	def populate_table_list(self):
+		"""Populate the listbox with the table names."""
+		for table_name in self.tables:
+			self.table_listbox.insert(tk.END, table_name)
 
-        for item in self.treeview.get_children():
-            self.treeview.delete(item)
+	def on_table_select(self, event):
+		"""Handle table selection from the listbox."""
+		selected_index = self.table_listbox.curselection()
+		if not selected_index:
+			return
 
-        columns = list(table.keys())
-        self.treeview['['/]"columns"] = columns
-        self.treeview['['/]"show"] = "headings"
+		table_name = self.table_listbox.get(selected_index)
+		self.display_table(table_name)
 
-        num_rows = 0
-        for col in columns:
-            self.treeview.heading(col, text=col)
-            if num_rows < len(table['['/]col]):
-                num_rows = len(table['['/]col])
+	def display_table(self, table_name):
+		"""Display selected table in the Treeview."""
+		table = self.tables[table_name]
 
-        for i in range(num_rows):
-            row = ['['/]table['['/]col]['['/]i] for col in columns]
-            self.treeview.insert("", tk.END, values=row)
+		for item in self.treeview.get_children():
+			self.treeview.delete(item)
 
+		columns = list(table.keys())
+		self.treeview["columns"] = columns
+		self.treeview["show"] = "headings"
+
+		for col in columns:
+			self.treeview.heading(col, text=col, command=lambda _col=col: self.sort_by(_col, False))
+			self.treeview.column(col, width=tk.font.Font().measure(col))
+
+		for i in range(len(table[columns[0]])):
+			row = [table[col][i] for col in columns]
+			self.treeview.insert("", tk.END, values=row)
+
+		for col in columns:
+			self.treeview.column(col, width=tk.font.Font().measure(col))
+
+	def sort_by(self, col, descending):
+		"""Sort treeview contents when a column header is clicked."""
+		data = [(self.treeview.set(child, col), child) for child in self.treeview.get_children('')]
+		data.sort(reverse=descending)
+
+		for index, (val, child) in enumerate(data):
+			self.treeview.move(child, '', index)
+
+		self.treeview.heading(col, command=lambda: self.sort_by(col, not descending))
+
+	def save_table(self):
+		"""Save the currently displayed table to a CSV file."""
+		if self.current_table:
+			df = pd.DataFrame(self.tables[self.current_table])
+			df.to_csv(f"output_{self.current_table}.csv", index=False)
+			tk.messagebox.showinfo("Save Table", f"Table '{self.current_table}' saved successfully.")
+		else:
+			tk.messagebox.showwarning("Save Table", "No table selected to save.")
 
 
 def main():
-	tables_data = load(sys.argv['['/]1:])
+	tables_data = load(sys.argv[1:])
 	res, msg = check_constraints(tables_data)
 	if not res:
 		print(msg)
 		return 
-	
+
 	tables_data = generate_output(tables_data)
-	app = TableViewer(tables_data)
+	app = TableViewer(ttables_data)
 	app.mainloop()
 
 if __name__ == '__main__':
 	main()
-
-[/file]
-[/template]
-[query public getLastFunction(arg : Algorithm) :Function = arg.functions -> last()/]
-[query public getTable(arg : ChaiseMinute, name: String) : Table = arg.tables 
--> select(e | e.oclIsTypeOf(Table) and e.name = name)
--> collect(e | e.oclAsType(Table)) 
-/]
-[query public getTables(arg : ChaiseMinute): OrderedSet(Table) = arg.tables 
--> select(e | e.oclIsTypeOf(Table))
--> collect(e | e.oclAsType(Table)) 
--> asOrderedSet()
-/]
-
-[template public generateElement(aTable: Table)]
-	out = {}
-	###########################################################################
-	# Table: [aTable.name/]
-	###########################################################################
-	[for (c: Column | aTable.columns)]
-		[if (c.oclIsKindOf(ColumnData))]
-	################################
-	## Data column: [c.id/] 
-	################################
-	out['['/]"[c.id/]"]=input['['/]"[aTable.name/]"]['['/]"[c.id/]"]
-
-		[elseif (c.oclIsTypeOf(ImportedColumn))]
-			[let table:String = c.oclAsType(ImportedColumn).path.replaceAll('\\..*', '')]
-			[let id:String = c.oclAsType(ImportedColumn).path.replaceFirst('.*\\.', '')]
-	### Imported column: [c.id/] from [c.oclAsType(ImportedColumn).path/] ###
-	out['['/]"[c.id/]"]=input['['/]"[table/]"]['['/]"[id/]"]
-
-			[/let]
-			[/let]
-		[else]
-		[/if]
-	[/for]
-	[for (c: Column | aTable.columns)]
-		[if (c.oclIsKindOf(ComputedColumn))]
-	################################			
-	## Computed column: [c.id/] 
-	################################
-			[for (f : Function | c.oclAsType(ComputedColumn).algorithm.functions) ]
-	### Apply [f.name/] ##
-	from [f.name/] import [f.name/]
-				[let functionNo :Integer= i]
-	out['['/]"[c.id/]"] = [f.name/](
-					[for (input : Argument | f.inputs)]
-					[if (functionNo >=2)]
-		out['['/]"[c.id/]"], # Previous result used in next function
-					[/if]
-					[if input.oclIsTypeOf(ColumnArgument)]
-						[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
-						[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
-		search(input, out, "[table/]", "[id/]"),
-						[/let][/let]
-					[/if]			
-					[/for]
-				[/let]
-	)
-	###############
-			[/for]
-		[/if]
-	[/for]
-	tables['['/]"[aTable.name/]"] = out
-
-[/template]
 
 
 
