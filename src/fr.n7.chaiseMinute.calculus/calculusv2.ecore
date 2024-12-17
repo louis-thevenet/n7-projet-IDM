@@ -37,7 +37,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Products" eSuperTypes="#//BinaryOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Substraction" eSuperTypes="#//BinaryOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//BinaryOperation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Constante" eSuperTypes="#//UsableExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constante" eSuperTypes="#//UsableExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Result" eSuperTypes="#//FinalExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Pipe" eSuperTypes="#//CalculusElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"

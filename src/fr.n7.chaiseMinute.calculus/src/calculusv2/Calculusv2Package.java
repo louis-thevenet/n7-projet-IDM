@@ -826,13 +826,22 @@ public interface Calculusv2Package extends EPackage {
 	int CONSTANTE__USED_BY = USABLE_EXPRESSION__USED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE__VALUE = USABLE_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Constante</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTANTE_FEATURE_COUNT = USABLE_EXPRESSION_FEATURE_COUNT + 0;
+	int CONSTANTE_FEATURE_COUNT = USABLE_EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Constante</em>' class.
@@ -1237,6 +1246,17 @@ public interface Calculusv2Package extends EPackage {
 	EClass getConstante();
 
 	/**
+	 * Returns the meta object for the attribute '{@link calculusv2.Constante#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see calculusv2.Constante#getValue()
+	 * @see #getConstante()
+	 * @generated
+	 */
+	EAttribute getConstante_Value();
+
+	/**
 	 * Returns the meta object for class '{@link calculusv2.Result <em>Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1526,6 +1546,14 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTANTE = eINSTANCE.getConstante();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTANTE__VALUE = eINSTANCE.getConstante_Value();
 
 		/**
 		 * The meta object literal for the '{@link calculusv2.impl.ResultImpl <em>Result</em>}' class.

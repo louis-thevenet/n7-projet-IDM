@@ -31,7 +31,9 @@
     <genClasses ecoreClass="calculusv2.ecore#//Products"/>
     <genClasses ecoreClass="calculusv2.ecore#//Substraction"/>
     <genClasses ecoreClass="calculusv2.ecore#//Division"/>
-    <genClasses ecoreClass="calculusv2.ecore#//Constante"/>
+    <genClasses ecoreClass="calculusv2.ecore#//Constante">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculusv2.ecore#//Constante/value"/>
+    </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//Result"/>
     <genClasses ecoreClass="calculusv2.ecore#//Pipe">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Pipe/source"/>

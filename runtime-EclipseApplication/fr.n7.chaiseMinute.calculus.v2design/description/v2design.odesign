@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="v2design" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="v2design" version="12.0.0.2017041100">
   <ownedViewpoints name="calculusv2Viewpoint" modelFileExtension="clc">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="v2Diag" domainClass="calculusv2::Calculus" enablePopupBars="true">
       <metamodel href="http://calculusv2#/"/>
@@ -8,14 +8,14 @@
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="bN" domainClass="calculusv2::BinaryOperation">
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="uN" domainClass="calculusv2::UnaryOperation">
@@ -36,7 +36,7 @@
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
         <edgeMappings name="PE" sourceMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='bN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='cN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='iaN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='uN']" targetMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='bN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='cN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='iaN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='uN']" targetFinderExpression="[target/]" sourceFinderExpression="[source/]" domainClass="calculusv2::Pipe" useDomainElement="true">
@@ -55,6 +55,36 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <toolSections name="EDC">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="PFEC" edgeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PFE']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::PipeFinal" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="[source/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="[target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="PEC" edgeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PE']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::PipeFinal" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="[source/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="[target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.n7.chaiseMinute.calculus.v2design.Services"/>

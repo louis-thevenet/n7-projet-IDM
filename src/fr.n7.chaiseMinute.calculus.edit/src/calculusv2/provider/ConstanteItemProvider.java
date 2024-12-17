@@ -62,6 +62,7 @@ public class ConstanteItemProvider
 
 			addNamePropertyDescriptor(object);
 			addUsedByPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,6 +112,28 @@ public class ConstanteItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Constante_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Constante_value_feature", "_UI_Constante_type"),
+				 Calculusv2Package.Literals.CONSTANTE__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Constante.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -149,6 +172,7 @@ public class ConstanteItemProvider
 
 		switch (notification.getFeatureID(Constante.class)) {
 			case Calculusv2Package.CONSTANTE__NAME:
+			case Calculusv2Package.CONSTANTE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

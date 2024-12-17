@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calculusv2:Calculus xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calculusv2="http://calculusv2" name="Tes">
+  <elements xsi:type="calculusv2:InputArgs" name="min"/>
+  <elements xsi:type="calculusv2:InputArgs" name="max"/>
+  <elements xsi:type="calculusv2:Sum" name="Somme" usedBy="//@elements.5"/>
+  <elements xsi:type="calculusv2:Division" name="div" beforeFirst="//@elements.5"/>
+  <elements xsi:type="calculusv2:Constante" name="c" value="2.0"/>
+  <elements xsi:type="calculusv2:Pipe" name="S2D" source="//@elements.2" target="//@elements.3"/>
+  <elements xsi:type="calculusv2:Result" name="Res"/>
+  <elements xsi:type="calculusv2:PipeFinal" source="//@elements.3" target="//@elements.6"/>
+</calculusv2:Calculus>

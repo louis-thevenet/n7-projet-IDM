@@ -38,8 +38,9 @@
       beforeSecond="//@elements.7"/>
   <elements
       xsi:type="calculusv2:Constante"
-      name="2"
-      usedBy="//@elements.7"/>
+      name="c"
+      usedBy="//@elements.7"
+      value="2.0"/>
   <elements
       xsi:type="calculusv2:Pipe"
       name="2ToD"

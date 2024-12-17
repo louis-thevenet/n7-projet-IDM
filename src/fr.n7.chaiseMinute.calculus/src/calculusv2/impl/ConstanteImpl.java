@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link calculusv2.impl.ConstanteImpl#getCalculus <em>Calculus</em>}</li>
  *   <li>{@link calculusv2.impl.ConstanteImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculusv2.impl.ConstanteImpl#getUsedBy <em>Used By</em>}</li>
+ *   <li>{@link calculusv2.impl.ConstanteImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +70,26 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 	 * @ordered
 	 */
 	protected EList<Pipe> usedBy;
+
+	/**
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float VALUE_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected float value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,6 +194,29 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public float getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setValue(float newValue) {
+		float oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.CONSTANTE__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -231,6 +275,8 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 				return getName();
 			case Calculusv2Package.CONSTANTE__USED_BY:
 				return getUsedBy();
+			case Calculusv2Package.CONSTANTE__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -254,6 +300,9 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 				getUsedBy().clear();
 				getUsedBy().addAll((Collection<? extends Pipe>)newValue);
 				return;
+			case Calculusv2Package.CONSTANTE__VALUE:
+				setValue((Float)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -275,6 +324,9 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 			case Calculusv2Package.CONSTANTE__USED_BY:
 				getUsedBy().clear();
 				return;
+			case Calculusv2Package.CONSTANTE__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -293,6 +345,8 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case Calculusv2Package.CONSTANTE__USED_BY:
 				return usedBy != null && !usedBy.isEmpty();
+			case Calculusv2Package.CONSTANTE__VALUE:
+				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -309,6 +363,8 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", value: ");
+		result.append(value);
 		result.append(')');
 		return result.toString();
 	}

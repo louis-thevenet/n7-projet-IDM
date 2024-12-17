@@ -423,6 +423,16 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getConstante_Value() {
+		return (EAttribute)constanteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getResult() {
 		return resultEClass;
 	}
@@ -549,6 +559,7 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		divisionEClass = createEClass(DIVISION);
 
 		constanteEClass = createEClass(CONSTANTE);
+		createEAttribute(constanteEClass, CONSTANTE__VALUE);
 
 		resultEClass = createEClass(RESULT);
 
@@ -638,6 +649,7 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		initEClass(divisionEClass, Division.class, "Division", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constanteEClass, Constante.class, "Constante", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getConstante_Value(), ecorePackage.getEFloat(), "value", null, 1, 1, Constante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
