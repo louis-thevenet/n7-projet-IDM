@@ -23,14 +23,12 @@ public interface Operation extends UsableExpression {
 
 	/**
 	 * Returns the value of the '<em><b>Before</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link calculusv2.Pipe#getTargetPipe <em>Target Pipe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Before</em>' reference.
 	 * @see #setBefore(Pipe)
 	 * @see calculusv2.Calculusv2Package#getOperation_Before()
-	 * @see calculusv2.Pipe#getTargetPipe
-	 * @model opposite="targetPipe" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	Pipe getBefore();

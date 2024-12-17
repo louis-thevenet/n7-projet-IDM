@@ -16,7 +16,7 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_U7EX4LyCEe-Xd9xKUmp-ug" name="new v2Diag" repPath="#_U7CisLyCEe-Xd9xKUmp-ug" changeId="1734450682226">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nXTWwLyPEe-8g4jMn5fImg" name="CalculusDiag" repPath="#_nXC4ELyPEe-8g4jMn5fImg" changeId="1734453833960">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nXTWwLyPEe-8g4jMn5fImg" name="CalculusDiag" repPath="#_nXC4ELyPEe-8g4jMn5fImg" changeId="1734456044504">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']"/>
         <target xmi:type="calculusv2:Calculus" href="Mean.clc#/"/>
       </ownedRepresentationDescriptors>
@@ -783,25 +783,9 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FyOrW7yUEe-W39Ims_LT7A"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_FyOEQ7yUEe-W39Ims_LT7A" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FyOERLyUEe-W39Ims_LT7A" x="284" y="240" width="30" height="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FyOERLyUEe-W39Ims_LT7A" x="284" y="240" width="53" height="33"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_nXkcgryPEe-8g4jMn5fImg"/>
-        <edges xmi:type="notation:Edge" xmi:id="_-v60QLyVEe-7VctSD2F0tg" type="4001" element="_-vunALyVEe-7VctSD2F0tg" source="_s0f_QLyPEe-8g4jMn5fImg" target="_tqImwLyPEe-8g4jMn5fImg">
-          <children xmi:type="notation:Node" xmi:id="_-v_FsLyVEe-7VctSD2F0tg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-v_FsbyVEe-7VctSD2F0tg" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_-v_swLyVEe-7VctSD2F0tg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-v_swbyVEe-7VctSD2F0tg" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_-wAT0LyVEe-7VctSD2F0tg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-wA64LyVEe-7VctSD2F0tg" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-v60QbyVEe-7VctSD2F0tg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_-v60QryVEe-7VctSD2F0tg" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-v60Q7yVEe-7VctSD2F0tg" points="[0, 0, -162, 56]$[162, -56, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-wFzYLyVEe-7VctSD2F0tg" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-wFzYbyVEe-7VctSD2F0tg" id="(0.5,0.5)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_BOJxQLyWEe-7VctSD2F0tg" type="4001" element="_BN888LyWEe-7VctSD2F0tg" source="_tqImwLyPEe-8g4jMn5fImg" target="_FyM2ILyUEe-W39Ims_LT7A">
           <children xmi:type="notation:Node" xmi:id="_BOJxRLyWEe-7VctSD2F0tg" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BOJxRbyWEe-7VctSD2F0tg" y="-10"/>
@@ -817,22 +801,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BOJxQ7yWEe-7VctSD2F0tg" points="[0, 0, -127, 0]$[127, 0, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BOKYULyWEe-7VctSD2F0tg" id="(1.0,0.6140350877192983)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BOKYUbyWEe-7VctSD2F0tg" id="(0.0,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_EADRILyWEe-7VctSD2F0tg" type="4001" element="_D_45FLyWEe-7VctSD2F0tg" source="_FyM2ILyUEe-W39Ims_LT7A" target="_FyNdMryUEe-W39Ims_LT7A">
-          <children xmi:type="notation:Node" xmi:id="_EAD4MLyWEe-7VctSD2F0tg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EAD4MbyWEe-7VctSD2F0tg" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_EAD4MryWEe-7VctSD2F0tg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EAD4M7yWEe-7VctSD2F0tg" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_EAD4NLyWEe-7VctSD2F0tg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EAD4NbyWEe-7VctSD2F0tg" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_EADRIbyWEe-7VctSD2F0tg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_EADRIryWEe-7VctSD2F0tg" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EADRI7yWEe-7VctSD2F0tg" points="[0, 0, -94, -24]$[94, 24, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EAD4NryWEe-7VctSD2F0tg" id="(1.0,0.5333333333333333)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EAD4N7yWEe-7VctSD2F0tg" id="(0.0,0.13333333333333333)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_EcZ18LyWEe-7VctSD2F0tg" type="4001" element="_Eb_mQLyWEe-7VctSD2F0tg" source="_FyNdMryUEe-W39Ims_LT7A" target="_FyNdN7yUEe-W39Ims_LT7A">
           <children xmi:type="notation:Node" xmi:id="_EcZ19LyWEe-7VctSD2F0tg" type="6001">
@@ -850,12 +818,76 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EcadALyWEe-7VctSD2F0tg" id="(1.0,0.5333333333333333)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EcadAbyWEe-7VctSD2F0tg" id="(0.0,0.5333333333333333)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_lgPi8LyZEe--ZPz6Fj2E1Q" type="4001" element="_lgA5cLyZEe--ZPz6Fj2E1Q" source="_FyM2ILyUEe-W39Ims_LT7A" target="_FyNdMryUEe-W39Ims_LT7A">
+          <children xmi:type="notation:Node" xmi:id="_lgPi9LyZEe--ZPz6Fj2E1Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lgPi9byZEe--ZPz6Fj2E1Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_lgPi9ryZEe--ZPz6Fj2E1Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lgPi97yZEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_lgPi-LyZEe--ZPz6Fj2E1Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lgPi-byZEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_lgPi8byZEe--ZPz6Fj2E1Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_lgPi8ryZEe--ZPz6Fj2E1Q" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lgPi87yZEe--ZPz6Fj2E1Q" points="[0, 0, -94, -32]$[94, 32, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lgPi-ryZEe--ZPz6Fj2E1Q" id="(1.0,0.5333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lgPi-7yZEe--ZPz6Fj2E1Q" id="(0.0,0.4)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_HTDgsLybEe--ZPz6Fj2E1Q" type="4001" element="_HTBEdLybEe--ZPz6Fj2E1Q" source="_s0f_QLyPEe-8g4jMn5fImg" target="_tqImwLyPEe-8g4jMn5fImg">
+          <children xmi:type="notation:Node" xmi:id="_HTDgtLybEe--ZPz6Fj2E1Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HTDgtbybEe--ZPz6Fj2E1Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HTDgtrybEe--ZPz6Fj2E1Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HTDgt7ybEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HTDguLybEe--ZPz6Fj2E1Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HTDgubybEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_HTDgsbybEe--ZPz6Fj2E1Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_HTDgsrybEe--ZPz6Fj2E1Q" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HTDgs7ybEe--ZPz6Fj2E1Q" points="[0, 0, -83, 36]$[83, -36, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HTEHwLybEe--ZPz6Fj2E1Q" id="(1.0,0.3508771929824561)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HTEHwbybEe--ZPz6Fj2E1Q" id="(0.0,0.7017543859649122)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IlrmNrybEe--ZPz6Fj2E1Q" type="4001" element="_IlpxBLybEe--ZPz6Fj2E1Q" source="_rxwI0LyPEe-8g4jMn5fImg" target="_tqImwLyPEe-8g4jMn5fImg">
+          <children xmi:type="notation:Node" xmi:id="_IlsNQLybEe--ZPz6Fj2E1Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IlsNQbybEe--ZPz6Fj2E1Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IlsNQrybEe--ZPz6Fj2E1Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IlsNQ7ybEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IlsNRLybEe--ZPz6Fj2E1Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IlsNRbybEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IlrmN7ybEe--ZPz6Fj2E1Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IlrmOLybEe--ZPz6Fj2E1Q" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IlrmObybEe--ZPz6Fj2E1Q" points="[0, 0, -123, -48]$[123, 48, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IlsNRrybEe--ZPz6Fj2E1Q" id="(1.0,0.24489795918367346)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IlsNR7ybEe--ZPz6Fj2E1Q" id="(0.0,0.42105263157894735)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Jvef0LybEe--ZPz6Fj2E1Q" type="4001" element="_JvUu1rybEe--ZPz6Fj2E1Q" source="_FyOEQryUEe-W39Ims_LT7A" target="_FyM2ILyUEe-W39Ims_LT7A">
+          <children xmi:type="notation:Node" xmi:id="_Jvef1LybEe--ZPz6Fj2E1Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jvef1bybEe--ZPz6Fj2E1Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jvef1rybEe--ZPz6Fj2E1Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jvef17ybEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jvef2LybEe--ZPz6Fj2E1Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jvef2bybEe--ZPz6Fj2E1Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Jvef0bybEe--ZPz6Fj2E1Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Jvef0rybEe--ZPz6Fj2E1Q" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Jvef07ybEe--ZPz6Fj2E1Q" points="[0, 0, -76, 88]$[76, -88, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jvef2rybEe--ZPz6Fj2E1Q" id="(0.6037735849056604,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JvfG4LybEe--ZPz6Fj2E1Q" id="(0.0,0.6666666666666666)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_nXtmcLyPEe-8g4jMn5fImg" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_nXtmcbyPEe-8g4jMn5fImg"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_rxm-4LyPEe-8g4jMn5fImg" name="min" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_rxm-4LyPEe-8g4jMn5fImg" name="min" outgoingEdges="_IlpxBLybEe--ZPz6Fj2E1Q" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculusv2:InputArgs" href="Mean.clc#//@elements.0"/>
       <semanticElements xmi:type="calculusv2:InputArgs" href="Mean.clc#//@elements.0"/>
       <ownedStyle xmi:type="diagram:Square" uid="_rxoNALyPEe-8g4jMn5fImg" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
@@ -863,7 +895,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='InputArgsN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_s0Z4oLyPEe-8g4jMn5fImg" name="max" outgoingEdges="_-vunALyVEe-7VctSD2F0tg" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_s0Z4oLyPEe-8g4jMn5fImg" name="max" outgoingEdges="_HTBEdLybEe--ZPz6Fj2E1Q" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculusv2:InputArgs" href="Mean.clc#//@elements.1"/>
       <semanticElements xmi:type="calculusv2:InputArgs" href="Mean.clc#//@elements.1"/>
       <ownedStyle xmi:type="diagram:Square" uid="_s0afsLyPEe-8g4jMn5fImg" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
@@ -871,7 +903,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='InputArgsN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tqDuQLyPEe-8g4jMn5fImg" name="Somme" outgoingEdges="_BN888LyWEe-7VctSD2F0tg" incomingEdges="_-vunALyVEe-7VctSD2F0tg" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tqDuQLyPEe-8g4jMn5fImg" name="Somme" outgoingEdges="_BN888LyWEe-7VctSD2F0tg" incomingEdges="_HTBEdLybEe--ZPz6Fj2E1Q _IlpxBLybEe--ZPz6Fj2E1Q" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculusv2:Sum" href="Mean.clc#//@elements.2"/>
       <semanticElements xmi:type="calculusv2:Sum" href="Mean.clc#//@elements.2"/>
       <ownedStyle xmi:type="diagram:Square" uid="_tqDuQbyPEe-8g4jMn5fImg" labelSize="12" showIcon="false" labelPosition="node" color="204,242,166">
@@ -879,7 +911,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='binaryOperationN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FyGvhbyUEe-W39Ims_LT7A" name="Div" outgoingEdges="_D_45FLyWEe-7VctSD2F0tg" incomingEdges="_BN888LyWEe-7VctSD2F0tg" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FyGvhbyUEe-W39Ims_LT7A" name="Div" outgoingEdges="_lgA5cLyZEe--ZPz6Fj2E1Q" incomingEdges="_BN888LyWEe-7VctSD2F0tg _JvUu1rybEe--ZPz6Fj2E1Q" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculusv2:Division" href="Mean.clc#//@elements.3"/>
       <semanticElements xmi:type="calculusv2:Division" href="Mean.clc#//@elements.3"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -890,7 +922,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='binaryOperationN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FyHWkbyUEe-W39Ims_LT7A" name="Opp" outgoingEdges="_Eb_mQLyWEe-7VctSD2F0tg" incomingEdges="_D_45FLyWEe-7VctSD2F0tg" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FyHWkbyUEe-W39Ims_LT7A" name="Opp" outgoingEdges="_Eb_mQLyWEe-7VctSD2F0tg" incomingEdges="_lgA5cLyZEe--ZPz6Fj2E1Q" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculusv2:Oppose" href="Mean.clc#//@elements.5"/>
       <semanticElements xmi:type="calculusv2:Oppose" href="Mean.clc#//@elements.5"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -912,7 +944,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='FinalExpressionN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FyH9obyUEe-W39Ims_LT7A" name="C : 2.0" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FyH9obyUEe-W39Ims_LT7A" name="C : 2.0" outgoingEdges="_JvUu1rybEe--ZPz6Fj2E1Q" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calculusv2:Constante" href="Mean.clc#//@elements.4"/>
       <semanticElements xmi:type="calculusv2:Constante" href="Mean.clc#//@elements.4"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -923,41 +955,59 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='ConstantN']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-vunALyVEe-7VctSD2F0tg" name="max2S" sourceNode="_s0Z4oLyPEe-8g4jMn5fImg" targetNode="_tqDuQLyPEe-8g4jMn5fImg">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_BN888LyWEe-7VctSD2F0tg" name="S2D" sourceNode="_tqDuQLyPEe-8g4jMn5fImg" targetNode="_FyGvhbyUEe-W39Ims_LT7A">
       <target xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.7"/>
       <semanticElements xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.7"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-vv1ILyVEe-7VctSD2F0tg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-vv1IbyVEe-7VctSD2F0tg" labelSize="12" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_BN888LyWEe-7VctSD2F0tg" name="S2D" sourceNode="_tqDuQLyPEe-8g4jMn5fImg" targetNode="_FyGvhbyUEe-W39Ims_LT7A">
-      <target xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.8"/>
-      <semanticElements xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.8"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_BN9kALyWEe-7VctSD2F0tg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_BN9kAbyWEe-7VctSD2F0tg" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_D_45FLyWEe-7VctSD2F0tg" name="D2O" sourceNode="_FyGvhbyUEe-W39Ims_LT7A" targetNode="_FyHWkbyUEe-W39Ims_LT7A">
-      <target xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.9"/>
-      <semanticElements xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.9"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_D_5gILyWEe-7VctSD2F0tg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_D_5gIbyWEe-7VctSD2F0tg" labelSize="12" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Eb_mQLyWEe-7VctSD2F0tg" name="O2R" sourceNode="_FyHWkbyUEe-W39Ims_LT7A" targetNode="_FyHWlLyUEe-W39Ims_LT7A">
-      <target xmi:type="calculusv2:PipeFinal" href="Mean.clc#//@elements.10"/>
-      <semanticElements xmi:type="calculusv2:PipeFinal" href="Mean.clc#//@elements.10"/>
+      <target xmi:type="calculusv2:PipeFinal" href="Mean.clc#//@elements.8"/>
+      <semanticElements xmi:type="calculusv2:PipeFinal" href="Mean.clc#//@elements.8"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Eb_mQbyWEe-7VctSD2F0tg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeFinalE']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Eb_mQryWEe-7VctSD2F0tg" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeFinalE']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_lgA5cLyZEe--ZPz6Fj2E1Q" name="D2O" sourceNode="_FyGvhbyUEe-W39Ims_LT7A" targetNode="_FyHWkbyUEe-W39Ims_LT7A">
+      <target xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.9"/>
+      <semanticElements xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.9"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_lgA5cbyZEe--ZPz6Fj2E1Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_lgA5cryZEe--ZPz6Fj2E1Q" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HTBEdLybEe--ZPz6Fj2E1Q" name="max2S" sourceNode="_s0Z4oLyPEe-8g4jMn5fImg" targetNode="_tqDuQLyPEe-8g4jMn5fImg">
+      <target xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.10"/>
+      <semanticElements xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.10"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HTBEdbybEe--ZPz6Fj2E1Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_HTBEdrybEe--ZPz6Fj2E1Q" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IlpxBLybEe--ZPz6Fj2E1Q" name="min2S" sourceNode="_rxm-4LyPEe-8g4jMn5fImg" targetNode="_tqDuQLyPEe-8g4jMn5fImg">
+      <target xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.11"/>
+      <semanticElements xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.11"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IlpxBbybEe--ZPz6Fj2E1Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IlpxBrybEe--ZPz6Fj2E1Q" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_JvUu1rybEe--ZPz6Fj2E1Q" name="C2D" sourceNode="_FyH9obyUEe-W39Ims_LT7A" targetNode="_FyGvhbyUEe-W39Ims_LT7A">
+      <target xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.12"/>
+      <semanticElements xmi:type="calculusv2:Pipe" href="Mean.clc#//@elements.12"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_JvUu17ybEe--ZPz6Fj2E1Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_JvUu2LybEe--ZPz6Fj2E1Q" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.chaiseMinute.calculus.v2design/description/v2design.odesign#//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_nXKz4LyPEe-8g4jMn5fImg"/>

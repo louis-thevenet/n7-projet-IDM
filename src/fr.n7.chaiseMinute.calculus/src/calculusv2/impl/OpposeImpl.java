@@ -212,34 +212,12 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBefore(Pipe newBefore, NotificationChain msgs) {
-		Pipe oldBefore = before;
-		before = newBefore;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Calculusv2Package.OPPOSE__BEFORE, oldBefore, newBefore);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public void setBefore(Pipe newBefore) {
-		if (newBefore != before) {
-			NotificationChain msgs = null;
-			if (before != null)
-				msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
-			if (newBefore != null)
-				msgs = ((InternalEObject)newBefore).eInverseAdd(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
-			msgs = basicSetBefore(newBefore, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.OPPOSE__BEFORE, newBefore, newBefore));
+		Pipe oldBefore = before;
+		before = newBefore;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.OPPOSE__BEFORE, oldBefore, before));
 	}
 
 	/**
@@ -257,10 +235,6 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 				return basicSetCalculus((Calculus)otherEnd, msgs);
 			case Calculusv2Package.OPPOSE__USED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsedBy()).basicAdd(otherEnd, msgs);
-			case Calculusv2Package.OPPOSE__BEFORE:
-				if (before != null)
-					msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
-				return basicSetBefore((Pipe)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -277,8 +251,6 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 				return basicSetCalculus(null, msgs);
 			case Calculusv2Package.OPPOSE__USED_BY:
 				return ((InternalEList<?>)getUsedBy()).basicRemove(otherEnd, msgs);
-			case Calculusv2Package.OPPOSE__BEFORE:
-				return basicSetBefore(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

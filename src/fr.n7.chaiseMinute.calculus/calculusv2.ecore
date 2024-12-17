@@ -24,7 +24,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true" interface="true"
       eSuperTypes="#//UsableExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="before" lowerBound="1"
-        eType="#//Pipe" eOpposite="#//Pipe/targetPipe"/>
+        eType="#//Pipe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnaryOperation" abstract="true" interface="true"
       eSuperTypes="#//Operation"/>
@@ -50,7 +50,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pipe" eSuperTypes="#//PipeSuper">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipe" lowerBound="1"
-        eType="#//Operation" eOpposite="#//Operation/before"/>
+        eType="#//Operation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PipeFinal" eSuperTypes="#//PipeSuper">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipeFinal" lowerBound="1"

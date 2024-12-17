@@ -422,43 +422,37 @@
                 <path d="M933 270 L943 270 L943 279 L933 279 L933 270 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath115">
-                <path d="M603 373 L654 373 L654 384 L603 384 L603 373 Z"/>
-            </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath116">
-                <path d="M627 355 L636 355 L636 365 L627 365 L627 355 Z"/>
-            </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath117">
-                <path d="M745 373 L815 373 L815 384 L745 384 L745 373 Z"/>
-            </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath118">
-                <path d="M732 355 L741 355 L741 365 L732 365 L732 355 Z"/>
-            </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath119">
                 <path d="M668 365 L749 365 L749 376 L668 376 L668 365 Z"/>
             </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath120">
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath116">
                 <path d="M676 355 L685 355 L685 365 L676 365 L676 355 Z"/>
             </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath121">
-                <path d="M533 354 L601 354 L601 365 L533 365 L533 354 Z"/>
-            </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath122">
-                <path d="M552 366 L561 366 L561 376 L552 376 L552 366 Z"/>
-            </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath123">
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath117">
                 <path d="M775 235 L786 235 L786 246 L775 246 L775 235 Z"/>
             </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath124">
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath118">
                 <path d="M532 190 L600 190 L600 201 L532 201 L532 190 Z"/>
             </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath125">
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath119">
                 <path d="M667 190 L719 190 L719 201 L667 201 L667 190 Z"/>
             </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath126">
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath120">
                 <path d="M534 181 L544 181 L544 190 L534 190 L534 181 Z"/>
             </clipPath>
-            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath127">
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath121">
                 <path d="M712 181 L722 181 L722 190 L712 190 L712 181 Z"/>
+            </clipPath>
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath122">
+                <path d="M573 329 L624 329 L624 340 L573 340 L573 329 Z"/>
+            </clipPath>
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath123">
+                <path d="M620 343 L630 343 L630 352 L620 352 L620 343 Z"/>
+            </clipPath>
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath124">
+                <path d="M573 462 L641 462 L641 473 L573 473 L573 462 Z"/>
+            </clipPath>
+            <clipPath clipPathUnits="userSpaceOnUse" id="clipPath125">
+                <path d="M574 447 L584 447 L584 456 L574 456 L574 447 Z"/>
             </clipPath>
         </defs>
         <g font-size="8px" fill="rgb(131,122,133)" font-family="'Ubuntu'" stroke-linejoin="round" stroke="rgb(131,122,133)" stroke-width="0" stroke-miterlimit="0">
@@ -685,48 +679,44 @@
             <line y2="271" fill="none" x1="1132" clip-path="url(#clipPath113)" x2="1125" y1="274"/>
             <line y2="274" fill="none" x1="941" clip-path="url(#clipPath114)" x2="934" y1="271"/>
             <line y2="277" fill="none" x1="934" clip-path="url(#clipPath114)" x2="941" y1="274"/>
-            <line y2="564" fill="none" x1="546" clip-path="url(#clipPath100)" x2="631" y1="564"/>
-            <line y2="356" fill="none" x1="631" clip-path="url(#clipPath100)" x2="631" y1="564"/>
-            <text x="604" xml:space="preserve" y="382" clip-path="url(#clipPath115)" font-weight="bold" stroke="none">[1..1] before</text>
-            <line y2="356" fill="none" x1="634" clip-path="url(#clipPath116)" x2="631" y1="363"/>
-            <line y2="363" fill="none" x1="631" clip-path="url(#clipPath116)" x2="628" y1="356"/>
-            <line y2="514" fill="none" x1="928" clip-path="url(#clipPath100)" x2="736" y1="514"/>
-            <line y2="356" fill="none" x1="736" clip-path="url(#clipPath100)" x2="736" y1="514"/>
-            <text x="746" xml:space="preserve" y="382" clip-path="url(#clipPath117)" font-weight="bold" stroke="none">[1..1] beforeFirst</text>
-            <line y2="356" fill="none" x1="739" clip-path="url(#clipPath118)" x2="736" y1="363"/>
-            <line y2="363" fill="none" x1="736" clip-path="url(#clipPath118)" x2="733" y1="356"/>
             <line y2="570" fill="none" x1="928" clip-path="url(#clipPath100)" x2="680" y1="570"/>
             <line y2="356" fill="none" x1="680" clip-path="url(#clipPath100)" x2="680" y1="570"/>
-            <text x="669" xml:space="preserve" y="374" clip-path="url(#clipPath119)" font-weight="bold" stroke="none">[1..1] beforeSecond</text>
-            <line y2="356" fill="none" x1="683" clip-path="url(#clipPath120)" x2="680" y1="363"/>
-            <line y2="363" fill="none" x1="680" clip-path="url(#clipPath120)" x2="677" y1="356"/>
-            <line y2="326" fill="none" x1="628" clip-path="url(#clipPath100)" x2="556" y1="326"/>
-            <line y2="374" fill="none" x1="556" clip-path="url(#clipPath100)" x2="556" y1="326"/>
-            <text x="534" xml:space="preserve" y="363" clip-path="url(#clipPath121)" font-weight="bold" stroke="none">[1..1] targetPipe</text>
-            <line y2="374" fill="none" x1="553" clip-path="url(#clipPath122)" x2="556" y1="367"/>
-            <line y2="367" fill="none" x1="556" clip-path="url(#clipPath122)" x2="559" y1="374"/>
+            <text x="669" xml:space="preserve" y="374" clip-path="url(#clipPath115)" font-weight="bold" stroke="none">[1..1] beforeSecond</text>
+            <line y2="356" fill="none" x1="683" clip-path="url(#clipPath116)" x2="680" y1="363"/>
+            <line y2="363" fill="none" x1="680" clip-path="url(#clipPath116)" x2="677" y1="356"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="687" x2="687" y1="258" y2="254" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="687" x2="780" y1="254" y2="254" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="780" x2="780" y1="254" y2="236" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
-            <polygon fill="white" stroke-dasharray="5,5" clip-path="url(#clipPath123)" points=" 780 236 784 244 776 244" stroke="none"/>
-            <polygon fill="none" clip-path="url(#clipPath123)" points=" 780 236 784 244 776 244" stroke="rgb(136,136,136)"/>
+            <polygon fill="white" stroke-dasharray="5,5" clip-path="url(#clipPath117)" points=" 780 236 784 244 776 244" stroke="none"/>
+            <polygon fill="none" clip-path="url(#clipPath117)" points=" 780 236 784 244 776 244" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="875" x2="875" y1="258" y2="254" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="875" x2="780" y1="254" y2="254" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="780" x2="780" y1="254" y2="236" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
-            <polygon fill="white" stroke-dasharray="5,5" clip-path="url(#clipPath123)" points=" 780 236 784 244 776 244" stroke="none"/>
-            <polygon fill="none" clip-path="url(#clipPath123)" points=" 780 236 784 244 776 244" stroke="rgb(136,136,136)"/>
+            <polygon fill="white" stroke-dasharray="5,5" clip-path="url(#clipPath117)" points=" 780 236 784 244 776 244" stroke="none"/>
+            <polygon fill="none" clip-path="url(#clipPath117)" points=" 780 236 784 244 776 244" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="779" x2="779" y1="138" y2="126" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="779" x2="300" y1="126" y2="126" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
             <line clip-path="url(#clipPath100)" fill="none" x1="300" x2="300" y1="126" y2="108" stroke-dasharray="5,5" stroke="rgb(136,136,136)"/>
             <polygon fill="white" stroke-dasharray="5,5" clip-path="url(#clipPath101)" points=" 300 108 304 116 296 116" stroke="none"/>
             <polygon fill="none" clip-path="url(#clipPath101)" points=" 300 108 304 116 296 116" stroke="rgb(136,136,136)"/>
             <line y2="185" fill="none" x1="535" clip-path="url(#clipPath100)" x2="720" y1="185"/>
-            <text x="533" xml:space="preserve" y="199" clip-path="url(#clipPath124)" stroke="none">[1..1] sourcePipe</text>
-            <text x="668" xml:space="preserve" y="199" clip-path="url(#clipPath125)" stroke="none">[0..*] usedBy</text>
-            <line y2="185" fill="none" x1="542" clip-path="url(#clipPath126)" x2="535" y1="182"/>
-            <line y2="188" fill="none" x1="535" clip-path="url(#clipPath126)" x2="542" y1="185"/>
-            <line y2="185" fill="none" x1="713" clip-path="url(#clipPath127)" x2="720" y1="188"/>
-            <line y2="182" fill="none" x1="720" clip-path="url(#clipPath127)" x2="713" y1="185"/>
+            <text x="533" xml:space="preserve" y="199" clip-path="url(#clipPath118)" stroke="none">[1..1] sourcePipe</text>
+            <text x="668" xml:space="preserve" y="199" clip-path="url(#clipPath119)" stroke="none">[0..*] usedBy</text>
+            <line y2="185" fill="none" x1="542" clip-path="url(#clipPath120)" x2="535" y1="182"/>
+            <line y2="188" fill="none" x1="535" clip-path="url(#clipPath120)" x2="542" y1="185"/>
+            <line y2="185" fill="none" x1="713" clip-path="url(#clipPath121)" x2="720" y1="188"/>
+            <line y2="182" fill="none" x1="720" clip-path="url(#clipPath121)" x2="713" y1="185"/>
+            <line y2="383" fill="none" x1="575" clip-path="url(#clipPath100)" x2="601" y1="383"/>
+            <line y2="347" fill="none" x1="601" clip-path="url(#clipPath100)" x2="601" y1="383"/>
+            <line y2="347" fill="none" x1="601" clip-path="url(#clipPath100)" x2="628" y1="347"/>
+            <text x="574" xml:space="preserve" y="338" clip-path="url(#clipPath122)" font-weight="bold" stroke="none">[1..1] before</text>
+            <line y2="347" fill="none" x1="621" clip-path="url(#clipPath123)" x2="628" y1="350"/>
+            <line y2="344" fill="none" x1="628" clip-path="url(#clipPath123)" x2="621" y1="347"/>
+            <line y2="451" fill="none" x1="636" clip-path="url(#clipPath100)" x2="636" y1="356"/>
+            <line y2="451" fill="none" x1="636" clip-path="url(#clipPath100)" x2="575" y1="451"/>
+            <text x="574" xml:space="preserve" y="471" clip-path="url(#clipPath124)" font-weight="bold" stroke="none">[1..1] targetPipe</text>
+            <line y2="451" fill="none" x1="582" clip-path="url(#clipPath125)" x2="575" y1="448"/>
+            <line y2="454" fill="none" x1="575" clip-path="url(#clipPath125)" x2="582" y1="451"/>
         </g>
     </g>
 </svg>

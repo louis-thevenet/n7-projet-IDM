@@ -223,34 +223,12 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBefore(Pipe newBefore, NotificationChain msgs) {
-		Pipe oldBefore = before;
-		before = newBefore;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Calculusv2Package.SUBSTRACTION__BEFORE, oldBefore, newBefore);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public void setBefore(Pipe newBefore) {
-		if (newBefore != before) {
-			NotificationChain msgs = null;
-			if (before != null)
-				msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
-			if (newBefore != null)
-				msgs = ((InternalEObject)newBefore).eInverseAdd(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
-			msgs = basicSetBefore(newBefore, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.SUBSTRACTION__BEFORE, newBefore, newBefore));
+		Pipe oldBefore = before;
+		before = newBefore;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.SUBSTRACTION__BEFORE, oldBefore, before));
 	}
 
 	/**
@@ -308,10 +286,6 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 				return basicSetCalculus((Calculus)otherEnd, msgs);
 			case Calculusv2Package.SUBSTRACTION__USED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsedBy()).basicAdd(otherEnd, msgs);
-			case Calculusv2Package.SUBSTRACTION__BEFORE:
-				if (before != null)
-					msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
-				return basicSetBefore((Pipe)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -328,8 +302,6 @@ public class SubstractionImpl extends MinimalEObjectImpl.Container implements Su
 				return basicSetCalculus(null, msgs);
 			case Calculusv2Package.SUBSTRACTION__USED_BY:
 				return ((InternalEList<?>)getUsedBy()).basicRemove(otherEnd, msgs);
-			case Calculusv2Package.SUBSTRACTION__BEFORE:
-				return basicSetBefore(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

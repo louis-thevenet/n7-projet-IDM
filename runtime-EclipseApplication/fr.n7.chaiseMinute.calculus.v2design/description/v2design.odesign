@@ -66,7 +66,6 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::PipeFinal" referenceName="elements">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="sourcePipe" valueExpression="[source/]"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="targetPipeFinal" valueExpression="[target/]"/>
-                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[target.before &lt;> null/]"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -81,10 +80,13 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::Pipe" referenceName="elements">
                   <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.targetPipe.before = null/]">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="targetPipe" valueExpression="[target/]"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[targetPipe/]">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="before" valueExpression="[instance/]"/>
+                    </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.targetPipe.oclIsTypeOf(BinaryOperation) and self.targetPipe.before &lt;> null/]">
-                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target/]">
-                      <subModelOperations xsi:type="tool_1:SetValue" featureName="beforeSecond" valueExpression="[target/]"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.targetPipe.before &lt;> null/]">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[targetPipe.oclAsType(BinaryOperation)/]">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="beforeSecond" valueExpression="[instance/]"/>
                     </subModelOperations>
                   </subModelOperations>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="sourcePipe" valueExpression="[source/]"/>

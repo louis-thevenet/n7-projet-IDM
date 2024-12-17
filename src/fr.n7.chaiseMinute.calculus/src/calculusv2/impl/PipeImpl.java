@@ -255,34 +255,12 @@ public class PipeImpl extends MinimalEObjectImpl.Container implements Pipe {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTargetPipe(Operation newTargetPipe, NotificationChain msgs) {
-		Operation oldTargetPipe = targetPipe;
-		targetPipe = newTargetPipe;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE__TARGET_PIPE, oldTargetPipe, newTargetPipe);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public void setTargetPipe(Operation newTargetPipe) {
-		if (newTargetPipe != targetPipe) {
-			NotificationChain msgs = null;
-			if (targetPipe != null)
-				msgs = ((InternalEObject)targetPipe).eInverseRemove(this, Calculusv2Package.OPERATION__BEFORE, Operation.class, msgs);
-			if (newTargetPipe != null)
-				msgs = ((InternalEObject)newTargetPipe).eInverseAdd(this, Calculusv2Package.OPERATION__BEFORE, Operation.class, msgs);
-			msgs = basicSetTargetPipe(newTargetPipe, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE__TARGET_PIPE, newTargetPipe, newTargetPipe));
+		Operation oldTargetPipe = targetPipe;
+		targetPipe = newTargetPipe;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE__TARGET_PIPE, oldTargetPipe, targetPipe));
 	}
 
 	/**
@@ -301,10 +279,6 @@ public class PipeImpl extends MinimalEObjectImpl.Container implements Pipe {
 				if (sourcePipe != null)
 					msgs = ((InternalEObject)sourcePipe).eInverseRemove(this, Calculusv2Package.USABLE_EXPRESSION__USED_BY, UsableExpression.class, msgs);
 				return basicSetSourcePipe((UsableExpression)otherEnd, msgs);
-			case Calculusv2Package.PIPE__TARGET_PIPE:
-				if (targetPipe != null)
-					msgs = ((InternalEObject)targetPipe).eInverseRemove(this, Calculusv2Package.OPERATION__BEFORE, Operation.class, msgs);
-				return basicSetTargetPipe((Operation)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -321,8 +295,6 @@ public class PipeImpl extends MinimalEObjectImpl.Container implements Pipe {
 				return basicSetCalculus(null, msgs);
 			case Calculusv2Package.PIPE__SOURCE_PIPE:
 				return basicSetSourcePipe(null, msgs);
-			case Calculusv2Package.PIPE__TARGET_PIPE:
-				return basicSetTargetPipe(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

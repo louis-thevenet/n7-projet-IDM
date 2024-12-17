@@ -22,14 +22,12 @@ package calculusv2;
 public interface Pipe extends PipeSuper {
 	/**
 	 * Returns the value of the '<em><b>Target Pipe</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link calculusv2.Operation#getBefore <em>Before</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Pipe</em>' reference.
 	 * @see #setTargetPipe(Operation)
 	 * @see calculusv2.Calculusv2Package#getPipe_TargetPipe()
-	 * @see calculusv2.Operation#getBefore
-	 * @model opposite="before" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	Operation getTargetPipe();
