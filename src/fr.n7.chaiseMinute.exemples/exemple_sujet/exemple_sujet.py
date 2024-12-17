@@ -1,7 +1,5 @@
 import sys
 import pandas as pd
-import tkinter as tk
-from tkinter import ttk, filedialog
 
 def search(input, out, table, id):
 	try:
@@ -12,7 +10,7 @@ def search(input, out, table, id):
 def load():
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-	csv_file_path = "table_visualizer.csv"
+	csv_file_path = "table.csv"
 	input["table"] = pd.read_csv(csv_file_path)
 	return input
 
@@ -35,8 +33,8 @@ def check_constraints(input):
 	)
 
 	if not res:
-		("ensure_min_max constraints failed on table")
-	return True
+		return (False, "ensure_min_max constraints failed on table")
+	return (True, "Constraints are respected")
 
 def generate_output(input):
 	"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
@@ -94,62 +92,13 @@ def save_to_csv(tables):
 	################################
 	pd.DataFrame.from_dict(tables["table"], orient="columns").to_csv("output_"+"table"+".csv", index_label="Date")
 
-
-# Fonction pour changer la table affichée dans le tableau
-def afficher_donnees(table_name):
-    df = tables_dict[table_name]
-    
-    # Vider l'ancienne vue (si applicable)
-    for item in tree.get_children():
-        tree.delete(item)
-
-    # Mettre à jour les colonnes
-    tree["columns"] = list(df.columns)
-    for col in df.columns:
-        tree.heading(col, text=col)
-        tree.column(col, width=100)
-
-    # Insérer les données
-    for index, row in df.iterrows():
-        tree.insert("", "end", values=list(row))
-
-# Fonction pour mettre à jour la table affichée lorsque l'utilisateur change de sélection
-def on_table_select(event):
-    selected_table = table_selector.get()
-    afficher_donnees(selected_table)
-
-
 	
 def main():
 	input = load()
 	out = generate_output(input)
-	res_cons = check_constraints(input)
-	root = tk.Tk()
-	root.title("Visualisation des Données CSV")
-	
-	## Créer la fenêtre principale
-	root = tk.Tk()
-	root.title("Changer de Table CSV")
-	
-	# Ajouter un menu déroulant pour sélectionner une table
-	table_selector = ttk.Combobox(root, values=list(tables_dict.keys()))
-	table_selector.set(list(tables_dict.keys())[0])  # Sélectionner par défaut la première table
-	table_selector.pack(pady=10)
-	
-	# Lier l'événement de sélection de table
-	table_selector.bind("<<ComboboxSelected>>", on_table_select)
-	
-	# Créer un tableau pour afficher les données
-	tree = ttk.Treeview(root, show="headings")
-	tree.pack(expand=True, fill=tk.BOTH)
-	
-	# Afficher la table initiale (première table par défaut)
-	afficher_donnees(table_selector.get())
-
-# Lancer l'interface graphique
-root.mainloop()
-
-	
+	res, msg = check_constraints(input)
+	print(msg)
+	save_to_csv(out)
 
 if __name__ == '__main__':
 	main()
