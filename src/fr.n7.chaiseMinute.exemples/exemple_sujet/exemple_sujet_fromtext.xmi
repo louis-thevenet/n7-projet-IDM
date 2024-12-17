@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chaiseMinute:ChaiseMinute xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chaiseMinute="http://chaiseMinute" xmlns:function="http://function" name="exemple_sujet">
+  <tables name="table">
+    <columns xsi:type="chaiseMinute:ColumnData" id="Open" type="Float"/>
+    <columns xsi:type="chaiseMinute:ColumnData" id="High" type="Float"/>
+    <columns xsi:type="chaiseMinute:ColumnData" id="Low" type="Float"/>
+    <columns xsi:type="chaiseMinute:ColumnData" id="Close" type="Float"/>
+    <columns xsi:type="chaiseMinute:ColumnData" id="Adj_Close" type="Float"/>
+    <columns xsi:type="chaiseMinute:ColumnData" id="Volume" type="Int"/>
+    <indexColumn id="Date"/>
+  </tables>
+  <tables name="table2">
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="Ouverture" type="Float" path="table.Open"/>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="Min" type="Float" path="table.Low"/>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="Max" type="Float" path="table.High"/>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="Fermeture" type="Float" path="table.Close"/>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="Volume" type="Int" path="table.Volume"/>
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="Moyenne" type="Float">
+      <algorithm>
+        <functions name="mean">
+          <inputs xsi:type="function:ColumnArgument" columnPath="table.Min"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="table.Max"/>
+        </functions>
+      </algorithm>
+    </columns>
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="Variation" type="Float">
+      <algorithm>
+        <functions name="variation">
+          <inputs xsi:type="function:ColumnArgument" columnPath="table.Fermeture"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="table.Ouverture"/>
+        </functions>
+      </algorithm>
+    </columns>
+    <indexColumn id="Date"/>
+  </tables>
+  <constraints>
+    <functions name="ensure_min_max">
+      <inputs xsi:type="function:ColumnArgument" columnPath="table.Low"/>
+      <inputs xsi:type="function:ColumnArgument" columnPath="table.High"/>
+    </functions>
+  </constraints>
+</chaiseMinute:ChaiseMinute>

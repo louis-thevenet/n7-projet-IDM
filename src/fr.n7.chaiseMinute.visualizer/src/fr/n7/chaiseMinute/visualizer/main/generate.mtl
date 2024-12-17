@@ -5,6 +5,7 @@
 [comment @main/]
 [file ((aChaiseMinute.name)+'_visualizer.py', false, 'UTF-8')]
 import sys
+import numpy
 import pandas as pd
 import tkinter as tk
 from tkinter import ttk, filedialog
@@ -15,10 +16,10 @@ def search(input, out, table, id):
 	except Exception:
 		return out['['/]id].to_list()
  
-def load():
+def load(files):
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-	for filename in sys.argv['['/]1:]:
+	for filename in files:
 		name = filename.rsplit(".",1)['['/]0]
 		input['['/]name] = pd.read_csv(filename)
 
@@ -49,7 +50,9 @@ def check_constraints(input):
 				[/let]
 	)
 		[/for]
-	
+
+		
+
 	if not res:
 		return (False,("[aChaiseMinute.constraints.getLastFunction().name/] constraints failed"))
 	[/for]
@@ -60,6 +63,28 @@ def check_constraints(input):
 	out = generate_output(input)
 
 	[for (t : Table | aChaiseMinute.getTables())]
+	### Verify data types
+		[for (c: Column | t.columns)]
+			[let type : DataType = c.type]
+	for x in out['['/]"[t.name/]"]['['/]"[c.id/]"]:
+		[if type = DataType::Float]
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on [t.name/].[c.id/]")
+	
+		[elseif type = DataType::Int]
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on [t.name/].[c.id/]")
+
+		[elseif type = DataType::Boolean]
+		if (x !=0 and x != 1):
+			return (False, "Type constraints failed on [t.name/].[c.id/]")
+		[else]
+		break
+		[/if]
+
+			[/let]
+		[/for]
+
 		[for (a : Algorithm |  t.constraints)]
 			[for (f : Function | a.functions)]
 	### Apply [f.name/] ##
@@ -173,12 +198,13 @@ class TableViewer(tk.Tk):
 
 
 def main():
-	tables_data = load()
+	tables_data = load(sys.argv['['/]1:])
 	res, msg = check_constraints(tables_data)
 	if not res:
 		print(msg)
 		return 
-		
+	
+	tables_data = generate_output(tables_data)
 	app = TableViewer(tables_data)
 	app.mainloop()
 

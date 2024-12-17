@@ -1,9 +1,9 @@
 exemple_sujet {
-		table1 indexed on Date of String (
+		table indexed on Date of String (
 		Open of Float, High of Float, Low of Float, Close of Float, Adj_Close of Float, Volume of Int
 		)
         table2 indexed on Date of String (
-        Ouverture of Float imported from "table1.Open" , Min of Float imported from "table1.Low", Max of Float imported from "table.High", Fermeture of Float imported from "table.Close",Volume of Float, Moyenne of Int computed with [mean("table1.Min","table1.Max")], Variation of Int computed with [variation("table1.Fermeture","table1.Ouverture")] 
+        Ouverture of Float imported from "table.Open" , Min of Float imported from "table.Low", Max of Float imported from "table.High", Fermeture of Float imported from "table.Close",Volume of Int imported from "table.Volume", Moyenne of Float computed with [mean("table.Min","table.Max")], Variation of Float computed with [variation("table.Fermeture","table.Ouverture")] 
         )
 }
-constrained by [ensure_min_max("table1.Low","table1.High") ]
+constrained by [ensure_min_max("table.Low","table.High") ]

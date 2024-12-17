@@ -1,5 +1,6 @@
 import sys
 import pandas as pd
+import numpy
 
 def search(input, out, table, id):
 	try:
@@ -7,13 +8,13 @@ def search(input, out, table, id):
 	except Exception:
 		return out[id].to_list()
  
-def load():
+def load(files):
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-	csv_file_path = "table1.csv"
-	input["table1"] = pd.read_csv(csv_file_path)
-	csv_file_path = "table2.csv"
-	input["table2"] = pd.read_csv(csv_file_path)
+	for filename in files:
+		name = filename.rsplit(".",1)[0]
+		input[name] = pd.read_csv(filename)
+
 	return input
 
 def check_constraints(input):
@@ -41,7 +42,41 @@ def check_constraints(input):
 	################################
 	out = generate_output(input)
 
-	return True
+	### Verify data types
+	for x in out["table1"]["A"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table1.A")
+
+	for x in out["table1"]["B"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table1.B")
+
+	for x in out["table1"]["C"]:
+		break
+
+	### Verify data types
+	for x in out["table2"]["A"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table2.A")
+
+	for x in out["table2"]["B"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table2.B")
+
+	for x in out["table2"]["C"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table2.C")
+
+	for x in out["table2"]["Sum"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table2.Sum")
+
+	for x in out["table2"]["Variation"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table2.Variation")
+
+
+	return (True, "Constraints are respected")
 
 def generate_output(input):
 	"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
@@ -130,10 +165,12 @@ def save_to_csv(tables):
 
 	
 def main():
-	input = load()
+	input = load(sys.argv[1:])
 	out = generate_output(input)
-	check_constraints(input)
+	res, msg = check_constraints(input)
+	print(msg)
 	save_to_csv(out)
+	print("Exported files")
 
 if __name__ == '__main__':
 	main()
