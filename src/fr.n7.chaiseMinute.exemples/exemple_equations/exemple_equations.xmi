@@ -3,10 +3,24 @@
   <tables name="equations">
     <columns xsi:type="chaiseMinute:ComputedColumn" id="Solution">
       <algorithm>
+        <functions name="compute_delta">
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.a"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.b"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.c"/>
+        </functions>
         <functions name="solve">
           <inputs xsi:type="function:ColumnArgument" columnPath="equations.a"/>
           <inputs xsi:type="function:ColumnArgument" columnPath="equations.b"/>
-          <inputs xsi:type="function:ColumnArgument" columnPath="&#x9;equations.c"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.c"/>
+        </functions>
+      </algorithm>
+    </columns>
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="delta" type="Int">
+      <algorithm>
+        <functions name="compute_delta">
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.a"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.b"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.c"/>
         </functions>
       </algorithm>
     </columns>

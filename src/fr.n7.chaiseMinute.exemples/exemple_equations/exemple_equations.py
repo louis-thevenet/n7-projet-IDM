@@ -39,6 +39,10 @@ def check_constraints(input):
 	### Verify data types
 	for x in out["equations"]["Solution"]:
 		break
+	for x in out["equations"]["delta"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on equations.delta")
+
 	for x in out["equations"]["a"]:
 		if (type(x)!=int and type(x)!=numpy.int64):
 			return (False, "Type constraints failed on equations.a")
@@ -73,12 +77,32 @@ def generate_output(input):
 	################################			
 	## Computed column: Solution 
 	################################
+	### Apply compute_delta ##
+	from compute_delta import compute_delta
+	out["Solution"] = compute_delta(
+		search(input, out, "equations", "a"),
+		search(input, out, "equations", "b"),
+		search(input, out, "equations", "c"),
+	)
+	###############
 	### Apply solve ##
 	from solve import solve
 	out["Solution"] = solve(
+		out["Solution"], # Previous result used in next function
 		search(input, out, "equations", "a"),
 		search(input, out, "equations", "b"),
-		search(input, out, "	equations", "c"),
+		search(input, out, "equations", "c"),
+	)
+	###############
+	################################			
+	## Computed column: delta 
+	################################
+	### Apply compute_delta ##
+	from compute_delta import compute_delta
+	out["delta"] = compute_delta(
+		search(input, out, "equations", "a"),
+		search(input, out, "equations", "b"),
+		search(input, out, "equations", "c"),
 	)
 	###############
 	tables["equations"] = out

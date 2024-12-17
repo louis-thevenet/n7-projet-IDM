@@ -1,10 +1,8 @@
 import numpy as np
 import math
 
-def solve(a,b,c):
-    deltas = delta(np.array(a), np.array(b), np.array(c))
+def solve(deltas, a,b,c):
     solutions = []
-    print(deltas)
     for i in range(len(a)):
 
         if deltas[i] > 0:
@@ -17,5 +15,3 @@ def solve(a,b,c):
     return solutions
 
     
-def delta(a,b,c):
-    return np.multiply(b,b) - 4 * np.multiply(a, c)
