@@ -23,295 +23,311 @@ import org.eclipse.emf.ecore.EObject;
 public class TabouretSecondeAdapterFactory extends AdapterFactoryImpl
 {
   /**
-	 * The cached model package.
-	 * <!-- begin-user-doc -->
+   * The cached model package.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected static TabouretSecondePackage modelPackage;
 
   /**
-	 * Creates an instance of the adapter factory.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the adapter factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public TabouretSecondeAdapterFactory()
   {
-		if (modelPackage == null) {
-			modelPackage = TabouretSecondePackage.eINSTANCE;
-		}
-	}
+    if (modelPackage == null)
+    {
+      modelPackage = TabouretSecondePackage.eINSTANCE;
+    }
+  }
 
   /**
-	 * Returns whether this factory is applicable for the type of the object.
-	 * <!-- begin-user-doc -->
+   * Returns whether this factory is applicable for the type of the object.
+   * <!-- begin-user-doc -->
    * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
    * <!-- end-user-doc -->
-	 * @return whether this factory is applicable for the type of the object.
-	 * @generated
-	 */
+   * @return whether this factory is applicable for the type of the object.
+   * @generated
+   */
   @Override
   public boolean isFactoryForType(Object object)
   {
-		if (object == modelPackage) {
-			return true;
-		}
-		if (object instanceof EObject) {
-			return ((EObject)object).eClass().getEPackage() == modelPackage;
-		}
-		return false;
-	}
+    if (object == modelPackage)
+    {
+      return true;
+    }
+    if (object instanceof EObject)
+    {
+      return ((EObject)object).eClass().getEPackage() == modelPackage;
+    }
+    return false;
+  }
 
   /**
-	 * The switch that delegates to the <code>createXXX</code> methods.
-	 * <!-- begin-user-doc -->
+   * The switch that delegates to the <code>createXXX</code> methods.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected TabouretSecondeSwitch<Adapter> modelSwitch =
-    new TabouretSecondeSwitch<Adapter>() {
-			@Override
-			public Adapter caseChaiseMinute(ChaiseMinute object) {
-				return createChaiseMinuteAdapter();
-			}
-			@Override
-			public Adapter caseTable(Table object) {
-				return createTableAdapter();
-			}
-			@Override
-			public Adapter caseIndexColumn(IndexColumn object) {
-				return createIndexColumnAdapter();
-			}
-			@Override
-			public Adapter caseColumn(Column object) {
-				return createColumnAdapter();
-			}
-			@Override
-			public Adapter caseColumnData(ColumnData object) {
-				return createColumnDataAdapter();
-			}
-			@Override
-			public Adapter caseComputedColumn(ComputedColumn object) {
-				return createComputedColumnAdapter();
-			}
-			@Override
-			public Adapter caseImportedColumn(ImportedColumn object) {
-				return createImportedColumnAdapter();
-			}
-			@Override
-			public Adapter caseAlgorithm(Algorithm object) {
-				return createAlgorithmAdapter();
-			}
-			@Override
-			public Adapter caseFunction(Function object) {
-				return createFunctionAdapter();
-			}
-			@Override
-			public Adapter caseArgument(Argument object) {
-				return createArgumentAdapter();
-			}
-			@Override
-			public Adapter caseColumnArgument(ColumnArgument object) {
-				return createColumnArgumentAdapter();
-			}
-			@Override
-			public Adapter defaultCase(EObject object) {
-				return createEObjectAdapter();
-			}
-		};
+    new TabouretSecondeSwitch<Adapter>()
+    {
+      @Override
+      public Adapter caseChaiseMinute(ChaiseMinute object)
+      {
+        return createChaiseMinuteAdapter();
+      }
+      @Override
+      public Adapter caseTable(Table object)
+      {
+        return createTableAdapter();
+      }
+      @Override
+      public Adapter caseIndexColumn(IndexColumn object)
+      {
+        return createIndexColumnAdapter();
+      }
+      @Override
+      public Adapter caseColumn(Column object)
+      {
+        return createColumnAdapter();
+      }
+      @Override
+      public Adapter caseColumnData(ColumnData object)
+      {
+        return createColumnDataAdapter();
+      }
+      @Override
+      public Adapter caseComputedColumn(ComputedColumn object)
+      {
+        return createComputedColumnAdapter();
+      }
+      @Override
+      public Adapter caseImportedColumn(ImportedColumn object)
+      {
+        return createImportedColumnAdapter();
+      }
+      @Override
+      public Adapter caseAlgorithm(Algorithm object)
+      {
+        return createAlgorithmAdapter();
+      }
+      @Override
+      public Adapter caseFunction(Function object)
+      {
+        return createFunctionAdapter();
+      }
+      @Override
+      public Adapter caseArgument(Argument object)
+      {
+        return createArgumentAdapter();
+      }
+      @Override
+      public Adapter caseColumnArgument(ColumnArgument object)
+      {
+        return createColumnArgumentAdapter();
+      }
+      @Override
+      public Adapter defaultCase(EObject object)
+      {
+        return createEObjectAdapter();
+      }
+    };
 
   /**
-	 * Creates an adapter for the <code>target</code>.
-	 * <!-- begin-user-doc -->
+   * Creates an adapter for the <code>target</code>.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param target the object to adapt.
-	 * @return the adapter for the <code>target</code>.
-	 * @generated
-	 */
+   * @param target the object to adapt.
+   * @return the adapter for the <code>target</code>.
+   * @generated
+   */
   @Override
   public Adapter createAdapter(Notifier target)
   {
-		return modelSwitch.doSwitch((EObject)target);
-	}
+    return modelSwitch.doSwitch((EObject)target);
+  }
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ChaiseMinute <em>Chaise Minute</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ChaiseMinute <em>Chaise Minute</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ChaiseMinute
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ChaiseMinute
+   * @generated
+   */
   public Adapter createChaiseMinuteAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table <em>Table</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table
+   * @generated
+   */
   public Adapter createTableAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn <em>Index Column</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn <em>Index Column</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn
+   * @generated
+   */
   public Adapter createIndexColumnAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Column <em>Column</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Column <em>Column</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Column
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Column
+   * @generated
+   */
   public Adapter createColumnAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnData <em>Column Data</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnData <em>Column Data</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnData
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnData
+   * @generated
+   */
   public Adapter createColumnDataAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ComputedColumn <em>Computed Column</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ComputedColumn <em>Computed Column</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ComputedColumn
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ComputedColumn
+   * @generated
+   */
   public Adapter createComputedColumnAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ImportedColumn <em>Imported Column</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ImportedColumn <em>Imported Column</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ImportedColumn
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ImportedColumn
+   * @generated
+   */
   public Adapter createImportedColumnAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Algorithm <em>Algorithm</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Algorithm <em>Algorithm</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Algorithm
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Algorithm
+   * @generated
+   */
   public Adapter createAlgorithmAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Function <em>Function</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Function <em>Function</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Function
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Function
+   * @generated
+   */
   public Adapter createFunctionAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Argument <em>Argument</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Argument <em>Argument</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Argument
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Argument
+   * @generated
+   */
   public Adapter createArgumentAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnArgument <em>Column Argument</em>}'.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for an object of class '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnArgument <em>Column Argument</em>}'.
+   * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnArgument
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnArgument
+   * @generated
+   */
   public Adapter createColumnArgumentAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
   /**
-	 * Creates a new adapter for the default case.
-	 * <!-- begin-user-doc -->
+   * Creates a new adapter for the default case.
+   * <!-- begin-user-doc -->
    * This default implementation returns null.
    * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @generated
-	 */
+   * @return the new adapter.
+   * @generated
+   */
   public Adapter createEObjectAdapter()
   {
-		return null;
-	}
+    return null;
+  }
 
 } //TabouretSecondeAdapterFactory

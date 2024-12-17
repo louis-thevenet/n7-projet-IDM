@@ -994,6 +994,22 @@ ruleDataType returns [Enumerator current=null]
 				newLeafNode(enumLiteral_1, grammarAccess.getDataTypeAccess().getIntEnumLiteralDeclaration_1());
 			}
 		)
+		    |
+		(
+			enumLiteral_2='Float'
+			{
+				$current = grammarAccess.getDataTypeAccess().getFloatEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getDataTypeAccess().getFloatEnumLiteralDeclaration_2());
+			}
+		)
+		    |
+		(
+			enumLiteral_3='Boolean'
+			{
+				$current = grammarAccess.getDataTypeAccess().getBooleanEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getDataTypeAccess().getBooleanEnumLiteralDeclaration_3());
+			}
+		)
 	)
 ;
 

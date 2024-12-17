@@ -9,6 +9,8 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="TabouretSeconde.ecore#//DataType">
       <genEnumLiterals ecoreEnumLiteral="TabouretSeconde.ecore#//DataType/String"/>
       <genEnumLiterals ecoreEnumLiteral="TabouretSeconde.ecore#//DataType/Int"/>
+      <genEnumLiterals ecoreEnumLiteral="TabouretSeconde.ecore#//DataType/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="TabouretSeconde.ecore#//DataType/Boolean"/>
     </genEnums>
     <genClasses ecoreClass="TabouretSeconde.ecore#//ChaiseMinute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TabouretSeconde.ecore#//ChaiseMinute/name"/>

@@ -20,24 +20,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argument
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected ArgumentImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TabouretSecondePackage.Literals.ARGUMENT;
-	}
+    return TabouretSecondePackage.Literals.ARGUMENT;
+  }
 
 } //ArgumentImpl

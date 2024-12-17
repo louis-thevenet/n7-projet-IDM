@@ -23,25 +23,25 @@ package fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde;
 public interface ColumnArgument extends Argument
 {
   /**
-	 * Returns the value of the '<em><b>Columnpath</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Columnpath</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Columnpath</em>' attribute.
-	 * @see #setColumnpath(String)
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getColumnArgument_Columnpath()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Columnpath</em>' attribute.
+   * @see #setColumnpath(String)
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getColumnArgument_Columnpath()
+   * @model
+   * @generated
+   */
   String getColumnpath();
 
   /**
-	 * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnArgument#getColumnpath <em>Columnpath</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ColumnArgument#getColumnpath <em>Columnpath</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Columnpath</em>' attribute.
-	 * @see #getColumnpath()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Columnpath</em>' attribute.
+   * @see #getColumnpath()
+   * @generated
+   */
   void setColumnpath(String value);
 
 } // ColumnArgument

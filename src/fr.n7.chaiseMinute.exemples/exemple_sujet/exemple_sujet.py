@@ -1,5 +1,6 @@
 import sys
 import pandas as pd
+import numpy
 
 def search(input, out, table, id):
 	try:
@@ -7,11 +8,13 @@ def search(input, out, table, id):
 	except Exception:
 		return out[id].to_list()
  
-def load():
+def load(files):
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-	csv_file_path = "table.csv"
-	input["table"] = pd.read_csv(csv_file_path)
+	for filename in files:
+		name = filename.rsplit(".",1)[0]
+		input[name] = pd.read_csv(filename)
+
 	return input
 
 def check_constraints(input):
@@ -19,21 +22,77 @@ def check_constraints(input):
 	################################
 	# Verifying Input Constraints
 	################################
+	### Apply ensure_min_max ##
+	from ensure_min_max import ensure_min_max
+	res = ensure_min_max(
+		input["table"]["Low"].to_list(),
+		input["table"]["High"].to_list(),
+	)
+	
+	if not res:
+		return (False,("ensure_min_max constraints failed"))
 
 	################################
 	# Verifying Table Constraints
 	################################
 	out = generate_output(input)
 
-	### Apply ensure_min_max ##
-	from ensure_min_max import ensure_min_max
-	res = ensure_min_max(
-		search(input, out, "table", "Low"),
-		search(input, out, "table", "High"),
-	)
+	### Verify data types
+	for x in out["table"]["Open"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table.Open")
+	
+	for x in out["table"]["High"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table.High")
+	
+	for x in out["table"]["Low"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table.Low")
+	
+	for x in out["table"]["Close"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table.Close")
+	
+	for x in out["table"]["Adj_Close"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table.Adj_Close")
+	
+	for x in out["table"]["Volume"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table.Volume")
 
-	if not res:
-		return (False, "ensure_min_max constraints failed on table")
+
+	### Verify data types
+	for x in out["table2"]["Ouverture"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table2.Ouverture")
+	
+	for x in out["table2"]["Min"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table2.Min")
+	
+	for x in out["table2"]["Max"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table2.Max")
+	
+	for x in out["table2"]["Fermeture"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table2.Fermeture")
+	
+	for x in out["table2"]["Volume"]:
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on table2.Volume")
+
+	for x in out["table2"]["Moyenne"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table2.Moyenne")
+	
+	for x in out["table2"]["Variation"]:
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on table2.Variation")
+	
+
 	return (True, "Constraints are respected")
 
 def generate_output(input):
@@ -42,6 +101,42 @@ def generate_output(input):
 	out = {}
 	###########################################################################
 	# Table: table
+	###########################################################################
+	################################
+	## Data column: Open 
+	################################
+	out["Open"]=input["table"]["Open"]
+
+	################################
+	## Data column: High 
+	################################
+	out["High"]=input["table"]["High"]
+
+	################################
+	## Data column: Low 
+	################################
+	out["Low"]=input["table"]["Low"]
+
+	################################
+	## Data column: Close 
+	################################
+	out["Close"]=input["table"]["Close"]
+
+	################################
+	## Data column: Adj_Close 
+	################################
+	out["Adj_Close"]=input["table"]["Adj_Close"]
+
+	################################
+	## Data column: Volume 
+	################################
+	out["Volume"]=input["table"]["Volume"]
+
+	tables["table"] = out
+
+	out = {}
+	###########################################################################
+	# Table: table2
 	###########################################################################
 	### Imported column: Ouverture from table.Open ###
 	out["Ouverture"]=input["table"]["Open"]
@@ -55,9 +150,7 @@ def generate_output(input):
 	### Imported column: Fermeture from table.Close ###
 	out["Fermeture"]=input["table"]["Close"]
 
-	################################
-	## Data column: Volume 
-	################################
+	### Imported column: Volume from table.Volume ###
 	out["Volume"]=input["table"]["Volume"]
 
 	################################			
@@ -80,7 +173,7 @@ def generate_output(input):
 		search(input, out, "table", "Ouverture"),
 	)
 	###############
-	tables["table"] = out
+	tables["table2"] = out
 
 	return tables
 
@@ -91,14 +184,20 @@ def save_to_csv(tables):
 	# Saving to "output_table.csv" 
 	################################
 	pd.DataFrame.from_dict(tables["table"], orient="columns").to_csv("output_"+"table"+".csv", index_label="Date")
+	
+	################################
+	# Saving to "output_table2.csv" 
+	################################
+	pd.DataFrame.from_dict(tables["table2"], orient="columns").to_csv("output_"+"table2"+".csv", index_label="Date")
 
 	
 def main():
-	input = load()
+	input = load(sys.argv[1:])
 	out = generate_output(input)
 	res, msg = check_constraints(input)
 	print(msg)
 	save_to_csv(out)
+	print("Exported files")
 
 if __name__ == '__main__':
 	main()

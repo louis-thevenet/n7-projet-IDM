@@ -586,15 +586,23 @@ public class TabouretSecondeGrammarAccess extends AbstractElementFinder.Abstract
 		private final Keyword cStringStringKeyword_0_0 = (Keyword)cStringEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cIntEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cIntIntKeyword_1_0 = (Keyword)cIntEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cFloatEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cFloatFloatKeyword_2_0 = (Keyword)cFloatEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cBooleanEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cBooleanBooleanKeyword_3_0 = (Keyword)cBooleanEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum DataType:
 		//    String='String'
 		//    |Int ='Int'
+		//    |Float = 'Float'
+		//    |Boolean = 'Boolean'
 		//;
 		public EnumRule getRule() { return rule; }
 		
 		//String='String'
 		//|Int ='Int'
+		//|Float = 'Float'
+		//|Boolean = 'Boolean'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//String='String'
@@ -608,6 +616,18 @@ public class TabouretSecondeGrammarAccess extends AbstractElementFinder.Abstract
 		
 		//'Int'
 		public Keyword getIntIntKeyword_1_0() { return cIntIntKeyword_1_0; }
+		
+		//Float = 'Float'
+		public EnumLiteralDeclaration getFloatEnumLiteralDeclaration_2() { return cFloatEnumLiteralDeclaration_2; }
+		
+		//'Float'
+		public Keyword getFloatFloatKeyword_2_0() { return cFloatFloatKeyword_2_0; }
+		
+		//Boolean = 'Boolean'
+		public EnumLiteralDeclaration getBooleanEnumLiteralDeclaration_3() { return cBooleanEnumLiteralDeclaration_3; }
+		
+		//'Boolean'
+		public Keyword getBooleanBooleanKeyword_3_0() { return cBooleanBooleanKeyword_3_0; }
 	}
 	
 	private final ChaiseMinuteElements pChaiseMinute;
@@ -754,6 +774,8 @@ public class TabouretSecondeGrammarAccess extends AbstractElementFinder.Abstract
 	//enum DataType:
 	//    String='String'
 	//    |Int ='Int'
+	//    |Float = 'Float'
+	//    |Boolean = 'Boolean'
 	//;
 	public DataTypeElements getDataTypeAccess() {
 		return eDataType;

@@ -36,7 +36,23 @@ public enum DataType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INT(1, "Int", "Int");
+	INT(1, "Int", "Int"), /**
+	 * The '<em><b>Float</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FLOAT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	FLOAT(2, "Float", "Float"), /**
+	 * The '<em><b>Boolean</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #BOOLEAN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	BOOLEAN(3, "Boolean", "Boolean");
 
 	/**
 	 * The '<em><b>String</b></em>' literal value.
@@ -61,6 +77,28 @@ public enum DataType implements Enumerator {
 	public static final int INT_VALUE = 1;
 
 	/**
+	 * The '<em><b>Float</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FLOAT
+	 * @model name="Float"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FLOAT_VALUE = 2;
+
+	/**
+	 * The '<em><b>Boolean</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #BOOLEAN
+	 * @model name="Boolean"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int BOOLEAN_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Data Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,6 +108,8 @@ public enum DataType implements Enumerator {
 		new DataType[] {
 			STRING,
 			INT,
+			FLOAT,
+			BOOLEAN,
 		};
 
 	/**
@@ -128,6 +168,8 @@ public enum DataType implements Enumerator {
 		switch (value) {
 			case STRING_VALUE: return STRING;
 			case INT_VALUE: return INT;
+			case FLOAT_VALUE: return FLOAT;
+			case BOOLEAN_VALUE: return BOOLEAN;
 		}
 		return null;
 	}

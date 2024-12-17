@@ -6,6 +6,7 @@
 [file ((aChaiseMinute.name)+'.py', false, 'UTF-8')]
 import sys
 import pandas as pd
+import numpy
 
 def search(input, out, table, id):
 	try:
@@ -13,13 +14,13 @@ def search(input, out, table, id):
 	except Exception:
 		return out['['/]id].to_list()
  
-def load():
+def load(files):
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-[for (t : Table | aChaiseMinute.getTables())]
-	csv_file_path = ['"' + t.name+ '.csv'+'"'/]
-	input['['/]"[t.name/]"] = pd.read_csv(csv_file_path)
-[/for]	
+	for filename in files:
+		name = filename.rsplit(".",1)['['/]0]
+		input['['/]name] = pd.read_csv(filename)
+
 	return input
 
 def check_constraints(input):
@@ -58,6 +59,27 @@ def check_constraints(input):
 	out = generate_output(input)
 
 	[for (t : Table | aChaiseMinute.getTables())]
+	### Verify data types
+		[for (c: Column | t.columns)]
+			[let type : DataType = c.type]
+	for x in out['['/]"[t.name/]"]['['/]"[c.id/]"]:
+		[if type = DataType::Float]
+		if (type(x)!=float and type(x)!=numpy.float64):
+			return (False, "Type constraints failed on [t.name/].[c.id/]")
+	
+		[elseif type = DataType::Int]
+		if (type(x)!=int and type(x)!=numpy.int64):
+			return (False, "Type constraints failed on [t.name/].[c.id/]")
+
+		[elseif type = DataType::Boolean]
+		if (x !=0 and x != 1):
+			return (False, "Type constraints failed on [t.name/].[c.id/]")
+		[else]
+		break
+		[/if]
+			[/let]
+		[/for]
+
 		[for (a : Algorithm |  t.constraints)]
 			[for (f : Function | a.functions)]
 	### Apply [f.name/] ##
@@ -105,11 +127,12 @@ def save_to_csv(tables):
 
 	
 def main():
-	input = load()
+	input = load(sys.argv['['/]1:])
 	out = generate_output(input)
 	res, msg = check_constraints(input)
 	print(msg)
 	save_to_csv(out)
+	print("Exported files")
 
 if __name__ == '__main__':
 	main()

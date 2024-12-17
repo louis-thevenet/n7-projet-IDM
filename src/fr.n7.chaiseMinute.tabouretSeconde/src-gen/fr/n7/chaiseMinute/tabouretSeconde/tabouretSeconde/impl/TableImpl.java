@@ -44,306 +44,315 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class TableImpl extends MinimalEObjectImpl.Container implements Table
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getIndexcolumn() <em>Indexcolumn</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getIndexcolumn() <em>Indexcolumn</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getIndexcolumn()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getIndexcolumn()
+   * @generated
+   * @ordered
+   */
   protected IndexColumn indexcolumn;
 
   /**
-	 * The cached value of the '{@link #getColumns() <em>Columns</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getColumns() <em>Columns</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getColumns()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getColumns()
+   * @generated
+   * @ordered
+   */
   protected EList<Column> columns;
 
   /**
-	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getConstraints()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getConstraints()
+   * @generated
+   * @ordered
+   */
   protected EList<Algorithm> constraints;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected TableImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TabouretSecondePackage.Literals.TABLE;
-	}
+    return TabouretSecondePackage.Literals.TABLE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String getName()
   {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void setName(String newName)
   {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.TABLE__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.TABLE__NAME, oldName, name));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public IndexColumn getIndexcolumn()
   {
-		return indexcolumn;
-	}
+    return indexcolumn;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NotificationChain basicSetIndexcolumn(IndexColumn newIndexcolumn, NotificationChain msgs)
   {
-		IndexColumn oldIndexcolumn = indexcolumn;
-		indexcolumn = newIndexcolumn;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.TABLE__INDEXCOLUMN, oldIndexcolumn, newIndexcolumn);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    IndexColumn oldIndexcolumn = indexcolumn;
+    indexcolumn = newIndexcolumn;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.TABLE__INDEXCOLUMN, oldIndexcolumn, newIndexcolumn);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void setIndexcolumn(IndexColumn newIndexcolumn)
   {
-		if (newIndexcolumn != indexcolumn) {
-			NotificationChain msgs = null;
-			if (indexcolumn != null)
-				msgs = ((InternalEObject)indexcolumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.TABLE__INDEXCOLUMN, null, msgs);
-			if (newIndexcolumn != null)
-				msgs = ((InternalEObject)newIndexcolumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.TABLE__INDEXCOLUMN, null, msgs);
-			msgs = basicSetIndexcolumn(newIndexcolumn, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.TABLE__INDEXCOLUMN, newIndexcolumn, newIndexcolumn));
-	}
+    if (newIndexcolumn != indexcolumn)
+    {
+      NotificationChain msgs = null;
+      if (indexcolumn != null)
+        msgs = ((InternalEObject)indexcolumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.TABLE__INDEXCOLUMN, null, msgs);
+      if (newIndexcolumn != null)
+        msgs = ((InternalEObject)newIndexcolumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.TABLE__INDEXCOLUMN, null, msgs);
+      msgs = basicSetIndexcolumn(newIndexcolumn, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.TABLE__INDEXCOLUMN, newIndexcolumn, newIndexcolumn));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EList<Column> getColumns()
   {
-		if (columns == null) {
-			columns = new EObjectContainmentEList<Column>(Column.class, this, TabouretSecondePackage.TABLE__COLUMNS);
-		}
-		return columns;
-	}
+    if (columns == null)
+    {
+      columns = new EObjectContainmentEList<Column>(Column.class, this, TabouretSecondePackage.TABLE__COLUMNS);
+    }
+    return columns;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EList<Algorithm> getConstraints()
   {
-		if (constraints == null) {
-			constraints = new EObjectContainmentEList<Algorithm>(Algorithm.class, this, TabouretSecondePackage.TABLE__CONSTRAINTS);
-		}
-		return constraints;
-	}
+    if (constraints == null)
+    {
+      constraints = new EObjectContainmentEList<Algorithm>(Algorithm.class, this, TabouretSecondePackage.TABLE__CONSTRAINTS);
+    }
+    return constraints;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.TABLE__INDEXCOLUMN:
-				return basicSetIndexcolumn(null, msgs);
-			case TabouretSecondePackage.TABLE__COLUMNS:
-				return ((InternalEList<?>)getColumns()).basicRemove(otherEnd, msgs);
-			case TabouretSecondePackage.TABLE__CONSTRAINTS:
-				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.TABLE__INDEXCOLUMN:
+        return basicSetIndexcolumn(null, msgs);
+      case TabouretSecondePackage.TABLE__COLUMNS:
+        return ((InternalEList<?>)getColumns()).basicRemove(otherEnd, msgs);
+      case TabouretSecondePackage.TABLE__CONSTRAINTS:
+        return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.TABLE__NAME:
-				return getName();
-			case TabouretSecondePackage.TABLE__INDEXCOLUMN:
-				return getIndexcolumn();
-			case TabouretSecondePackage.TABLE__COLUMNS:
-				return getColumns();
-			case TabouretSecondePackage.TABLE__CONSTRAINTS:
-				return getConstraints();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.TABLE__NAME:
+        return getName();
+      case TabouretSecondePackage.TABLE__INDEXCOLUMN:
+        return getIndexcolumn();
+      case TabouretSecondePackage.TABLE__COLUMNS:
+        return getColumns();
+      case TabouretSecondePackage.TABLE__CONSTRAINTS:
+        return getConstraints();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.TABLE__NAME:
-				setName((String)newValue);
-				return;
-			case TabouretSecondePackage.TABLE__INDEXCOLUMN:
-				setIndexcolumn((IndexColumn)newValue);
-				return;
-			case TabouretSecondePackage.TABLE__COLUMNS:
-				getColumns().clear();
-				getColumns().addAll((Collection<? extends Column>)newValue);
-				return;
-			case TabouretSecondePackage.TABLE__CONSTRAINTS:
-				getConstraints().clear();
-				getConstraints().addAll((Collection<? extends Algorithm>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.TABLE__NAME:
+        setName((String)newValue);
+        return;
+      case TabouretSecondePackage.TABLE__INDEXCOLUMN:
+        setIndexcolumn((IndexColumn)newValue);
+        return;
+      case TabouretSecondePackage.TABLE__COLUMNS:
+        getColumns().clear();
+        getColumns().addAll((Collection<? extends Column>)newValue);
+        return;
+      case TabouretSecondePackage.TABLE__CONSTRAINTS:
+        getConstraints().clear();
+        getConstraints().addAll((Collection<? extends Algorithm>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.TABLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case TabouretSecondePackage.TABLE__INDEXCOLUMN:
-				setIndexcolumn((IndexColumn)null);
-				return;
-			case TabouretSecondePackage.TABLE__COLUMNS:
-				getColumns().clear();
-				return;
-			case TabouretSecondePackage.TABLE__CONSTRAINTS:
-				getConstraints().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.TABLE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case TabouretSecondePackage.TABLE__INDEXCOLUMN:
+        setIndexcolumn((IndexColumn)null);
+        return;
+      case TabouretSecondePackage.TABLE__COLUMNS:
+        getColumns().clear();
+        return;
+      case TabouretSecondePackage.TABLE__CONSTRAINTS:
+        getConstraints().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.TABLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TabouretSecondePackage.TABLE__INDEXCOLUMN:
-				return indexcolumn != null;
-			case TabouretSecondePackage.TABLE__COLUMNS:
-				return columns != null && !columns.isEmpty();
-			case TabouretSecondePackage.TABLE__CONSTRAINTS:
-				return constraints != null && !constraints.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.TABLE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TabouretSecondePackage.TABLE__INDEXCOLUMN:
+        return indexcolumn != null;
+      case TabouretSecondePackage.TABLE__COLUMNS:
+        return columns != null && !columns.isEmpty();
+      case TabouretSecondePackage.TABLE__CONSTRAINTS:
+        return constraints != null && !constraints.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
 
 } //TableImpl

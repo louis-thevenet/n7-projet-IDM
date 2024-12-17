@@ -29,71 +29,71 @@ import org.eclipse.emf.ecore.EObject;
 public interface Table extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Name()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Name()
+   * @model
+   * @generated
+   */
   String getName();
 
   /**
-	 * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
   void setName(String value);
 
   /**
-	 * Returns the value of the '<em><b>Indexcolumn</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Indexcolumn</b></em>' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Indexcolumn</em>' containment reference.
-	 * @see #setIndexcolumn(IndexColumn)
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Indexcolumn()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Indexcolumn</em>' containment reference.
+   * @see #setIndexcolumn(IndexColumn)
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Indexcolumn()
+   * @model containment="true"
+   * @generated
+   */
   IndexColumn getIndexcolumn();
 
   /**
-	 * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table#getIndexcolumn <em>Indexcolumn</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Table#getIndexcolumn <em>Indexcolumn</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Indexcolumn</em>' containment reference.
-	 * @see #getIndexcolumn()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Indexcolumn</em>' containment reference.
+   * @see #getIndexcolumn()
+   * @generated
+   */
   void setIndexcolumn(IndexColumn value);
 
   /**
-	 * Returns the value of the '<em><b>Columns</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Column}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Columns</b></em>' containment reference list.
+   * The list contents are of type {@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Column}.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Columns</em>' containment reference list.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Columns()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Columns</em>' containment reference list.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Columns()
+   * @model containment="true"
+   * @generated
+   */
   EList<Column> getColumns();
 
   /**
-	 * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Algorithm}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
+   * The list contents are of type {@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.Algorithm}.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Constraints</em>' containment reference list.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Constraints()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Constraints</em>' containment reference list.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getTable_Constraints()
+   * @model containment="true"
+   * @generated
+   */
   EList<Algorithm> getConstraints();
 
 } // Table

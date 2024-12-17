@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTabouretSecondeParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "','", "'}'", "'constrained'", "'by'", "'indexed'", "'on'", "'('", "')'", "'of'", "'computed'", "'with'", "'imported'", "'from'", "'['", "'>'", "']'", "'String'", "'Int'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "','", "'}'", "'constrained'", "'by'", "'indexed'", "'on'", "'('", "')'", "'of'", "'computed'", "'with'", "'imported'", "'from'", "'['", "'>'", "']'", "'String'", "'Int'", "'Float'", "'Boolean'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -36,6 +36,8 @@ public class InternalTabouretSecondeParser extends AbstractInternalAntlrParser {
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -1054,88 +1056,7 @@ public class InternalTabouretSecondeParser extends AbstractInternalAntlrParser {
             {
             // InternalTabouretSeconde.g:465:2: (this_ColumnData_0= ruleColumnData | this_ComputedColumn_1= ruleComputedColumn | this_ImportedColumn_2= ruleImportedColumn )
             int alt10=3;
-            int LA10_0 = input.LA(1);
-
-            if ( (LA10_0==RULE_ID) ) {
-                int LA10_1 = input.LA(2);
-
-                if ( (LA10_1==20) ) {
-                    int LA10_2 = input.LA(3);
-
-                    if ( (LA10_2==28) ) {
-                        switch ( input.LA(4) ) {
-                        case EOF:
-                        case 12:
-                        case 19:
-                            {
-                            alt10=1;
-                            }
-                            break;
-                        case 23:
-                            {
-                            alt10=3;
-                            }
-                            break;
-                        case 21:
-                            {
-                            alt10=2;
-                            }
-                            break;
-                        default:
-                            NoViableAltException nvae =
-                                new NoViableAltException("", 10, 3, input);
-
-                            throw nvae;
-                        }
-
-                    }
-                    else if ( (LA10_2==29) ) {
-                        switch ( input.LA(4) ) {
-                        case EOF:
-                        case 12:
-                        case 19:
-                            {
-                            alt10=1;
-                            }
-                            break;
-                        case 23:
-                            {
-                            alt10=3;
-                            }
-                            break;
-                        case 21:
-                            {
-                            alt10=2;
-                            }
-                            break;
-                        default:
-                            NoViableAltException nvae =
-                                new NoViableAltException("", 10, 4, input);
-
-                            throw nvae;
-                        }
-
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 10, 2, input);
-
-                        throw nvae;
-                    }
-                }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 10, 1, input);
-
-                    throw nvae;
-                }
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
-
-                throw nvae;
-            }
+            alt10 = dfa10.predict(input);
             switch (alt10) {
                 case 1 :
                     // InternalTabouretSeconde.g:466:3: this_ColumnData_0= ruleColumnData
@@ -2322,36 +2243,52 @@ public class InternalTabouretSecondeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataType"
-    // InternalTabouretSeconde.g:974:1: ruleDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) ) ;
+    // InternalTabouretSeconde.g:974:1: ruleDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) ) ;
     public final Enumerator ruleDataType() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
 
 
         	enterRule();
 
         try {
-            // InternalTabouretSeconde.g:980:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) ) )
-            // InternalTabouretSeconde.g:981:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) )
+            // InternalTabouretSeconde.g:980:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) ) )
+            // InternalTabouretSeconde.g:981:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) )
             {
-            // InternalTabouretSeconde.g:981:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
-
-            if ( (LA14_0==28) ) {
+            // InternalTabouretSeconde.g:981:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Int' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) )
+            int alt14=4;
+            switch ( input.LA(1) ) {
+            case 28:
+                {
                 alt14=1;
-            }
-            else if ( (LA14_0==29) ) {
+                }
+                break;
+            case 29:
+                {
                 alt14=2;
-            }
-            else {
+                }
+                break;
+            case 30:
+                {
+                alt14=3;
+                }
+                break;
+            case 31:
+                {
+                alt14=4;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
+
             switch (alt14) {
                 case 1 :
                     // InternalTabouretSeconde.g:982:3: (enumLiteral_0= 'String' )
@@ -2387,6 +2324,40 @@ public class InternalTabouretSecondeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 3 :
+                    // InternalTabouretSeconde.g:998:3: (enumLiteral_2= 'Float' )
+                    {
+                    // InternalTabouretSeconde.g:998:3: (enumLiteral_2= 'Float' )
+                    // InternalTabouretSeconde.g:999:4: enumLiteral_2= 'Float'
+                    {
+                    enumLiteral_2=(Token)match(input,30,FOLLOW_2); 
+
+                    				current = grammarAccess.getDataTypeAccess().getFloatEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_2, grammarAccess.getDataTypeAccess().getFloatEnumLiteralDeclaration_2());
+                    			
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // InternalTabouretSeconde.g:1006:3: (enumLiteral_3= 'Boolean' )
+                    {
+                    // InternalTabouretSeconde.g:1006:3: (enumLiteral_3= 'Boolean' )
+                    // InternalTabouretSeconde.g:1007:4: enumLiteral_3= 'Boolean'
+                    {
+                    enumLiteral_3=(Token)match(input,31,FOLLOW_2); 
+
+                    				current = grammarAccess.getDataTypeAccess().getBooleanEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_3, grammarAccess.getDataTypeAccess().getBooleanEnumLiteralDeclaration_3());
+                    			
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
@@ -2411,6 +2382,51 @@ public class InternalTabouretSecondeParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
+    protected DFA10 dfa10 = new DFA10(this);
+    static final String dfa_1s = "\12\uffff";
+    static final String dfa_2s = "\3\uffff\4\7\3\uffff";
+    static final String dfa_3s = "\1\4\1\24\1\34\4\14\3\uffff";
+    static final String dfa_4s = "\1\4\1\24\1\37\4\27\3\uffff";
+    static final String dfa_5s = "\7\uffff\1\1\1\3\1\2";
+    static final String dfa_6s = "\12\uffff}>";
+    static final String[] dfa_7s = {
+            "\1\1",
+            "\1\2",
+            "\1\3\1\4\1\5\1\6",
+            "\1\7\6\uffff\1\7\1\uffff\1\11\1\uffff\1\10",
+            "\1\7\6\uffff\1\7\1\uffff\1\11\1\uffff\1\10",
+            "\1\7\6\uffff\1\7\1\uffff\1\11\1\uffff\1\10",
+            "\1\7\6\uffff\1\7\1\uffff\1\11\1\uffff\1\10",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
+    static final short[] dfa_2 = DFA.unpackEncodedString(dfa_2s);
+    static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
+    static final char[] dfa_4 = DFA.unpackEncodedStringToUnsignedChars(dfa_4s);
+    static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
+    static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
+    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
+
+    class DFA10 extends DFA {
+
+        public DFA10(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 10;
+            this.eot = dfa_1;
+            this.eof = dfa_2;
+            this.min = dfa_3;
+            this.max = dfa_4;
+            this.accept = dfa_5;
+            this.special = dfa_6;
+            this.transition = dfa_7;
+        }
+        public String getDescription() {
+            return "465:2: (this_ColumnData_0= ruleColumnData | this_ComputedColumn_1= ruleComputedColumn | this_ImportedColumn_2= ruleImportedColumn )";
+        }
+    }
  
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
@@ -2429,7 +2445,7 @@ public class InternalTabouretSecondeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000081000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000030000000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00000000F0000000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000800000L});

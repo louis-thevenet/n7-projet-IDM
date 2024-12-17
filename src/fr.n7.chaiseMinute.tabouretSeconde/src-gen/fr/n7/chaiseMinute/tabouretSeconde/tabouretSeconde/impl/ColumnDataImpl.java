@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.EClass;
 public class ColumnDataImpl extends ColumnImpl implements ColumnData
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected ColumnDataImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TabouretSecondePackage.Literals.COLUMN_DATA;
-	}
+    return TabouretSecondePackage.Literals.COLUMN_DATA;
+  }
 
 } //ColumnDataImpl
