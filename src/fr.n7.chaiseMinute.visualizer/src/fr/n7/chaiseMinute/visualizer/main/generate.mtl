@@ -187,12 +187,12 @@ class TableViewer(tk.Tk):
 		self.treeview['['/]"show"] = "headings"
 		for col in columns:
 			self.treeview.heading(col, text=col, command=lambda _col=col: self.sort_by(_col, False))
-			self.treeview.column(col, width=tk.font.Font().measure(col))
+			self.treeview.column(col)
 		for i in range(len(table['['/]columns['['/]0]])):
 			row = ['['/]table['['/]col]['['/]i] for col in columns]
 			self.treeview.insert("", tk.END, values=row)
 		for col in columns:
-			self.treeview.column(col, width=tk.font.Font().measure(col))
+			self.treeview.column(col)
 
 	def sort_by(self, col, descending):
 		"""Sort treeview contents when a column header is clicked."""
@@ -210,7 +210,7 @@ class TableViewer(tk.Tk):
 			messagebox.showinfo("Save Table", f"Table '{self.current_table}' saved successfully.")
 		else:
 			messagebox.showwarning("Save Table", "No table selected to save.")
-			
+
 def main():
 	tables_data = load(sys.argv['['/]1:])
 	res, msg = check_constraints(tables_data)
