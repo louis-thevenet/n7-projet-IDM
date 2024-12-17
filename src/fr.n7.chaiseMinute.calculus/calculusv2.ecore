@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="calculusv2" nsURI="http://calculusv2" nsPrefix="calculusv2">
+  <eClassifiers xsi:type="ecore:EClass" name="Calculus">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//CalculusElement" containment="true" eOpposite="#//CalculusElement/calculus"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalculusElement" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calculus" lowerBound="1"
+        eType="#//Calculus" eOpposite="#//Calculus/elements"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UsableExpression" abstract="true" interface="true"
+      eSuperTypes="#//CalculusElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" upperBound="-1"
+        eType="#//PipeSuper" eOpposite="#//PipeSuper/sourcePipe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FinalExpression" abstract="true" interface="true"
+      eSuperTypes="#//CalculusElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="before" lowerBound="1"
+        eType="#//PipeFinal" eOpposite="#//PipeFinal/targetPipeFinal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputArgs" eSuperTypes="#//UsableExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true" interface="true"
+      eSuperTypes="#//UsableExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="before" lowerBound="1"
+        eType="#//Pipe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnaryOperation" abstract="true" interface="true"
+      eSuperTypes="#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Oppose" eSuperTypes="#//UnaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Reciprocal" eSuperTypes="#//UnaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" abstract="true" interface="true"
+      eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beforeSecond" lowerBound="1"
+        eType="#//Pipe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Products" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Substraction" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constante" eSuperTypes="#//UsableExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Result" eSuperTypes="#//FinalExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PipeSuper" abstract="true" interface="true"
+      eSuperTypes="#//CalculusElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourcePipe" lowerBound="1"
+        eType="#//UsableExpression" eOpposite="#//UsableExpression/usedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pipe" eSuperTypes="#//PipeSuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipe" lowerBound="1"
+        eType="#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PipeFinal" eSuperTypes="#//PipeSuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipeFinal" lowerBound="1"
+        eType="#//FinalExpression" eOpposite="#//FinalExpression/before"/>
+  </eClassifiers>
+</ecore:EPackage>
