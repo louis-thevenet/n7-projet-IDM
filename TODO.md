@@ -24,14 +24,14 @@
   - [ ] F3.4 L’utilisateur doit pouvoir réaliser (au minimum) des sommes, des produits, prendre l’opposé et l’inverse, la division, le minimum et le maximum de deux valeurs.
   - [ ] F3.5 L’utilisateur doit pouvoir faire appel à des fonctions classiques des mathématiques (par ex. sinus, cosinus, racine carrée, exponentielle, etc.).
   - [ ] F3.6 L’utilisateur doit pouvoir introduire des constantes dans ses calculs, autrement dit des valeurs codées en dur qui ne dépendent pas de l’entrée.
-- [ ] F4 L’utilisateur doit pouvoir générer, à partir d’un schéma de table (et d’éventuels composants satellites), une librairie de traitement de données conformes au schéma donné.
-  - [ ] F4.1 La librairie sera fournie dans un langage cible, compatible avec les algorithmes associés au schéma de table.
-  - [ ] F4.2 La librairie doit permettre d’importer des données pour les utiliser ailleurs dans un programme. Les formats d’entrées possibles doivent contenir, au minimum, le format CSV 3.
-  - [ ] F4.3 La librairie doit permettre de réaliser les vérifications associées aux contraintes associées au schéma (F1.5) sur les données importées.
-  - [ ] F4.4 La librairie doit permettre de réaliser les calculs associés au schéma (F1.3) sur les données importées, et notamment les réaliser dans le bon ordre (si une colonne dérivée intervient comme argument d’un calcul, par exemple).
-  - [ ] F4.5 La librairie doit gérer correctement les références croisées (F1.4).
-  - [ ] F4.6 La librairie doit permettre d’exporter les données dans un format standard, incluant au minimum le format CSV (voir plus haut).
-- [ ] F5 L’utilisateur doit pouvoir générer, à partir d’un schéma de table (et d’éventuels composants satellites) un outil de visualisation spécifique aux données conformes au schéma donné.
+- [x] F4 L’utilisateur doit pouvoir générer, à partir d’un schéma de table (et d’éventuels composants satellites), une librairie de traitement de données conformes au schéma donné.
+  - [x] F4.1 La librairie sera fournie dans un langage cible, compatible avec les algorithmes associés au schéma de table.
+  - [x] F4.2 La librairie doit permettre d’importer des données pour les utiliser ailleurs dans un programme. Les formats d’entrées possibles doivent contenir, au minimum, le format CSV 3.
+  - [x] F4.3 La librairie doit permettre de réaliser les vérifications associées aux contraintes associées au schéma (F1.5) sur les données importées.
+  - [x] F4.4 La librairie doit permettre de réaliser les calculs associés au schéma (F1.3) sur les données importées, et notamment les réaliser dans le bon ordre (si une colonne dérivée intervient comme argument d’un calcul, par exemple).
+  - [x] F4.5 La librairie doit gérer correctement les références croisées (F1.4).
+  - [x] F4.6 La librairie doit permettre d’exporter les données dans un format standard, incluant au minimum le format CSV (voir plus haut).
+- [x] F5 L’utilisateur doit pouvoir générer, à partir d’un schéma de table (et d’éventuels composants satellites) un outil de visualisation spécifique aux données conformes au schéma donné.
 - [x] F6 L’utilisateur doit pouvoir générer, à partir d’un schéma de table (et d’éventuels composants satellites)
       un script de calcul automatique, qui prend en entrée des données conformes au(x) schéma(s) requis et met à jour les colonnes dérivées (F1.3, F1.4). 3. Voir https://fr.wikipedia.org/wiki/Comma-separated_values
 
