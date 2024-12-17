@@ -73,6 +73,34 @@ Une `Function` est représentée par un identifiant qui référence un programme
 On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on aurait pu construire un arbre d'appels et prendre la sortie de plusieurs fonctions à la fois en arguments. On peut quand même obtenir ce résultat avec le système actuel en adaptant les fonctions Python pour qu'elles renvoient plusieurs colonnes, ainsi en adaptant la fonction suivante pour qu'elle récupère ces deux colonnes, on imite le fonctionnement d'un arbre d'appels.
 
 = Transforamtions Texte à Modèle de `ChaiseMinute`
+== Syntaxe Textuelle
+En utilisant le langage Xtext, nous avons pu définir une syntaxe textuelle pour les schémas de tables comme suit : 
+#sourcecode(```
+nomSchemaTable {
+  nomTable1 (
+    nomColonne1 of typeColonne1,
+    nomColonne2 of typeColonne2,
+    nomColonne3 of typeColonne3 computed with [
+      nomFonction1("nomTable1.nomColonne1", "nomTable1.nomColonne2") >
+      nomFonction2(nomTable1.nomColonne2)
+    ]
+  )
+  constrained by [nomFonction3("nomTable1.nomColonne1", "nomTable1.nomColonne2")]
+
+  nomTable2 (
+    nomColonne1 of typeColonne1 imported from nomTable1.nomColonne1
+  )
+} 
+constrained by [nomFonction4("nomTable2.nomColonne1" "nomTable1.nomColonne2")]
+```)
+
+La syntaxe permet de définir des modèles de Table dans un méta-modèles proche de `ChaiseMinute` mais néamoins différent : `TabouretSeconde`. En effet, Xtext ne supportant pas certaines spécificités des ecore, comme les e-references, il est nécéssaire d'effecter une transformation M2M pour obtenir un modèle de `ChaiseMinute` à partir d'un modèle conforme à `TabouretSeconde`.
+
+== Transformation M2M
+
+Pour finaliser la transformation texte à modèle, nous avons écrit une transformation modèle à modèle en Acceleo (la `menuiserie`) qui consiste simplement à rétablir les e-references et avoir un modèle conforme à `ChaiseMinute`.
+
+
 = Génération de la librarie et du script de calcul (Transformation M2T)
 Nous avons décidé d'utiliser le language Python pour nos algorithmes. Ainsi, pour générer une librarie de calcul à partir d'un schéma de table, il nous suffit de générer un programme Python qui appelle les fonctions référencées par les algorithmes et les contraintes.
 
