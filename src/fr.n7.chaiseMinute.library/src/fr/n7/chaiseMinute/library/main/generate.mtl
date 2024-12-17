@@ -13,10 +13,10 @@ def search(input, out, table, id):
 	except Exception:
 		return out['['/]id].to_list()
  
-def load():
+def load(files):
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-	for filename in sys.argv['['/]1:]:
+	for filename in files:
 		name = filename.rsplit(".",1)['['/]0]
 		input['['/]name] = pd.read_csv(filename)
 
@@ -105,7 +105,7 @@ def save_to_csv(tables):
 
 	
 def main():
-	input = load()
+	input = load(sys.argv['['/]1:])
 	out = generate_output(input)
 	res, msg = check_constraints(input)
 	print(msg)
