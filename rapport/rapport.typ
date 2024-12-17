@@ -74,7 +74,7 @@ On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on au
 
 = Transforamtions Texte à Modèle de `ChaiseMinute`
 == Syntaxe Textuelle
-En utilisant le langage Xtext, nous avons pu définir une syntaxe textuelle pour les schémas de tables comme suit : 
+En utilisant le langage Xtext, nous avons pu définir une syntaxe textuelle pour les schémas de tables comme suit :
 #sourcecode(```
 nomSchemaTable {
   nomTable1 (
@@ -90,7 +90,7 @@ nomSchemaTable {
   nomTable2 (
     nomColonne1 of typeColonne1 imported from nomTable1.nomColonne1
   )
-} 
+}
 constrained by [nomFonction4("nomTable2.nomColonne1" "nomTable1.nomColonne2")]
 ```)
 
@@ -106,9 +106,6 @@ Nous avons décidé d'utiliser le language Python pour nos algorithmes. Ainsi, p
 
 Nous générons aussi une fonction `main` dans notre librarie qui prend en entrée des fichier au format CSV et qui en génèrent de nouveaux en appliquant le schéma de table, résultant en un script de transformation automatique des données.
 
-// ici ajouter une image du modèle exemple-compliqué et les fonctions python
-
-== Exemple
 
 = Transformations Modèle à Modèle
 = Edition graphique
@@ -133,7 +130,201 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
 Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
 
 = Exemples
+== Equation du second degré
+=== Modèle `TabouretSeconde` (syntaxe textuelle)
+On utilise un schéma de table qui représente des polynômes du second degré dont on cherche les racines.
+Les données d'entrée sont un fichier CSV qui contient une colonne par coefficient ($a$, $b$, $c$).
 
+#figure(caption: "Description textuelle du schéma de table")[#sourcecode()[```ocaml
+    exemple_equations {
+            equations indexed on Index of Int(
+            Solution of String computed with [
+            	compute_delta("equations.a","equations.b", "equations.c")
+            	> solve("equations.a","equations.b", "equations.c")
+            ],
+            delta of Int computed with [
+            	compute_delta("equations.a","equations.b", "equations.c")
+            ],
+            a of Int imported from "table.a",
+            b of Int imported from "table.b",
+            c of Int imported from "table.c"
+            )
+    }
+    constrained by [ensure_is_not_null("table.a") ]
+    ```]
+]
+Les colonnes $a$, $b$ et $c$ sont importées de la table d'entrée.
+
+Le schéma de table spécifie deux nouvelles colonnes `Solution` et `delta` qui représentent les racines et les déterminants de chaque polynôme.
+Elles sont produites à partir des fonctions `compute_delta` et `solve`.
+
+#sourcecode()[```python
+  import numpy as np
+
+  def compute_delta(a,b,c):
+      return np.multiply(b,b) - 4 * np.multiply(a, c)
+
+  ```
+]
+#sourcecode()[```python
+  import numpy as np
+  import math
+
+  def solve(deltas, a,b,c):
+      solutions = []
+      for i in range(len(a)):
+
+          if deltas[i] > 0:
+              sqrt_delta = math.sqrt(deltas[i])
+              solutions.append([
+                (-b[i] - sqrt_delta)/(2*a[i]),
+                (-b[i] + sqrt_delta)/(2*a[i])
+              ])
+          elif deltas[i] < 0:
+              solutions.append(["No solution"])
+          else:
+              solutions.append([-b[i] / (2*a[i])])
+      return solutions
+  ```]
+
+
+Finalement, une contrainte est vérifiée sur la colonne $a$, dont tous les éléments doivent être non nuls.
+#sourcecode()[```python
+
+  import numpy as np
+
+  def ensure_is_not_null(x):
+      return (np.array(x) != 0).all()
+  ```]
+
+=== Modèle `ChaiseMinute`
+On transforme ensuite ce modèle intermédiaire en `ChaiseMinute` par notre transformation ATL `cmtToCm`
+
+#figure(
+  image("./images/equation_model.svg"),
+  caption: [Modèle `chaiseMinute` obtenu vu sous Sirius],
+)
+
+=== Génération de la librarie Python
+
+On génère ensuite la librarie via la transformation modèle vers texte, un extrait est disponible ci-dessous.
+
+La fonction `generate_output` applique le schéma de table à partir des données chargées en entrée.
+#sourcecode()[```python
+  def generate_output(input):
+  	"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
+  	tables = {}
+  	out = {}
+  	###########################################################################
+  	# Table: equations
+  	###########################################################################
+  	### Imported column: a from table.a ###
+  	out["a"]=input["table"]["a"]
+
+  	### Imported column: b from table.b ###
+  	out["b"]=input["table"]["b"]
+
+  	### Imported column: c from table.c ###
+  	out["c"]=input["table"]["c"]
+
+  	################################
+  	## Computed column: Solution
+  	################################
+  	### Apply compute_delta ##
+  	from compute_delta import compute_delta
+  	out["Solution"] = compute_delta(
+  		search(input, out, "equations", "a"),
+  		search(input, out, "equations", "b"),
+  		search(input, out, "equations", "c"),
+  	)
+  	###############
+  	### Apply solve ##
+  	from solve import solve
+  	out["Solution"] = solve(
+  		out["Solution"], # Previous result used in next function
+  		search(input, out, "equations", "a"),
+  		search(input, out, "equations", "b"),
+  		search(input, out, "equations", "c"),
+  	)
+  	###############
+  	################################
+  	## Computed column: delta
+  	################################
+  	### Apply compute_delta ##
+  	from compute_delta import compute_delta
+  	out["delta"] = compute_delta(
+  		search(input, out, "equations", "a"),
+  		search(input, out, "equations", "b"),
+  		search(input, out, "equations", "c"),
+  	)
+  	###############
+  	tables["equations"] = out
+
+  	return tables
+  ```]
+La fonction `check_constraints` applique les contraintes et vérifie la cohérence des types.
+#sourcecode()[```python
+    def check_constraints(input):
+    	"""Ensure all contraints are respected in input and output data"""
+    	################################
+    	# Verifying Input Constraints
+    	################################
+    	### Apply ensure_is_not_null ##
+    	from ensure_is_not_null import ensure_is_not_null
+    	res = ensure_is_not_null(
+    		input["table"]["a"].to_list(),
+    	)
+
+    	if not res:
+    		return (False,("ensure_is_not_null constraints failed"))
+
+    	################################
+    	# Verifying Table Constraints
+    	################################
+    	out = generate_output(input)
+
+    	### Verify data types
+    	for x in out["equations"]["Solution"]:
+    		break
+    	for x in out["equations"]["delta"]:
+    		if (type(x)!=int and type(x)!=numpy.int64):
+    			return (False, "Type constraints failed on equations.delta")
+
+    	for x in out["equations"]["a"]:
+    		if (type(x)!=int and type(x)!=numpy.int64):
+    			return (False, "Type constraints failed on equations.a")
+
+    	for x in out["equations"]["b"]:
+    		if (type(x)!=int and type(x)!=numpy.int64):
+    			return (False, "Type constraints failed on equations.b")
+
+    	for x in out["equations"]["c"]:
+    		if (type(x)!=int and type(x)!=numpy.int64):
+    			return (False, "Type constraints failed on equations.c")
+
+
+    	return (True, "Constraints are respected")
+  ```]
+=== Application de la librarie
+On peut finalement appeler le script automatique (fonction `main` de la librarie), qui à partir des données d'entrée au format CSV :
+
+#table(
+  columns: 4,
+  ..csv("./images/input_equations.csv").flatten()
+)
+
+Produit le fichier :
+
+#table(
+  columns: 6,
+
+  ..csv("./images/output_equations.csv").flatten()
+)
+
+
+On peut également voir les données dans l'outil de visualisation généré
+
+#image("./images/equation_visualizer.png")
 
 = Conclusion
 //  qui doit inclure un bilan sur le projet (soit personnel soit de groupe), expliquant notamment les points de difficulté, et si possible une critique sur le sujet proposé
