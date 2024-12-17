@@ -25,50 +25,50 @@ import org.eclipse.emf.ecore.EObject;
 public interface IndexColumn extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getIndexColumn_Id()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getIndexColumn_Id()
+   * @model
+   * @generated
+   */
   String getId();
 
   /**
-	 * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn#getId <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
+   * @generated
+   */
   void setId(String value);
 
   /**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.DataType}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * The literals are from the enumeration {@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.DataType}.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.DataType
-	 * @see #setType(DataType)
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getIndexColumn_Type()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.DataType
+   * @see #setType(DataType)
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getIndexColumn_Type()
+   * @model
+   * @generated
+   */
   DataType getType();
 
   /**
-	 * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.IndexColumn#getType <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.DataType
-	 * @see #getType()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.DataType
+   * @see #getType()
+   * @generated
+   */
   void setType(DataType value);
 
 } // IndexColumn

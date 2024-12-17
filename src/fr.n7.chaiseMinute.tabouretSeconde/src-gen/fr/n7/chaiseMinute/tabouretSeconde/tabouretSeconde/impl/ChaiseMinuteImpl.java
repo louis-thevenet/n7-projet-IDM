@@ -42,236 +42,243 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ChaiseMinuteImpl extends MinimalEObjectImpl.Container implements ChaiseMinute
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getTables() <em>Tables</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getTables() <em>Tables</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getTables()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getTables()
+   * @generated
+   * @ordered
+   */
   protected EList<Table> tables;
 
   /**
-	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getConstraints()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getConstraints()
+   * @generated
+   * @ordered
+   */
   protected EList<Algorithm> constraints;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected ChaiseMinuteImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TabouretSecondePackage.Literals.CHAISE_MINUTE;
-	}
+    return TabouretSecondePackage.Literals.CHAISE_MINUTE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String getName()
   {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void setName(String newName)
   {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.CHAISE_MINUTE__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.CHAISE_MINUTE__NAME, oldName, name));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EList<Table> getTables()
   {
-		if (tables == null) {
-			tables = new EObjectContainmentEList<Table>(Table.class, this, TabouretSecondePackage.CHAISE_MINUTE__TABLES);
-		}
-		return tables;
-	}
+    if (tables == null)
+    {
+      tables = new EObjectContainmentEList<Table>(Table.class, this, TabouretSecondePackage.CHAISE_MINUTE__TABLES);
+    }
+    return tables;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EList<Algorithm> getConstraints()
   {
-		if (constraints == null) {
-			constraints = new EObjectContainmentEList<Algorithm>(Algorithm.class, this, TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS);
-		}
-		return constraints;
-	}
+    if (constraints == null)
+    {
+      constraints = new EObjectContainmentEList<Algorithm>(Algorithm.class, this, TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS);
+    }
+    return constraints;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
-				return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
-			case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
-				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
+        return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
+      case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
+        return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.CHAISE_MINUTE__NAME:
-				return getName();
-			case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
-				return getTables();
-			case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
-				return getConstraints();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.CHAISE_MINUTE__NAME:
+        return getName();
+      case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
+        return getTables();
+      case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
+        return getConstraints();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.CHAISE_MINUTE__NAME:
-				setName((String)newValue);
-				return;
-			case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
-				getTables().clear();
-				getTables().addAll((Collection<? extends Table>)newValue);
-				return;
-			case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
-				getConstraints().clear();
-				getConstraints().addAll((Collection<? extends Algorithm>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.CHAISE_MINUTE__NAME:
+        setName((String)newValue);
+        return;
+      case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
+        getTables().clear();
+        getTables().addAll((Collection<? extends Table>)newValue);
+        return;
+      case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
+        getConstraints().clear();
+        getConstraints().addAll((Collection<? extends Algorithm>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.CHAISE_MINUTE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
-				getTables().clear();
-				return;
-			case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
-				getConstraints().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.CHAISE_MINUTE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
+        getTables().clear();
+        return;
+      case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
+        getConstraints().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.CHAISE_MINUTE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
-				return tables != null && !tables.isEmpty();
-			case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
-				return constraints != null && !constraints.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.CHAISE_MINUTE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TabouretSecondePackage.CHAISE_MINUTE__TABLES:
+        return tables != null && !tables.isEmpty();
+      case TabouretSecondePackage.CHAISE_MINUTE__CONSTRAINTS:
+        return constraints != null && !constraints.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
 
 } //ChaiseMinuteImpl

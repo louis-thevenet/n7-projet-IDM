@@ -23,268 +23,274 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 public class TabouretSecondeFactoryImpl extends EFactoryImpl implements TabouretSecondeFactory
 {
   /**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
+   * Creates the default factory implementation.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public static TabouretSecondeFactory init()
   {
-		try {
-			TabouretSecondeFactory theTabouretSecondeFactory = (TabouretSecondeFactory)EPackage.Registry.INSTANCE.getEFactory(TabouretSecondePackage.eNS_URI);
-			if (theTabouretSecondeFactory != null) {
-				return theTabouretSecondeFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new TabouretSecondeFactoryImpl();
-	}
+    try
+    {
+      TabouretSecondeFactory theTabouretSecondeFactory = (TabouretSecondeFactory)EPackage.Registry.INSTANCE.getEFactory(TabouretSecondePackage.eNS_URI);
+      if (theTabouretSecondeFactory != null)
+      {
+        return theTabouretSecondeFactory;
+      }
+    }
+    catch (Exception exception)
+    {
+      EcorePlugin.INSTANCE.log(exception);
+    }
+    return new TabouretSecondeFactoryImpl();
+  }
 
   /**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public TabouretSecondeFactoryImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EObject create(EClass eClass)
   {
-		switch (eClass.getClassifierID()) {
-			case TabouretSecondePackage.CHAISE_MINUTE: return createChaiseMinute();
-			case TabouretSecondePackage.TABLE: return createTable();
-			case TabouretSecondePackage.INDEX_COLUMN: return createIndexColumn();
-			case TabouretSecondePackage.COLUMN: return createColumn();
-			case TabouretSecondePackage.COLUMN_DATA: return createColumnData();
-			case TabouretSecondePackage.COMPUTED_COLUMN: return createComputedColumn();
-			case TabouretSecondePackage.IMPORTED_COLUMN: return createImportedColumn();
-			case TabouretSecondePackage.ALGORITHM: return createAlgorithm();
-			case TabouretSecondePackage.FUNCTION: return createFunction();
-			case TabouretSecondePackage.ARGUMENT: return createArgument();
-			case TabouretSecondePackage.COLUMN_ARGUMENT: return createColumnArgument();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eClass.getClassifierID())
+    {
+      case TabouretSecondePackage.CHAISE_MINUTE: return createChaiseMinute();
+      case TabouretSecondePackage.TABLE: return createTable();
+      case TabouretSecondePackage.INDEX_COLUMN: return createIndexColumn();
+      case TabouretSecondePackage.COLUMN: return createColumn();
+      case TabouretSecondePackage.COLUMN_DATA: return createColumnData();
+      case TabouretSecondePackage.COMPUTED_COLUMN: return createComputedColumn();
+      case TabouretSecondePackage.IMPORTED_COLUMN: return createImportedColumn();
+      case TabouretSecondePackage.ALGORITHM: return createAlgorithm();
+      case TabouretSecondePackage.FUNCTION: return createFunction();
+      case TabouretSecondePackage.ARGUMENT: return createArgument();
+      case TabouretSecondePackage.COLUMN_ARGUMENT: return createColumnArgument();
+      default:
+        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object createFromString(EDataType eDataType, String initialValue)
   {
-		switch (eDataType.getClassifierID()) {
-			case TabouretSecondePackage.DATA_TYPE:
-				return createDataTypeFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID())
+    {
+      case TabouretSecondePackage.DATA_TYPE:
+        return createDataTypeFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
-		switch (eDataType.getClassifierID()) {
-			case TabouretSecondePackage.DATA_TYPE:
-				return convertDataTypeToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID())
+    {
+      case TabouretSecondePackage.DATA_TYPE:
+        return convertDataTypeToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public ChaiseMinute createChaiseMinute()
   {
-		ChaiseMinuteImpl chaiseMinute = new ChaiseMinuteImpl();
-		return chaiseMinute;
-	}
+    ChaiseMinuteImpl chaiseMinute = new ChaiseMinuteImpl();
+    return chaiseMinute;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Table createTable()
   {
-		TableImpl table = new TableImpl();
-		return table;
-	}
+    TableImpl table = new TableImpl();
+    return table;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public IndexColumn createIndexColumn()
   {
-		IndexColumnImpl indexColumn = new IndexColumnImpl();
-		return indexColumn;
-	}
+    IndexColumnImpl indexColumn = new IndexColumnImpl();
+    return indexColumn;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Column createColumn()
   {
-		ColumnImpl column = new ColumnImpl();
-		return column;
-	}
+    ColumnImpl column = new ColumnImpl();
+    return column;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public ColumnData createColumnData()
   {
-		ColumnDataImpl columnData = new ColumnDataImpl();
-		return columnData;
-	}
+    ColumnDataImpl columnData = new ColumnDataImpl();
+    return columnData;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public ComputedColumn createComputedColumn()
   {
-		ComputedColumnImpl computedColumn = new ComputedColumnImpl();
-		return computedColumn;
-	}
+    ComputedColumnImpl computedColumn = new ComputedColumnImpl();
+    return computedColumn;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public ImportedColumn createImportedColumn()
   {
-		ImportedColumnImpl importedColumn = new ImportedColumnImpl();
-		return importedColumn;
-	}
+    ImportedColumnImpl importedColumn = new ImportedColumnImpl();
+    return importedColumn;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Algorithm createAlgorithm()
   {
-		AlgorithmImpl algorithm = new AlgorithmImpl();
-		return algorithm;
-	}
+    AlgorithmImpl algorithm = new AlgorithmImpl();
+    return algorithm;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Function createFunction()
   {
-		FunctionImpl function = new FunctionImpl();
-		return function;
-	}
+    FunctionImpl function = new FunctionImpl();
+    return function;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Argument createArgument()
   {
-		ArgumentImpl argument = new ArgumentImpl();
-		return argument;
-	}
+    ArgumentImpl argument = new ArgumentImpl();
+    return argument;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public ColumnArgument createColumnArgument()
   {
-		ColumnArgumentImpl columnArgument = new ColumnArgumentImpl();
-		return columnArgument;
-	}
+    ColumnArgumentImpl columnArgument = new ColumnArgumentImpl();
+    return columnArgument;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public DataType createDataTypeFromString(EDataType eDataType, String initialValue)
   {
-		DataType result = DataType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    DataType result = DataType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String convertDataTypeToString(EDataType eDataType, Object instanceValue)
   {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public TabouretSecondePackage getTabouretSecondePackage()
   {
-		return (TabouretSecondePackage)getEPackage();
-	}
+    return (TabouretSecondePackage)getEPackage();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+   * @deprecated
+   * @generated
+   */
   @Deprecated
   public static TabouretSecondePackage getPackage()
   {
-		return TabouretSecondePackage.eINSTANCE;
-	}
+    return TabouretSecondePackage.eINSTANCE;
+  }
 
 } //TabouretSecondeFactoryImpl

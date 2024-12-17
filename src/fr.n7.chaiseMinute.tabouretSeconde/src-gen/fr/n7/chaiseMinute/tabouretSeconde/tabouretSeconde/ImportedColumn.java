@@ -23,25 +23,25 @@ package fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde;
 public interface ImportedColumn extends Column
 {
   /**
-	 * Returns the value of the '<em><b>Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Path</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Path</em>' attribute.
-	 * @see #setPath(String)
-	 * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getImportedColumn_Path()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Path</em>' attribute.
+   * @see #setPath(String)
+   * @see fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.TabouretSecondePackage#getImportedColumn_Path()
+   * @model
+   * @generated
+   */
   String getPath();
 
   /**
-	 * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ImportedColumn#getPath <em>Path</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link fr.n7.chaiseMinute.tabouretSeconde.tabouretSeconde.ImportedColumn#getPath <em>Path</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Path</em>' attribute.
-	 * @see #getPath()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Path</em>' attribute.
+   * @see #getPath()
+   * @generated
+   */
   void setPath(String value);
 
 } // ImportedColumn

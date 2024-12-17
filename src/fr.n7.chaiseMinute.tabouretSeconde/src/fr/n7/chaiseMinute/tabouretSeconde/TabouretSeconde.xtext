@@ -35,6 +35,9 @@ ImportedColumn: id=ID 'of' type=DataType 'imported' 'from' path=STRING
 enum DataType:
 	String='String'
 	|Int ='Int'
+	|Float = 'Float'
+	|Boolean = 'Boolean'
+	
 ;
 
 Algorithm:

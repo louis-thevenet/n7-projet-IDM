@@ -524,6 +524,8 @@ public class ChaiseMinutePackageImpl extends EPackageImpl implements ChaiseMinut
 		initEEnum(dataTypeEEnum, DataType.class, "DataType");
 		addEEnumLiteral(dataTypeEEnum, DataType.STRING);
 		addEEnumLiteral(dataTypeEEnum, DataType.INT);
+		addEEnumLiteral(dataTypeEEnum, DataType.FLOAT);
+		addEEnumLiteral(dataTypeEEnum, DataType.BOOLEAN);
 
 		// Create resource
 		createResource(eNS_URI);

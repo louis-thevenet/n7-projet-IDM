@@ -383,6 +383,18 @@ rule__DataType__Alternatives
 		('Int')
 		{ after(grammarAccess.getDataTypeAccess().getIntEnumLiteralDeclaration_1()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getDataTypeAccess().getFloatEnumLiteralDeclaration_2()); }
+		('Float')
+		{ after(grammarAccess.getDataTypeAccess().getFloatEnumLiteralDeclaration_2()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getDataTypeAccess().getBooleanEnumLiteralDeclaration_3()); }
+		('Boolean')
+		{ after(grammarAccess.getDataTypeAccess().getBooleanEnumLiteralDeclaration_3()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);

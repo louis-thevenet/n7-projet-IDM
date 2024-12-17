@@ -37,127 +37,133 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algorithm
 {
   /**
-	 * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getFunctions()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getFunctions()
+   * @generated
+   * @ordered
+   */
   protected EList<Function> functions;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected AlgorithmImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TabouretSecondePackage.Literals.ALGORITHM;
-	}
+    return TabouretSecondePackage.Literals.ALGORITHM;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EList<Function> getFunctions()
   {
-		if (functions == null) {
-			functions = new EObjectContainmentEList<Function>(Function.class, this, TabouretSecondePackage.ALGORITHM__FUNCTIONS);
-		}
-		return functions;
-	}
+    if (functions == null)
+    {
+      functions = new EObjectContainmentEList<Function>(Function.class, this, TabouretSecondePackage.ALGORITHM__FUNCTIONS);
+    }
+    return functions;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
-				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
+        return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
-				return getFunctions();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
+        return getFunctions();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
-				getFunctions().clear();
-				getFunctions().addAll((Collection<? extends Function>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
+        getFunctions().clear();
+        getFunctions().addAll((Collection<? extends Function>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
-				getFunctions().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
+        getFunctions().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
-				return functions != null && !functions.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.ALGORITHM__FUNCTIONS:
+        return functions != null && !functions.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //AlgorithmImpl

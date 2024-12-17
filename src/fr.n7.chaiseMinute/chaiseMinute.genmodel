@@ -11,6 +11,8 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="chaiseMinute.ecore#//DataType">
       <genEnumLiterals ecoreEnumLiteral="chaiseMinute.ecore#//DataType/String"/>
       <genEnumLiterals ecoreEnumLiteral="chaiseMinute.ecore#//DataType/Int"/>
+      <genEnumLiterals ecoreEnumLiteral="chaiseMinute.ecore#//DataType/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="chaiseMinute.ecore#//DataType/Boolean"/>
     </genEnums>
     <genClasses ecoreClass="chaiseMinute.ecore#//ChaiseMinute">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chaiseMinute.ecore#//ChaiseMinute/tables"/>

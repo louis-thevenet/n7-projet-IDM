@@ -31,159 +31,166 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ComputedColumnImpl extends ColumnImpl implements ComputedColumn
 {
   /**
-	 * The cached value of the '{@link #getAlgorithm() <em>Algorithm</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getAlgorithm() <em>Algorithm</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getAlgorithm()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getAlgorithm()
+   * @generated
+   * @ordered
+   */
   protected Algorithm algorithm;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected ComputedColumnImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TabouretSecondePackage.Literals.COMPUTED_COLUMN;
-	}
+    return TabouretSecondePackage.Literals.COMPUTED_COLUMN;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Algorithm getAlgorithm()
   {
-		return algorithm;
-	}
+    return algorithm;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NotificationChain basicSetAlgorithm(Algorithm newAlgorithm, NotificationChain msgs)
   {
-		Algorithm oldAlgorithm = algorithm;
-		algorithm = newAlgorithm;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, oldAlgorithm, newAlgorithm);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Algorithm oldAlgorithm = algorithm;
+    algorithm = newAlgorithm;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, oldAlgorithm, newAlgorithm);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void setAlgorithm(Algorithm newAlgorithm)
   {
-		if (newAlgorithm != algorithm) {
-			NotificationChain msgs = null;
-			if (algorithm != null)
-				msgs = ((InternalEObject)algorithm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, null, msgs);
-			if (newAlgorithm != null)
-				msgs = ((InternalEObject)newAlgorithm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, null, msgs);
-			msgs = basicSetAlgorithm(newAlgorithm, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, newAlgorithm, newAlgorithm));
-	}
+    if (newAlgorithm != algorithm)
+    {
+      NotificationChain msgs = null;
+      if (algorithm != null)
+        msgs = ((InternalEObject)algorithm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, null, msgs);
+      if (newAlgorithm != null)
+        msgs = ((InternalEObject)newAlgorithm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, null, msgs);
+      msgs = basicSetAlgorithm(newAlgorithm, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM, newAlgorithm, newAlgorithm));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
-				return basicSetAlgorithm(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
+        return basicSetAlgorithm(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
-				return getAlgorithm();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
+        return getAlgorithm();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
-				setAlgorithm((Algorithm)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
+        setAlgorithm((Algorithm)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
-				setAlgorithm((Algorithm)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
+        setAlgorithm((Algorithm)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
-				return algorithm != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case TabouretSecondePackage.COMPUTED_COLUMN__ALGORITHM:
+        return algorithm != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //ComputedColumnImpl
