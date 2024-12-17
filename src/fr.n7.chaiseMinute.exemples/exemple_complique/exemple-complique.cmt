@@ -6,4 +6,4 @@ ExempleComplique{
 		A of Int, B of Int, C of Int imported from "table1.A", Sum of Int computed with [sum("table1.A","table1.B")], Variation of Int computed with [variation("table1.A","table1.B")>variation("table2.A")]
 		)
 	}
-	constrained by [sum("table1.UN","table2.DEUX")>ensure_all_lower_than_3()]
+	constrained by [sum("table1.Un","table2.Deux")>ensure_all_lower_than_3()]

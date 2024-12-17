@@ -3,4 +3,5 @@
   <semanticResources>exemple-sujet.xmi</semanticResources>
   <semanticResources>platform:/resource/fr.n7.chaiseMinute.script/algorithm.ecore</semanticResources>
   <semanticResources>platform:/resource/fr.n7.chaiseMinute.function/function.ecore</semanticResources>
+  <semanticResources>exemple_sujet/exemple_sujet.cmt</semanticResources>
 </viewpoint:DAnalysis>
