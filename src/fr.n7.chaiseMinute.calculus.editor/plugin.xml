@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated calculusv2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="calculusv2.presentation.Calculusv2ModelWizardID"
+            name="%_UI_Calculusv2ModelWizard_label"
+            class="calculusv2.presentation.Calculusv2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Calculusv2ModelFile.gif">
+         <description>%_UI_Calculusv2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated calculusv2 -->
+      <editor
+            id="calculusv2.presentation.Calculusv2EditorID"
+            name="%_UI_Calculusv2Editor_label"
+            icon="icons/full/obj16/Calculusv2ModelFile.gif"
+            extensions="calculusv2"
+            class="calculusv2.presentation.Calculusv2Editor"
+            contributorClass="calculusv2.presentation.Calculusv2ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated calculus -->
+      <package
+            uri="http://calculus"
+            class="calculus.CalculusPackage"
+            genModel="calculus.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated calculusv2 -->
+      <package
+            uri="http://calculusv2"
+            class="calculusv2.Calculusv2Package"
+            genModel="calculusv2.genmodel"/>
+   </extension>
+
+</plugin>
