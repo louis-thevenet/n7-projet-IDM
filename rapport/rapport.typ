@@ -25,7 +25,7 @@ L'utilisateur de `ChaiseMinute` dipose d'une syntaxe textuelle ainsi qu'un outil
 = Méta-Modèles
 Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
 + ChaiseMinute.Ecore
-  - Point d'entrée, il permet de définir les schéma de table
+  - Point d'entrée, il permet de définir les schémas de table
 + Algorithm.Ecore
   - Définir les algorithmes utilisés pour les `ComputedColumns` et les `Constraints`
 + Function.Ecore
@@ -101,11 +101,40 @@ La syntaxe permet de définir des modèles de Table dans un méta-modèles proch
 Pour finaliser la transformation texte à modèle, nous avons écrit une transformation modèle à modèle en Acceleo (la `menuiserie`) qui consiste simplement à rétablir les e-references et avoir un modèle conforme à `ChaiseMinute`.
 
 
-= Génération de la librarie et du script de calcul (Transformation M2T)
+= Transformations M2T
+== Librairie et script de calcul automatique
 Nous avons décidé d'utiliser le language Python pour nos algorithmes. Ainsi, pour générer une librarie de calcul à partir d'un schéma de table, il nous suffit de générer un programme Python qui appelle les fonctions référencées par les algorithmes et les contraintes.
+
+La librarie propose différentes fonctions pour manipuler des données à l'aide du schéma de table.
+#figure(caption: [Signatures des fonctions de la librarie])[#sourcecode()[```python
+    def load(files):
+    	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
+
+    def check_constraints(input):
+    	"""Ensure all contraints are respected in input and output data"""
+
+    def generate_output(input):
+    	"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
+
+    def save_to_csv(tables):
+    	"""Saves each table from he input argument as a CSV file."""
+
+
+    def main():
+    	input = load(sys.argv[1:])
+    	out = generate_output(input)
+    	res, msg = check_constraints(input)
+    	print(msg)
+    	save_to_csv(out)
+    	print("Exported files")
+    ```]
+]
+
 
 Nous générons aussi une fonction `main` dans notre librarie qui prend en entrée des fichier au format CSV et qui en génèrent de nouveaux en appliquant le schéma de table, résultant en un script de transformation automatique des données.
 
+== Outil de visualisation des données
+En s'appuyant sur la même librarie, on crée un outil de visualisation du schéma de table en Python. (Voir @equation_vis)
 
 = Transformations Modèle à Modèle
 = Edition graphique
@@ -324,7 +353,10 @@ Produit le fichier :
 
 On peut également voir les données dans l'outil de visualisation généré
 
-#image("./images/equation_visualizer.png")
+#figure(
+  caption: [Visualisation des données générées],
+  image("./images/equation_visualizer.png"),
+) <equation_vis>
 
 = Conclusion
 //  qui doit inclure un bilan sur le projet (soit personnel soit de groupe), expliquant notamment les points de difficulté, et si possible une critique sur le sujet proposé
