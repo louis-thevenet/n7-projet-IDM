@@ -91,10 +91,10 @@ def check_constraints(input):
 	from [f.name/] import [f.name/]
 					[let functionNo :Integer= i]
 	res = [f.name/](
-						[for (input : Argument | f.inputs)]
 						[if (functionNo >=2)]
 		res, # Previous result used in next function
 						[/if]
+						[for (input : Argument | f.inputs)]
 						[if input.oclIsTypeOf(ColumnArgument)]
 							[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
 							[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
@@ -257,10 +257,10 @@ if __name__ == '__main__':
 	from [f.name/] import [f.name/]
 				[let functionNo :Integer= i]
 	out['['/]"[c.id/]"] = [f.name/](
-					[for (input : Argument | f.inputs)]
 					[if (functionNo >=2)]
 		out['['/]"[c.id/]"], # Previous result used in next function
 					[/if]
+					[for (input : Argument | f.inputs)]
 					[if input.oclIsTypeOf(ColumnArgument)]
 						[let table:String = input.oclAsType(ColumnArgument).columnPath.replaceAll('\\..*', '')]
 						[let id:String = input.oclAsType(ColumnArgument).columnPath.replaceFirst('.*\\.', '')]
