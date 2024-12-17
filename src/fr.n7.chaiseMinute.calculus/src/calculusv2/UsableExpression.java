@@ -24,13 +24,13 @@ public interface UsableExpression extends CalculusElement {
 	/**
 	 * Returns the value of the '<em><b>Used By</b></em>' reference list.
 	 * The list contents are of type {@link calculusv2.Pipe}.
-	 * It is bidirectional and its opposite is '{@link calculusv2.Pipe#getSource <em>Source</em>}'.
+	 * It is bidirectional and its opposite is '{@link calculusv2.Pipe#getSourcePipe <em>Source Pipe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Used By</em>' reference list.
 	 * @see calculusv2.Calculusv2Package#getUsableExpression_UsedBy()
-	 * @see calculusv2.Pipe#getSource
-	 * @model opposite="source"
+	 * @see calculusv2.Pipe#getSourcePipe
+	 * @model opposite="sourcePipe"
 	 * @generated
 	 */
 	EList<Pipe> getUsedBy();

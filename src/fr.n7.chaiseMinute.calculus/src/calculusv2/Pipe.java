@@ -12,8 +12,8 @@ package calculusv2;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link calculusv2.Pipe#getSource <em>Source</em>}</li>
- *   <li>{@link calculusv2.Pipe#getTarget <em>Target</em>}</li>
+ *   <li>{@link calculusv2.Pipe#getSourcePipe <em>Source Pipe</em>}</li>
+ *   <li>{@link calculusv2.Pipe#getTargetPipe <em>Target Pipe</em>}</li>
  * </ul>
  *
  * @see calculusv2.Calculusv2Package#getPipe()
@@ -22,49 +22,49 @@ package calculusv2;
  */
 public interface Pipe extends CalculusElement {
 	/**
-	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * Returns the value of the '<em><b>Source Pipe</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link calculusv2.UsableExpression#getUsedBy <em>Used By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(UsableExpression)
-	 * @see calculusv2.Calculusv2Package#getPipe_Source()
+	 * @return the value of the '<em>Source Pipe</em>' reference.
+	 * @see #setSourcePipe(UsableExpression)
+	 * @see calculusv2.Calculusv2Package#getPipe_SourcePipe()
 	 * @see calculusv2.UsableExpression#getUsedBy
 	 * @model opposite="usedBy" required="true"
 	 * @generated
 	 */
-	UsableExpression getSource();
+	UsableExpression getSourcePipe();
 
 	/**
-	 * Sets the value of the '{@link calculusv2.Pipe#getSource <em>Source</em>}' reference.
+	 * Sets the value of the '{@link calculusv2.Pipe#getSourcePipe <em>Source Pipe</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source</em>' reference.
-	 * @see #getSource()
+	 * @param value the new value of the '<em>Source Pipe</em>' reference.
+	 * @see #getSourcePipe()
 	 * @generated
 	 */
-	void setSource(UsableExpression value);
+	void setSourcePipe(UsableExpression value);
 
 	/**
-	 * Returns the value of the '<em><b>Target</b></em>' reference.
+	 * Returns the value of the '<em><b>Target Pipe</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(Operation)
-	 * @see calculusv2.Calculusv2Package#getPipe_Target()
-	 * @model
+	 * @return the value of the '<em>Target Pipe</em>' reference.
+	 * @see #setTargetPipe(Operation)
+	 * @see calculusv2.Calculusv2Package#getPipe_TargetPipe()
+	 * @model required="true"
 	 * @generated
 	 */
-	Operation getTarget();
+	Operation getTargetPipe();
 
 	/**
-	 * Sets the value of the '{@link calculusv2.Pipe#getTarget <em>Target</em>}' reference.
+	 * Sets the value of the '{@link calculusv2.Pipe#getTargetPipe <em>Target Pipe</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target</em>' reference.
-	 * @see #getTarget()
+	 * @param value the new value of the '<em>Target Pipe</em>' reference.
+	 * @see #getTargetPipe()
 	 * @generated
 	 */
-	void setTarget(Operation value);
+	void setTargetPipe(Operation value);
 
 } // Pipe

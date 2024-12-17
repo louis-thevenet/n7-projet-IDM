@@ -184,7 +184,7 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 	@Override
 	public EList<Pipe> getUsedBy() {
 		if (usedBy == null) {
-			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.CONSTANTE__USED_BY, Calculusv2Package.PIPE__SOURCE);
+			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.CONSTANTE__USED_BY, Calculusv2Package.PIPE__SOURCE_PIPE);
 		}
 		return usedBy;
 	}

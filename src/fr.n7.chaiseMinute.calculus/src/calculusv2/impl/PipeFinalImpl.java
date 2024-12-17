@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <ul>
  *   <li>{@link calculusv2.impl.PipeFinalImpl#getCalculus <em>Calculus</em>}</li>
  *   <li>{@link calculusv2.impl.PipeFinalImpl#getName <em>Name</em>}</li>
- *   <li>{@link calculusv2.impl.PipeFinalImpl#getSource <em>Source</em>}</li>
- *   <li>{@link calculusv2.impl.PipeFinalImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link calculusv2.impl.PipeFinalImpl#getSourcePipeFinal <em>Source Pipe Final</em>}</li>
+ *   <li>{@link calculusv2.impl.PipeFinalImpl#getTargetPipeFinal <em>Target Pipe Final</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,24 +57,24 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * The cached value of the '{@link #getSourcePipeFinal() <em>Source Pipe Final</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSource()
+	 * @see #getSourcePipeFinal()
 	 * @generated
 	 * @ordered
 	 */
-	protected UsableExpression source;
+	protected UsableExpression sourcePipeFinal;
 
 	/**
-	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * The cached value of the '{@link #getTargetPipeFinal() <em>Target Pipe Final</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTarget()
+	 * @see #getTargetPipeFinal()
 	 * @generated
 	 * @ordered
 	 */
-	protected FinalExpression target;
+	protected FinalExpression targetPipeFinal;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,16 +167,16 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	 * @generated
 	 */
 	@Override
-	public UsableExpression getSource() {
-		if (source != null && source.eIsProxy()) {
-			InternalEObject oldSource = (InternalEObject)source;
-			source = (UsableExpression)eResolveProxy(oldSource);
-			if (source != oldSource) {
+	public UsableExpression getSourcePipeFinal() {
+		if (sourcePipeFinal != null && sourcePipeFinal.eIsProxy()) {
+			InternalEObject oldSourcePipeFinal = (InternalEObject)sourcePipeFinal;
+			sourcePipeFinal = (UsableExpression)eResolveProxy(oldSourcePipeFinal);
+			if (sourcePipeFinal != oldSourcePipeFinal) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Calculusv2Package.PIPE_FINAL__SOURCE, oldSource, source));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Calculusv2Package.PIPE_FINAL__SOURCE_PIPE_FINAL, oldSourcePipeFinal, sourcePipeFinal));
 			}
 		}
-		return source;
+		return sourcePipeFinal;
 	}
 
 	/**
@@ -184,8 +184,8 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsableExpression basicGetSource() {
-		return source;
+	public UsableExpression basicGetSourcePipeFinal() {
+		return sourcePipeFinal;
 	}
 
 	/**
@@ -194,11 +194,11 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	 * @generated
 	 */
 	@Override
-	public void setSource(UsableExpression newSource) {
-		UsableExpression oldSource = source;
-		source = newSource;
+	public void setSourcePipeFinal(UsableExpression newSourcePipeFinal) {
+		UsableExpression oldSourcePipeFinal = sourcePipeFinal;
+		sourcePipeFinal = newSourcePipeFinal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE_FINAL__SOURCE, oldSource, source));
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE_FINAL__SOURCE_PIPE_FINAL, oldSourcePipeFinal, sourcePipeFinal));
 	}
 
 	/**
@@ -207,16 +207,16 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	 * @generated
 	 */
 	@Override
-	public FinalExpression getTarget() {
-		if (target != null && target.eIsProxy()) {
-			InternalEObject oldTarget = (InternalEObject)target;
-			target = (FinalExpression)eResolveProxy(oldTarget);
-			if (target != oldTarget) {
+	public FinalExpression getTargetPipeFinal() {
+		if (targetPipeFinal != null && targetPipeFinal.eIsProxy()) {
+			InternalEObject oldTargetPipeFinal = (InternalEObject)targetPipeFinal;
+			targetPipeFinal = (FinalExpression)eResolveProxy(oldTargetPipeFinal);
+			if (targetPipeFinal != oldTargetPipeFinal) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Calculusv2Package.PIPE_FINAL__TARGET, oldTarget, target));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL, oldTargetPipeFinal, targetPipeFinal));
 			}
 		}
-		return target;
+		return targetPipeFinal;
 	}
 
 	/**
@@ -224,8 +224,8 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FinalExpression basicGetTarget() {
-		return target;
+	public FinalExpression basicGetTargetPipeFinal() {
+		return targetPipeFinal;
 	}
 
 	/**
@@ -234,11 +234,11 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	 * @generated
 	 */
 	@Override
-	public void setTarget(FinalExpression newTarget) {
-		FinalExpression oldTarget = target;
-		target = newTarget;
+	public void setTargetPipeFinal(FinalExpression newTargetPipeFinal) {
+		FinalExpression oldTargetPipeFinal = targetPipeFinal;
+		targetPipeFinal = newTargetPipeFinal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE_FINAL__TARGET, oldTarget, target));
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL, oldTargetPipeFinal, targetPipeFinal));
 	}
 
 	/**
@@ -297,12 +297,12 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 				return getCalculus();
 			case Calculusv2Package.PIPE_FINAL__NAME:
 				return getName();
-			case Calculusv2Package.PIPE_FINAL__SOURCE:
-				if (resolve) return getSource();
-				return basicGetSource();
-			case Calculusv2Package.PIPE_FINAL__TARGET:
-				if (resolve) return getTarget();
-				return basicGetTarget();
+			case Calculusv2Package.PIPE_FINAL__SOURCE_PIPE_FINAL:
+				if (resolve) return getSourcePipeFinal();
+				return basicGetSourcePipeFinal();
+			case Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL:
+				if (resolve) return getTargetPipeFinal();
+				return basicGetTargetPipeFinal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -321,11 +321,11 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 			case Calculusv2Package.PIPE_FINAL__NAME:
 				setName((String)newValue);
 				return;
-			case Calculusv2Package.PIPE_FINAL__SOURCE:
-				setSource((UsableExpression)newValue);
+			case Calculusv2Package.PIPE_FINAL__SOURCE_PIPE_FINAL:
+				setSourcePipeFinal((UsableExpression)newValue);
 				return;
-			case Calculusv2Package.PIPE_FINAL__TARGET:
-				setTarget((FinalExpression)newValue);
+			case Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL:
+				setTargetPipeFinal((FinalExpression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -345,11 +345,11 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 			case Calculusv2Package.PIPE_FINAL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Calculusv2Package.PIPE_FINAL__SOURCE:
-				setSource((UsableExpression)null);
+			case Calculusv2Package.PIPE_FINAL__SOURCE_PIPE_FINAL:
+				setSourcePipeFinal((UsableExpression)null);
 				return;
-			case Calculusv2Package.PIPE_FINAL__TARGET:
-				setTarget((FinalExpression)null);
+			case Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL:
+				setTargetPipeFinal((FinalExpression)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -367,10 +367,10 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 				return getCalculus() != null;
 			case Calculusv2Package.PIPE_FINAL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Calculusv2Package.PIPE_FINAL__SOURCE:
-				return source != null;
-			case Calculusv2Package.PIPE_FINAL__TARGET:
-				return target != null;
+			case Calculusv2Package.PIPE_FINAL__SOURCE_PIPE_FINAL:
+				return sourcePipeFinal != null;
+			case Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL:
+				return targetPipeFinal != null;
 		}
 		return super.eIsSet(featureID);
 	}

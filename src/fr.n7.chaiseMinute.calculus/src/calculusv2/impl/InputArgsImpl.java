@@ -163,7 +163,7 @@ public class InputArgsImpl extends MinimalEObjectImpl.Container implements Input
 	@Override
 	public EList<Pipe> getUsedBy() {
 		if (usedBy == null) {
-			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.INPUT_ARGS__USED_BY, Calculusv2Package.PIPE__SOURCE);
+			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.INPUT_ARGS__USED_BY, Calculusv2Package.PIPE__SOURCE_PIPE);
 		}
 		return usedBy;
 	}

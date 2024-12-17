@@ -61,8 +61,8 @@ public class PipeFinalItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addSourcePropertyDescriptor(object);
-			addTargetPropertyDescriptor(object);
+			addSourcePipeFinalPropertyDescriptor(object);
+			addTargetPipeFinalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,19 +90,19 @@ public class PipeFinalItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Source feature.
+	 * This adds a property descriptor for the Source Pipe Final feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSourcePropertyDescriptor(Object object) {
+	protected void addSourcePipeFinalPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PipeFinal_source_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PipeFinal_source_feature", "_UI_PipeFinal_type"),
-				 Calculusv2Package.Literals.PIPE_FINAL__SOURCE,
+				 getString("_UI_PipeFinal_sourcePipeFinal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PipeFinal_sourcePipeFinal_feature", "_UI_PipeFinal_type"),
+				 Calculusv2Package.Literals.PIPE_FINAL__SOURCE_PIPE_FINAL,
 				 true,
 				 false,
 				 true,
@@ -112,19 +112,19 @@ public class PipeFinalItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Target feature.
+	 * This adds a property descriptor for the Target Pipe Final feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTargetPropertyDescriptor(Object object) {
+	protected void addTargetPipeFinalPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PipeFinal_target_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PipeFinal_target_feature", "_UI_PipeFinal_type"),
-				 Calculusv2Package.Literals.PIPE_FINAL__TARGET,
+				 getString("_UI_PipeFinal_targetPipeFinal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PipeFinal_targetPipeFinal_feature", "_UI_PipeFinal_type"),
+				 Calculusv2Package.Literals.PIPE_FINAL__TARGET_PIPE_FINAL,
 				 true,
 				 false,
 				 true,

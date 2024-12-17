@@ -14,7 +14,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="UsableExpression" abstract="true" interface="true"
       eSuperTypes="#//CalculusElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" upperBound="-1"
-        eType="#//Pipe" eOpposite="#//Pipe/source"/>
+        eType="#//Pipe" eOpposite="#//Pipe/sourcePipe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FinalExpression" abstract="true" interface="true"
       eSuperTypes="#//CalculusElement"/>
@@ -42,14 +42,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Result" eSuperTypes="#//FinalExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Pipe" eSuperTypes="#//CalculusElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourcePipe" lowerBound="1"
         eType="#//UsableExpression" eOpposite="#//UsableExpression/usedBy"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipe" lowerBound="1"
+        eType="#//Operation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PipeFinal" eSuperTypes="#//CalculusElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourcePipeFinal" lowerBound="1"
         eType="#//UsableExpression"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipeFinal" lowerBound="1"
         eType="#//FinalExpression"/>
   </eClassifiers>
 </ecore:EPackage>

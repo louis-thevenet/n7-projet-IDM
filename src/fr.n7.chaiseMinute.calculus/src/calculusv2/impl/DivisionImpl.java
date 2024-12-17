@@ -185,7 +185,7 @@ public class DivisionImpl extends MinimalEObjectImpl.Container implements Divisi
 	@Override
 	public EList<Pipe> getUsedBy() {
 		if (usedBy == null) {
-			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.DIVISION__USED_BY, Calculusv2Package.PIPE__SOURCE);
+			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.DIVISION__USED_BY, Calculusv2Package.PIPE__SOURCE_PIPE);
 		}
 		return usedBy;
 	}

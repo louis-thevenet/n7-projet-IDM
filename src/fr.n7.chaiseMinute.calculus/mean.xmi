@@ -4,7 +4,6 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:calculusv2="http://calculusv2"
-    xsi:schemaLocation="http://calculusv2 calculusv2.ecore"
     name="Tes">
   <elements
       xsi:type="calculusv2:InputArgs"
@@ -23,17 +22,16 @@
   <elements
       xsi:type="calculusv2:Pipe"
       name="Min2S"
-      source="//@elements.0"
-      target="//@elements.2"/>
+      sourcePipe="//@elements.0"
+      targetPipe="//@elements.2"/>
   <elements
       xsi:type="calculusv2:Pipe"
       name="Max2S"
-      source="//@elements.1"
-      target="//@elements.2"/>
+      sourcePipe="//@elements.1"
+      targetPipe="//@elements.2"/>
   <elements
       xsi:type="calculusv2:Division"
       name="div"
-      usedBy="//@elements.10"
       beforeFirst="//@elements.8"
       beforeSecond="//@elements.7"/>
   <elements
@@ -44,23 +42,19 @@
   <elements
       xsi:type="calculusv2:Pipe"
       name="2ToD"
-      source="//@elements.6"
-      target="//@elements.5"/>
+      sourcePipe="//@elements.6"
+      targetPipe="//@elements.5"/>
   <elements
       xsi:type="calculusv2:Pipe"
       name="S2D"
-      source="//@elements.2"
-      target="//@elements.5"/>
+      sourcePipe="//@elements.2"
+      targetPipe="//@elements.5"/>
   <elements
       xsi:type="calculusv2:Result"
       name="Res"/>
   <elements
-      xsi:type="calculusv2:Pipe"
-      name="D2R"
-      source="//@elements.5"/>
-  <elements
       xsi:type="calculusv2:PipeFinal"
       name="D2R"
-      source="//@elements.5"
-      target="//@elements.9"/>
+      sourcePipeFinal="//@elements.5"
+      targetPipeFinal="//@elements.9"/>
 </calculusv2:Calculus>

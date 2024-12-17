@@ -4,59 +4,59 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="v2Diag" domainClass="calculusv2::Calculus" enablePopupBars="true">
       <metamodel href="http://calculusv2#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="iaN" domainClass="calculusv2::InputArgs">
+        <nodeMappings name="InputArgsN" domainClass="calculusv2::InputArgs">
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="bN" domainClass="calculusv2::BinaryOperation">
+        <nodeMappings name="binaryOperationN" domainClass="calculusv2::BinaryOperation">
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="uN" domainClass="calculusv2::UnaryOperation">
+        <nodeMappings name="UnaryOperationN" domainClass="calculusv2::UnaryOperation">
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="fN" domainClass="calculusv2::FinalExpression">
+        <nodeMappings name="FinalExpressionN" domainClass="calculusv2::FinalExpression">
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="cN" domainClass="calculusv2::Constante">
+        <nodeMappings name="ConstantN" domainClass="calculusv2::Constante">
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="PE" sourceMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='bN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='cN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='iaN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='uN']" targetMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='bN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='cN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='iaN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='uN']" targetFinderExpression="[target/]" sourceFinderExpression="[source/]" domainClass="calculusv2::Pipe" useDomainElement="true">
+        <edgeMappings name="PipeE" sourceMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='binaryOperationN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='ConstantN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='InputArgsN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='UnaryOperationN']" targetMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='binaryOperationN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='ConstantN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='InputArgsN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='UnaryOperationN']" targetFinderExpression="[targetPipe/]" sourceFinderExpression="[sourcePipe/]" domainClass="calculusv2::Pipe" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="[self.name/]">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="PFE" sourceMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='bN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='cN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='iaN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='uN']" targetMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='fN']" targetFinderExpression="[target/]" sourceFinderExpression="[source/]" domainClass="calculusv2::PipeFinal" useDomainElement="true">
+        <edgeMappings name="PipeFinalE" sourceMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='binaryOperationN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='ConstantN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='InputArgsN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='UnaryOperationN']" targetMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='FinalExpressionN']" targetFinderExpression="[targetPipeFinal/]" sourceFinderExpression="[sourcePipeFinal/]" domainClass="calculusv2::PipeFinal" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="[self.name/]">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <toolSections name="EDC">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="PFEC" edgeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PFE']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="PipeFinalE Creation" edgeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeFinalE']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -70,16 +70,16 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="PEC" edgeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PE']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Pipe E Creation" edgeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@edgeMappings[name='PipeE']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::PipeFinal" referenceName="elements">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="[source/]"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="[target/]"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::Pipe" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="sourcePipe" valueExpression="[source/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="targetPipe" valueExpression="[target/]"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

@@ -927,22 +927,22 @@ public interface Calculusv2Package extends EPackage {
 	int PIPE__NAME = CALCULUS_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source Pipe</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE__SOURCE = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
+	int PIPE__SOURCE_PIPE = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target Pipe</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE__TARGET = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
+	int PIPE__TARGET_PIPE = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Pipe</em>' class.
@@ -991,22 +991,22 @@ public interface Calculusv2Package extends EPackage {
 	int PIPE_FINAL__NAME = CALCULUS_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source Pipe Final</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL__SOURCE = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
+	int PIPE_FINAL__SOURCE_PIPE_FINAL = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target Pipe Final</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL__TARGET = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
+	int PIPE_FINAL__TARGET_PIPE_FINAL = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Pipe Final</em>' class.
@@ -1277,26 +1277,26 @@ public interface Calculusv2Package extends EPackage {
 	EClass getPipe();
 
 	/**
-	 * Returns the meta object for the reference '{@link calculusv2.Pipe#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link calculusv2.Pipe#getSourcePipe <em>Source Pipe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see calculusv2.Pipe#getSource()
+	 * @return the meta object for the reference '<em>Source Pipe</em>'.
+	 * @see calculusv2.Pipe#getSourcePipe()
 	 * @see #getPipe()
 	 * @generated
 	 */
-	EReference getPipe_Source();
+	EReference getPipe_SourcePipe();
 
 	/**
-	 * Returns the meta object for the reference '{@link calculusv2.Pipe#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link calculusv2.Pipe#getTargetPipe <em>Target Pipe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see calculusv2.Pipe#getTarget()
+	 * @return the meta object for the reference '<em>Target Pipe</em>'.
+	 * @see calculusv2.Pipe#getTargetPipe()
 	 * @see #getPipe()
 	 * @generated
 	 */
-	EReference getPipe_Target();
+	EReference getPipe_TargetPipe();
 
 	/**
 	 * Returns the meta object for class '{@link calculusv2.PipeFinal <em>Pipe Final</em>}'.
@@ -1309,26 +1309,26 @@ public interface Calculusv2Package extends EPackage {
 	EClass getPipeFinal();
 
 	/**
-	 * Returns the meta object for the reference '{@link calculusv2.PipeFinal#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link calculusv2.PipeFinal#getSourcePipeFinal <em>Source Pipe Final</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see calculusv2.PipeFinal#getSource()
+	 * @return the meta object for the reference '<em>Source Pipe Final</em>'.
+	 * @see calculusv2.PipeFinal#getSourcePipeFinal()
 	 * @see #getPipeFinal()
 	 * @generated
 	 */
-	EReference getPipeFinal_Source();
+	EReference getPipeFinal_SourcePipeFinal();
 
 	/**
-	 * Returns the meta object for the reference '{@link calculusv2.PipeFinal#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link calculusv2.PipeFinal#getTargetPipeFinal <em>Target Pipe Final</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see calculusv2.PipeFinal#getTarget()
+	 * @return the meta object for the reference '<em>Target Pipe Final</em>'.
+	 * @see calculusv2.PipeFinal#getTargetPipeFinal()
 	 * @see #getPipeFinal()
 	 * @generated
 	 */
-	EReference getPipeFinal_Target();
+	EReference getPipeFinal_TargetPipeFinal();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1576,20 +1576,20 @@ public interface Calculusv2Package extends EPackage {
 		EClass PIPE = eINSTANCE.getPipe();
 
 		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Source Pipe</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIPE__SOURCE = eINSTANCE.getPipe_Source();
+		EReference PIPE__SOURCE_PIPE = eINSTANCE.getPipe_SourcePipe();
 
 		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Target Pipe</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIPE__TARGET = eINSTANCE.getPipe_Target();
+		EReference PIPE__TARGET_PIPE = eINSTANCE.getPipe_TargetPipe();
 
 		/**
 		 * The meta object literal for the '{@link calculusv2.impl.PipeFinalImpl <em>Pipe Final</em>}' class.
@@ -1602,20 +1602,20 @@ public interface Calculusv2Package extends EPackage {
 		EClass PIPE_FINAL = eINSTANCE.getPipeFinal();
 
 		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Source Pipe Final</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIPE_FINAL__SOURCE = eINSTANCE.getPipeFinal_Source();
+		EReference PIPE_FINAL__SOURCE_PIPE_FINAL = eINSTANCE.getPipeFinal_SourcePipeFinal();
 
 		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Target Pipe Final</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIPE_FINAL__TARGET = eINSTANCE.getPipeFinal_Target();
+		EReference PIPE_FINAL__TARGET_PIPE_FINAL = eINSTANCE.getPipeFinal_TargetPipeFinal();
 
 	}
 

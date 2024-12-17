@@ -61,8 +61,8 @@ public class PipeItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addSourcePropertyDescriptor(object);
-			addTargetPropertyDescriptor(object);
+			addSourcePipePropertyDescriptor(object);
+			addTargetPipePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,19 +90,19 @@ public class PipeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Source feature.
+	 * This adds a property descriptor for the Source Pipe feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSourcePropertyDescriptor(Object object) {
+	protected void addSourcePipePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Pipe_source_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Pipe_source_feature", "_UI_Pipe_type"),
-				 Calculusv2Package.Literals.PIPE__SOURCE,
+				 getString("_UI_Pipe_sourcePipe_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Pipe_sourcePipe_feature", "_UI_Pipe_type"),
+				 Calculusv2Package.Literals.PIPE__SOURCE_PIPE,
 				 true,
 				 false,
 				 true,
@@ -112,19 +112,19 @@ public class PipeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Target feature.
+	 * This adds a property descriptor for the Target Pipe feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTargetPropertyDescriptor(Object object) {
+	protected void addTargetPipePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Pipe_target_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Pipe_target_feature", "_UI_Pipe_type"),
-				 Calculusv2Package.Literals.PIPE__TARGET,
+				 getString("_UI_Pipe_targetPipe_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Pipe_targetPipe_feature", "_UI_Pipe_type"),
+				 Calculusv2Package.Literals.PIPE__TARGET_PIPE,
 				 true,
 				 false,
 				 true,

@@ -36,12 +36,12 @@
     </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//Result"/>
     <genClasses ecoreClass="calculusv2.ecore#//Pipe">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Pipe/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Pipe/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Pipe/sourcePipe"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Pipe/targetPipe"/>
     </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//PipeFinal">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//PipeFinal/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//PipeFinal/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//PipeFinal/sourcePipeFinal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//PipeFinal/targetPipeFinal"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
