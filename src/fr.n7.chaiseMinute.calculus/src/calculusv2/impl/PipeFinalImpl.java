@@ -233,12 +233,34 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setTargetPipeFinal(FinalExpression newTargetPipeFinal) {
+	public NotificationChain basicSetTargetPipeFinal(FinalExpression newTargetPipeFinal, NotificationChain msgs) {
 		FinalExpression oldTargetPipeFinal = targetPipeFinal;
 		targetPipeFinal = newTargetPipeFinal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL, oldTargetPipeFinal, targetPipeFinal));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL, oldTargetPipeFinal, newTargetPipeFinal);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTargetPipeFinal(FinalExpression newTargetPipeFinal) {
+		if (newTargetPipeFinal != targetPipeFinal) {
+			NotificationChain msgs = null;
+			if (targetPipeFinal != null)
+				msgs = ((InternalEObject)targetPipeFinal).eInverseRemove(this, Calculusv2Package.FINAL_EXPRESSION__BEFORE, FinalExpression.class, msgs);
+			if (newTargetPipeFinal != null)
+				msgs = ((InternalEObject)newTargetPipeFinal).eInverseAdd(this, Calculusv2Package.FINAL_EXPRESSION__BEFORE, FinalExpression.class, msgs);
+			msgs = basicSetTargetPipeFinal(newTargetPipeFinal, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL, newTargetPipeFinal, newTargetPipeFinal));
 	}
 
 	/**
@@ -253,6 +275,10 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetCalculus((Calculus)otherEnd, msgs);
+			case Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL:
+				if (targetPipeFinal != null)
+					msgs = ((InternalEObject)targetPipeFinal).eInverseRemove(this, Calculusv2Package.FINAL_EXPRESSION__BEFORE, FinalExpression.class, msgs);
+				return basicSetTargetPipeFinal((FinalExpression)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -267,6 +293,8 @@ public class PipeFinalImpl extends MinimalEObjectImpl.Container implements PipeF
 		switch (featureID) {
 			case Calculusv2Package.PIPE_FINAL__CALCULUS:
 				return basicSetCalculus(null, msgs);
+			case Calculusv2Package.PIPE_FINAL__TARGET_PIPE_FINAL:
+				return basicSetTargetPipeFinal(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

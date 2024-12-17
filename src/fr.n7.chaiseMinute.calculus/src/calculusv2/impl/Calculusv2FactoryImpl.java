@@ -58,6 +58,8 @@ public class Calculusv2FactoryImpl extends EFactoryImpl implements Calculusv2Fac
 		switch (eClass.getClassifierID()) {
 			case Calculusv2Package.CALCULUS: return createCalculus();
 			case Calculusv2Package.INPUT_ARGS: return createInputArgs();
+			case Calculusv2Package.OPPOSE: return createOppose();
+			case Calculusv2Package.RECIPROCAL: return createReciprocal();
 			case Calculusv2Package.SUM: return createSum();
 			case Calculusv2Package.PRODUCTS: return createProducts();
 			case Calculusv2Package.SUBSTRACTION: return createSubstraction();
@@ -91,6 +93,28 @@ public class Calculusv2FactoryImpl extends EFactoryImpl implements Calculusv2Fac
 	public InputArgs createInputArgs() {
 		InputArgsImpl inputArgs = new InputArgsImpl();
 		return inputArgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Oppose createOppose() {
+		OpposeImpl oppose = new OpposeImpl();
+		return oppose;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Reciprocal createReciprocal() {
+		ReciprocalImpl reciprocal = new ReciprocalImpl();
+		return reciprocal;
 	}
 
 	/**

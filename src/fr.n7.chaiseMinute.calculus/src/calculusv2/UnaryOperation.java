@@ -25,12 +25,12 @@ public interface UnaryOperation extends Operation {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Before</em>' reference.
-	 * @see #setBefore(UsableExpression)
+	 * @see #setBefore(Pipe)
 	 * @see calculusv2.Calculusv2Package#getUnaryOperation_Before()
 	 * @model required="true"
 	 * @generated
 	 */
-	UsableExpression getBefore();
+	Pipe getBefore();
 
 	/**
 	 * Sets the value of the '{@link calculusv2.UnaryOperation#getBefore <em>Before</em>}' reference.
@@ -40,6 +40,6 @@ public interface UnaryOperation extends Operation {
 	 * @see #getBefore()
 	 * @generated
 	 */
-	void setBefore(UsableExpression value);
+	void setBefore(Pipe value);
 
 } // UnaryOperation

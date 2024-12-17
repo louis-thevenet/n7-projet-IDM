@@ -45,12 +45,14 @@ public interface PipeFinal extends CalculusElement {
 
 	/**
 	 * Returns the value of the '<em><b>Target Pipe Final</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link calculusv2.FinalExpression#getBefore <em>Before</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Pipe Final</em>' reference.
 	 * @see #setTargetPipeFinal(FinalExpression)
 	 * @see calculusv2.Calculusv2Package#getPipeFinal_TargetPipeFinal()
-	 * @model required="true"
+	 * @see calculusv2.FinalExpression#getBefore
+	 * @model opposite="before" required="true"
 	 * @generated
 	 */
 	FinalExpression getTargetPipeFinal();

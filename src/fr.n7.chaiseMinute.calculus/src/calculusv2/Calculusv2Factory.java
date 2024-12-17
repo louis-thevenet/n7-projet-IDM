@@ -40,6 +40,24 @@ public interface Calculusv2Factory extends EFactory {
 	InputArgs createInputArgs();
 
 	/**
+	 * Returns a new object of class '<em>Oppose</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oppose</em>'.
+	 * @generated
+	 */
+	Oppose createOppose();
+
+	/**
+	 * Returns a new object of class '<em>Reciprocal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reciprocal</em>'.
+	 * @generated
+	 */
+	Reciprocal createReciprocal();
+
+	/**
 	 * Returns a new object of class '<em>Sum</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

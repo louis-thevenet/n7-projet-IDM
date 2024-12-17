@@ -187,6 +187,16 @@ public class CalculusItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Calculusv2Package.Literals.CALCULUS__ELEMENTS,
+				 Calculusv2Factory.eINSTANCE.createOppose()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Calculusv2Package.Literals.CALCULUS__ELEMENTS,
+				 Calculusv2Factory.eINSTANCE.createReciprocal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Calculusv2Package.Literals.CALCULUS__ELEMENTS,
 				 Calculusv2Factory.eINSTANCE.createSum()));
 
 		newChildDescriptors.add

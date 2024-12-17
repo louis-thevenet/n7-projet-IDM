@@ -12,9 +12,11 @@ import calculusv2.Division;
 import calculusv2.FinalExpression;
 import calculusv2.InputArgs;
 import calculusv2.Operation;
+import calculusv2.Oppose;
 import calculusv2.Pipe;
 import calculusv2.PipeFinal;
 import calculusv2.Products;
+import calculusv2.Reciprocal;
 import calculusv2.Result;
 import calculusv2.Substraction;
 import calculusv2.Sum;
@@ -83,6 +85,20 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	private EClass unaryOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass opposeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reciprocalEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,6 +319,16 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
+	public EReference getFinalExpression_Before() {
+		return (EReference)finalExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getInputArgs() {
 		return inputArgsEClass;
 	}
@@ -335,6 +361,26 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	@Override
 	public EReference getUnaryOperation_Before() {
 		return (EReference)unaryOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getOppose() {
+		return opposeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReciprocal() {
+		return reciprocalEClass;
 	}
 
 	/**
@@ -538,6 +584,7 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		createEReference(usableExpressionEClass, USABLE_EXPRESSION__USED_BY);
 
 		finalExpressionEClass = createEClass(FINAL_EXPRESSION);
+		createEReference(finalExpressionEClass, FINAL_EXPRESSION__BEFORE);
 
 		inputArgsEClass = createEClass(INPUT_ARGS);
 
@@ -545,6 +592,10 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 
 		unaryOperationEClass = createEClass(UNARY_OPERATION);
 		createEReference(unaryOperationEClass, UNARY_OPERATION__BEFORE);
+
+		opposeEClass = createEClass(OPPOSE);
+
+		reciprocalEClass = createEClass(RECIPROCAL);
 
 		binaryOperationEClass = createEClass(BINARY_OPERATION);
 		createEReference(binaryOperationEClass, BINARY_OPERATION__BEFORE_FIRST);
@@ -605,6 +656,8 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		inputArgsEClass.getESuperTypes().add(this.getUsableExpression());
 		operationEClass.getESuperTypes().add(this.getUsableExpression());
 		unaryOperationEClass.getESuperTypes().add(this.getOperation());
+		opposeEClass.getESuperTypes().add(this.getUnaryOperation());
+		reciprocalEClass.getESuperTypes().add(this.getUnaryOperation());
 		binaryOperationEClass.getESuperTypes().add(this.getOperation());
 		sumEClass.getESuperTypes().add(this.getBinaryOperation());
 		productsEClass.getESuperTypes().add(this.getBinaryOperation());
@@ -628,13 +681,18 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		initEReference(getUsableExpression_UsedBy(), this.getPipe(), this.getPipe_SourcePipe(), "usedBy", null, 0, -1, UsableExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(finalExpressionEClass, FinalExpression.class, "FinalExpression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFinalExpression_Before(), this.getPipeFinal(), this.getPipeFinal_TargetPipeFinal(), "before", null, 1, 1, FinalExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputArgsEClass, InputArgs.class, "InputArgs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationEClass, Operation.class, "Operation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(unaryOperationEClass, UnaryOperation.class, "UnaryOperation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnaryOperation_Before(), this.getUsableExpression(), null, "before", null, 1, 1, UnaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnaryOperation_Before(), this.getPipe(), null, "before", null, 1, 1, UnaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(opposeEClass, Oppose.class, "Oppose", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reciprocalEClass, Reciprocal.class, "Reciprocal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(binaryOperationEClass, BinaryOperation.class, "BinaryOperation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBinaryOperation_BeforeFirst(), this.getPipe(), null, "beforeFirst", null, 1, 1, BinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -659,7 +717,7 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 
 		initEClass(pipeFinalEClass, PipeFinal.class, "PipeFinal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPipeFinal_SourcePipeFinal(), this.getUsableExpression(), null, "sourcePipeFinal", null, 1, 1, PipeFinal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPipeFinal_TargetPipeFinal(), this.getFinalExpression(), null, "targetPipeFinal", null, 1, 1, PipeFinal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPipeFinal_TargetPipeFinal(), this.getFinalExpression(), this.getFinalExpression_Before(), "targetPipeFinal", null, 1, 1, PipeFinal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

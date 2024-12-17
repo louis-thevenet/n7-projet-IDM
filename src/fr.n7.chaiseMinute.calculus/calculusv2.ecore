@@ -17,15 +17,20 @@
         eType="#//Pipe" eOpposite="#//Pipe/sourcePipe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FinalExpression" abstract="true" interface="true"
-      eSuperTypes="#//CalculusElement"/>
+      eSuperTypes="#//CalculusElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="before" lowerBound="1"
+        eType="#//PipeFinal" eOpposite="#//PipeFinal/targetPipeFinal"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputArgs" eSuperTypes="#//UsableExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true" interface="true"
       eSuperTypes="#//UsableExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="UnaryOperation" abstract="true" interface="true"
       eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="before" lowerBound="1"
-        eType="#//UsableExpression"/>
+        eType="#//Pipe"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Oppose" eSuperTypes="#//UnaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Reciprocal" eSuperTypes="#//UnaryOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" abstract="true" interface="true"
       eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="beforeFirst" lowerBound="1"
@@ -51,6 +56,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourcePipeFinal" lowerBound="1"
         eType="#//UsableExpression"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipeFinal" lowerBound="1"
-        eType="#//FinalExpression"/>
+        eType="#//FinalExpression" eOpposite="#//FinalExpression/before"/>
   </eClassifiers>
 </ecore:EPackage>

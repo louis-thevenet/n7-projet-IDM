@@ -118,6 +118,52 @@ public class Calculusv2ItemProviderAdapterFactory extends Calculusv2AdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link calculusv2.Oppose} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OpposeItemProvider opposeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link calculusv2.Oppose}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOpposeAdapter() {
+		if (opposeItemProvider == null) {
+			opposeItemProvider = new OpposeItemProvider(this);
+		}
+
+		return opposeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link calculusv2.Reciprocal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReciprocalItemProvider reciprocalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link calculusv2.Reciprocal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReciprocalAdapter() {
+		if (reciprocalItemProvider == null) {
+			reciprocalItemProvider = new ReciprocalItemProvider(this);
+		}
+
+		return reciprocalItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link calculusv2.Sum} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -408,6 +454,8 @@ public class Calculusv2ItemProviderAdapterFactory extends Calculusv2AdapterFacto
 	public void dispose() {
 		if (calculusItemProvider != null) calculusItemProvider.dispose();
 		if (inputArgsItemProvider != null) inputArgsItemProvider.dispose();
+		if (opposeItemProvider != null) opposeItemProvider.dispose();
+		if (reciprocalItemProvider != null) reciprocalItemProvider.dispose();
 		if (sumItemProvider != null) sumItemProvider.dispose();
 		if (productsItemProvider != null) productsItemProvider.dispose();
 		if (substractionItemProvider != null) substractionItemProvider.dispose();

@@ -117,6 +117,26 @@ public class Calculusv2Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Calculusv2Package.OPPOSE: {
+				Oppose oppose = (Oppose)theEObject;
+				T result = caseOppose(oppose);
+				if (result == null) result = caseUnaryOperation(oppose);
+				if (result == null) result = caseOperation(oppose);
+				if (result == null) result = caseUsableExpression(oppose);
+				if (result == null) result = caseCalculusElement(oppose);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Calculusv2Package.RECIPROCAL: {
+				Reciprocal reciprocal = (Reciprocal)theEObject;
+				T result = caseReciprocal(reciprocal);
+				if (result == null) result = caseUnaryOperation(reciprocal);
+				if (result == null) result = caseOperation(reciprocal);
+				if (result == null) result = caseUsableExpression(reciprocal);
+				if (result == null) result = caseCalculusElement(reciprocal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Calculusv2Package.BINARY_OPERATION: {
 				BinaryOperation binaryOperation = (BinaryOperation)theEObject;
 				T result = caseBinaryOperation(binaryOperation);
@@ -302,6 +322,36 @@ public class Calculusv2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUnaryOperation(UnaryOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oppose</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oppose</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOppose(Oppose object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reciprocal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reciprocal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReciprocal(Reciprocal object) {
 		return null;
 	}
 

@@ -96,6 +96,14 @@ public class Calculusv2AdapterFactory extends AdapterFactoryImpl {
 				return createUnaryOperationAdapter();
 			}
 			@Override
+			public Adapter caseOppose(Oppose object) {
+				return createOpposeAdapter();
+			}
+			@Override
+			public Adapter caseReciprocal(Reciprocal object) {
+				return createReciprocalAdapter();
+			}
+			@Override
 			public Adapter caseBinaryOperation(BinaryOperation object) {
 				return createBinaryOperationAdapter();
 			}
@@ -246,6 +254,34 @@ public class Calculusv2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUnaryOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link calculusv2.Oppose <em>Oppose</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see calculusv2.Oppose
+	 * @generated
+	 */
+	public Adapter createOpposeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link calculusv2.Reciprocal <em>Reciprocal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see calculusv2.Reciprocal
+	 * @generated
+	 */
+	public Adapter createReciprocalAdapter() {
 		return null;
 	}
 

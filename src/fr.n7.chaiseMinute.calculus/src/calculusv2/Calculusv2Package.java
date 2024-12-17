@@ -232,13 +232,22 @@ public interface Calculusv2Package extends EPackage {
 	int FINAL_EXPRESSION__NAME = CALCULUS_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Before</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINAL_EXPRESSION__BEFORE = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Final Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINAL_EXPRESSION_FEATURE_COUNT = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
+	int FINAL_EXPRESSION_FEATURE_COUNT = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Final Expression</em>' class.
@@ -424,6 +433,134 @@ public interface Calculusv2Package extends EPackage {
 	int UNARY_OPERATION_OPERATION_COUNT = OPERATION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link calculusv2.impl.OpposeImpl <em>Oppose</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calculusv2.impl.OpposeImpl
+	 * @see calculusv2.impl.Calculusv2PackageImpl#getOppose()
+	 * @generated
+	 */
+	int OPPOSE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPOSE__CALCULUS = UNARY_OPERATION__CALCULUS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPOSE__NAME = UNARY_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Used By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPOSE__USED_BY = UNARY_OPERATION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Before</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPOSE__BEFORE = UNARY_OPERATION__BEFORE;
+
+	/**
+	 * The number of structural features of the '<em>Oppose</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPOSE_FEATURE_COUNT = UNARY_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Oppose</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPOSE_OPERATION_COUNT = UNARY_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link calculusv2.impl.ReciprocalImpl <em>Reciprocal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calculusv2.impl.ReciprocalImpl
+	 * @see calculusv2.impl.Calculusv2PackageImpl#getReciprocal()
+	 * @generated
+	 */
+	int RECIPROCAL = 8;
+
+	/**
+	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCAL__CALCULUS = UNARY_OPERATION__CALCULUS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCAL__NAME = UNARY_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Used By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCAL__USED_BY = UNARY_OPERATION__USED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Before</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCAL__BEFORE = UNARY_OPERATION__BEFORE;
+
+	/**
+	 * The number of structural features of the '<em>Reciprocal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCAL_FEATURE_COUNT = UNARY_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Reciprocal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCAL_OPERATION_COUNT = UNARY_OPERATION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link calculusv2.BinaryOperation <em>Binary Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -431,7 +568,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getBinaryOperation()
 	 * @generated
 	 */
-	int BINARY_OPERATION = 7;
+	int BINARY_OPERATION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -504,7 +641,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getSum()
 	 * @generated
 	 */
-	int SUM = 8;
+	int SUM = 10;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -577,7 +714,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getProducts()
 	 * @generated
 	 */
-	int PRODUCTS = 9;
+	int PRODUCTS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -650,7 +787,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getSubstraction()
 	 * @generated
 	 */
-	int SUBSTRACTION = 10;
+	int SUBSTRACTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -723,7 +860,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getDivision()
 	 * @generated
 	 */
-	int DIVISION = 11;
+	int DIVISION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -796,7 +933,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getConstante()
 	 * @generated
 	 */
-	int CONSTANTE = 12;
+	int CONSTANTE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -860,7 +997,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getResult()
 	 * @generated
 	 */
-	int RESULT = 13;
+	int RESULT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -879,6 +1016,15 @@ public interface Calculusv2Package extends EPackage {
 	 * @ordered
 	 */
 	int RESULT__NAME = FINAL_EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Before</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT__BEFORE = FINAL_EXPRESSION__BEFORE;
 
 	/**
 	 * The number of structural features of the '<em>Result</em>' class.
@@ -906,7 +1052,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getPipe()
 	 * @generated
 	 */
-	int PIPE = 14;
+	int PIPE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -970,7 +1116,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getPipeFinal()
 	 * @generated
 	 */
-	int PIPE_FINAL = 15;
+	int PIPE_FINAL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -1123,6 +1269,17 @@ public interface Calculusv2Package extends EPackage {
 	EClass getFinalExpression();
 
 	/**
+	 * Returns the meta object for the reference '{@link calculusv2.FinalExpression#getBefore <em>Before</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Before</em>'.
+	 * @see calculusv2.FinalExpression#getBefore()
+	 * @see #getFinalExpression()
+	 * @generated
+	 */
+	EReference getFinalExpression_Before();
+
+	/**
 	 * Returns the meta object for class '{@link calculusv2.InputArgs <em>Input Args</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1162,6 +1319,26 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getUnaryOperation_Before();
+
+	/**
+	 * Returns the meta object for class '{@link calculusv2.Oppose <em>Oppose</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Oppose</em>'.
+	 * @see calculusv2.Oppose
+	 * @generated
+	 */
+	EClass getOppose();
+
+	/**
+	 * Returns the meta object for class '{@link calculusv2.Reciprocal <em>Reciprocal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reciprocal</em>'.
+	 * @see calculusv2.Reciprocal
+	 * @generated
+	 */
+	EClass getReciprocal();
 
 	/**
 	 * Returns the meta object for class '{@link calculusv2.BinaryOperation <em>Binary Operation</em>}'.
@@ -1434,6 +1611,14 @@ public interface Calculusv2Package extends EPackage {
 		EClass FINAL_EXPRESSION = eINSTANCE.getFinalExpression();
 
 		/**
+		 * The meta object literal for the '<em><b>Before</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FINAL_EXPRESSION__BEFORE = eINSTANCE.getFinalExpression_Before();
+
+		/**
 		 * The meta object literal for the '{@link calculusv2.impl.InputArgsImpl <em>Input Args</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1470,6 +1655,26 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EReference UNARY_OPERATION__BEFORE = eINSTANCE.getUnaryOperation_Before();
+
+		/**
+		 * The meta object literal for the '{@link calculusv2.impl.OpposeImpl <em>Oppose</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calculusv2.impl.OpposeImpl
+		 * @see calculusv2.impl.Calculusv2PackageImpl#getOppose()
+		 * @generated
+		 */
+		EClass OPPOSE = eINSTANCE.getOppose();
+
+		/**
+		 * The meta object literal for the '{@link calculusv2.impl.ReciprocalImpl <em>Reciprocal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calculusv2.impl.ReciprocalImpl
+		 * @see calculusv2.impl.Calculusv2PackageImpl#getReciprocal()
+		 * @generated
+		 */
+		EClass RECIPROCAL = eINSTANCE.getReciprocal();
 
 		/**
 		 * The meta object literal for the '{@link calculusv2.BinaryOperation <em>Binary Operation</em>}' class.
