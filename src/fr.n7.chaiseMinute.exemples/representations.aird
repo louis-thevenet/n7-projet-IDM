@@ -5,4 +5,7 @@
   <semanticResources>platform:/resource/fr.n7.chaiseMinute.function/function.ecore</semanticResources>
   <semanticResources>exemple_sujet/exemple_sujet.cmt</semanticResources>
   <semanticResources>exemple_sujet/exemple_sujet_fromtext.xmi</semanticResources>
+  <semanticResources>exemple_scenario/exemple_sujet.cmt</semanticResources>
+  <semanticResources>exemple_scenario/backup/exemple_sujet.cmt</semanticResources>
+  <semanticResources>exemple_scenario/backup/exemple_sujet_from_text.xmi</semanticResources>
 </viewpoint:DAnalysis>
