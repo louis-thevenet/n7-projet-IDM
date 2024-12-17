@@ -64,7 +64,7 @@ Ces règles nous permettent de chaîner les fonctions dans un algorithme.
 == `Function`
 #figure(
   image("./images/functionDiagram.svg", width: 50%),
-  caption: [Algorith Diagram.],
+  caption: [Function Diagram.],
 ) <functionDiagram>
 
 Une `Function` est représentée par un identifiant qui référence un programme Python, elle contient des arguments, qui sont des références vers des colonnes. Les colonnes sont représentées sous la forme `nomTable.nomColonne` dans tout le projet (pour les références croisées de @chaiseMinuteDiagram, les arguments de fonctions, etc).
@@ -161,7 +161,8 @@ En s'appuyant sur la même librarie, on crée un outil de visualisation du sché
 
 = Transformations Modèle à Modèle
 = Edition graphique
-Nous avons développé un outils graphique permettant de modifier des fichiers .cml (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
+== `ChaiseMinute`
+Nous avons développé un outils graphique permettant de modifier des fichiers _.cml_ (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
 
 Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boîtes, pour montrer l'imbrication des `Columns` dans les `Tables` et la fraternités des `Columns`.
 - Les `Tables` sont représentées par des `containers` verts clairs,
@@ -180,6 +181,30 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
 
 == Limitation
 Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
+
+== `Calculus`
+Les fichiers _.clc_, pour `Calculus`, sont éditables dans Sirius et sont donc plus facilement personnalisables pour les utilisateurs.
+
+Les `UsableExpression` et `FinalExpression` sont représentés par des _Node_ et les `Pipes` comme des _Element Based Edge_ : 
+- Les `InputArgs` en blanc,
+- Les `Constante` en orange clair avec leur _value_,
+- Les `BinaryExpression` en vert clair, 
+- Les `UnaryExpression` en bleu clair, 
+- Les `Pipe` et les `PipeFinal` en gris clair, 
+- Les `FinalExpression` en bleu clair.
+
+Les noms sur les _Nodes_ ou les _Edges_ représentent les arguments _name_ des `CalculusElement` associé.  
+
+#figure(
+  image("/images/meanFromCalculus.svg", width: 100%),
+  caption: [Sirius de Mean.clc.],
+) <meanSiriusDiagram>
+
+== Limitation et améliorations
+Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer n'importe quel `CalculusElement` avec la palette de création. Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent. En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`. Nous avons isolé la partie et compris d'où venait le problème (INSERER UN SCREEN DU .ODESIGN DES IF) et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
+
+Une piste d'amélioration de ce problème serait de créer des _Bordered Nodes_ indiquant le `before` et `beforeSecond` pour les `BinaryExpression` pour isoler le `Pipe` à modifier et ainsi résoudre notre problème. Dans la même idée, rajouter des _Bordered Nodes_ pour chaque entrée (`before`/`beforeSecond`) et sortie (`targetPipe`) pour visualiser correctement le nombre d'E/S nécessaire par expression.
+
 
 = Exemples
 == Equation du second degré
