@@ -18,10 +18,10 @@ def search(input, out, table, id):
 def load():
 	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 	input = {}	
-[for (t : Table | aChaiseMinute.getTables())]
-	csv_file_path = ['"' + t.name+ '.csv'+'"'/]
-	input['['/]"[t.name/]"] = pd.read_csv(csv_file_path)
-[/for]	
+	for filename in sys.argv['['/]1:]:
+		name = filename.rsplit(".",1)['['/]0]
+		input['['/]name] = pd.read_csv(filename)
+
 	return input
 
 def check_constraints(input):
