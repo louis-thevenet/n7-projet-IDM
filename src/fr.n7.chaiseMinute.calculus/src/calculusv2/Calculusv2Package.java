@@ -76,22 +76,13 @@ public interface Calculusv2Package extends EPackage {
 	int CALCULUS__ELEMENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALCULUS__NAME = 1;
-
-	/**
 	 * The number of structural features of the '<em>Calculus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALCULUS_FEATURE_COUNT = 2;
+	int CALCULUS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Calculus</em>' class.
@@ -351,13 +342,22 @@ public interface Calculusv2Package extends EPackage {
 	int OPERATION__USED_BY = USABLE_EXPRESSION__USED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Before</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__BEFORE = USABLE_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_FEATURE_COUNT = USABLE_EXPRESSION_FEATURE_COUNT + 0;
+	int OPERATION_FEATURE_COUNT = USABLE_EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Operation</em>' class.
@@ -412,7 +412,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNARY_OPERATION__BEFORE = OPERATION_FEATURE_COUNT + 0;
+	int UNARY_OPERATION__BEFORE = OPERATION__BEFORE;
 
 	/**
 	 * The number of structural features of the '<em>Unary Operation</em>' class.
@@ -421,7 +421,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNARY_OPERATION_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+	int UNARY_OPERATION_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Unary Operation</em>' class.
@@ -598,13 +598,13 @@ public interface Calculusv2Package extends EPackage {
 	int BINARY_OPERATION__USED_BY = OPERATION__USED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Before First</b></em>' reference.
+	 * The feature id for the '<em><b>Before</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINARY_OPERATION__BEFORE_FIRST = OPERATION_FEATURE_COUNT + 0;
+	int BINARY_OPERATION__BEFORE = OPERATION__BEFORE;
 
 	/**
 	 * The feature id for the '<em><b>Before Second</b></em>' reference.
@@ -613,7 +613,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINARY_OPERATION__BEFORE_SECOND = OPERATION_FEATURE_COUNT + 1;
+	int BINARY_OPERATION__BEFORE_SECOND = OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Binary Operation</em>' class.
@@ -622,7 +622,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINARY_OPERATION_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 2;
+	int BINARY_OPERATION_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Binary Operation</em>' class.
@@ -671,13 +671,13 @@ public interface Calculusv2Package extends EPackage {
 	int SUM__USED_BY = BINARY_OPERATION__USED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Before First</b></em>' reference.
+	 * The feature id for the '<em><b>Before</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUM__BEFORE_FIRST = BINARY_OPERATION__BEFORE_FIRST;
+	int SUM__BEFORE = BINARY_OPERATION__BEFORE;
 
 	/**
 	 * The feature id for the '<em><b>Before Second</b></em>' reference.
@@ -744,13 +744,13 @@ public interface Calculusv2Package extends EPackage {
 	int PRODUCTS__USED_BY = BINARY_OPERATION__USED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Before First</b></em>' reference.
+	 * The feature id for the '<em><b>Before</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCTS__BEFORE_FIRST = BINARY_OPERATION__BEFORE_FIRST;
+	int PRODUCTS__BEFORE = BINARY_OPERATION__BEFORE;
 
 	/**
 	 * The feature id for the '<em><b>Before Second</b></em>' reference.
@@ -817,13 +817,13 @@ public interface Calculusv2Package extends EPackage {
 	int SUBSTRACTION__USED_BY = BINARY_OPERATION__USED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Before First</b></em>' reference.
+	 * The feature id for the '<em><b>Before</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSTRACTION__BEFORE_FIRST = BINARY_OPERATION__BEFORE_FIRST;
+	int SUBSTRACTION__BEFORE = BINARY_OPERATION__BEFORE;
 
 	/**
 	 * The feature id for the '<em><b>Before Second</b></em>' reference.
@@ -890,13 +890,13 @@ public interface Calculusv2Package extends EPackage {
 	int DIVISION__USED_BY = BINARY_OPERATION__USED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Before First</b></em>' reference.
+	 * The feature id for the '<em><b>Before</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIVISION__BEFORE_FIRST = BINARY_OPERATION__BEFORE_FIRST;
+	int DIVISION__BEFORE = BINARY_OPERATION__BEFORE;
 
 	/**
 	 * The feature id for the '<em><b>Before Second</b></em>' reference.
@@ -1045,14 +1045,14 @@ public interface Calculusv2Package extends EPackage {
 	int RESULT_OPERATION_COUNT = FINAL_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link calculusv2.impl.PipeImpl <em>Pipe</em>}' class.
+	 * The meta object id for the '{@link calculusv2.PipeSuper <em>Pipe Super</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see calculusv2.impl.PipeImpl
-	 * @see calculusv2.impl.Calculusv2PackageImpl#getPipe()
+	 * @see calculusv2.PipeSuper
+	 * @see calculusv2.impl.Calculusv2PackageImpl#getPipeSuper()
 	 * @generated
 	 */
-	int PIPE = 16;
+	int PIPE_SUPER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -1061,7 +1061,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE__CALCULUS = CALCULUS_ELEMENT__CALCULUS;
+	int PIPE_SUPER__CALCULUS = CALCULUS_ELEMENT__CALCULUS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1070,7 +1070,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE__NAME = CALCULUS_ELEMENT__NAME;
+	int PIPE_SUPER__NAME = CALCULUS_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Source Pipe</b></em>' reference.
@@ -1079,7 +1079,62 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE__SOURCE_PIPE = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
+	int PIPE_SUPER__SOURCE_PIPE = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Pipe Super</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE_SUPER_FEATURE_COUNT = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Pipe Super</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE_SUPER_OPERATION_COUNT = CALCULUS_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link calculusv2.impl.PipeImpl <em>Pipe</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calculusv2.impl.PipeImpl
+	 * @see calculusv2.impl.Calculusv2PackageImpl#getPipe()
+	 * @generated
+	 */
+	int PIPE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE__CALCULUS = PIPE_SUPER__CALCULUS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE__NAME = PIPE_SUPER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source Pipe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE__SOURCE_PIPE = PIPE_SUPER__SOURCE_PIPE;
 
 	/**
 	 * The feature id for the '<em><b>Target Pipe</b></em>' reference.
@@ -1088,7 +1143,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE__TARGET_PIPE = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
+	int PIPE__TARGET_PIPE = PIPE_SUPER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Pipe</em>' class.
@@ -1097,7 +1152,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FEATURE_COUNT = CALCULUS_ELEMENT_FEATURE_COUNT + 2;
+	int PIPE_FEATURE_COUNT = PIPE_SUPER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Pipe</em>' class.
@@ -1106,7 +1161,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_OPERATION_COUNT = CALCULUS_ELEMENT_OPERATION_COUNT + 0;
+	int PIPE_OPERATION_COUNT = PIPE_SUPER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link calculusv2.impl.PipeFinalImpl <em>Pipe Final</em>}' class.
@@ -1116,7 +1171,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @see calculusv2.impl.Calculusv2PackageImpl#getPipeFinal()
 	 * @generated
 	 */
-	int PIPE_FINAL = 17;
+	int PIPE_FINAL = 18;
 
 	/**
 	 * The feature id for the '<em><b>Calculus</b></em>' container reference.
@@ -1125,7 +1180,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL__CALCULUS = CALCULUS_ELEMENT__CALCULUS;
+	int PIPE_FINAL__CALCULUS = PIPE_SUPER__CALCULUS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1134,16 +1189,16 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL__NAME = CALCULUS_ELEMENT__NAME;
+	int PIPE_FINAL__NAME = PIPE_SUPER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Source Pipe Final</b></em>' reference.
+	 * The feature id for the '<em><b>Source Pipe</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL__SOURCE_PIPE_FINAL = CALCULUS_ELEMENT_FEATURE_COUNT + 0;
+	int PIPE_FINAL__SOURCE_PIPE = PIPE_SUPER__SOURCE_PIPE;
 
 	/**
 	 * The feature id for the '<em><b>Target Pipe Final</b></em>' reference.
@@ -1152,7 +1207,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL__TARGET_PIPE_FINAL = CALCULUS_ELEMENT_FEATURE_COUNT + 1;
+	int PIPE_FINAL__TARGET_PIPE_FINAL = PIPE_SUPER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Pipe Final</em>' class.
@@ -1161,7 +1216,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL_FEATURE_COUNT = CALCULUS_ELEMENT_FEATURE_COUNT + 2;
+	int PIPE_FINAL_FEATURE_COUNT = PIPE_SUPER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Pipe Final</em>' class.
@@ -1170,7 +1225,7 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPE_FINAL_OPERATION_COUNT = CALCULUS_ELEMENT_OPERATION_COUNT + 0;
+	int PIPE_FINAL_OPERATION_COUNT = PIPE_SUPER_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1193,17 +1248,6 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getCalculus_Elements();
-
-	/**
-	 * Returns the meta object for the attribute '{@link calculusv2.Calculus#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see calculusv2.Calculus#getName()
-	 * @see #getCalculus()
-	 * @generated
-	 */
-	EAttribute getCalculus_Name();
 
 	/**
 	 * Returns the meta object for class '{@link calculusv2.CalculusElement <em>Calculus Element</em>}'.
@@ -1300,6 +1344,17 @@ public interface Calculusv2Package extends EPackage {
 	EClass getOperation();
 
 	/**
+	 * Returns the meta object for the reference '{@link calculusv2.Operation#getBefore <em>Before</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Before</em>'.
+	 * @see calculusv2.Operation#getBefore()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EReference getOperation_Before();
+
+	/**
 	 * Returns the meta object for class '{@link calculusv2.UnaryOperation <em>Unary Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1308,17 +1363,6 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getUnaryOperation();
-
-	/**
-	 * Returns the meta object for the reference '{@link calculusv2.UnaryOperation#getBefore <em>Before</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Before</em>'.
-	 * @see calculusv2.UnaryOperation#getBefore()
-	 * @see #getUnaryOperation()
-	 * @generated
-	 */
-	EReference getUnaryOperation_Before();
 
 	/**
 	 * Returns the meta object for class '{@link calculusv2.Oppose <em>Oppose</em>}'.
@@ -1349,17 +1393,6 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getBinaryOperation();
-
-	/**
-	 * Returns the meta object for the reference '{@link calculusv2.BinaryOperation#getBeforeFirst <em>Before First</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Before First</em>'.
-	 * @see calculusv2.BinaryOperation#getBeforeFirst()
-	 * @see #getBinaryOperation()
-	 * @generated
-	 */
-	EReference getBinaryOperation_BeforeFirst();
 
 	/**
 	 * Returns the meta object for the reference '{@link calculusv2.BinaryOperation#getBeforeSecond <em>Before Second</em>}'.
@@ -1444,6 +1477,27 @@ public interface Calculusv2Package extends EPackage {
 	EClass getResult();
 
 	/**
+	 * Returns the meta object for class '{@link calculusv2.PipeSuper <em>Pipe Super</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pipe Super</em>'.
+	 * @see calculusv2.PipeSuper
+	 * @generated
+	 */
+	EClass getPipeSuper();
+
+	/**
+	 * Returns the meta object for the reference '{@link calculusv2.PipeSuper#getSourcePipe <em>Source Pipe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source Pipe</em>'.
+	 * @see calculusv2.PipeSuper#getSourcePipe()
+	 * @see #getPipeSuper()
+	 * @generated
+	 */
+	EReference getPipeSuper_SourcePipe();
+
+	/**
 	 * Returns the meta object for class '{@link calculusv2.Pipe <em>Pipe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1452,17 +1506,6 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getPipe();
-
-	/**
-	 * Returns the meta object for the reference '{@link calculusv2.Pipe#getSourcePipe <em>Source Pipe</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Pipe</em>'.
-	 * @see calculusv2.Pipe#getSourcePipe()
-	 * @see #getPipe()
-	 * @generated
-	 */
-	EReference getPipe_SourcePipe();
 
 	/**
 	 * Returns the meta object for the reference '{@link calculusv2.Pipe#getTargetPipe <em>Target Pipe</em>}'.
@@ -1484,17 +1527,6 @@ public interface Calculusv2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getPipeFinal();
-
-	/**
-	 * Returns the meta object for the reference '{@link calculusv2.PipeFinal#getSourcePipeFinal <em>Source Pipe Final</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Pipe Final</em>'.
-	 * @see calculusv2.PipeFinal#getSourcePipeFinal()
-	 * @see #getPipeFinal()
-	 * @generated
-	 */
-	EReference getPipeFinal_SourcePipeFinal();
 
 	/**
 	 * Returns the meta object for the reference '{@link calculusv2.PipeFinal#getTargetPipeFinal <em>Target Pipe Final</em>}'.
@@ -1547,14 +1579,6 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EReference CALCULUS__ELEMENTS = eINSTANCE.getCalculus_Elements();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CALCULUS__NAME = eINSTANCE.getCalculus_Name();
 
 		/**
 		 * The meta object literal for the '{@link calculusv2.CalculusElement <em>Calculus Element</em>}' class.
@@ -1639,6 +1663,14 @@ public interface Calculusv2Package extends EPackage {
 		EClass OPERATION = eINSTANCE.getOperation();
 
 		/**
+		 * The meta object literal for the '<em><b>Before</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATION__BEFORE = eINSTANCE.getOperation_Before();
+
+		/**
 		 * The meta object literal for the '{@link calculusv2.UnaryOperation <em>Unary Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1647,14 +1679,6 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EClass UNARY_OPERATION = eINSTANCE.getUnaryOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Before</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNARY_OPERATION__BEFORE = eINSTANCE.getUnaryOperation_Before();
 
 		/**
 		 * The meta object literal for the '{@link calculusv2.impl.OpposeImpl <em>Oppose</em>}' class.
@@ -1685,14 +1709,6 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EClass BINARY_OPERATION = eINSTANCE.getBinaryOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Before First</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BINARY_OPERATION__BEFORE_FIRST = eINSTANCE.getBinaryOperation_BeforeFirst();
 
 		/**
 		 * The meta object literal for the '<em><b>Before Second</b></em>' reference feature.
@@ -1771,6 +1787,24 @@ public interface Calculusv2Package extends EPackage {
 		EClass RESULT = eINSTANCE.getResult();
 
 		/**
+		 * The meta object literal for the '{@link calculusv2.PipeSuper <em>Pipe Super</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calculusv2.PipeSuper
+		 * @see calculusv2.impl.Calculusv2PackageImpl#getPipeSuper()
+		 * @generated
+		 */
+		EClass PIPE_SUPER = eINSTANCE.getPipeSuper();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Pipe</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PIPE_SUPER__SOURCE_PIPE = eINSTANCE.getPipeSuper_SourcePipe();
+
+		/**
 		 * The meta object literal for the '{@link calculusv2.impl.PipeImpl <em>Pipe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1779,14 +1813,6 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EClass PIPE = eINSTANCE.getPipe();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Pipe</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PIPE__SOURCE_PIPE = eINSTANCE.getPipe_SourcePipe();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Pipe</b></em>' reference feature.
@@ -1805,14 +1831,6 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EClass PIPE_FINAL = eINSTANCE.getPipeFinal();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Pipe Final</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PIPE_FINAL__SOURCE_PIPE_FINAL = eINSTANCE.getPipeFinal_SourcePipeFinal();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Pipe Final</b></em>' reference feature.

@@ -61,7 +61,7 @@ public class PipeFinalItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addSourcePipeFinalPropertyDescriptor(object);
+			addSourcePipePropertyDescriptor(object);
 			addTargetPipeFinalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -90,19 +90,19 @@ public class PipeFinalItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Source Pipe Final feature.
+	 * This adds a property descriptor for the Source Pipe feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSourcePipeFinalPropertyDescriptor(Object object) {
+	protected void addSourcePipePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PipeFinal_sourcePipeFinal_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PipeFinal_sourcePipeFinal_feature", "_UI_PipeFinal_type"),
-				 Calculusv2Package.Literals.PIPE_FINAL__SOURCE_PIPE_FINAL,
+				 getString("_UI_PipeSuper_sourcePipe_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PipeSuper_sourcePipe_feature", "_UI_PipeSuper_type"),
+				 Calculusv2Package.Literals.PIPE_SUPER__SOURCE_PIPE,
 				 true,
 				 false,
 				 true,

@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link calculusv2.Calculus#getElements <em>Elements</em>}</li>
- *   <li>{@link calculusv2.Calculus#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see calculusv2.Calculusv2Package#getCalculus()
@@ -37,27 +36,5 @@ public interface Calculus extends EObject {
 	 * @generated
 	 */
 	EList<CalculusElement> getElements();
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see calculusv2.Calculusv2Package#getCalculus_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link calculusv2.Calculus#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // Calculus

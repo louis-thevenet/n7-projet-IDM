@@ -8,7 +8,6 @@
   <genPackages prefix="Calculusv2" disposableProviderFactory="true" ecorePackage="calculusv2.ecore#/">
     <genClasses ecoreClass="calculusv2.ecore#//Calculus">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Calculus/elements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculusv2.ecore#//Calculus/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="calculusv2.ecore#//CalculusElement">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference calculusv2.ecore#//CalculusElement/calculus"/>
@@ -21,14 +20,13 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//FinalExpression/before"/>
     </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//InputArgs"/>
-    <genClasses image="false" ecoreClass="calculusv2.ecore#//Operation"/>
-    <genClasses image="false" ecoreClass="calculusv2.ecore#//UnaryOperation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//UnaryOperation/before"/>
+    <genClasses image="false" ecoreClass="calculusv2.ecore#//Operation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Operation/before"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="calculusv2.ecore#//UnaryOperation"/>
     <genClasses ecoreClass="calculusv2.ecore#//Oppose"/>
     <genClasses ecoreClass="calculusv2.ecore#//Reciprocal"/>
     <genClasses image="false" ecoreClass="calculusv2.ecore#//BinaryOperation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//BinaryOperation/beforeFirst"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//BinaryOperation/beforeSecond"/>
     </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//Sum"/>
@@ -39,12 +37,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculusv2.ecore#//Constante/value"/>
     </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//Result"/>
+    <genClasses image="false" ecoreClass="calculusv2.ecore#//PipeSuper">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//PipeSuper/sourcePipe"/>
+    </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//Pipe">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Pipe/sourcePipe"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Pipe/targetPipe"/>
     </genClasses>
     <genClasses ecoreClass="calculusv2.ecore#//PipeFinal">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//PipeFinal/sourcePipeFinal"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference calculusv2.ecore#//PipeFinal/targetPipeFinal"/>
     </genClasses>
   </genPackages>

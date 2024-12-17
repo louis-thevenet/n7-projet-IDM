@@ -100,9 +100,9 @@ public class PipeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Pipe_sourcePipe_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Pipe_sourcePipe_feature", "_UI_Pipe_type"),
-				 Calculusv2Package.Literals.PIPE__SOURCE_PIPE,
+				 getString("_UI_PipeSuper_sourcePipe_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PipeSuper_sourcePipe_feature", "_UI_PipeSuper_type"),
+				 Calculusv2Package.Literals.PIPE_SUPER__SOURCE_PIPE,
 				 true,
 				 false,
 				 true,

@@ -132,6 +132,10 @@ public class Calculusv2AdapterFactory extends AdapterFactoryImpl {
 				return createResultAdapter();
 			}
 			@Override
+			public Adapter casePipeSuper(PipeSuper object) {
+				return createPipeSuperAdapter();
+			}
+			@Override
 			public Adapter casePipe(Pipe object) {
 				return createPipeAdapter();
 			}
@@ -380,6 +384,20 @@ public class Calculusv2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResultAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link calculusv2.PipeSuper <em>Pipe Super</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see calculusv2.PipeSuper
+	 * @generated
+	 */
+	public Adapter createPipeSuperAdapter() {
 		return null;
 	}
 

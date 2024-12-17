@@ -47,7 +47,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="PipeFinalE" sourceMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='binaryOperationN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='ConstantN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='InputArgsN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='UnaryOperationN']" targetMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='FinalExpressionN']" targetFinderExpression="[targetPipeFinal/]" sourceFinderExpression="[sourcePipeFinal/]" domainClass="calculusv2::PipeFinal" useDomainElement="true">
+        <edgeMappings name="PipeFinalE" sourceMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='binaryOperationN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='ConstantN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='InputArgsN'] //@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='UnaryOperationN']" targetMapping="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='FinalExpressionN']" targetFinderExpression="[targetPipeFinal/]" sourceFinderExpression="[sourcePipe/]" domainClass="calculusv2::PipeFinal" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="[self.name/]">
@@ -64,8 +64,9 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::PipeFinal" referenceName="elements">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="sourcePipeFinal" valueExpression="[source/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="sourcePipe" valueExpression="[source/]"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="targetPipeFinal" valueExpression="[target/]"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[target.before &lt;> null/]"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -78,8 +79,15 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::Pipe" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.targetPipe.before = null/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="targetPipe" valueExpression="[target/]"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.targetPipe.oclIsTypeOf(BinaryOperation) and self.targetPipe.before &lt;> null/]">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target/]">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="beforeSecond" valueExpression="[target/]"/>
+                    </subModelOperations>
+                  </subModelOperations>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="sourcePipe" valueExpression="[source/]"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="targetPipe" valueExpression="[target/]"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -146,6 +154,24 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::Reciprocal" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Constant Creations" nodeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='ConstantN']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::Constante" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Res Creations" nodeMappings="//@ownedViewpoints[name='calculusv2Viewpoint']/@ownedRepresentations[name='v2Diag']/@defaultLayer/@nodeMappings[name='FinalExpressionN']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calculusv2::Result" referenceName="elements"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

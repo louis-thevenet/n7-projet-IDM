@@ -7,6 +7,7 @@ import calculusv2.Calculusv2Package;
 import calculusv2.Oppose;
 import calculusv2.Pipe;
 
+import calculusv2.PipeSuper;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -69,7 +70,7 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pipe> usedBy;
+	protected EList<PipeSuper> usedBy;
 
 	/**
 	 * The cached value of the '{@link #getBefore() <em>Before</em>}' reference.
@@ -172,9 +173,9 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 	 * @generated
 	 */
 	@Override
-	public EList<Pipe> getUsedBy() {
+	public EList<PipeSuper> getUsedBy() {
 		if (usedBy == null) {
-			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.OPPOSE__USED_BY, Calculusv2Package.PIPE__SOURCE_PIPE);
+			usedBy = new EObjectWithInverseResolvingEList<PipeSuper>(PipeSuper.class, this, Calculusv2Package.OPPOSE__USED_BY, Calculusv2Package.PIPE_SUPER__SOURCE_PIPE);
 		}
 		return usedBy;
 	}
@@ -211,12 +212,34 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setBefore(Pipe newBefore) {
+	public NotificationChain basicSetBefore(Pipe newBefore, NotificationChain msgs) {
 		Pipe oldBefore = before;
 		before = newBefore;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.OPPOSE__BEFORE, oldBefore, before));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Calculusv2Package.OPPOSE__BEFORE, oldBefore, newBefore);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBefore(Pipe newBefore) {
+		if (newBefore != before) {
+			NotificationChain msgs = null;
+			if (before != null)
+				msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
+			if (newBefore != null)
+				msgs = ((InternalEObject)newBefore).eInverseAdd(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
+			msgs = basicSetBefore(newBefore, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.OPPOSE__BEFORE, newBefore, newBefore));
 	}
 
 	/**
@@ -234,6 +257,10 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 				return basicSetCalculus((Calculus)otherEnd, msgs);
 			case Calculusv2Package.OPPOSE__USED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsedBy()).basicAdd(otherEnd, msgs);
+			case Calculusv2Package.OPPOSE__BEFORE:
+				if (before != null)
+					msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
+				return basicSetBefore((Pipe)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -250,6 +277,8 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 				return basicSetCalculus(null, msgs);
 			case Calculusv2Package.OPPOSE__USED_BY:
 				return ((InternalEList<?>)getUsedBy()).basicRemove(otherEnd, msgs);
+			case Calculusv2Package.OPPOSE__BEFORE:
+				return basicSetBefore(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -306,7 +335,7 @@ public class OpposeImpl extends MinimalEObjectImpl.Container implements Oppose {
 				return;
 			case Calculusv2Package.OPPOSE__USED_BY:
 				getUsedBy().clear();
-				getUsedBy().addAll((Collection<? extends Pipe>)newValue);
+				getUsedBy().addAll((Collection<? extends PipeSuper>)newValue);
 				return;
 			case Calculusv2Package.OPPOSE__BEFORE:
 				setBefore((Pipe)newValue);

@@ -5,8 +5,7 @@ package calculusv2.impl;
 import calculusv2.Calculus;
 import calculusv2.Calculusv2Package;
 import calculusv2.InputArgs;
-import calculusv2.Pipe;
-
+import calculusv2.PipeSuper;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -68,7 +67,7 @@ public class InputArgsImpl extends MinimalEObjectImpl.Container implements Input
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pipe> usedBy;
+	protected EList<PipeSuper> usedBy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,9 +160,9 @@ public class InputArgsImpl extends MinimalEObjectImpl.Container implements Input
 	 * @generated
 	 */
 	@Override
-	public EList<Pipe> getUsedBy() {
+	public EList<PipeSuper> getUsedBy() {
 		if (usedBy == null) {
-			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.INPUT_ARGS__USED_BY, Calculusv2Package.PIPE__SOURCE_PIPE);
+			usedBy = new EObjectWithInverseResolvingEList<PipeSuper>(PipeSuper.class, this, Calculusv2Package.INPUT_ARGS__USED_BY, Calculusv2Package.PIPE_SUPER__SOURCE_PIPE);
 		}
 		return usedBy;
 	}
@@ -252,7 +251,7 @@ public class InputArgsImpl extends MinimalEObjectImpl.Container implements Input
 				return;
 			case Calculusv2Package.INPUT_ARGS__USED_BY:
 				getUsedBy().clear();
-				getUsedBy().addAll((Collection<? extends Pipe>)newValue);
+				getUsedBy().addAll((Collection<? extends PipeSuper>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

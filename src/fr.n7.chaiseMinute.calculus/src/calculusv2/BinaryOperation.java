@@ -12,7 +12,6 @@ package calculusv2;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link calculusv2.BinaryOperation#getBeforeFirst <em>Before First</em>}</li>
  *   <li>{@link calculusv2.BinaryOperation#getBeforeSecond <em>Before Second</em>}</li>
  * </ul>
  *
@@ -21,28 +20,6 @@ package calculusv2;
  * @generated
  */
 public interface BinaryOperation extends Operation {
-	/**
-	 * Returns the value of the '<em><b>Before First</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Before First</em>' reference.
-	 * @see #setBeforeFirst(Pipe)
-	 * @see calculusv2.Calculusv2Package#getBinaryOperation_BeforeFirst()
-	 * @model required="true"
-	 * @generated
-	 */
-	Pipe getBeforeFirst();
-
-	/**
-	 * Sets the value of the '{@link calculusv2.BinaryOperation#getBeforeFirst <em>Before First</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Before First</em>' reference.
-	 * @see #getBeforeFirst()
-	 * @generated
-	 */
-	void setBeforeFirst(Pipe value);
-
 	/**
 	 * Returns the value of the '<em><b>Before Second</b></em>' reference.
 	 * <!-- begin-user-doc -->

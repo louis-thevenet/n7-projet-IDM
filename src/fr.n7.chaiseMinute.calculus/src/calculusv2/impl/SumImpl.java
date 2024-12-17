@@ -5,6 +5,7 @@ package calculusv2.impl;
 import calculusv2.Calculus;
 import calculusv2.Calculusv2Package;
 import calculusv2.Pipe;
+import calculusv2.PipeSuper;
 import calculusv2.Sum;
 
 import java.util.Collection;
@@ -35,7 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link calculusv2.impl.SumImpl#getCalculus <em>Calculus</em>}</li>
  *   <li>{@link calculusv2.impl.SumImpl#getName <em>Name</em>}</li>
  *   <li>{@link calculusv2.impl.SumImpl#getUsedBy <em>Used By</em>}</li>
- *   <li>{@link calculusv2.impl.SumImpl#getBeforeFirst <em>Before First</em>}</li>
+ *   <li>{@link calculusv2.impl.SumImpl#getBefore <em>Before</em>}</li>
  *   <li>{@link calculusv2.impl.SumImpl#getBeforeSecond <em>Before Second</em>}</li>
  * </ul>
  *
@@ -70,17 +71,17 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pipe> usedBy;
+	protected EList<PipeSuper> usedBy;
 
 	/**
-	 * The cached value of the '{@link #getBeforeFirst() <em>Before First</em>}' reference.
+	 * The cached value of the '{@link #getBefore() <em>Before</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBeforeFirst()
+	 * @see #getBefore()
 	 * @generated
 	 * @ordered
 	 */
-	protected Pipe beforeFirst;
+	protected Pipe before;
 
 	/**
 	 * The cached value of the '{@link #getBeforeSecond() <em>Before Second</em>}' reference.
@@ -183,9 +184,9 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * @generated
 	 */
 	@Override
-	public EList<Pipe> getUsedBy() {
+	public EList<PipeSuper> getUsedBy() {
 		if (usedBy == null) {
-			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.SUM__USED_BY, Calculusv2Package.PIPE__SOURCE_PIPE);
+			usedBy = new EObjectWithInverseResolvingEList<PipeSuper>(PipeSuper.class, this, Calculusv2Package.SUM__USED_BY, Calculusv2Package.PIPE_SUPER__SOURCE_PIPE);
 		}
 		return usedBy;
 	}
@@ -196,16 +197,16 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * @generated
 	 */
 	@Override
-	public Pipe getBeforeFirst() {
-		if (beforeFirst != null && beforeFirst.eIsProxy()) {
-			InternalEObject oldBeforeFirst = (InternalEObject)beforeFirst;
-			beforeFirst = (Pipe)eResolveProxy(oldBeforeFirst);
-			if (beforeFirst != oldBeforeFirst) {
+	public Pipe getBefore() {
+		if (before != null && before.eIsProxy()) {
+			InternalEObject oldBefore = (InternalEObject)before;
+			before = (Pipe)eResolveProxy(oldBefore);
+			if (before != oldBefore) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Calculusv2Package.SUM__BEFORE_FIRST, oldBeforeFirst, beforeFirst));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Calculusv2Package.SUM__BEFORE, oldBefore, before));
 			}
 		}
-		return beforeFirst;
+		return before;
 	}
 
 	/**
@@ -213,8 +214,23 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Pipe basicGetBeforeFirst() {
-		return beforeFirst;
+	public Pipe basicGetBefore() {
+		return before;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBefore(Pipe newBefore, NotificationChain msgs) {
+		Pipe oldBefore = before;
+		before = newBefore;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Calculusv2Package.SUM__BEFORE, oldBefore, newBefore);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -223,11 +239,18 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 	 * @generated
 	 */
 	@Override
-	public void setBeforeFirst(Pipe newBeforeFirst) {
-		Pipe oldBeforeFirst = beforeFirst;
-		beforeFirst = newBeforeFirst;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.SUM__BEFORE_FIRST, oldBeforeFirst, beforeFirst));
+	public void setBefore(Pipe newBefore) {
+		if (newBefore != before) {
+			NotificationChain msgs = null;
+			if (before != null)
+				msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
+			if (newBefore != null)
+				msgs = ((InternalEObject)newBefore).eInverseAdd(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
+			msgs = basicSetBefore(newBefore, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Calculusv2Package.SUM__BEFORE, newBefore, newBefore));
 	}
 
 	/**
@@ -285,6 +308,10 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return basicSetCalculus((Calculus)otherEnd, msgs);
 			case Calculusv2Package.SUM__USED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsedBy()).basicAdd(otherEnd, msgs);
+			case Calculusv2Package.SUM__BEFORE:
+				if (before != null)
+					msgs = ((InternalEObject)before).eInverseRemove(this, Calculusv2Package.PIPE__TARGET_PIPE, Pipe.class, msgs);
+				return basicSetBefore((Pipe)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -301,6 +328,8 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return basicSetCalculus(null, msgs);
 			case Calculusv2Package.SUM__USED_BY:
 				return ((InternalEList<?>)getUsedBy()).basicRemove(otherEnd, msgs);
+			case Calculusv2Package.SUM__BEFORE:
+				return basicSetBefore(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -333,9 +362,9 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return getName();
 			case Calculusv2Package.SUM__USED_BY:
 				return getUsedBy();
-			case Calculusv2Package.SUM__BEFORE_FIRST:
-				if (resolve) return getBeforeFirst();
-				return basicGetBeforeFirst();
+			case Calculusv2Package.SUM__BEFORE:
+				if (resolve) return getBefore();
+				return basicGetBefore();
 			case Calculusv2Package.SUM__BEFORE_SECOND:
 				if (resolve) return getBeforeSecond();
 				return basicGetBeforeSecond();
@@ -360,10 +389,10 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return;
 			case Calculusv2Package.SUM__USED_BY:
 				getUsedBy().clear();
-				getUsedBy().addAll((Collection<? extends Pipe>)newValue);
+				getUsedBy().addAll((Collection<? extends PipeSuper>)newValue);
 				return;
-			case Calculusv2Package.SUM__BEFORE_FIRST:
-				setBeforeFirst((Pipe)newValue);
+			case Calculusv2Package.SUM__BEFORE:
+				setBefore((Pipe)newValue);
 				return;
 			case Calculusv2Package.SUM__BEFORE_SECOND:
 				setBeforeSecond((Pipe)newValue);
@@ -389,8 +418,8 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 			case Calculusv2Package.SUM__USED_BY:
 				getUsedBy().clear();
 				return;
-			case Calculusv2Package.SUM__BEFORE_FIRST:
-				setBeforeFirst((Pipe)null);
+			case Calculusv2Package.SUM__BEFORE:
+				setBefore((Pipe)null);
 				return;
 			case Calculusv2Package.SUM__BEFORE_SECOND:
 				setBeforeSecond((Pipe)null);
@@ -413,8 +442,8 @@ public class SumImpl extends MinimalEObjectImpl.Container implements Sum {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case Calculusv2Package.SUM__USED_BY:
 				return usedBy != null && !usedBy.isEmpty();
-			case Calculusv2Package.SUM__BEFORE_FIRST:
-				return beforeFirst != null;
+			case Calculusv2Package.SUM__BEFORE:
+				return before != null;
 			case Calculusv2Package.SUM__BEFORE_SECOND:
 				return beforeSecond != null;
 		}

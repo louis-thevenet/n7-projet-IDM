@@ -4,7 +4,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Calculus">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//CalculusElement" containment="true" eOpposite="#//CalculusElement/calculus"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalculusElement" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="calculus" lowerBound="1"
@@ -14,7 +13,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="UsableExpression" abstract="true" interface="true"
       eSuperTypes="#//CalculusElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" upperBound="-1"
-        eType="#//Pipe" eOpposite="#//Pipe/sourcePipe"/>
+        eType="#//PipeSuper" eOpposite="#//PipeSuper/sourcePipe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FinalExpression" abstract="true" interface="true"
       eSuperTypes="#//CalculusElement">
@@ -23,18 +22,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputArgs" eSuperTypes="#//UsableExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true" interface="true"
-      eSuperTypes="#//UsableExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="UnaryOperation" abstract="true" interface="true"
-      eSuperTypes="#//Operation">
+      eSuperTypes="#//UsableExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="before" lowerBound="1"
-        eType="#//Pipe"/>
+        eType="#//Pipe" eOpposite="#//Pipe/targetPipe"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnaryOperation" abstract="true" interface="true"
+      eSuperTypes="#//Operation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Oppose" eSuperTypes="#//UnaryOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Reciprocal" eSuperTypes="#//UnaryOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" abstract="true" interface="true"
       eSuperTypes="#//Operation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="beforeFirst" lowerBound="1"
-        eType="#//Pipe"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="beforeSecond" lowerBound="1"
         eType="#//Pipe"/>
   </eClassifiers>
@@ -46,15 +43,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Result" eSuperTypes="#//FinalExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Pipe" eSuperTypes="#//CalculusElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PipeSuper" abstract="true" interface="true"
+      eSuperTypes="#//CalculusElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourcePipe" lowerBound="1"
         eType="#//UsableExpression" eOpposite="#//UsableExpression/usedBy"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipe" lowerBound="1"
-        eType="#//Operation"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PipeFinal" eSuperTypes="#//CalculusElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourcePipeFinal" lowerBound="1"
-        eType="#//UsableExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Pipe" eSuperTypes="#//PipeSuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipe" lowerBound="1"
+        eType="#//Operation" eOpposite="#//Operation/before"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PipeFinal" eSuperTypes="#//PipeSuper">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetPipeFinal" lowerBound="1"
         eType="#//FinalExpression" eOpposite="#//FinalExpression/before"/>
   </eClassifiers>

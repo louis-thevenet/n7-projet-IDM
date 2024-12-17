@@ -5,8 +5,7 @@ package calculusv2.impl;
 import calculusv2.Calculus;
 import calculusv2.Calculusv2Package;
 import calculusv2.Constante;
-import calculusv2.Pipe;
-
+import calculusv2.PipeSuper;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -69,7 +68,7 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pipe> usedBy;
+	protected EList<PipeSuper> usedBy;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -182,9 +181,9 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 	 * @generated
 	 */
 	@Override
-	public EList<Pipe> getUsedBy() {
+	public EList<PipeSuper> getUsedBy() {
 		if (usedBy == null) {
-			usedBy = new EObjectWithInverseResolvingEList<Pipe>(Pipe.class, this, Calculusv2Package.CONSTANTE__USED_BY, Calculusv2Package.PIPE__SOURCE_PIPE);
+			usedBy = new EObjectWithInverseResolvingEList<PipeSuper>(PipeSuper.class, this, Calculusv2Package.CONSTANTE__USED_BY, Calculusv2Package.PIPE_SUPER__SOURCE_PIPE);
 		}
 		return usedBy;
 	}
@@ -298,7 +297,7 @@ public class ConstanteImpl extends MinimalEObjectImpl.Container implements Const
 				return;
 			case Calculusv2Package.CONSTANTE__USED_BY:
 				getUsedBy().clear();
-				getUsedBy().addAll((Collection<? extends Pipe>)newValue);
+				getUsedBy().addAll((Collection<? extends PipeSuper>)newValue);
 				return;
 			case Calculusv2Package.CONSTANTE__VALUE:
 				setValue((Float)newValue);

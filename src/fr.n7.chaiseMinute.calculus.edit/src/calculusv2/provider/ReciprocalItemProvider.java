@@ -122,9 +122,9 @@ public class ReciprocalItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UnaryOperation_before_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnaryOperation_before_feature", "_UI_UnaryOperation_type"),
-				 Calculusv2Package.Literals.UNARY_OPERATION__BEFORE,
+				 getString("_UI_Operation_before_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Operation_before_feature", "_UI_Operation_type"),
+				 Calculusv2Package.Literals.OPERATION__BEFORE,
 				 true,
 				 false,
 				 true,

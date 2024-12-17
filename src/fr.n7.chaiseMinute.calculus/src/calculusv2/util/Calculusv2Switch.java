@@ -202,9 +202,17 @@ public class Calculusv2Switch<T> extends Switch<T> {
 				if (theResult == null) theResult = defaultCase(theEObject);
 				return theResult;
 			}
+			case Calculusv2Package.PIPE_SUPER: {
+				PipeSuper pipeSuper = (PipeSuper)theEObject;
+				T result = casePipeSuper(pipeSuper);
+				if (result == null) result = caseCalculusElement(pipeSuper);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Calculusv2Package.PIPE: {
 				Pipe pipe = (Pipe)theEObject;
 				T result = casePipe(pipe);
+				if (result == null) result = casePipeSuper(pipe);
 				if (result == null) result = caseCalculusElement(pipe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -212,6 +220,7 @@ public class Calculusv2Switch<T> extends Switch<T> {
 			case Calculusv2Package.PIPE_FINAL: {
 				PipeFinal pipeFinal = (PipeFinal)theEObject;
 				T result = casePipeFinal(pipeFinal);
+				if (result == null) result = casePipeSuper(pipeFinal);
 				if (result == null) result = caseCalculusElement(pipeFinal);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -457,6 +466,21 @@ public class Calculusv2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResult(Result object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pipe Super</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pipe Super</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePipeSuper(PipeSuper object) {
 		return null;
 	}
 

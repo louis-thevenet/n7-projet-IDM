@@ -15,6 +15,7 @@ import calculusv2.Operation;
 import calculusv2.Oppose;
 import calculusv2.Pipe;
 import calculusv2.PipeFinal;
+import calculusv2.PipeSuper;
 import calculusv2.Products;
 import calculusv2.Reciprocal;
 import calculusv2.Result;
@@ -154,6 +155,13 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass pipeSuperEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass pipeEClass = null;
 
 	/**
@@ -241,16 +249,6 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	@Override
 	public EReference getCalculus_Elements() {
 		return (EReference)calculusEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCalculus_Name() {
-		return (EAttribute)calculusEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -349,8 +347,8 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
-	public EClass getUnaryOperation() {
-		return unaryOperationEClass;
+	public EReference getOperation_Before() {
+		return (EReference)operationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -359,8 +357,8 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
-	public EReference getUnaryOperation_Before() {
-		return (EReference)unaryOperationEClass.getEStructuralFeatures().get(0);
+	public EClass getUnaryOperation() {
+		return unaryOperationEClass;
 	}
 
 	/**
@@ -399,18 +397,8 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
-	public EReference getBinaryOperation_BeforeFirst() {
-		return (EReference)binaryOperationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getBinaryOperation_BeforeSecond() {
-		return (EReference)binaryOperationEClass.getEStructuralFeatures().get(1);
+		return (EReference)binaryOperationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -489,6 +477,26 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
+	public EClass getPipeSuper() {
+		return pipeSuperEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPipeSuper_SourcePipe() {
+		return (EReference)pipeSuperEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPipe() {
 		return pipeEClass;
 	}
@@ -499,18 +507,8 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
-	public EReference getPipe_SourcePipe() {
-		return (EReference)pipeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getPipe_TargetPipe() {
-		return (EReference)pipeEClass.getEStructuralFeatures().get(1);
+		return (EReference)pipeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -529,18 +527,8 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
-	public EReference getPipeFinal_SourcePipeFinal() {
-		return (EReference)pipeFinalEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getPipeFinal_TargetPipeFinal() {
-		return (EReference)pipeFinalEClass.getEStructuralFeatures().get(1);
+		return (EReference)pipeFinalEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -574,7 +562,6 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		// Create classes and their features
 		calculusEClass = createEClass(CALCULUS);
 		createEReference(calculusEClass, CALCULUS__ELEMENTS);
-		createEAttribute(calculusEClass, CALCULUS__NAME);
 
 		calculusElementEClass = createEClass(CALCULUS_ELEMENT);
 		createEReference(calculusElementEClass, CALCULUS_ELEMENT__CALCULUS);
@@ -589,16 +576,15 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		inputArgsEClass = createEClass(INPUT_ARGS);
 
 		operationEClass = createEClass(OPERATION);
+		createEReference(operationEClass, OPERATION__BEFORE);
 
 		unaryOperationEClass = createEClass(UNARY_OPERATION);
-		createEReference(unaryOperationEClass, UNARY_OPERATION__BEFORE);
 
 		opposeEClass = createEClass(OPPOSE);
 
 		reciprocalEClass = createEClass(RECIPROCAL);
 
 		binaryOperationEClass = createEClass(BINARY_OPERATION);
-		createEReference(binaryOperationEClass, BINARY_OPERATION__BEFORE_FIRST);
 		createEReference(binaryOperationEClass, BINARY_OPERATION__BEFORE_SECOND);
 
 		sumEClass = createEClass(SUM);
@@ -614,12 +600,13 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 
 		resultEClass = createEClass(RESULT);
 
+		pipeSuperEClass = createEClass(PIPE_SUPER);
+		createEReference(pipeSuperEClass, PIPE_SUPER__SOURCE_PIPE);
+
 		pipeEClass = createEClass(PIPE);
-		createEReference(pipeEClass, PIPE__SOURCE_PIPE);
 		createEReference(pipeEClass, PIPE__TARGET_PIPE);
 
 		pipeFinalEClass = createEClass(PIPE_FINAL);
-		createEReference(pipeFinalEClass, PIPE_FINAL__SOURCE_PIPE_FINAL);
 		createEReference(pipeFinalEClass, PIPE_FINAL__TARGET_PIPE_FINAL);
 	}
 
@@ -665,20 +652,20 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		divisionEClass.getESuperTypes().add(this.getBinaryOperation());
 		constanteEClass.getESuperTypes().add(this.getUsableExpression());
 		resultEClass.getESuperTypes().add(this.getFinalExpression());
-		pipeEClass.getESuperTypes().add(this.getCalculusElement());
-		pipeFinalEClass.getESuperTypes().add(this.getCalculusElement());
+		pipeSuperEClass.getESuperTypes().add(this.getCalculusElement());
+		pipeEClass.getESuperTypes().add(this.getPipeSuper());
+		pipeFinalEClass.getESuperTypes().add(this.getPipeSuper());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(calculusEClass, Calculus.class, "Calculus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalculus_Elements(), this.getCalculusElement(), this.getCalculusElement_Calculus(), "elements", null, 0, -1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCalculus_Name(), ecorePackage.getEString(), "name", null, 1, 1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(calculusElementEClass, CalculusElement.class, "CalculusElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalculusElement_Calculus(), this.getCalculus(), this.getCalculus_Elements(), "calculus", null, 1, 1, CalculusElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCalculusElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, CalculusElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(usableExpressionEClass, UsableExpression.class, "UsableExpression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUsableExpression_UsedBy(), this.getPipe(), this.getPipe_SourcePipe(), "usedBy", null, 0, -1, UsableExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUsableExpression_UsedBy(), this.getPipeSuper(), this.getPipeSuper_SourcePipe(), "usedBy", null, 0, -1, UsableExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(finalExpressionEClass, FinalExpression.class, "FinalExpression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFinalExpression_Before(), this.getPipeFinal(), this.getPipeFinal_TargetPipeFinal(), "before", null, 1, 1, FinalExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -686,16 +673,15 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		initEClass(inputArgsEClass, InputArgs.class, "InputArgs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationEClass, Operation.class, "Operation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperation_Before(), this.getPipe(), this.getPipe_TargetPipe(), "before", null, 1, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unaryOperationEClass, UnaryOperation.class, "UnaryOperation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnaryOperation_Before(), this.getPipe(), null, "before", null, 1, 1, UnaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(opposeEClass, Oppose.class, "Oppose", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(reciprocalEClass, Reciprocal.class, "Reciprocal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(binaryOperationEClass, BinaryOperation.class, "BinaryOperation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBinaryOperation_BeforeFirst(), this.getPipe(), null, "beforeFirst", null, 1, 1, BinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBinaryOperation_BeforeSecond(), this.getPipe(), null, "beforeSecond", null, 1, 1, BinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sumEClass, Sum.class, "Sum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -711,12 +697,13 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 
 		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(pipeSuperEClass, PipeSuper.class, "PipeSuper", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPipeSuper_SourcePipe(), this.getUsableExpression(), this.getUsableExpression_UsedBy(), "sourcePipe", null, 1, 1, PipeSuper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(pipeEClass, Pipe.class, "Pipe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPipe_SourcePipe(), this.getUsableExpression(), this.getUsableExpression_UsedBy(), "sourcePipe", null, 1, 1, Pipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPipe_TargetPipe(), this.getOperation(), null, "targetPipe", null, 1, 1, Pipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPipe_TargetPipe(), this.getOperation(), this.getOperation_Before(), "targetPipe", null, 1, 1, Pipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pipeFinalEClass, PipeFinal.class, "PipeFinal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPipeFinal_SourcePipeFinal(), this.getUsableExpression(), null, "sourcePipeFinal", null, 1, 1, PipeFinal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPipeFinal_TargetPipeFinal(), this.getFinalExpression(), this.getFinalExpression_Before(), "targetPipeFinal", null, 1, 1, PipeFinal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

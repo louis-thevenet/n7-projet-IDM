@@ -12,7 +12,6 @@ package calculusv2;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link calculusv2.PipeFinal#getSourcePipeFinal <em>Source Pipe Final</em>}</li>
  *   <li>{@link calculusv2.PipeFinal#getTargetPipeFinal <em>Target Pipe Final</em>}</li>
  * </ul>
  *
@@ -20,29 +19,7 @@ package calculusv2;
  * @model
  * @generated
  */
-public interface PipeFinal extends CalculusElement {
-	/**
-	 * Returns the value of the '<em><b>Source Pipe Final</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Pipe Final</em>' reference.
-	 * @see #setSourcePipeFinal(UsableExpression)
-	 * @see calculusv2.Calculusv2Package#getPipeFinal_SourcePipeFinal()
-	 * @model required="true"
-	 * @generated
-	 */
-	UsableExpression getSourcePipeFinal();
-
-	/**
-	 * Sets the value of the '{@link calculusv2.PipeFinal#getSourcePipeFinal <em>Source Pipe Final</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source Pipe Final</em>' reference.
-	 * @see #getSourcePipeFinal()
-	 * @generated
-	 */
-	void setSourcePipeFinal(UsableExpression value);
-
+public interface PipeFinal extends PipeSuper {
 	/**
 	 * Returns the value of the '<em><b>Target Pipe Final</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link calculusv2.FinalExpression#getBefore <em>Before</em>}'.

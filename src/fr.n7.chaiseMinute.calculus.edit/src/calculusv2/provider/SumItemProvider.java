@@ -62,7 +62,7 @@ public class SumItemProvider
 
 			addNamePropertyDescriptor(object);
 			addUsedByPropertyDescriptor(object);
-			addBeforeFirstPropertyDescriptor(object);
+			addBeforePropertyDescriptor(object);
 			addBeforeSecondPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -113,19 +113,19 @@ public class SumItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Before First feature.
+	 * This adds a property descriptor for the Before feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addBeforeFirstPropertyDescriptor(Object object) {
+	protected void addBeforePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_BinaryOperation_beforeFirst_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryOperation_beforeFirst_feature", "_UI_BinaryOperation_type"),
-				 Calculusv2Package.Literals.BINARY_OPERATION__BEFORE_FIRST,
+				 getString("_UI_Operation_before_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Operation_before_feature", "_UI_Operation_type"),
+				 Calculusv2Package.Literals.OPERATION__BEFORE,
 				 true,
 				 false,
 				 true,
