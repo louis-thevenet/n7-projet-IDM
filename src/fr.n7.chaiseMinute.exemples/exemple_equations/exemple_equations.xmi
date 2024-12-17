@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chaiseMinute:ChaiseMinute xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chaiseMinute="http://chaiseMinute" xmlns:function="http://function" name="exemple_equations">
+  <tables name="equations">
+    <columns xsi:type="chaiseMinute:ComputedColumn" id="Solution">
+      <algorithm>
+        <functions name="solve">
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.a"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="equations.b"/>
+          <inputs xsi:type="function:ColumnArgument" columnPath="&#x9;equations.c"/>
+        </functions>
+      </algorithm>
+    </columns>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="a" type="Int" path="table.a"/>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="b" type="Int" path="table.b"/>
+    <columns xsi:type="chaiseMinute:ImportedColumn" id="c" type="Int" path="table.c"/>
+    <indexColumn id="Index" type="Int"/>
+  </tables>
+  <constraints>
+    <functions name="ensure_is_not_null">
+      <inputs xsi:type="function:ColumnArgument" columnPath="table.a"/>
+    </functions>
+  </constraints>
+</chaiseMinute:ChaiseMinute>

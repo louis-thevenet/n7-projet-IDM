@@ -1,0 +1,9 @@
+exemple_equations {
+        equations indexed on Index of Int(
+        Solution of String computed with [solve("equations.a","equations.b", "	equations.c")],
+        a of Int imported from "table.a",
+        b of Int imported from "table.b",
+        c of Int imported from "table.c" 
+        )
+}
+constrained by [ensure_is_not_null("table.a") ]
