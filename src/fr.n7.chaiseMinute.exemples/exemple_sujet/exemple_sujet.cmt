@@ -1,0 +1,6 @@
+exemple_sujet {
+        table indexed on Date of String (
+        Ouverture of Int imported from "table.Open" , Min of Int imported from "table.Low", Max of Int imported from "table.High", Fermeture of Int imported from "table.Close",Volume of Int, Moyenne of Int computed with [mean("table.Min","table.Max")], Variation of Int computed with [variation("table.Fermeture","table.Ouverture")] 
+        )
+}
+constrained by [ensure_min_max("table.Low","table.High") ]
