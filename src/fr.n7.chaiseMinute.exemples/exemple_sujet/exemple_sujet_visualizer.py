@@ -35,8 +35,8 @@ def check_constraints(input):
 	)
 
 	if not res:
-		("ensure_min_max constraints failed on table")
-	return True
+		return (False, "ensure_min_max constraints failed on table")
+	return (True, "Constraints are respected")
 
 def generate_output(input):
 	"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
@@ -101,19 +101,28 @@ class TableViewer(tk.Tk):
         super().__init__()
 
         self.title("Table Viewer")
-        self.geometry("600x400")
+        self.geometry("1500x800")
 
         self.tables = tables
         self.current_table = None
 
-        self.table_listbox = tk.Listbox(self)
-        self.table_listbox.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        self.left_frame = tk.Frame(self)
+        self.left_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nswe")
+
+        self.table_listbox = tk.Listbox(self.left_frame, height=20)
+        self.table_listbox.pack(fill=tk.Y, padx=10)
         self.table_listbox.bind("<<ListboxSelect>>", self.on_table_select)
 
         self.populate_table_list()
 
-        self.treeview = ttk.Treeview(self)
+        self.right_frame = tk.Frame(self)
+        self.right_frame.grid(row=0, column=1, padx=10, pady=10, sticky="nswe")
+
+        self.treeview = ttk.Treeview(self.right_frame)
         self.treeview.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+
+        self.grid_columnconfigure(0, weight=1, uniform="equal")
+        self.grid_columnconfigure(1, weight=3, uniform="equal")
 
     def populate_table_list(self):
         """Populate the listbox with the table names."""
@@ -133,11 +142,9 @@ class TableViewer(tk.Tk):
         """Display selected table in the Treeview."""
         table = self.tables[table_name]
 
-        # Clear the previous table display
         for item in self.treeview.get_children():
             self.treeview.delete(item)
 
-        # Create columns
         columns = list(table.keys())
         self.treeview["columns"] = columns
         self.treeview["show"] = "headings"
@@ -145,13 +152,9 @@ class TableViewer(tk.Tk):
         num_rows = 0
         for col in columns:
             self.treeview.heading(col, text=col)
-            print(table)
-            print(table[col])
             if num_rows < len(table[col]):
                 num_rows = len(table[col])
 
-	
-		# Add rows 
         for i in range(num_rows):
             row = [table[col][i] for col in columns]
             self.treeview.insert("", tk.END, values=row)
@@ -160,10 +163,13 @@ class TableViewer(tk.Tk):
 
 def main():
 	tables_data = load()
+	res, msg = check_constraints(tables_data)
+	if not res:
+		print(msg)
+		return 
+		
 	app = TableViewer(tables_data)
 	app.mainloop()
-
-	
 
 if __name__ == '__main__':
 	main()

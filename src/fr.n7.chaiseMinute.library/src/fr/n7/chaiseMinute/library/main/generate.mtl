@@ -79,11 +79,11 @@ def check_constraints(input):
 	)
 
 	if not res:
-		("[f.name/] constraints failed on [t.name/]")
+		return (False, "[f.name/] constraints failed on [t.name/]")
 			[/for]
 		[/for]
 	[/for]
-	return True
+	return (True, "Constraints are respected")
 
 def generate_output(input):
 	"""Returns a Dict<TableName, Dict<ColumnName, Data>> by applying the the model on the input data."""
@@ -107,7 +107,8 @@ def save_to_csv(tables):
 def main():
 	input = load()
 	out = generate_output(input)
-	check_constraints(input)
+	res, msg = check_constraints(input)
+	print(msg)
 	save_to_csv(out)
 
 if __name__ == '__main__':
