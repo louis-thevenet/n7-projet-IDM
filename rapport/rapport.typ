@@ -410,3 +410,8 @@ On peut également voir les données dans l'outil de visualisation généré
 
 = Annexes
 //Une description détaillée de ce que contient le rendu (cf Section 4) : description succincte de chaque projet et des fichiers importants (méta-modèles, modèles exemple, fichiers de description, scripts, etc.)
+
+== Workspaces `ChaiseMinute`
+== Workspaces `Calculus`
+== Workspaces Sirius
+== Workspaces Exemples
