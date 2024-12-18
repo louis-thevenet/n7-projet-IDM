@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calculusv2:Calculus xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calculusv2="http://calculusv2" name="Mean">
+  <elements xsi:type="calculusv2:InputArgs" name="min" usedBy="//@elements.11"/>
+  <elements xsi:type="calculusv2:InputArgs" name="max" usedBy="//@elements.10"/>
+  <elements xsi:type="calculusv2:Sum" name="Somme" usedBy="//@elements.7" before="//@elements.11" beforeSecond="//@elements.10"/>
+  <elements xsi:type="calculusv2:Division" name="Div" usedBy="//@elements.9" before="//@elements.7" beforeSecond="//@elements.12"/>
+  <elements xsi:type="calculusv2:Constante" name="C" usedBy="//@elements.12" value="2.0"/>
+  <elements xsi:type="calculusv2:Oppose" name="Opp" usedBy="//@elements.8" before="//@elements.9"/>
+  <elements xsi:type="calculusv2:Result" name="Res" before="//@elements.8"/>
+  <elements xsi:type="calculusv2:Pipe" name="S2D" sourcePipe="//@elements.2" targetPipe="//@elements.3"/>
+  <elements xsi:type="calculusv2:PipeFinal" name="O2R" sourcePipe="//@elements.5" targetPipeFinal="//@elements.6"/>
+  <elements xsi:type="calculusv2:Pipe" name="D2O" sourcePipe="//@elements.3" targetPipe="//@elements.5"/>
+  <elements xsi:type="calculusv2:Pipe" name="max2S" sourcePipe="//@elements.1" targetPipe="//@elements.2"/>
+  <elements xsi:type="calculusv2:Pipe" name="min2S" sourcePipe="//@elements.0" targetPipe="//@elements.2"/>
+  <elements xsi:type="calculusv2:Pipe" name="C2D" sourcePipe="//@elements.4" targetPipe="//@elements.3"/>
+</calculusv2:Calculus>
