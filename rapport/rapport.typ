@@ -119,12 +119,12 @@ constrained by [nomFonction4("nomTable2.nomColonne1" "nomTable1.nomColonne2")]
 
 La syntaxe permet de définir des modèles de Table dans un méta-modèles proche de `ChaiseMinute` mais néamoins différent : `TabouretSeconde`. En effet, Xtext ne supportant pas certaines spécificités des ecore, comme les e-references, il est nécéssaire d'effecter une transformation M2M pour obtenir un modèle de `ChaiseMinute` à partir d'un modèle conforme à `TabouretSeconde`.
 
-== Transformation M2M
+= Transformation Modèle à Modèle
 
 Pour finaliser la transformation texte à modèle, nous avons écrit une transformation modèle à modèle en Acceleo (la `menuiserie`) qui consiste simplement à rétablir les e-references et avoir un modèle conforme à `ChaiseMinute`.
 
 
-= Transformations M2T
+= Transformations Modèle à Texte
 == Librairie et script de calcul automatique
 Nous avons décidé d'utiliser le language Python pour nos algorithmes. Ainsi, pour générer une librarie de calcul à partir d'un schéma de table, il nous suffit de générer un programme Python qui appelle les fonctions référencées par les algorithmes et les contraintes.
 
@@ -159,7 +159,6 @@ Nous générons aussi une fonction `main` dans notre librarie qui prend en entr�
 == Outil de visualisation des données
 En s'appuyant sur la même librarie, on crée un outil de visualisation du schéma de table en Python. (Voir @equation_vis)
 
-= Transformations Modèle à Modèle
 = Edition graphique
 == `ChaiseMinute`
 Nous avons développé un outils graphique permettant de modifier des fichiers _.cml_ (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
