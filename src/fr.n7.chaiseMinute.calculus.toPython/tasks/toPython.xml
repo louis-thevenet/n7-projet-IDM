@@ -34,21 +34,6 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.35.0.v20230801-1141.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.23.0.v20230211-1150.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_32.1.2.jre.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.edit_2.19.0.v20230828-0616.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.change_2.15.0.v20230211-1150.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.resources_3.19.100.v20230814-1312.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.edit.ui_2.23.0.v20230211-1150.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.views_3.12.100.v20230821-1342.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.workbench_3.130.0.v20230822-0911.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.e4.ui.workbench3_0.17.100.v20230727-0604.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common.ui_2.21.0.v20230211-1150.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui_3.204.0.v20230821-1342.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt_3.124.100.v20230825-1346.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt.gtk.linux.x86_64_3.124.100.v20230825-1346.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jface_3.31.0.v20230821-1552.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.commands_3.11.100.v20230708-0916.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.ide_3.21.100.v20230825-1346.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.e4.ui.ide_3.17.100.v20230727-0604.jar"/>
     </path>
 
     <path id="fr.n7.chaiseMinute.calculus.toPython.classpath">
