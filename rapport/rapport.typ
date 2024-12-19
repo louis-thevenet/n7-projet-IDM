@@ -57,8 +57,6 @@ Le méta-modèle seul ne permet pas d'éviter toute erreur que pourrait faire l'
 - *inv* CheminCorrect : Une `ImportedColumn` doit posséder un chemin d'accés valide vers la colonne qui est importée. C'est-à-dire que si la colonne est importée depuis une autre `Table` du `ChaiseMinute` le chemin doit être `<NomDeLaTable>.<NomDeLaColonne>`. Sinon, `<NomDeLaColonne>` car la colonne est dans la même table (duplication d'une colonne).
 Il n'y a pas de contraintes statiques supplémentaire pour les `ColumnData`, et les `ComputedColumn`.
 
-Dans ce projet, nous avons fournis dans `src/fr.n7.chaiseMinute.exemples/exemples_contraintes_statiques` deux exemples différents de modèle qui passent l'entièreté des contraintes statiques (nom commence par "ok"). Ainsi que 9 autres exemples qui ne passent pas les tests.
-
 
 == `Algorithm`
 #figure(
@@ -457,3 +455,5 @@ Workspace contenant des fichiers _clc_ de `Calculus` éditable par les utilisate
 == Workspaces Exemples
 === `fr.n7.ChaiseMinute.exemples`
 Workspace contenant différents exemples d'utilisation de schémas de tables avec les résultats de leur transformation vers le modèle et les générations python.
+
+Dans ce projet, nous avons fournis dans `exemples_contraintes_statiques` deux exemples différents de modèle qui passent l'entièreté des contraintes statiques (nom commence par "ok"). Ainsi que 9 autres exemples qui ne passent pas les tests le nom du fichier précise l'erreur qui doit être levé par le validator.
