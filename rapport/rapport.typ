@@ -195,7 +195,7 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
 ) <exempleCompliqueSiriusDiagram>
 
 
-== Limitation
+=== Limitations
 Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
 
 == `Calculus`
@@ -216,7 +216,7 @@ Les noms sur les _Nodes_ ou les _Edges_ représentent les arguments _name_ des `
   caption: [Sirius de Mean.clc.],
 ) <meanSiriusDiagram>
 
-== Limitation et améliorations
+=== Limitations et améliorations
 Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer n'importe quel `CalculusElement` avec la palette de création. Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent. En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`. Nous avons isolé la partie et compris d'où venait le problème (INSERER UN SCREEN DU .ODESIGN DES IF) et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
 
 Une piste d'amélioration de ce problème serait de créer des _Bordered Nodes_ indiquant le `before` et `beforeSecond` pour les `BinaryExpression` pour isoler le `Pipe` à modifier et ainsi résoudre notre problème. Dans la même idée, rajouter des _Bordered Nodes_ pour chaque entrée (`before`/`beforeSecond`) et sortie (`targetPipe`) pour visualiser correctement le nombre d'E/S nécessaire par expression.
@@ -428,7 +428,21 @@ On peut également voir les données dans l'outil de visualisation généré
 = Annexes
 //Une description détaillée de ce que contient le rendu (cf Section 4) : description succincte de chaque projet et des fichiers importants (méta-modèles, modèles exemple, fichiers de description, scripts, etc.)
 
-== Workspaces `ChaiseMinute`
-== Workspaces `Calculus`
+== Workspaces `fr.n7.ChaiseMinute`
+=== `fr.n7.ChaiseMinute`
+Workspace contenant le méta-modèle `chaiseMinute.ecore` décrivant les schémas de tables.
+=== `fr.n7.ChaiseMinute.function`
+Worksapce contenant le méta-modèle `function.ecore` décrivant les fonctions utilisées dans les `Algorithm` d'un modèle.
+=== `fr.n7.ChaiseMinute.script`
+Workspace contenant le méta-modèle `algorithm.ecore` décrivant les algorithmes (utilisations des fonctions) dans le méta-modèle `ChaiseMinute` pour pouvoir appliquer des opérations pour les `ComputedColumns`.
+=== `fr.n7.ChaiseMinute.library`
+Workspace Acceleo permettant la transformation du modèle insatancié de `ChaiseMinute` vers un fichier Python en sortie pour vérifier les contraintes et afficher les tables ainsi obetnues.
+=== `fr.n7.ChaiseMinute.tabouretSeconde`
+Worksapce comportant un fichier `TabouretSeconde.xtext` décrivant un langage textuel concret propre à `ChaiseMinute` pour décrire des schémas de tables (d'extension _cmt_). Cette transformation ne supportant pas les eOpposite, nous avons du créer une transformation Modèle à Modèle `menuiserie.atl` pour obtenir des vrais schémas de tables `ChaiseMinute`.
+=== `fr.n7.ChaiseMinute.chaiseMinute.cmtToCm`
+Workspace comportant la transformation Modèle à Modèle `menuiserie.atl` pour engendrer des `ChaiseMinute` (d'extension _xmi_ ou _cm_)à partir de la transforamtion xText.
+== Workspaces `fr.n7.ChaiseMinute.calculus`
 == Workspaces Sirius
 == Workspaces Exemples
+=== `fr.n7.ChaiseMinute.exemples`
+Workspace contenant différents exemples d'utilisation de schémas de tables avec les résultats de leur transformation vers le modèle et les générations python.
