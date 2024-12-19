@@ -441,8 +441,18 @@ Workspace Acceleo permettant la transformation du modèle insatancié de `Chaise
 Worksapce comportant un fichier `TabouretSeconde.xtext` décrivant un langage textuel concret propre à `ChaiseMinute` pour décrire des schémas de tables (d'extension _cmt_). Cette transformation ne supportant pas les eOpposite, nous avons du créer une transformation Modèle à Modèle `menuiserie.atl` pour obtenir des vrais schémas de tables `ChaiseMinute`.
 === `fr.n7.ChaiseMinute.chaiseMinute.cmtToCm`
 Workspace comportant la transformation Modèle à Modèle `menuiserie.atl` pour engendrer des `ChaiseMinute` (d'extension _xmi_ ou _cm_)à partir de la transforamtion xText.
-== Workspaces `fr.n7.ChaiseMinute.calculus`
+== `fr.n7.ChaiseMinute.calculus`
+Workspace contenant le méta-modèle `calculusv2.ecore` décrivant les fonctions/scripts que l'utilisateur pourra définir par un l'éditeur graphique Sirius. Une fois l'édition faite, nous voulions pouvoir transformer ces scripts en fichiers Python pour pouvoir être appelé dans les `Algorithm` au travers des paths, mais ayant eu des problèmes avec l'édition graphique, expliquées plus haut(FAIRE UNE ANCRE POUR LIEN), nous n'avons pu aboutir à une transformation utilisable. 
+
 == Workspaces Sirius
+=== `fr.n7.ChaiseMinute.design`
+Workspace contenant le fichier `chaiseMinute.odesign` représentant le ViewPoint sous forme de containers d'un `ChaiseMinute` pour éditer des schémas de tables de façon graphique.
+=== `fr.n7.ChaiseMinute.samples`
+Workspace contenant des fichiers _cm_ de `ChaiseMinute` éditable par les utilisateurs.
+=== `fr.n7.ChaiseMinute.calculus.v2design`
+Workspace contenant le fichier `v2design.odesign` représentant le ViewPoint sous forme d'arbre d'un `Calculus` pour être modifié par les utilisateurs ensuite.
+=== `fr.n7.ChaiseMinute.calculus.v2samples`
+Workspace contenant des fichiers _clc_ de `Calculus` éditable par les utilisateurs.
 == Workspaces Exemples
 === `fr.n7.ChaiseMinute.exemples`
 Workspace contenant différents exemples d'utilisation de schémas de tables avec les résultats de leur transformation vers le modèle et les générations python.
