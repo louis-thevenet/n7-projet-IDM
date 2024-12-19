@@ -32,6 +32,7 @@ Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
   - Pour spécifier les `Functions` utilisées par les `Algorithm`
 
 == `ChaiseMinute`
+
 #figure(
   image("./images/chaiseMinuteDiagram.svg", width: 100%),
   caption: [ChaiseMinute Ecore Diagram.],
@@ -46,6 +47,19 @@ Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
   - `ComputedColumn` : représentant une colonne calculée avec un `Algorithm`
 
 Toutes les contraintes sont représentées par des algorithmes qui renvoient un booléen.
+
+Le méta-modèle seul ne permet pas d'éviter toute erreur que pourrait faire l'utilisateur lors de la conception d'un modèle. Nous avons donc mis en place un certains nombre de contraintes statiques décrites ci-dessous :
+- *inv* NomValide : Le nom d'un `ChaiseMinute` doit être non null, non vide et respecter les conventions java
+- *inv* NomCorrect : Le nom d'une `Table` doit respecter les mêmes conditions
+- *inv* NomCorrect : Le nom d'une `Column` doit respecter les mêmes conditions
+- *inv* Possede un type : Une `Column` doit posséder un type
+- *inv* NomUniqueColumn : Une `Column` doit posséder un nom qui l'identifie dans la table
+- *inv* CheminCorrect : Une `ImportedColumn` doit posséder un chemin d'accés valide vers la colonne qui est importée. C'est-à-dire que si la colonne est importée depuis une autre `Table` du `ChaiseMinute` le chemin doit être `<NomDeLaTable>.<NomDeLaColonne>`. Sinon, `<NomDeLaColonne>` car la colonne est dans la même table (duplication d'une colonne).
+Il n'y a pas de contraintes statiques supplémentaire pour les `ColumnData`, et les `ComputedColumn`.
+
+Dans ce projet, nous avons fournis dans `src/fr.n7.chaiseMinute.exemples/exemples_contraintes_statiques` deux exemples différents de modèle qui passent l'entièreté des contraintes statiques (nom commence par "ok"). Ainsi que 9 autres exemples qui ne passent pas les tests.
+
+
 == `Algorithm`
 #figure(
   image("./images/algorithmDiagram.svg", width: 60%),
@@ -60,6 +74,7 @@ L'application des fonctions respecte les règles suivantes :
 
 Ces règles nous permettent de chaîner les fonctions dans un algorithme.
 
+Nous n'avons pas établit de contraintes statiques sur ce modèle.
 
 == `Function`
 #figure(
@@ -68,6 +83,8 @@ Ces règles nous permettent de chaîner les fonctions dans un algorithme.
 ) <functionDiagram>
 
 Une `Function` est représentée par un identifiant qui référence un programme Python, elle contient des arguments, qui sont des références vers des colonnes. Les colonnes sont représentées sous la forme `nomTable.nomColonne` dans tout le projet (pour les références croisées de @chaiseMinuteDiagram, les arguments de fonctions, etc).
+
+Nous n'avons pas établit de contraintes statiques sur ce modèle.
 
 === Limitations
 On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on aurait pu construire un arbre d'appels et prendre la sortie de plusieurs fonctions à la fois en arguments. On peut quand même obtenir ce résultat avec le système actuel en adaptant les fonctions Python pour qu'elles renvoient plusieurs colonnes, ainsi en adaptant la fonction suivante pour qu'elle récupère ces deux colonnes, on imite le fonctionnement d'un arbre d'appels.
