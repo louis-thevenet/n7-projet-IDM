@@ -216,7 +216,7 @@ Les noms sur les _Nodes_ ou les _Edges_ représentent les arguments _name_ des `
   caption: [Sirius de Mean.clc.],
 ) <meanSiriusDiagram>
 
-=== Limitations et améliorations
+=== Limitations et améliorations <limitationSiriusCalculus>
 Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer n'importe quel `CalculusElement` avec la palette de création. Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent. En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`. Nous avons isolé la partie et compris d'où venait le problème (INSERER UN SCREEN DU .ODESIGN DES IF) et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
 
 Une piste d'amélioration de ce problème serait de créer des _Bordered Nodes_ indiquant le `before` et `beforeSecond` pour les `BinaryExpression` pour isoler le `Pipe` à modifier et ainsi résoudre notre problème. Dans la même idée, rajouter des _Bordered Nodes_ pour chaque entrée (`before`/`beforeSecond`) et sortie (`targetPipe`) pour visualiser correctement le nombre d'E/S nécessaire par expression.
@@ -442,7 +442,8 @@ Worksapce comportant un fichier `TabouretSeconde.xtext` décrivant un langage te
 === `fr.n7.ChaiseMinute.chaiseMinute.cmtToCm`
 Workspace comportant la transformation Modèle à Modèle `menuiserie.atl` pour engendrer des `ChaiseMinute` (d'extension _xmi_ ou _cm_)à partir de la transforamtion xText.
 == `fr.n7.ChaiseMinute.calculus`
-Workspace contenant le méta-modèle `calculusv2.ecore` décrivant les fonctions/scripts que l'utilisateur pourra définir par un l'éditeur graphique Sirius. Une fois l'édition faite, nous voulions pouvoir transformer ces scripts en fichiers Python pour pouvoir être appelé dans les `Algorithm` au travers des paths, mais ayant eu des problèmes avec l'édition graphique, expliquées plus haut(FAIRE UNE ANCRE POUR LIEN), nous n'avons pu aboutir à une transformation utilisable. 
+Workspace contenant le méta-modèle `calculusv2.ecore` décrivant les fonctions/scripts que l'utilisateur pourra définir par un l'éditeur graphique Sirius. Une fois l'édition faite, nous voulions pouvoir transformer ces scripts en fichiers Python pour pouvoir être appelé dans les `Algorithm` au travers des paths, mais ayant eu des problèmes avec l'édition graphique, expliquées plus haut
+(#link(<limitationSiriusCalculus>)[Limitations et améliorations]), nous n'avons pu aboutir à une transformation utilisable. 
 
 == Workspaces Sirius
 === `fr.n7.ChaiseMinute.design`
