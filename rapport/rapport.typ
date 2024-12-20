@@ -438,6 +438,9 @@ On peut également voir les données dans l'outil de visualisation généré
 = Conclusion
 //  qui doit inclure un bilan sur le projet (soit personnel soit de groupe), expliquant notamment les points de difficulté, et si possible une critique sur le sujet proposé
 
+== Guillaume
+J'ai trouvé le sujet un peu compliqué au début à devoir s'adapter à des contraintes d'utilisations et imaginer une solution sans avoir des contraintes techniques. Mais j'ai apprécié travailler en équipe pour trouver ces solutions et aboutir à un résultat exploitables et je pense y avoir gagné en management d'équipe et communication. Du côté technique j'ai pu travailler sur presque tous les types de transformations sauf texte à modèle ce qui m'a permis de mieux concevoir le travail d'un ingénieur logiciel qui doit s'adapter au problème qu'il rencontre.
+
 == Timothé
 
 C'était un travail difficile pour moi car j'ai eu du mal avec la liberté d'interprétation.//, où l'equipage a due faire face à vents et marées (Eclipse est à l'origine de la houle).
