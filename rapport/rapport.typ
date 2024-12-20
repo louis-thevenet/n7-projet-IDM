@@ -308,7 +308,7 @@ On transforme ensuite ce modèle intermédiaire en `ChaiseMinute` par notre tran
 
 #figure(
   image("./images/equation_model.svg"),
-  caption: [Modèle `chaiseMinute` obtenu vu sous Sirius],
+  caption: [Modèle `chaiseMinute` obtenu vu sous Sirius.],
 )
 
 === Génération de la librarie Python
@@ -431,7 +431,7 @@ Produit le fichier :
 On peut également voir les données dans l'outil de visualisation généré
 
 #figure(
-  caption: [Visualisation des données générées],
+  caption: [Visualisation des données générées.],
   image("./images/equation_visualizer.png"),
 ) <equation_vis>
 
@@ -479,6 +479,6 @@ Workspace contenant des fichiers _clc_ de `Calculus` éditable par les utilisate
 === `fr.n7.ChaiseMinute.exemples`
 Workspace contenant différents exemples d'utilisation de schémas de tables avec les résultats de leur transformation vers le modèle et les générations python.
 
-Dans ce projet, nous avons fournis dans `exemples_contraintes_statiques` deux exemples différents de modèle qui passent l'entièreté des contraintes statiques (nom commence par "ok"). Ainsi que 9 autres exemples qui ne passent pas les tests le nom du fichier précise l'erreur qui doit être levé par le validator.
-
-// #outline(title: "Figures", target: figure.where(kind: image))
+- Dans ce projet, nous avons fournis dans `exemples_contraintes_statiques` deux exemples différents de modèle qui passent l'entièreté des contraintes statiques (nom commence par "ok"). Ainsi que 9 autres exemples qui ne passent pas les tests le nom du fichier précise l'erreur qui doit être levé par le validator.
+== Figures Content
+#outline(title: "Figures", target: figure.where(kind: image))
