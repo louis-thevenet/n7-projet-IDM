@@ -178,7 +178,7 @@ En s'appuyant sur la même librarie, on crée un outil de visualisation du sché
 
 = Edition graphique
 == `ChaiseMinute`
-Nous avons développé un outils graphique permettant de modifier des fichiers _.cml_ (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
+Nous avons développé un outils graphique permettant de modifier des fichiers _.cm_ (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
 
 Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boîtes, pour montrer l'imbrication des `Columns` dans les `Tables` et la fraternités des `Columns`.
 - Les `Tables` sont représentées par des `containers` verts clairs,
@@ -191,11 +191,11 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
 
 #figure(
   image("./images/exempleCompliqueSiriusDiagram.svg", width: 100%),
-  caption: [Sirius de ExempleComplique.cml.],
+  caption: [Sirius de ExempleComplique.cm.],
 ) <exempleCompliqueSiriusDiagram>
 
 #figure(
-  image("/images/paletteChaiseMinute.png", width: 25%),
+  image("./images/paletteChaiseMinute.png", width: 25%),
   caption: [Palette de création de ChaiseMinute.],
 ) <paletteChaiseMinute>
 === Limitations
@@ -215,19 +215,19 @@ Les `UsableExpression` et `FinalExpression` sont représentés par des _Node_ et
 Les noms sur les _Nodes_ ou les _Edges_ représentent les arguments _name_ des `CalculusElement` associé.  
 
 #figure(
-  image("/images/meanFromCalculus.svg", width: 100%),
+  image("images/meanFromCalculus.svg", width: 100%),
   caption: [Sirius de Mean.clc.],
 ) <meanSiriusDiagram>
 
 #figure(
-  image("/images/palettecalculus.png", width: 25%),
+  image("./images/palettecalculus.png", width: 25%),
   caption: [Palette de création de Calculus.],
 ) <palettecalculus>
 
 
 === Limitations et améliorations <limitationSiriusCalculus>
 Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer n'importe quel `CalculusElement` avec la palette de création. Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent. En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`. Nous avons isolé la partie et compris d'où venait le problème #figure(
-  image("/images/odesign_calculus_error.png", width: 50%),
+  image("./images/odesign_calculus_error.png", width: 50%),
   caption: [Erreur conception Pipe Edge.],
 ) <odesignCalculusError>
  et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
@@ -438,12 +438,17 @@ On peut également voir les données dans l'outil de visualisation généré
 = Conclusion
 //  qui doit inclure un bilan sur le projet (soit personnel soit de groupe), expliquant notamment les points de difficulté, et si possible une critique sur le sujet proposé
 
+== Timothé
+
+C'était un travail difficile pour moi car j'ai eu du mal avec la liberté d'interprétation.//, où l'equipage a due faire face à vents et marées (Eclipse est à l'origine de la houle).
+ Dans ce projet, j'ai pu travailler sur la première version de la transformation de texte à modèle, la syntaxe concrète graphique et les contraintes statiques. Ce qui m'a permis de m'améliorer dans ces domaines.
+
 = Annexes
 //Une description détaillée de ce que contient le rendu (cf Section 4) : description succincte de chaque projet et des fichiers importants (méta-modèles, modèles exemple, fichiers de description, scripts, etc.)
 
 == Workspaces `fr.n7.ChaiseMinute`
 === `fr.n7.ChaiseMinute`
-Workspace contenant le méta-modèle `chaiseMinute.ecore` décrivant les schémas de tables.
+Workspace contenant le méta-modèle `chaiseMinute.ecore` décrivant les schémas de tables. Ce projet contient aussi le code pour la validation des modèles. Pour valider un modèle vis-à-vis des contraintes statiques, il faut lancer la classe `ValidateChaiseMinute.java` suivi du chemin d'accès vers un modèle.
 === `fr.n7.ChaiseMinute.function`
 Worksapce contenant le méta-modèle `function.ecore` décrivant les fonctions utilisées dans les `Algorithm` d'un modèle.
 === `fr.n7.ChaiseMinute.script`
