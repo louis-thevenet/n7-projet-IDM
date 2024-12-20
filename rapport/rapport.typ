@@ -464,6 +464,13 @@ J'ai trouvé le sujet un peu compliqué au début à devoir s'adapter à des con
 C'était un travail difficile pour moi car j'ai eu du mal avec la liberté d'interprétation.//, où l'equipage a due faire face à vents et marées (Eclipse est à l'origine de la houle).
 Dans ce projet, j'ai pu travailler sur la première version de la transformation de texte à modèle, la syntaxe concrète graphique et les contraintes statiques. Ce qui m'a permis de m'améliorer dans ces domaines.
 
+== Louis
+J'ai également eu du mal à interprêter le sujet qui est très libre, mais je pense que cette difficulté fait partie de l'exercice.
+
+J'ai apprécié le fait que le projet nous force à nous coordonner pour délivrer les différentes parties et éviter les conflits.
+Nous avons, par exemple, eu un problème de communication quant à la manière d'utiliser notre schéma de table en sortie (Entre le programme Python et les contraintes statiques).
+
+// L'antagoniste principal reste le logiciel Eclipse lui-même.
 
 = Annexes
 //Une description détaillée de ce que contient le rendu (cf Section 4) : description succincte de chaque projet et des fichiers importants (méta-modèles, modèles exemple, fichiers de description, scripts, etc.)
@@ -476,7 +483,7 @@ Worksapce contenant le méta-modèle `function.ecore` décrivant les fonctions u
 === `fr.n7.ChaiseMinute.script`
 Workspace contenant le méta-modèle `algorithm.ecore` décrivant les algorithmes (utilisations des fonctions) dans le méta-modèle `ChaiseMinute` pour pouvoir appliquer des opérations pour les `ComputedColumns`.
 === `fr.n7.ChaiseMinute.library`
-Workspace Acceleo permettant la transformation du modèle insatancié de `ChaiseMinute` vers un fichier Python en sortie pour vérifier les contraintes et afficher les tables ainsi obetnues.
+Workspace Acceleo permettant la transformation du modèle instancié de `ChaiseMinute` vers un fichier Python en sortie pour vérifier les contraintes, appliquer le schéma et afficher les tables obtenues.
 === `fr.n7.ChaiseMinute.tabouretSeconde`
 Worksapce comportant un fichier `TabouretSeconde.xtext` décrivant un langage textuel concret propre à `ChaiseMinute` pour décrire des schémas de tables (d'extension _cmt_). Cette transformation ne supportant pas les eOpposite, nous avons du créer une transformation Modèle à Modèle `menuiserie.atl` pour obtenir des vrais schémas de tables `ChaiseMinute`.
 === `fr.n7.ChaiseMinute.chaiseMinute.cmtToCm`
