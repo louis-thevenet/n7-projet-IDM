@@ -15,6 +15,8 @@
   toc: true,
 )
 
+
+
 = Introduction
 Ce projet consiste en la réalisation d'un environnement de calcul Domaine-Scientifique nommé : ChaiseMinute.
 
@@ -192,7 +194,10 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
   caption: [Sirius de ExempleComplique.cml.],
 ) <exempleCompliqueSiriusDiagram>
 
-
+#figure(
+  image("/images/paletteChaiseMinute.png", width: 25%),
+  caption: [Palette de création de ChaiseMinute.],
+) <paletteChaiseMinute>
 === Limitations
 Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
 
@@ -214,8 +219,18 @@ Les noms sur les _Nodes_ ou les _Edges_ représentent les arguments _name_ des `
   caption: [Sirius de Mean.clc.],
 ) <meanSiriusDiagram>
 
+#figure(
+  image("/images/palettecalculus.png", width: 25%),
+  caption: [Palette de création de Calculus.],
+) <palettecalculus>
+
+
 === Limitations et améliorations <limitationSiriusCalculus>
-Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer n'importe quel `CalculusElement` avec la palette de création. Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent. En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`. Nous avons isolé la partie et compris d'où venait le problème (INSERER UN SCREEN DU .ODESIGN DES IF) et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
+Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer n'importe quel `CalculusElement` avec la palette de création. Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent. En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`. Nous avons isolé la partie et compris d'où venait le problème #figure(
+  image("/images/odesign_calculus_error.png", width: 50%),
+  caption: [Erreur conception Pipe Edge.],
+) <odesignCalculusError>
+ et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
 
 Une piste d'amélioration de ce problème serait de créer des _Bordered Nodes_ indiquant le `before` et `beforeSecond` pour les `BinaryExpression` pour isoler le `Pipe` à modifier et ainsi résoudre notre problème. Dans la même idée, rajouter des _Bordered Nodes_ pour chaque entrée (`before`/`beforeSecond`) et sortie (`targetPipe`) pour visualiser correctement le nombre d'E/S nécessaire par expression.
 
@@ -457,3 +472,5 @@ Workspace contenant des fichiers _clc_ de `Calculus` éditable par les utilisate
 Workspace contenant différents exemples d'utilisation de schémas de tables avec les résultats de leur transformation vers le modèle et les générations python.
 
 Dans ce projet, nous avons fournis dans `exemples_contraintes_statiques` deux exemples différents de modèle qui passent l'entièreté des contraintes statiques (nom commence par "ok"). Ainsi que 9 autres exemples qui ne passent pas les tests le nom du fichier précise l'erreur qui doit être levé par le validator.
+
+// #outline(title: "Figures", target: figure.where(kind: image))
