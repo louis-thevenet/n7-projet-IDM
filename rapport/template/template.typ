@@ -48,8 +48,7 @@
     image(subimage, width: 100%)
   }
 
-  set page(margin: auto, header: none, footer: none)
-
+  
   pagebreak()
   if toc {
     outline(depth: 2, indent: true)

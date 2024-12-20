@@ -8,6 +8,7 @@
   <genPackages prefix="Calculusv2" disposableProviderFactory="true" ecorePackage="calculusv2.ecore#/">
     <genClasses ecoreClass="calculusv2.ecore#//Calculus">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference calculusv2.ecore#//Calculus/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute calculusv2.ecore#//Calculus/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="calculusv2.ecore#//CalculusElement">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference calculusv2.ecore#//CalculusElement/calculus"/>

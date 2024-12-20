@@ -257,6 +257,16 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getCalculus_Name() {
+		return (EAttribute)calculusEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getCalculusElement() {
 		return calculusElementEClass;
 	}
@@ -562,6 +572,7 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		// Create classes and their features
 		calculusEClass = createEClass(CALCULUS);
 		createEReference(calculusEClass, CALCULUS__ELEMENTS);
+		createEAttribute(calculusEClass, CALCULUS__NAME);
 
 		calculusElementEClass = createEClass(CALCULUS_ELEMENT);
 		createEReference(calculusElementEClass, CALCULUS_ELEMENT__CALCULUS);
@@ -659,6 +670,7 @@ public class Calculusv2PackageImpl extends EPackageImpl implements Calculusv2Pac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(calculusEClass, Calculus.class, "Calculus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalculus_Elements(), this.getCalculusElement(), this.getCalculusElement_Calculus(), "elements", null, 0, -1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCalculus_Name(), ecorePackage.getEString(), "name", "calculus", 1, 1, Calculus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(calculusElementEClass, CalculusElement.class, "CalculusElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalculusElement_Calculus(), this.getCalculus(), this.getCalculus_Elements(), "calculus", null, 1, 1, CalculusElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

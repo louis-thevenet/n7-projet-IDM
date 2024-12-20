@@ -1,0 +1,21 @@
+[comment encoding = UTF-8 /]
+[module toPython('http://calculusv2')]
+
+
+[template public calculusToPython(aCalculus : Calculus)]
+[comment @main/]
+[file ((aCalculus.name)+'.py', false, 'UTF-8')]
+import numpy as np
+def [aCalculus.name/]([for (ia : InputArgs | aCalculus.getInputArgs())][ia.name/],[/for]):
+[aCalculus/]
+[/file]
+[/template]
+
+
+[query public getInputArgs(arg : Calculus): OrderedSet(InputArgs) = arg.elements 
+-> select(e | e.oclIsTypeOf(CalculusElement))
+-> select(e | e.oclIsTypeOf(UsableExpression))
+-> select(e | e.oclIsTypeOf(InputArgs))
+-> collect(e | e.oclAsType(InputArgs)) 
+-> asOrderedSet()
+/]

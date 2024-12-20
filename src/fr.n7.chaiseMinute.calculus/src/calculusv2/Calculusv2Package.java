@@ -76,13 +76,22 @@ public interface Calculusv2Package extends EPackage {
 	int CALCULUS__ELEMENTS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALCULUS__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Calculus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALCULUS_FEATURE_COUNT = 1;
+	int CALCULUS_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Calculus</em>' class.
@@ -1250,6 +1259,17 @@ public interface Calculusv2Package extends EPackage {
 	EReference getCalculus_Elements();
 
 	/**
+	 * Returns the meta object for the attribute '{@link calculusv2.Calculus#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see calculusv2.Calculus#getName()
+	 * @see #getCalculus()
+	 * @generated
+	 */
+	EAttribute getCalculus_Name();
+
+	/**
 	 * Returns the meta object for class '{@link calculusv2.CalculusElement <em>Calculus Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1579,6 +1599,14 @@ public interface Calculusv2Package extends EPackage {
 		 * @generated
 		 */
 		EReference CALCULUS__ELEMENTS = eINSTANCE.getCalculus_Elements();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CALCULUS__NAME = eINSTANCE.getCalculus_Name();
 
 		/**
 		 * The meta object literal for the '{@link calculusv2.CalculusElement <em>Calculus Element</em>}' class.
