@@ -204,7 +204,7 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
   caption: [Palette de création de ChaiseMinute.],
 ) <paletteChaiseMinute>
 === Limitations
-Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile.
+Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à supprimer des fonctions avec l'éditeur graphique.
 En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
 
 == `Calculus`
@@ -233,9 +233,9 @@ Les noms sur les `Nodes` ou les `Edges` représentent les arguments `name` des `
 
 === Limitations et améliorations <limitationSiriusCalculus>
 Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer des `CalculusElement` avec la palette de création.
-Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent.
-En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`.
-Nous avons isolé la partie et compris d'où venait le problème et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
+Cependant, nous n'arrivons pas pour les `BinaryExpression` à définir uniquement la valeur du lien `beforeSecond` lorsque le lien `before` existe déjà.
+En effet, quand nous relions ce nouveau lien, les valeurs de `before` et `beforeSecond` sont définies avec cette nouvelle valeur.
+Nous avons isolé la partie et compris d'où venait le problème et n'arrivons pas à implémenter une solution convenable.
 #figure(
   image("./images/odesign_calculus_error.png", width: 50%),
   caption: [Erreur conception Pipe Edge.],
@@ -470,6 +470,10 @@ J'ai également eu du mal à interprêter le sujet qui est très libre, mais je 
 J'ai apprécié le fait que le projet nous force à nous coordonner pour délivrer les différentes parties et éviter les conflits.
 Nous avons, par exemple, eu un problème de communication quant à la manière d'utiliser notre schéma de table en sortie (Entre le programme Python et les contraintes statiques).
 
+== Simon
+J'ai, tout comme mes camarades trouvé le sujet assez vague, ne proposant pas réellement de scénario ce qui a notamment causé des disonnances au sein de l'équipe sur ce qui devait être produit. Avec la complexité (parlons plutôt d'impossibilité) de modifier les métas-modeles au cours du projet, cela empêche de commencer réellement différents aspects du projet sereinement.
+De plus l'outil Eclipse semble nécessiter plus d'expérience pour être utilisé que ce que nous avons, notamment en ce qui concerne la collaboration via git (et certains mystères qui resteront irrésolus et disparus après quelques redémarrage). Tout cela nous a fait "perdre" beaucoup de temps, ce qui reste très frustrant car nous avons l'impression de passer plus de temps à se battre contre l'outil plutôt que de travailler avec.
+Cependant je tiens aussi à souligner que les concepts appris dans la matière sont très intéressants, et que mes camarades sont restés particulièrement sérieux dans l'exercice de collaboration.
 // L'antagoniste principal reste le logiciel Eclipse lui-même.
 
 = Annexes
