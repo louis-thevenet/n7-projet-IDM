@@ -18,20 +18,22 @@
 
 
 = Introduction
-Ce projet consiste en la réalisation d'un environnement de calcul Domaine-Scientifique nommé : ChaiseMinute.
+Ce projet consiste en la réalisation d'un environnement de calcul Domaine-Scientifique nommé `ChaiseMinute` (c'est un tableur).
 
-ChaiseMinute permet à tous ses utilisateurs de développer des `schémas de tables` et des `librairies` pour traiter automatiquement des données respectant ces schémas. Ainsi l'utilisateur pourra produire des outils pour d'autres utilisateurs finaux souhaitant manipuler des données sans avoir à créer leur propres outils.
+`ChaiseMinute` permet à tous ses utilisateurs de développer des `schémas de tables` et des `librairies` pour traiter automatiquement des données respectant ces schémas.
+Ainsi l'utilisateur pourra produire des outils pour d'autres utilisateurs finaux souhaitant manipuler des données sans avoir à créer leur propres outils.
 
-L'utilisateur de `ChaiseMinute` dipose d'une syntaxe textuelle ainsi qu'un outil graphique permettant de définir ses schémas de tables. Les schémas de tables pourront être transformés dans des langages plus spécifiques au calcul pour pouvoir transformer et vérifier des données.
+L'utilisateur de `ChaiseMinute` dipose d'une syntaxe textuelle ainsi qu'un outil graphique permettant de définir ses schémas de tables.
+Les schémas de tables pourront être transformés dans des langages plus spécifiques au calcul pour pouvoir transformer, vérifier et visualiser des données.
 
 = Méta-Modèles
 Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
-+ ChaiseMinute.Ecore
-  - Point d'entrée, il permet de définir les schémas de table
-+ Algorithm.Ecore
-  - Définir les algorithmes utilisés pour les `ComputedColumns` et les `Constraints`
-+ Function.Ecore
-  - Pour spécifier les `Functions` utilisées par les `Algorithm`
++ `ChaiseMinute.Ecore`
+  - Point d'entrée, il définit les schémas de table
++ `Algorithm.Ecore`
+  - Définit les algorithmes utilisés pour les colonnes calculées et les contraintes
++ `Function.Ecore`
+  - Pour spécifier les fonctions utilisées par les algorithmes
 
 == `ChaiseMinute`
 
@@ -41,7 +43,7 @@ Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
 ) <chaiseMinuteDiagram>
 
 - `ChaiseMinute` représente le container permettant de regrouper les schémas de tables entre eux.
-- `Table` défini un schéma de table comme un ensemble de `Column` et d'une `IndexColumn`, des contraintes peuvent également être ajoutées pour vérifier les données d'entrée
+- `Table` définit un schéma de table comme un ensemble de `Column` et d'une `IndexColumn`, des contraintes peuvent également être ajoutées pour vérifier les données d'entrée
 - `IndexColumn` : est une colonne spéciale pour les index des lignes
 - `Column` est une super-classe représentant une colonne, elle contient un type de données et d'éventuelles contraintes sur les données d'entrée ou de sortie
   - `ColumnData` : une colonne simple pour représenter une donnée,
@@ -51,12 +53,12 @@ Nous avons décidé de séparer le modèle en trois sous-méta-modèles :
 Toutes les contraintes sont représentées par des algorithmes qui renvoient un booléen.
 
 Le méta-modèle seul ne permet pas d'éviter toute erreur que pourrait faire l'utilisateur lors de la conception d'un modèle. Nous avons donc mis en place un certains nombre de contraintes statiques décrites ci-dessous :
-- *inv* NomValide : Le nom d'un `ChaiseMinute` doit être non null, non vide et respecter les conventions java
-- *inv* NomCorrect : Le nom d'une `Table` doit respecter les mêmes conditions
-- *inv* NomCorrect : Le nom d'une `Column` doit respecter les mêmes conditions
-- *inv* Possede un type : Une `Column` doit posséder un type
-- *inv* NomUniqueColumn : Une `Column` doit posséder un nom qui l'identifie dans la table
-- *inv* CheminCorrect : Une `ImportedColumn` doit posséder un chemin d'accés valide vers la colonne qui est importée. C'est-à-dire que si la colonne est importée depuis une autre `Table` du `ChaiseMinute` le chemin doit être `<NomDeLaTable>.<NomDeLaColonne>`. Sinon, `<NomDeLaColonne>` car la colonne est dans la même table (duplication d'une colonne).
+/ `NomValide`: Le nom d'un `ChaiseMinute` doit être ni vide ni `null`, et respecter les conventions java
+/ `NomCorrect`: Le nom d'une `Table` doit respecter les mêmes conditions
+/ `NomCorrect`: Le nom d'une `Column` doit respecter les mêmes conditions
+/ `Typé`: Une `Column` doit posséder un type
+/ `NomUniqueColumn`: Une `Column` doit posséder un nom qui l'identifie dans la table
+/ `CheminCorrect`: Une `ImportedColumn` doit posséder un chemin d'accés valide vers la colonne qui est importée. C'est-à-dire que si la colonne est importée depuis une autre `Table` du `ChaiseMinute` le chemin doit être `<NomDeLaTable>.<NomDeLaColonne>`. Sinon, `<NomDeLaColonne>` car la colonne est dans la même table (duplication d'une colonne).
 Il n'y a pas de contraintes statiques supplémentaire pour les `ColumnData`, et les `ComputedColumn`.
 
 
@@ -74,7 +76,6 @@ L'application des fonctions respecte les règles suivantes :
 
 Ces règles nous permettent de chaîner les fonctions dans un algorithme.
 
-Nous n'avons pas établit de contraintes statiques sur ce modèle.
 
 == `Function`
 #figure(
@@ -84,10 +85,8 @@ Nous n'avons pas établit de contraintes statiques sur ce modèle.
 
 Une `Function` est représentée par un identifiant qui référence un programme Python, elle contient des arguments, qui sont des références vers des colonnes. Les colonnes sont représentées sous la forme `nomTable.nomColonne` dans tout le projet (pour les références croisées de @chaiseMinuteDiagram, les arguments de fonctions, etc).
 
-Nous n'avons pas établit de contraintes statiques sur ce modèle.
-
 === Limitations
-On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on aurait pu construire un arbre d'appels et prendre la sortie de plusieurs fonctions à la fois en arguments. On peut quand même obtenir ce résultat avec le système actuel en adaptant les fonctions Python pour qu'elles renvoient plusieurs colonnes, ainsi en adaptant la fonction suivante pour qu'elle récupère ces deux colonnes, on imite le fonctionnement d'un arbre d'appels.
+On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on aurait pu construire un arbre d'appels et prendre la sortie de plusieurs fonctions à la fois en arguments. On peut quand même obtenir ce résultat avec le système actuel en adaptant les fonctions Python pour qu'elles renvoient plusieurs colonnes, puis en adaptant la fonction suivante pour qu'elle récupère ces deux colonnes, on imite le fonctionnement d'un arbre d'appels.
 
 == `Calculus`
 #figure(
@@ -99,15 +98,15 @@ On aurait pu faire en sorte que les `Function` soient des arguments, ainsi on au
 
 - `UsableExpression` décrit les expressions pouvant être appelées pour réaliser le calcul :
   - `InputArgs` pour les arguments en entrée du `Calculus`,
-  - `Constante` pour décrire les constantes pouvant être écrite en dure dans les suites de calculs. Ces deux premiers ne peuvent que fournir des valeurs à l'intérieur du `Calculus` et donc n'ont pas d'expression en entrée,
+  - `Constante` pour décrire les constantes pouvant être écrites en dure dans les suites de calculs. Ces deux premiers ne peuvent que fournir des valeurs à l'intérieur du `Calculus` et donc n'ont pas d'expression en entrée,
   - `Operation` décrit une opération possible à l'intérieur du calcul, pouvant être à deux entrées (`BinaryExpression`) ou à une seule entrée (`UnaryExpression`)
-- `PipeSuper` représente les liens entre les `UsableExpression` pour décrire l'odre des calculs et l'odre des appels : 
+- `PipeSuper` représente les liens entre les `UsableExpression` pour décrire l'odre des calculs et l'odre des appels :
   - `Pipe` pour décrire les liens, les entrées et les sorties, entre les calculs,
-  - `PipeFinal` indique que les calculs redirige vers la sortie finale, la donnée retournée du `Calculus`, 
+  - `PipeFinal` indique que les calculs redirigent vers la sortie finale, la donnée retournée du `Calculus`,
 - `FinalExpression` indique la fin du calcul.
 
-=== Limitations 
-Nous avons donné des opérations de calcul "classique" utilisable directement par l'utilisateur : `Sum`, `Substraction`, `Products`, `Division`, `Oppose` et `Reciprocal` mais nous aurions pu rajouter des opérations mathématiques plus avancées (sin, cos, exp, modulo, ...) ou juste définir des opérations unaire ou binaire en les décrivants par un argument `opération`.  
+=== Limitations
+Nous avons donné des opérations de calcul "classique" utilisable directement par l'utilisateur : `Sum`, `Substraction`, `Products`, `Division`, `Oppose` et `Reciprocal` mais nous aurions pu rajouter des opérations mathématiques plus avancées (sin, cos, exp, modulo, ...) ou juste définir des opérations unaire ou binaire en les décrivants par un argument `opération`.
 
 Les `Pipe` sont utiles car il permettent de définir des expressions pendantes non reliées qui sont facilement éditables ensuite mais cela rajoute du poids sur l'architecture du méta-modèles qui nous pourrions corriger dans une version future.
 
@@ -115,14 +114,14 @@ Les `Pipe` sont utiles car il permettent de définir des expressions pendantes n
 = Transforamtions Texte à Modèle de `ChaiseMinute`
 == Syntaxe Textuelle
 En utilisant le langage Xtext, nous avons pu définir une syntaxe textuelle pour les schémas de tables comme suit :
-#sourcecode(```
+#sourcecode(```rust
 nomSchemaTable {
   nomTable1 (
     nomColonne1 of typeColonne1,
     nomColonne2 of typeColonne2,
     nomColonne3 of typeColonne3 computed with [
-      nomFonction1("nomTable1.nomColonne1", "nomTable1.nomColonne2") >
-      nomFonction2(nomTable1.nomColonne2)
+      nomFonction1("nomTable1.nomColonne1", "nomTable1.nomColonne2")
+      > nomFonction2(nomTable1.nomColonne2)
     ]
   )
   constrained by [nomFonction3("nomTable1.nomColonne1", "nomTable1.nomColonne2")]
@@ -134,7 +133,7 @@ nomSchemaTable {
 constrained by [nomFonction4("nomTable2.nomColonne1" "nomTable1.nomColonne2")]
 ```)
 
-La syntaxe permet de définir des modèles de Table dans un méta-modèles proche de `ChaiseMinute` mais néamoins différent : `TabouretSeconde`. En effet, Xtext ne supportant pas certaines spécificités des ecore, comme les e-references, il est nécéssaire d'effecter une transformation M2M pour obtenir un modèle de `ChaiseMinute` à partir d'un modèle conforme à `TabouretSeconde`.
+La syntaxe permet de définir des modèles de Table dans un méta-modèles proche de `ChaiseMinute` mais néanmoins différent : `TabouretSeconde`. En effet, Xtext ne supportant pas certaines spécificités des modèles Ecore, comme les e-references, il est nécéssaire d'effecter une transformation M2M pour obtenir un modèle de `ChaiseMinute` à partir d'un modèle conforme à `TabouretSeconde`.
 
 = Transformation Modèle à Modèle
 
@@ -143,10 +142,14 @@ Pour finaliser la transformation texte à modèle, nous avons écrit une transfo
 
 = Transformations Modèle à Texte
 == Librairie et script de calcul automatique
-Nous avons décidé d'utiliser le language Python pour nos algorithmes. Ainsi, pour générer une librarie de calcul à partir d'un schéma de table, il nous suffit de générer un programme Python qui appelle les fonctions référencées par les algorithmes et les contraintes.
+On souhaite générer une librarie de calcul qui permet de charger et transformer des données conformes à un schéma de table.
+
+Nous utilisons le language Python pour la produire. Ainsi, l'utilisateur peut écrire les différentes fonctions appelées dans son schéma de table dans ce langage, la librarie leur fera appel.
 
 La librarie propose différentes fonctions pour manipuler des données à l'aide du schéma de table.
-#figure(caption: [Signatures des fonctions de la librarie])[#sourcecode()[```python
+#figure(
+  caption: [Signatures des fonctions de la librarie et fonction `main`],
+)[#sourcecode()[```python
     def load(files):
     	"""Load all tables as CSV files. All tables must have a corresponding CSV file with the same name in working dir."""
 
@@ -173,12 +176,14 @@ La librarie propose différentes fonctions pour manipuler des données à l'aide
 
 Nous générons aussi une fonction `main` dans notre librarie qui prend en entrée des fichier au format CSV et qui en génèrent de nouveaux en appliquant le schéma de table, résultant en un script de transformation automatique des données.
 
+Lorsque qu'une colonne est référencée par un import ou en argument de fonction, le programme la cherchera en priorité dans les données de sortie (i.e. au sein de la table courante), puis parmis les données d'entrée.
+
 == Outil de visualisation des données
-En s'appuyant sur la même librarie, on crée un outil de visualisation du schéma de table en Python. (Voir @equation_vis)
+En s'appuyant sur la même librarie, on crée un outil de visualisation de schéma de table en Python. (Voir @equation_vis)
 
 = Edition graphique
 == `ChaiseMinute`
-Nous avons développé un outils graphique permettant de modifier des fichiers _.cm_ (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
+Nous avons développé un outil graphique permettant de modifier des fichiers `.cm` (`ChaiseMinute`) pour modifier les différents `schémas de tables` et obtenir une visualisation plus pratique pour l'utilisateur.
 
 Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boîtes, pour montrer l'imbrication des `Columns` dans les `Tables` et la fraternités des `Columns`.
 - Les `Tables` sont représentées par des `containers` verts clairs,
@@ -199,20 +204,21 @@ Les `Tables` et les `Columns` sont visualisées comme des `containers`, des boî
   caption: [Palette de création de ChaiseMinute.],
 ) <paletteChaiseMinute>
 === Limitations
-Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile. En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
+Il est possible pour l'utilisateur de rajouter des fonctions utiles pour une `ComputedColumn`. Cependant nous avons rencontré des difficultés à choisir des fonctions inutile.
+En effet, nous ajoutons et enlevons les fonctions en écrivant leur chemin dans une boite de dialogue texte mais pour l'enlever nous n'avons pas réussi à utiliser la valeur renvoyée pour vérifier si elle correspondait à une `Function` présente et donc la supprimer en conséquence.
 
 == `Calculus`
-Les fichiers _.clc_, pour `Calculus`, sont éditables dans Sirius et sont donc plus facilement personnalisables pour les utilisateurs.
+Les fichiers `.clc`, pour `Calculus`, sont éditables dans Sirius et permettent une alternative au code Python.
 
-Les `UsableExpression` et `FinalExpression` sont représentés par des _Node_ et les `Pipes` comme des _Element Based Edge_ : 
+Les `UsableExpression` et `FinalExpression` sont représentés par des `Node` et les `Pipes` comme des `Element Based Edge` :
 - Les `InputArgs` en blanc,
-- Les `Constante` en orange clair avec leur _value_,
-- Les `BinaryExpression` en vert clair, 
-- Les `UnaryExpression` en bleu clair, 
-- Les `Pipe` et les `PipeFinal` en gris clair, 
+- Les `Constante` en orange clair avec leur `value`,
+- Les `BinaryExpression` en vert clair,
+- Les `UnaryExpression` en bleu clair,
+- Les `Pipe` et les `PipeFinal` en gris clair,
 - Les `FinalExpression` en bleu clair.
 
-Les noms sur les _Nodes_ ou les _Edges_ représentent les arguments _name_ des `CalculusElement` associé.  
+Les noms sur les `Nodes` ou les `Edges` représentent les arguments `name` des `CalculusElement` associé.
 
 #figure(
   image("images/meanFromCalculus.svg", width: 100%),
@@ -226,11 +232,14 @@ Les noms sur les _Nodes_ ou les _Edges_ représentent les arguments _name_ des `
 
 
 === Limitations et améliorations <limitationSiriusCalculus>
-Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer n'importe quel `CalculusElement` avec la palette de création. Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent. En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`. Nous avons isolé la partie et compris d'où venait le problème #figure(
+Dans l'état actuel de notre représentation graphique, nous pouvons définir et créer des `CalculusElement` avec la palette de création.
+Cependant, nous n'arrivons pas pour les `BinaryExpression` à _Set_ uniquement la valeur de `beforeSecond` lorsqu'un lien est déjà présent.
+En effet, quand nous relions un deuxième `Pipe`, celui-ci remplace les valeurs de `before` et `beforeSecond`.
+Nous avons isolé la partie et compris d'où venait le problème et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
+#figure(
   image("./images/odesign_calculus_error.png", width: 50%),
   caption: [Erreur conception Pipe Edge.],
 ) <odesignCalculusError>
- et n'arrivons pas à implémenter un _if else_ convenable mais nous travaillons dessus.
 
 Une piste d'amélioration de ce problème serait de créer des _Bordered Nodes_ indiquant le `before` et `beforeSecond` pour les `BinaryExpression` pour isoler le `Pipe` à modifier et ainsi résoudre notre problème. Dans la même idée, rajouter des _Bordered Nodes_ pour chaque entrée (`before`/`beforeSecond`) et sortie (`targetPipe`) pour visualiser correctement le nombre d'E/S nécessaire par expression.
 
@@ -239,9 +248,12 @@ Une piste d'amélioration de ce problème serait de créer des _Bordered Nodes_ 
 == Equation du second degré
 === Modèle `TabouretSeconde` (syntaxe textuelle)
 On utilise un schéma de table qui représente des polynômes du second degré dont on cherche les racines.
+
 Les données d'entrée sont un fichier CSV qui contient une colonne par coefficient ($a$, $b$, $c$).
 
-#figure(caption: "Description textuelle du schéma de table")[#sourcecode()[```ocaml
+#figure(
+  caption: "Description textuelle du schéma de table",
+)[#sourcecode()[```ocaml
     exemple_equations {
             equations indexed on Index of Int(
             Solution of String computed with [
@@ -294,9 +306,8 @@ Elles sont produites à partir des fonctions `compute_delta` et `solve`.
   ```]
 
 
-Finalement, une contrainte est vérifiée sur la colonne $a$, dont tous les éléments doivent être non nuls.
+Finalement, une fonction de contrainte est vérifiée sur la colonne $a$, dont tous les éléments doivent être non nuls.
 #sourcecode()[```python
-
   import numpy as np
 
   def ensure_is_not_null(x):
@@ -313,7 +324,7 @@ On transforme ensuite ce modèle intermédiaire en `ChaiseMinute` par notre tran
 
 === Génération de la librarie Python
 
-On génère ensuite la librarie via la transformation modèle vers texte, un extrait est disponible ci-dessous.
+On génère ensuite la librairie de calcul via la transformation modèle vers texte, un extrait est disponible ci-dessous.
 
 La fonction `generate_output` applique le schéma de table à partir des données chargées en entrée.
 #sourcecode()[```python
@@ -392,6 +403,7 @@ La fonction `check_constraints` applique les contraintes et vérifie la cohéren
     	### Verify data types
     	for x in out["equations"]["Solution"]:
     		break
+
     	for x in out["equations"]["delta"]:
     		if (type(x)!=int and type(x)!=numpy.int64):
     			return (False, "Type constraints failed on equations.delta")
@@ -412,20 +424,27 @@ La fonction `check_constraints` applique les contraintes et vérifie la cohéren
     	return (True, "Constraints are respected")
   ```]
 === Application de la librarie
-On peut finalement appeler le script automatique (fonction `main` de la librarie), qui à partir des données d'entrée au format CSV :
+On peut finalement appeler le script automatique (fonction `main` de la librarie).
 
-#table(
-  columns: 4,
-  ..csv("./images/input_equations.csv").flatten()
-)
+#align(center)[#grid(
+    columns: 2,
+    gutter: 2cm,
+    figure(caption: "Données d'entrée (CSV)")[#table(
+        columns: 4,
+        ..csv("./images/input_equations.csv").flatten()
+      )],
+  )[
 
-Produit le fichier :
 
-#table(
-  columns: 6,
+    #figure(caption: "Données transformées (CSV)")[#table(
+        columns: 6,
 
-  ..csv("./images/output_equations.csv").flatten()
-)
+        ..csv("./images/output_equations.csv").flatten()
+      )
+    ]
+  ]
+]
+
 
 
 On peut également voir les données dans l'outil de visualisation généré
@@ -442,9 +461,9 @@ On peut également voir les données dans l'outil de visualisation généré
 J'ai trouvé le sujet un peu compliqué au début à devoir s'adapter à des contraintes d'utilisations et imaginer une solution sans avoir des contraintes techniques. Mais j'ai apprécié travailler en équipe pour trouver ces solutions et aboutir à un résultat exploitables et je pense y avoir gagné en management d'équipe et communication. Du côté technique j'ai pu travailler sur presque tous les types de transformations sauf texte à modèle ce qui m'a permis de mieux concevoir le travail d'un ingénieur logiciel qui doit s'adapter au problème qu'il rencontre.
 
 == Timothé
-
 C'était un travail difficile pour moi car j'ai eu du mal avec la liberté d'interprétation.//, où l'equipage a due faire face à vents et marées (Eclipse est à l'origine de la houle).
- Dans ce projet, j'ai pu travailler sur la première version de la transformation de texte à modèle, la syntaxe concrète graphique et les contraintes statiques. Ce qui m'a permis de m'améliorer dans ces domaines.
+Dans ce projet, j'ai pu travailler sur la première version de la transformation de texte à modèle, la syntaxe concrète graphique et les contraintes statiques. Ce qui m'a permis de m'améliorer dans ces domaines.
+
 
 = Annexes
 //Une description détaillée de ce que contient le rendu (cf Section 4) : description succincte de chaque projet et des fichiers importants (méta-modèles, modèles exemple, fichiers de description, scripts, etc.)
@@ -464,7 +483,7 @@ Worksapce comportant un fichier `TabouretSeconde.xtext` décrivant un langage te
 Workspace comportant la transformation Modèle à Modèle `menuiserie.atl` pour engendrer des `ChaiseMinute` (d'extension _xmi_ ou _cm_)à partir de la transforamtion xText.
 == `fr.n7.ChaiseMinute.calculus`
 Workspace contenant le méta-modèle `calculusv2.ecore` décrivant les fonctions/scripts que l'utilisateur pourra définir par un l'éditeur graphique Sirius. Une fois l'édition faite, nous voulions pouvoir transformer ces scripts en fichiers Python pour pouvoir être appelé dans les `Algorithm` au travers des paths, mais ayant eu des problèmes avec l'édition graphique, expliquées plus haut
-(#link(<limitationSiriusCalculus>)[Limitations et améliorations]), nous n'avons pu aboutir à une transformation utilisable. 
+(#link(<limitationSiriusCalculus>)[Limitations et améliorations]), nous n'avons pu aboutir à une transformation utilisable.
 
 == Workspaces Sirius
 === `fr.n7.ChaiseMinute.design`
@@ -481,4 +500,4 @@ Workspace contenant différents exemples d'utilisation de schémas de tables ave
 
 - Dans ce projet, nous avons fournis dans `exemples_contraintes_statiques` deux exemples différents de modèle qui passent l'entièreté des contraintes statiques (nom commence par "ok"). Ainsi que 9 autres exemples qui ne passent pas les tests le nom du fichier précise l'erreur qui doit être levé par le validator.
 == Figures Content
-#outline(title: "Figures", target: figure.where(kind: image))
+#outline(title: "Figures", target: figure)
